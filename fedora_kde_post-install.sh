@@ -4,8 +4,8 @@
 
 # Add repositories rpmfusion free e non-free
 sudo dnf install -y \
-	https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
-	https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+    https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
+    https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # -----------------------
 
@@ -15,7 +15,7 @@ sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.micros
 
 # add apps
 APPS_ADD=(	
-	audacity              # editor de audio
+    audacity              # editor de audio
     #'atom', # editor de texto dedicado a programação
     code                  # editor de codigo - visual studio code
     cmake                 # utilitario de compilação de codigo c/c++
@@ -52,7 +52,7 @@ dnf install -y ${APPS_ADD[@]}
 
 # remove apps
 APPS_REMOVE=(
-	akregator
+    akregator
     calligra-core
     dnfdragora
     dragon
@@ -81,7 +81,7 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # install flatpak apps
 FLATPAK_FLATHUB=(
-	com.discordapp.Discord  # Discord
+    com.discordapp.Discord  # Discord
     com.spotify.Client      # Spotify
     com.valsesoftware.Steam # Steam
     org.telegram.desktop    # telegram
