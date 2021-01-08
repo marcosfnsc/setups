@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# based on https://github.com/Marcos-Fonseca/general-scripts/blob/main/Fedora-Workstation-post-install.sh
+# based on https://github.com/realgrm/general-scripts/blob/main/Fedora-Workstation-post-install.sh
 
 # Add repositories rpmfusion free e non-free
 sudo dnf install -y \
