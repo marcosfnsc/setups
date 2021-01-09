@@ -16,7 +16,6 @@ sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.micros
 # add apps
 APPS_ADD=(	
     audacity              # editor de audio
-    #'atom', # editor de texto dedicado a programação
     code                  # editor de codigo - visual studio code
     cmake                 # utilitario de compilação de codigo c/c++
     ffmpeg                # conversor de arquivos de midia
@@ -33,11 +32,11 @@ APPS_ADD=(
     akmod-wl              # driver do wifi
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
-    #'kernel-devel', # é necessario pra instalar o modulo do virtualbox
+    #kernel-devel # é necessario pra instalar o modulo do virtualbox
     nano                  # editor de texto via terminal
     qbittorrent           # cliente de torrent
-    #'openssh', # programa de ssh
-    #'pavucontrol-qt', # ferramenta simples para editar opções de som
+    #openssh # programa de ssh
+    #pavucontrol-qt # ferramenta simples para editar opções de som
     screenfetch
     skanlite              # scanner de impressora
     VirtualBox
@@ -112,5 +111,19 @@ done
 # config version java
 alternatives --config java
 alternatives --config javac
+
+# -----------------------
+
+# rust environpment
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# -----------------------
+
+# set zsh as default
+chsh -s $(which zsh)
+# oh-my-zsh setup
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# change theme
+sed 's/avit/agnoster/g' ~/.zshrc
 
 # -----------------------
