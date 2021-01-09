@@ -2,8 +2,10 @@
 
 # based on https://github.com/realgrm/general-scripts/blob/main/Fedora-Workstation-post-install.sh
 
+username=marcos
+
 # Add repositories rpmfusion free e non-free
-sudo dnf install -y \
+dnf install -y \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
@@ -32,8 +34,8 @@ APPS_ADD=(
     akmod-wl              # driver do wifi
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
-    #kernel-devel # é necessario pra instalar o modulo do virtualbox
     nano                  # editor de texto via terminal
+    podman
     qbittorrent           # cliente de torrent
     #openssh # programa de ssh
     #pavucontrol-qt # ferramenta simples para editar opções de som
@@ -78,6 +80,9 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # -----------------------
 
+# flathub remote
+sudo -u $username flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 # install flatpak apps
 FLATPAK_FLATHUB=(
     com.discordapp.Discord  # Discord
@@ -86,7 +91,7 @@ FLATPAK_FLATHUB=(
     org.telegram.desktop    # telegram
 )
 
-flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
+sudo -u $username flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
 
 # -----------------------
 
@@ -103,7 +108,7 @@ VSCODE_EXTENSION=(
 )
 
 for app in ${VSCODE_EXTENSION[@]}; do
-    code --install-extension "$app"
+    sudo -u $username code --install-extension "$app"
 done
 
 # -----------------------
@@ -115,15 +120,13 @@ alternatives --config javac
 # -----------------------
 
 # rust environpment
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # -----------------------
 
-# set zsh as default
-chsh -s $(which zsh)
 # oh-my-zsh setup
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo -u $username sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 # change theme
-sed 's/avit/agnoster/g' ~/.zshrc
+sudo -u $username sed 's/avit/agnoster/g' /home/$username/.zshrc
 
 # -----------------------
