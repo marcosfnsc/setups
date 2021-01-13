@@ -4,20 +4,26 @@
 
 username=marcos
 
-# Add repositories rpmfusion free e non-free
+# -----------------------
+
+# enable repositories
+
+dnf install -y fedora-workstation-repositories
+sudo dnf config-manager --set-enabled google-chrome
+
+# rpmfusion free and non-free
 dnf install -y \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# -----------------------
-
-# add repository vscode
+# vscode
 rpm --import https://packages.microsoft.com/keys/microsoft.asc
 sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
 
 # add apps
 APPS_ADD=(	
     audacity              # editor de audio
+    akmod-wl              # driver do wifi
     code                  # editor de codigo - visual studio code
     cmake                 # utilitario de compilação de codigo c/c++
     ffmpeg                # conversor de arquivos de midia
@@ -26,15 +32,16 @@ APPS_ADD=(
     git                   # ferramenta de versionamento de arquivos
     gimp                  # editor de imagem
     glogg                 # editor de texto focado em ler arquivos grandes
+    google-chrome-stable
     gparted               # gerenciador grafico de partições do disco rigido
     htop                  # monitor de tarefas via terminal
     java-11-openjdk       # runtime do jdk 11
     java-11-openjdk-devel # ferramentas de compilação do jdk 11
     kate                  # editor de texto simples com alguns recursos avançados
-    akmod-wl              # driver do wifi
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
     nano                  # editor de texto via terminal
+    neovim
     podman
     qbittorrent           # cliente de torrent
     #openssh # programa de ssh
@@ -47,7 +54,7 @@ APPS_ADD=(
     zsh
 )
 
-dnf install -y ${APPS_ADD[@]}
+dnf install -y --skip-broken ${APPS_ADD[@]}
 
 # -----------------------
 
