@@ -10,7 +10,5 @@ ln init.vim $HOME/.config/nvim/init.vim
 # install coc.vim extension
 nvim +PlugInstall +qa
 nvim "+CocInstall coc-rust-analyzer" +qa
-echo ok1
 nvim "*CocInstall coc-pyright" +qa
-echo ok2
 
