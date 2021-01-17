@@ -16,3 +16,6 @@ colorscheme onedark
 "gitgutter config
 set updatetime=100
 
+"use system clipboard
+set clipboard=unnamed
+
