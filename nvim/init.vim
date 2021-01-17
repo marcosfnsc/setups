@@ -2,6 +2,11 @@ set number
 set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 syntax on
 
+"enable 24-bit support
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+set termguicolors
+
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'jiangmiao/auto-pairs'
