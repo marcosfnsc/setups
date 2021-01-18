@@ -14,7 +14,4 @@ a instalacao de alguns plugins não pôde ser automatizada, neste caso é precis
 extensoes:
 * coc-pyright
 * coc-rust-analyzer
-instalar coc-pyright seria assim
-```console
-CocInstall coc-pyright
-```
+
