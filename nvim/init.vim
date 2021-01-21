@@ -12,7 +12,6 @@ set clipboard=unnamed
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'jiangmiao/auto-pairs'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
@@ -25,4 +24,10 @@ colorscheme onedark
 
 "gitgutter config
 set updatetime=100
+
+let g:coc_global_extensions = [
+  \ 'coc-pyright',
+  \ 'coc-rust-analyzer',
+  \ 'coc-pairs'
+  \ ]
 
