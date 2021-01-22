@@ -31,5 +31,6 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-rust-analyzer',
   \ 'coc-pairs'
+  \ 'coc-tsserver'
   \ ]
 
