@@ -32,5 +32,6 @@ let g:coc_global_extensions = [
   \ 'coc-rust-analyzer',
   \ 'coc-pairs'
   \ 'coc-tsserver'
+  \ 'coc-css'
   \ ]
 
