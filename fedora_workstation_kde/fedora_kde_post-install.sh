@@ -16,15 +16,10 @@ dnf install -y \
     https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
-# vscode
-rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-
 # add apps
 APPS_ADD=(	
     audacity              # editor de audio
     akmod-wl              # driver do wifi
-    code                  # editor de codigo - visual studio code
     cmake                 # utilitario de compilação de codigo c/c++
     ffmpeg                # conversor de arquivos de midia
     flatpak 
@@ -40,7 +35,6 @@ APPS_ADD=(
     kate                  # editor de texto simples com alguns recursos avançados
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
-    nano                  # editor de texto via terminal
     neovim
     podman
     qbittorrent           # cliente de torrent
@@ -99,24 +93,6 @@ FLATPAK_FLATHUB=(
 )
 
 sudo -u $username flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
-
-# -----------------------
-
-# install vscode extensions
-VSCODE_EXTENSION=(
-    alexcvzz.vscode.sqlite      # sqlite
-    ms-python.python            # suporte a python
-    ms-vscode.cpptools          # suporte a c++
-    redhat.java                 # suporte a java
-    redhat.vscode-xml           # suporte a xml
-    ritwickdey.LiveServer       # ferramenta web
-    zhuangtongfa.material-theme # One Dark Pro - tema
-    matklad.rust-analyzer       # suporte a rust
-)
-
-for app in ${VSCODE_EXTENSION[@]}; do
-    sudo -u $username code --install-extension "$app"
-done
 
 # -----------------------
 
