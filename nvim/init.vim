@@ -30,9 +30,9 @@ set updatetime=100
 let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-rust-analyzer',
-  \ 'coc-pairs'
-  \ 'coc-tsserver'
-  \ 'coc-css'
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-css',
   \ 'coc-html'
   \ ]
 
