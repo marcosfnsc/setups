@@ -107,3 +107,7 @@ sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # -----------------------
 
+# run other scripts
+sudo -u $username ./../nvim/setup_nvim.sh
+sudo -u $username ./../zsh/setup_zsh.sh
+
