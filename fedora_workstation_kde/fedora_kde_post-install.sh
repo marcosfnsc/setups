@@ -108,6 +108,15 @@ sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # -----------------------
 
 # run other scripts
-sudo -u $username ./../nvim/setup_nvim.sh
-sudo -u $username ./../zsh/setup_zsh.sh
+cd ..
+cd nvim && sudo -u $username ./setup_nvim.sh
+cd ..
+cd zsh && sudo -u $username ./zsh/setup_zsh.sh
+cd ..
+cd fedora_workstation_kde
+
+# -----------------------
+
+# dotfiles
+sudo -u $username ln dotfiles/konsolerc $HOME/.config/ # konsole
 
