@@ -22,11 +22,6 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
-colorscheme onedark
-
-"gitgutter config
-set updatetime=100
-
 let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-rust-analyzer',
@@ -35,4 +30,12 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-html'
   \ ]
+
+colorscheme onedark
+
+"gitgutter config
+set updatetime=100
+
+" show hidden files
+let NERDTreeShowHidden=1
 
