@@ -1,0 +1,61 @@
+[CompactMode]
+FontWeight=50
+PreviewSize=16
+
+[Desktop Entry]
+DefaultProfile=
+
+[DetailsMode]
+FontWeight=50
+PreviewSize=16
+
+[Favorite Profiles]
+Favorites=
+
+[General]
+RememberOpenedTabs=false
+Version=200
+ViewPropsTimestamp=2021,1,25,0,6,54
+
+[IconsMode]
+FontWeight=50
+
+[KPropertiesDialog]
+Height 768=529
+LVDS-1 Height 768=531
+LVDS-1 Width 1366=611
+Width 1366=611
+
+[MainWindow]
+Height 768=698
+LVDS-1 Height 768=698
+LVDS-1 VGA-1 Window-Maximized 1024x768=true
+LVDS-1 VGA-1 XPosition=0
+LVDS-1 VGA-1 YPosition=34
+LVDS-1 Width 1366=683
+LVDS-1 Window-Maximized 1366x768=true
+LVDS-1 Window-Maximized 768x1366=true
+LVDS-1 XPosition=0
+LVDS-1 YPosition=34
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAwAAAAAAAAChAAAClPwCAAAAAvsAAAAWAGYAbwBsAGQAZQByAHMARABvAGMAawAAAAAmAAAAkwAAAAoBAAAD+wAAABQAcABsAGEAYwBlAHMARABvAGMAawEAAAAmAAAClAAAAF0BAAADAAAAAQAAALgAAAKU/AIAAAAB+wAAABAAaQBuAGYAbwBEAG8AYwBrAAAAACYAAAKUAAAACgEAAAMAAAADAAAFVgAAAL78AQAAAAH7AAAAGAB0AGUAcgBtAGkAbgBhAGwARABvAGMAawAAAAAAAAAFVgAAAAoBAAADAAAEtAAAApQAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAQAAABYAbQBhAGkAbgBUAG8AbwBsAEIAYQByAQAAAAD/////AAAAAAAAAAA=
+ToolBarsMovable=Disabled
+Width 1366=1366
+Window-Maximized 720x1280=true
+Window-Maximized 768x1024=true
+Window-Maximized 768x1366=true
+
+[Open-with settings]
+CompletionMode=1
+History=kate,oku,chro,glog,au,do,open,java,code,goo,inte
+
+[PreviewSettings]
+Plugins=rawthumbnail,directorythumbnail,opendocumentthumbnail,audiothumbnail,blenderthumbnail,imagethumbnail,djvuthumbnail,windowsexethumbnail,ebookthumbnail,svgthumbnail,fontthumbnail,exrthumbnail,gsthumbnail,kraorathumbnail,comicbookthumbnail,windowsimagethumbnail,cursorthumbnail,mobithumbnail,jpegthumbnail
+
+[SettingsDialog]
+LVDS-1 Height 768=435
+LVDS-1 Width 1366=871
+
+[ViewPropertiesDialog]
+Height 768=558
+Width 1366=443
