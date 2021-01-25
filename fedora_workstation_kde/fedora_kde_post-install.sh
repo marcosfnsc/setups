@@ -117,6 +117,3 @@ cd fedora_workstation_kde
 
 # -----------------------
 
-# dotfiles
-sudo -u $username ln dotfiles/konsolerc $HOME/.config/ # konsole
-
