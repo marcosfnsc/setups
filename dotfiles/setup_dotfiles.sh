@@ -1,5 +1,5 @@
 #!/bin/bash
 
-ln konsolerc $HOME/.config/ # konsole
-ln .gitconfig $HOME/ # git
+ln konsolerc $HOME/.config/konsolerc # konsole
+ln .gitconfig $HOME/.gitconfig # git
 
