@@ -1,14 +1,17 @@
+set clipboard=unnamed " use system clipboard
+set expandtab         " insert space when tab pressd
 set number
-set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
-syntax on
+set shiftwidth=2      " number of spaces inserts when tab pressd
+set smarttab
+set softtabstop=0
+set tabstop=8
 
 "enable 24-bit support
 let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
 let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 set termguicolors
 
-"use system clipboard
-set clipboard=unnamed
+syntax on
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
