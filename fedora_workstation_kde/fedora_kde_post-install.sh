@@ -42,6 +42,7 @@ APPS_ADD=(
     #pavucontrol-qt # ferramenta simples para editar opções de som
     screenfetch
     skanlite              # scanner de impressora
+    tmux
     VirtualBox
     vlc                   # reprodutor de audio e video
     zeal                  # ferramenta pra gerenciar documentação de softwares
