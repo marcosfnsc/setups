@@ -26,15 +26,15 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 let g:coc_global_extensions = [
-  \ 'coc-pyright',
-  \ 'coc-rust-analyzer',
-  \ 'coc-pairs',
-  \ 'coc-tsserver',
+  \ 'coc-clangd',
   \ 'coc-css',
   \ 'coc-html',
+  \ 'coc-java',
   \ 'coc-json',
-  \ 'coc-clangd',
-  \ 'coc-java'
+  \ 'coc-pairs',
+  \ 'coc-pyright',
+  \ 'coc-rust-analyzer',
+  \ 'coc-tsserver',
   \ ]
 
 colorscheme onedark
