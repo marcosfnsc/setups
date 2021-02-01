@@ -28,6 +28,7 @@ call plug#end()
 let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-css',
+  \ 'coc-go',
   \ 'coc-html',
   \ 'coc-java',
   \ 'coc-json',
