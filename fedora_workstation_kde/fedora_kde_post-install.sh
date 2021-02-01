@@ -20,6 +20,7 @@ dnf install -y \
 APPS_ADD=(	
     audacity              # editor de audio
     akmod-wl              # driver do wifi
+    clang
     cmake                 # utilitario de compilação de codigo c/c++
     ffmpeg                # conversor de arquivos de midia
     flatpak 
