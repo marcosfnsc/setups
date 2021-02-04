@@ -22,8 +22,8 @@ FontWeight=50
 
 [KPropertiesDialog]
 Height 768=529
-LVDS-1 Height 768=531
-LVDS-1 Width 1366=611
+LVDS-1 Height 768=445
+LVDS-1 Width 1366=429
 Width 1366=611
 
 [MainWindow]
@@ -32,7 +32,7 @@ LVDS-1 Height 768=698
 LVDS-1 VGA-1 Window-Maximized 1024x768=true
 LVDS-1 VGA-1 XPosition=0
 LVDS-1 VGA-1 YPosition=34
-LVDS-1 Width 1366=683
+LVDS-1 Width 1366=1366
 LVDS-1 Window-Maximized 1366x768=true
 LVDS-1 Window-Maximized 768x1366=true
 LVDS-1 XPosition=0
