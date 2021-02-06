@@ -37,9 +37,9 @@ APPS_ADD=(
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
     neovim
+    openssh
     podman
     qbittorrent           # cliente de torrent
-    #openssh # programa de ssh
     #pavucontrol-qt # ferramenta simples para editar opções de som
     screenfetch
     skanlite              # scanner de impressora
