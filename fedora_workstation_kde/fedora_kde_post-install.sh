@@ -111,10 +111,10 @@ sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # run other scripts
 cd ..
-cd nvim && sudo -u $username ./setup_nvim.sh
-cd ..
-cd zsh && sudo -u $username ./zsh/setup_zsh.sh
-cd ..
+cd dotfiles && sudo -u $username ./setup_dotfiles.sh && cd ..
+cd nvim     && sudo -u $username ./setup_nvim.sh     && cd ..
+cd tmux     && sudo -u $username ./setup_tmux.sh     && cd ..
+cd zsh      && sudo -u $username ./setup_zsh.sh      && cd ..
 cd fedora_workstation_kde
 
 # -----------------------
