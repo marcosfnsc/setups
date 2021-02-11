@@ -37,6 +37,7 @@ APPS_ADD=(
     k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
     libreoffice           # programas de escritorio
     neovim
+    nodejs
     openssh
     podman
     qbittorrent           # cliente de torrent
