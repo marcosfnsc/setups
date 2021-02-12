@@ -22,6 +22,7 @@ APPS_ADD=(
     akmod-wl              # driver do wifi
     clang
     cmake                 # utilitario de compilação de codigo c/c++
+    curl
     ffmpeg                # conversor de arquivos de midia
     flatpak 
     gcc-g++               # compilador de c++
