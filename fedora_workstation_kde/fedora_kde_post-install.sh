@@ -126,6 +126,6 @@ cd fedora_workstation_kde
 
 # -----------------------
 
-# pyenv
+# install pyenv
 sudo -u $username curl https://pyenv.run | bash
 
