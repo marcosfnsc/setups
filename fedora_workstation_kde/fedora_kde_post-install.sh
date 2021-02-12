@@ -20,6 +20,7 @@ dnf install -y \
 APPS_ADD=(	
     audacity              # editor de audio
     akmod-wl              # driver do wifi
+    bzip2-devel
     clang
     cmake                 # utilitario de compilação de codigo c/c++
     curl
@@ -40,12 +41,16 @@ APPS_ADD=(
     neovim
     nodejs
     openssh
+    openssl-devel
     podman
     qbittorrent           # cliente de torrent
     #pavucontrol-qt # ferramenta simples para editar opções de som
+    readline-devel
     screenfetch
     skanlite              # scanner de impressora
+    sqlite-devel
     tmux
+    tree
     VirtualBox
     vlc                   # reprodutor de audio e video
     zeal                  # ferramenta pra gerenciar documentação de softwares
@@ -120,4 +125,7 @@ cd zsh      && sudo -u $username ./setup_zsh.sh      && cd ..
 cd fedora_workstation_kde
 
 # -----------------------
+
+# pyenv
+sudo -u $username curl https://pyenv.run | bash
 
