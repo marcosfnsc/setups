@@ -7,11 +7,12 @@ username=marcos
 # -----------------------
 
 # config dnf to find a fast mirror
-sudo dnf config-manager --setopt=fastestmirror=True --save
+dnf config-manager --setopt=fastestmirror=True --save
+dnf makecache --refresh
 
 # enable repositories
 dnf install -y fedora-workstation-repositories
-sudo dnf config-manager --set-enabled google-chrome
+dnf config-manager --set-enabled google-chrome
 
 # rpmfusion free and non-free
 dnf install -y \
