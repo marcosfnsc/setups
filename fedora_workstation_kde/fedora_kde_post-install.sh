@@ -7,7 +7,7 @@ username=marcos
 # -----------------------
 
 # config dnf to find a fast mirror
-echo "fastestmirror=True" | sudo tee -a /etc/dnf/dnf.conf
+sudo dnf config-manager --setopt=fastestmirror=True --save
 
 # enable repositories
 dnf install -y fedora-workstation-repositories
