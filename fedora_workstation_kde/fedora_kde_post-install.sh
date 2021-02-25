@@ -6,8 +6,10 @@ username=marcos
 
 # -----------------------
 
-# enable repositories
+# config dnf to find a fast mirror
+echo "fastestmirror=True" | sudo tee -a /etc/dnf/dnf.conf
 
+# enable repositories
 dnf install -y fedora-workstation-repositories
 sudo dnf config-manager --set-enabled google-chrome
 
