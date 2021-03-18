@@ -119,6 +119,11 @@ sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # -----------------------
 
+# config swap
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+
+# -----------------------
+
 # run other scripts
 cd ..
 cd dotfiles && sudo -u $username ./setup_dotfiles.sh && cd ..
