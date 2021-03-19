@@ -9,5 +9,4 @@ if test -f "$HOME/.zshrc"; then
   rm $HOME/.zshrc
 fi
 
-ln zshrc $HOME/.zshrc
-
+ln zshrc $HOME/.zshrc || cp zshrc $HOME/.zshrc
