@@ -3,6 +3,7 @@
 PACKAGES_ADD=(
   clang
   git
+  neovim
   nodejs
   openssh
   python
