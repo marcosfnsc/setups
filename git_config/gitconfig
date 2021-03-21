@@ -3,3 +3,5 @@
 [user]
 	email = marco12.fonseca@hotmail.com
 	name = Marcos Fonseca
+[core]
+	editor = nvim
