@@ -18,7 +18,7 @@ syntax on
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
-Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -43,7 +43,7 @@ let g:coc_global_extensions = [
   \ ]
 
 " ale config
-let g:ale_enabled = 0
+"let g:ale_enabled = 0
 let g:ale_linters = {
   \ 'python': ['pylint'],
   \}
