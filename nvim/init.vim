@@ -42,6 +42,8 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ ]
 
+" ale config
+let g:ale_enabled = 0
 let g:ale_linters = {
   \ 'python': ['pylint'],
   \}
