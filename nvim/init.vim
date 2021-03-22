@@ -18,6 +18,7 @@ syntax on
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
+Plug 'dense-analysis/ale'
 Plug 'joshdick/onedark.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -40,6 +41,10 @@ let g:coc_global_extensions = [
   \ 'coc-rust-analyzer',
   \ 'coc-tsserver',
   \ ]
+
+let g:ale_linters = {
+  \ 'python': ['pylint'],
+  \}
 
 colorscheme onedark
 
