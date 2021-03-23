@@ -10,6 +10,6 @@ fi
 
 ln init.vim $HOME/.config/nvim/init.vim || cp init.vim $HOME/.config/nvim
 
-# install coc.vim extension
+# install vim-plug extension
 nvim +PlugInstall +qa
 
