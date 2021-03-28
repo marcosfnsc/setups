@@ -7,6 +7,7 @@ PACKAGES_ADD=(
   nodejs
   openssh
   python
+  tmux
   zsh
 )
 
