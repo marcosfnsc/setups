@@ -52,6 +52,7 @@ APPS_ADD=(
     screenfetch
     skanlite              # scanner de impressora
     sqlite-devel
+    the_silver_searcher   # ag
     tmux
     tree
     VirtualBox
