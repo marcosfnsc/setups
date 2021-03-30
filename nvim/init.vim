@@ -9,10 +9,10 @@ set tabstop=8
 set foldmethod=indent
 set nofoldenable
 
-"enable 24-bit support
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+" 24 bit color supoort
 set termguicolors
+let &t_8f = "\e[38;2;%lu;%lu;%lum"
+let &t_8b = "\e[48;2;%lu;%lu;%lum"
 
 syntax on
 
