@@ -1,4 +1,4 @@
-set clipboard=unnamed " use system clipboard
+set clipboard=unnamed,unnamedplus " use system clipboard
 set expandtab         " insert space when tab pressd
 set number
 set shiftwidth=2      " number of spaces inserts when tab pressd
@@ -58,3 +58,5 @@ set updatetime=100
 " show hidden files
 let NERDTreeShowHidden=1
 
+" vim-airline tabline
+let g:airline#extensions#tabline#enabled = 1
