@@ -8,8 +8,12 @@ if test -f "$HOME/.config/nvim/init.vim"; then
   rm $HOME/.config/nvim/init.vim
 fi
 
-ln init.vim $HOME/.config/nvim/init.vim || cp init.vim $HOME/.config/nvim
+{
+  ln init.vim $HOME/.config/nvim/init.vim 2>/dev/null
+} || {
+  echo "erro ao criar link fisico, copiando arquivo ..."
+  cp init.vim $HOME/.config/nvim
+}
 
 # install vim-plug extension
 nvim +PlugInstall +qa
-
