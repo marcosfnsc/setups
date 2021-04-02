@@ -9,4 +9,9 @@ if [ ! -d "$HOME/.oh-my-zsh/" ]; then
   sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
-ln zshrc $HOME/.zshrc || cp zshrc $HOME/.zshrc
+{
+  ln zshrc $HOME/.zshrc 2>/dev/null
+} || {
+  echo "erro ao criar link fisico, copiando arquivo ..."
+  cp zshrc $HOME/.zshrc
+}
