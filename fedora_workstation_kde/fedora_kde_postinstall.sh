@@ -88,6 +88,7 @@ APPS_REMOVE=(
     kruter
     ktorrent
     kwrite
+    plasma-discover
 )	
 
 dnf remove -y ${APPS_REMOVE[@]}
