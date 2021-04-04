@@ -6,6 +6,9 @@ username=marcos
 
 # -----------------------
 
+# enable deltarpm
+dnf config-manager --setopt=deltarpm=True --save
+
 # config dnf to find a fast mirror
 dnf config-manager --setopt=fastestmirror=True --save
 dnf makecache --refresh
