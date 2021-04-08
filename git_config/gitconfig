@@ -5,3 +5,5 @@
 	name = Marcos Fonseca
 [core]
 	editor = nvim
+[pull]
+	ff = only
