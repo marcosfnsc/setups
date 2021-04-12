@@ -6,6 +6,9 @@ set smarttab
 set softtabstop=0
 set tabstop=8
 
+" hiddne a buffer
+set hidden
+
 set foldmethod=indent
 set nofoldenable
 
