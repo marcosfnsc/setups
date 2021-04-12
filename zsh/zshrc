@@ -119,3 +119,11 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
+
+# vagrant completion
+if [ -d "$HOME/.vagrant.d/" ]; then
+  # >>>> Vagrant command completion (start)
+  fpath=(/opt/vagrant/embedded/gems/*/gems/vagrant-*/contrib/zsh $fpath)
+  compinit
+  # <<<<  Vagrant command completion (end)
+fi
