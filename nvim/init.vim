@@ -23,6 +23,11 @@ let &t_8b = "\e[48;2;%lu;%lu;%lum"
 
 syntax on
 
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'dense-analysis/ale', {'for': ['python']}
