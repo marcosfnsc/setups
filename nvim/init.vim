@@ -6,6 +6,10 @@ set smarttab
 set softtabstop=0
 set tabstop=8
 
+" natural split
+set splitbelow
+set splitright
+
 " hiddne a buffer
 set hidden
 
