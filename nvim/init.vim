@@ -20,6 +20,12 @@ set termguicolors
 let &t_8f = "\e[38;2;%lu;%lu;%lum"
 let &t_8b = "\e[48;2;%lu;%lu;%lum"
 
+"learn to use hjkl
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
