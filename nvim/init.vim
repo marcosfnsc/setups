@@ -26,6 +26,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+"coc-explorer
+nnoremap <space>e :CocCommand explorer<CR>
+
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
@@ -39,17 +42,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
-" nerdtree plugins
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 colorscheme onedark
 
 let g:airline#extensions#tabline#enabled = 1 " vim-airline tabline
 set updatetime=100 "gitgutter config
-let NERDTreeShowHidden=1 " show hidden files
 
 " ale config
 let g:ale_linters = {
@@ -60,6 +58,7 @@ let g:coc_global_extensions = [
   \ 'coc-clangd',
   \ 'coc-css',
   \ 'coc-emmet',
+  \ 'coc-explorer',
   \ 'coc-html',
   \ 'coc-java',
   \ 'coc-json',
