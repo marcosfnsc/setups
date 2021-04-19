@@ -61,9 +61,9 @@ let g:coc_global_extensions = [
   \ 'coc-explorer',
   \ 'coc-html',
   \ 'coc-java',
+  \ 'coc-jedi'
   \ 'coc-json',
   \ 'coc-pairs',
-  \ 'coc-pyright',
   \ 'coc-rust-analyzer',
   \ 'coc-tsserver',
   \ ]
