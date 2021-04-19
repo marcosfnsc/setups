@@ -19,3 +19,14 @@ fi
 
 # install vim-plug extension
 nvim +PlugInstall +qa
+
+# settings coc
+if test -f "$HOME/.config/nvim/coc-settings.json"; then
+  rm $HOME/.config/nvim/coc-settings.json
+fi
+{
+  ln coc-settings.json $HOME/.config/nvim/coc-settings.json 2>/dev/null
+} || {
+  echo "erro ao criar link fisico, copiando arquivo ..."
+  cp coc-settings.json $HOME/.config/nvim
+}
