@@ -17,8 +17,6 @@ set nofoldenable
 
 " 24 bit color supoort
 set termguicolors
-let &t_8f = "\e[38;2;%lu;%lu;%lum"
-let &t_8b = "\e[48;2;%lu;%lu;%lum"
 
 "learn to use hjkl
 noremap <Up> <Nop>
@@ -34,7 +32,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
-Plug 'joshdick/onedark.vim'
+Plug 'rakr/vim-one'
 Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
@@ -44,7 +42,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-colorscheme onedark
+colorscheme one
+set background=dark
 
 let g:airline#extensions#tabline#enabled = 1 " vim-airline tabline
 set updatetime=100 "gitgutter config
