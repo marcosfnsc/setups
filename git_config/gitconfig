@@ -7,3 +7,5 @@
 	editor = nvim
 [pull]
 	ff = only
+[alias]
+	llog = log --color --graph --decorate --pretty=format:'%C(bold cyan)%h%Creset -%C(bold red)%d%Creset %s %C(bold green)(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
