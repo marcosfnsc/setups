@@ -96,14 +96,6 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
-# vagrant completion
-if [ -d "$HOME/.vagrant.d/" ]; then
-  # >>>> Vagrant command completion (start)
-  fpath=(/opt/vagrant/embedded/gems/*/gems/vagrant-*/contrib/zsh $fpath)
-  compinit
-  # <<<<  Vagrant command completion (end)
-fi
-
 # pyvenv
 pyvenv() {
   venvs_path="$HOME/code_space/python_venvs"
