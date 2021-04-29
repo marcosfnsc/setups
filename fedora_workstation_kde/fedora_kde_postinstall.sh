@@ -23,7 +23,7 @@ dnf install -y \
     https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
 
 # add apps
-APPS_ADD=(	
+APPS_ADD=(
     audacity              # editor de audio
     akmod-wl              # driver do wifi
     bzip2-devel
@@ -31,7 +31,7 @@ APPS_ADD=(
     cmake                 # utilitario de compilação de codigo c/c++
     curl
     ffmpeg                # conversor de arquivos de midia
-    flatpak 
+    flatpak
     gcc-g++               # compilador de c++
     git                   # ferramenta de versionamento de arquivos
     gimp                  # editor de imagem
@@ -92,7 +92,7 @@ APPS_REMOVE=(
     ktorrent
     kwrite
     plasma-discover
-)	
+)
 
 dnf remove -y ${APPS_REMOVE[@]}
 
