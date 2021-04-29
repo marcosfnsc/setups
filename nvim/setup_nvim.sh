@@ -6,6 +6,8 @@ if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 fi
 
+mkdir -p $HOME/.config/nvim
+
 if test -f "$HOME/.config/nvim/init.vim"; then
   rm $HOME/.config/nvim/init.vim
 fi
