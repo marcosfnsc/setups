@@ -12,13 +12,14 @@ PACKAGES_ADD=(
   python
   silversearcher-ag
   tmux
+  tree
   zsh
 )
 
-pkg install  ${APPS_ADD[@]}
+pkg install  ${APPS_ADD[@]} -y
 
 cd ..
-cd git_config && ./setup_git     && cd ..
+cd git_config && ./setup_git.sh  && cd ..
 cd nvim       && ./setup_nvim.sh && cd ..
 cd tmux       && ./setup_tmux.sh && cd ..
 cd zsh        && ./setup_zsh.sh  && cd ..
