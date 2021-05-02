@@ -41,6 +41,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 colorscheme one
