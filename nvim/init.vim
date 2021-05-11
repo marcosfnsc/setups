@@ -40,8 +40,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'Yggdroot/indentLine'
+Plug 'bfrg/vim-cpp-modern'
 call plug#end()
 
 colorscheme one
