@@ -24,45 +24,45 @@ dnf install -y \
 
 # add apps
 APPS_ADD=(
-    alacritty
-    audacity              # editor de audio
-    akmod-wl              # driver do wifi
-    bzip2-devel
-    clang
-    cmake                 # utilitario de compilação de codigo c/c++
-    curl
-    ffmpeg                # conversor de arquivos de midia
-    flatpak
-    gcc-g++               # compilador de c++
-    git                   # ferramenta de versionamento de arquivos
-    gimp                  # editor de imagem
-    glogg                 # editor de texto focado em ler arquivos grandes
-    google-chrome-stable
-    gparted               # gerenciador grafico de partições do disco rigido
-    htop                  # monitor de tarefas via terminal
-    java-11-openjdk       # runtime do jdk 11
-    java-11-openjdk-devel # ferramentas de compilação do jdk 11
-    kate                  # editor de texto simples com alguns recursos avançados
-    k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
-    libreoffice           # programas de escritorio
-    neovim
-    nodejs
-    openssh
-    openssl-devel
-    podman
-    qbittorrent           # cliente de torrent
-    #pavucontrol-qt # ferramenta simples para editar opções de som
-    readline-devel
-    screenfetch
-    skanlite              # scanner de impressora
-    sqlite-devel
-    the_silver_searcher   # ag
-    tmux
-    tree
-    VirtualBox
-    vlc                   # reprodutor de audio e video
-    zeal                  # ferramenta pra gerenciar documentação de softwares
-    zsh
+  alacritty
+  audacity              # editor de audio
+  akmod-wl              # driver do wifi
+  bzip2-devel
+  clang
+  cmake                 # utilitario de compilação de codigo c/c++
+  curl
+  ffmpeg                # conversor de arquivos de midia
+  flatpak
+  gcc-g++               # compilador de c++
+  git                   # ferramenta de versionamento de arquivos
+  gimp                  # editor de imagem
+  glogg                 # editor de texto focado em ler arquivos grandes
+  google-chrome-stable
+  gparted               # gerenciador grafico de partições do disco rigido
+  htop                  # monitor de tarefas via terminal
+  java-11-openjdk       # runtime do jdk 11
+  java-11-openjdk-devel # ferramentas de compilação do jdk 11
+  kate                  # editor de texto simples com alguns recursos avançados
+  k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
+  libreoffice           # programas de escritorio
+  neovim
+  nodejs
+  openssh
+  openssl-devel
+  podman
+  qbittorrent           # cliente de torrent
+  #pavucontrol-qt # ferramenta simples para editar opções de som
+  readline-devel
+  screenfetch
+  skanlite              # scanner de impressora
+  sqlite-devel
+  the_silver_searcher   # ag
+  tmux
+  tree
+  VirtualBox
+  vlc                   # reprodutor de audio e video
+  zeal                  # ferramenta pra gerenciar documentação de softwares
+  zsh
 )
 
 dnf install -y --skip-broken ${APPS_ADD[@]}
@@ -71,28 +71,28 @@ dnf install -y --skip-broken ${APPS_ADD[@]}
 
 # remove apps
 APPS_REMOVE=(
-    akregator
-    calligra-core
-    dnfdragora
-    dragon
-    falkon
-    juk
-    #kde-partitionmanager
-    kget
-    kmahjongg
-    kmail
-    kmines
-    konversation
-    kpat
-    kolourpaint
-    konqueror
-    korganizer
-    krdc
-    krfb
-    kruter
-    ktorrent
-    kwrite
-    plasma-discover
+  akregator
+  calligra-core
+  dnfdragora
+  dragon
+  falkon
+  juk
+  #kde-partitionmanager
+  kget
+  kmahjongg
+  kmail
+  kmines
+  konversation
+  kpat
+  kolourpaint
+  konqueror
+  korganizer
+  krdc
+  krfb
+  kruter
+  ktorrent
+  kwrite
+  plasma-discover
 )
 
 dnf remove -y ${APPS_REMOVE[@]}
@@ -104,10 +104,10 @@ sudo -u $username flatpak remote-add --if-not-exists flathub https://flathub.org
 
 # install flatpak apps
 FLATPAK_FLATHUB=(
-    com.discordapp.Discord  # Discord
-    com.spotify.Client      # Spotify
-    com.valsesoftware.Steam # Steam
-    org.telegram.desktop    # telegram
+  com.discordapp.Discord  # Discord
+  com.spotify.Client      # Spotify
+  com.valsesoftware.Steam # Steam
+  org.telegram.desktop    # telegram
 )
 
 sudo -u $username flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
