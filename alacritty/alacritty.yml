@@ -1,0 +1,21 @@
+window:
+  dimensions:
+    columns: 125
+    lines: 35
+
+  position:
+    x: 170
+    y: 100
+
+font:
+  size: 9.0
+
+background_opacity: 0.95
+
+colors:
+  normal:
+    white:  '#fcfcfc'
+    green:  '0x10c214'
+    blue:   '0x268bd2'
+    yellow: '0xef7100'
+    red:    '0xd11616'
