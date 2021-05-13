@@ -14,9 +14,9 @@ background_opacity: 0.95
 
 colors:
   normal:
-    white:  '#fcfcfc'
+    white:  '0xfcfcfc'
     green:  '0x10c214'
     blue:   '0x268bd2'
-    yellow: '0xef7100'
+    yellow: '0xdab900'
     red:    '0xd11616'
     cyan:   '0x1abc9c'
