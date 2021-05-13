@@ -24,6 +24,7 @@ dnf install -y \
 
 # add apps
 APPS_ADD=(
+    alacritty
     audacity              # editor de audio
     akmod-wl              # driver do wifi
     bzip2-devel
