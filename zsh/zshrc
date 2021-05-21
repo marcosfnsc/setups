@@ -1,3 +1,8 @@
+# start with tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  exec tmux
+fi
+
 # rust environment
 if [ -d "$HOME/.cargo/" ]; then
   export PATH="$HOME/.cargo/bin:$PATH" 
