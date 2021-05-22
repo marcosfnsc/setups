@@ -1,4 +1,5 @@
 {
   "explorer.width": 30,
-  "explorer.file.showHiddenFiles": true 
+  "explorer.file.showHiddenFiles": true,
+  "jedi.enable": true
 }
