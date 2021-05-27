@@ -131,11 +131,12 @@ echo "vm.swappiness=10" >> /etc/sysctl.conf
 # -----------------------
 
 # run other scripts
-cd dotfiles   && sudo -u $username ./setup_dotfiles.sh && cd ../..
-cd git_config && sudo -u $username ./setup_git.sh      && cd ..
-cd nvim       && sudo -u $username ./setup_nvim.sh     && cd ..
-cd tmux       && sudo -u $username ./setup_tmux.sh     && cd ..
-cd zsh        && sudo -u $username ./setup_zsh.sh      && cd ..
+cd dotfiles                          && sudo -u $username ./setup_dotfiles.sh && cd ../..
+cd fedora_workstation_kde/modprobe.d &&                   ./setup_modprobe.sh && cd ../..
+cd git_config                        && sudo -u $username ./setup_git.sh      && cd ..
+cd nvim                              && sudo -u $username ./setup_nvim.sh     && cd ..
+cd tmux                              && sudo -u $username ./setup_tmux.sh     && cd ..
+cd zsh                               && sudo -u $username ./setup_zsh.sh      && cd ..
 cd fedora_workstation_kde
 
 # -----------------------
