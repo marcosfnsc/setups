@@ -13,6 +13,7 @@ digitar a combinação de comandos vai deletar a palavra, voce digita algo e mud
 em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>c</kbd> no modo normal: fecha uma janela
 * <kbd>w</kbd> no modo normal: saltar palavras
+* <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>$</kbd> no modo normal: ir para o final da linha
@@ -22,3 +23,8 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
+* <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere
+* <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
+* <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
+* <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
+* <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
