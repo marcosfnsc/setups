@@ -1,7 +1,7 @@
 (neo)vim
 =============
 
-folhas de dicas - comando e atalhos:
+atalhos:
 ------------------------------------
 * <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde
 está o cursor, apaga o conteudo que estiver entre aspas duplas, coloca
@@ -28,4 +28,7 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
 * <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
-* ```:retab```: este comando transforma tabulações em caracteres de espaço
+
+comandos:
+---------
+* ```:retab```: transforma tabulações em caracteres de espaço
