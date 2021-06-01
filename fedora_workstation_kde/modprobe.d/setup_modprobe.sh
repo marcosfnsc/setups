@@ -1,7 +1,9 @@
 #!/bin/bash
 
-if test -f "/etc/modprobe.d/wecam-blacklist.conf"; then
-  rm /etc/modprobe.d/wecam-blacklist.conf
+if test -f "/etc/modprobe.d/webcam-blacklist.conf"; then
+  rm /etc/modprobe.d/webcam-blacklist.conf
 fi
 
-cp wecam-blacklist.conf /etc/modprobe.d/wecam-blacklist.conf
+sudo modprobe -r uvcvideo
+
+cp webcam-blacklist.conf /etc/modprobe.d/webcam-blacklist.conf
