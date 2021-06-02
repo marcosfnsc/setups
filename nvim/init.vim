@@ -67,4 +67,5 @@ let g:coc_global_extensions = [
   \ 'coc-pairs',
   \ 'coc-rust-analyzer',
   \ 'coc-tsserver',
+  \ 'coc-vimlsp',
   \ ]
