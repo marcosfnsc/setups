@@ -1,9 +1,9 @@
 syntax on
 set clipboard=unnamed,unnamedplus " use system clipboard
-set expandtab         " insert space when tab pressd
-set hidden " hiddne a buffer
+set expandtab                     " insert space when tab pressd
+set hidden                        " hiddne a buffer
 set number
-set shiftwidth=2      " number of spaces inserts when tab pressd
+set shiftwidth=2                  " number of spaces inserts when tab pressd
 set smarttab
 set softtabstop=0
 set tabstop=8
