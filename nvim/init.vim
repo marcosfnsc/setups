@@ -28,6 +28,9 @@ noremap <Right> <Nop>
 "coc-explorer
 nnoremap <space>e :CocCommand explorer<CR>
 
+" go to definition
+nmap <silent> gd <Plug>(coc-definition)
+
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
