@@ -8,6 +8,7 @@ set smarttab
 set softtabstop=0
 set tabstop=8
 set relativenumber
+set updatetime=100
 
 " natural split
 set splitbelow
@@ -52,7 +53,6 @@ colorscheme one
 set background=dark
 
 let g:airline#extensions#tabline#enabled = 1 " vim-airline tabline
-set updatetime=100 "gitgutter config
 
 " ale config
 let g:ale_linters = {
