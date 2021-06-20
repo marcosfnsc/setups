@@ -1,6 +1,5 @@
 FROM fedora:latest
 
-
 RUN dnf install tmux neovim nodejs the_silver_searcher python zsh curl git -y
 
 # rust
