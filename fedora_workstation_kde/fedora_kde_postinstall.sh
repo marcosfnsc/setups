@@ -36,7 +36,6 @@ APPS_ADD=(
   gcc-g++               # compilador de c++
   git                   # ferramenta de versionamento de arquivos
   gimp                  # editor de imagem
-  glogg                 # editor de texto focado em ler arquivos grandes
   google-chrome-stable
   gparted               # gerenciador grafico de partições do disco rigido
   htop                  # monitor de tarefas via terminal
