@@ -7,6 +7,7 @@ atalhos:
 está o cursor, apaga o conteudo que estiver entre aspas duplas, coloca
 o curso entre as aspas e entre no modo insert
 onde está o cursor
+* <kbd>ctrol</kbd><kbd>w</kbd> <kbd>=</kbd> no modo normal: corrige o tamanho de todas as janelas
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas
 * <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando ```/palavra```,
 digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal,
