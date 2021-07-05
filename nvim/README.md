@@ -40,4 +40,6 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 comandos:
 ---------
 * `:retab`: transforma tabulações em caracteres de espaço
+* `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
+* `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
