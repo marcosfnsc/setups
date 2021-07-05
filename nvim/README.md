@@ -13,7 +13,7 @@ onde está o cursor
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd><</kbd> no modo normal: diminue a largura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>></kbd> no modo normal: aumenta a largura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas
-* <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando ```/palavra```,
+* <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando `/palavra`,
 digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal,
 em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>c</kbd> no modo normal: fecha uma janela
@@ -37,4 +37,4 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 
 comandos:
 ---------
-* ```:retab```: transforma tabulações em caracteres de espaço
+* `:retab`: transforma tabulações em caracteres de espaço
