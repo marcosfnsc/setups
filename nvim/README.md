@@ -38,3 +38,4 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 comandos:
 ---------
 * `:retab`: transforma tabulações em caracteres de espaço
+* `set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
