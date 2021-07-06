@@ -34,7 +34,9 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
+* <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
+* <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
 * <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
