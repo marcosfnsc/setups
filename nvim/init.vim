@@ -14,7 +14,7 @@ set updatetime=100
 set splitbelow
 set splitright
 
-set foldmethod=indent
+set foldmethod=manual
 set nofoldenable
 
 " 24 bit color supoort
