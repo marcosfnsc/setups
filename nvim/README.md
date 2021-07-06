@@ -41,6 +41,7 @@ o slot do registro, pode outra letra alem de `a`, apos isso basta digitar algum 
 
 comandos:
 ---------
+* `:help digraph-table`: mostra a lista de digrafos
 * `:retab`: transforma tabulações em caracteres de espaço
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
