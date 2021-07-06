@@ -18,7 +18,9 @@ digitar a combinação de comandos vai deletar a palavra, voce digita algo e mud
 em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>c</kbd> no modo normal: fecha uma janela
 * <kbd>w</kbd> no modo normal: saltar palavras
+* <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
 * <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
+* <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd>
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>$</kbd> no modo normal: ir para o final da linha
