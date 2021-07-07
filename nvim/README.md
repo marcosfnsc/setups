@@ -37,6 +37,8 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
+* <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
+* <kbd>g</kbd><kbd>T</kbd> no modo normal: alterna para a guia anterior
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
 * <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
@@ -49,6 +51,9 @@ comandos:
 ---------
 * `:help digraph-table`: mostra a lista de digrafos
 * `:retab`: transforma tabulações em caracteres de espaço
+* `:tabnew` ou `:tabe`: abre uma nova guia
+* `:tabclose` ou `:tac`: fecha uma nova guia
+* `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
