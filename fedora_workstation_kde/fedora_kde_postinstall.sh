@@ -143,9 +143,3 @@ cd fedora_workstation_kde
 sudo -u $username curl https://pyenv.run | bash
 
 # -----------------------
-
-# install fzf
-sudo -u $username git clone --depth 1 https://github.com/junegunn/fzf.git /home/$username/.fzf
-sudo -u $username /home/$username/.fzf/install --all
-
-# -----------------------
