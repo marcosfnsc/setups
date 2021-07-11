@@ -7,11 +7,9 @@ if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
 fi
 
 mkdir -p $HOME/.config/nvim
-
 if test -f "$HOME/.config/nvim/init.vim"; then
   rm $HOME/.config/nvim/init.vim
 fi
-
 {
   ln init.vim $HOME/.config/nvim/init.vim 2>/dev/null
 } || {
