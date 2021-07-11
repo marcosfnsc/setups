@@ -97,34 +97,19 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # -----------------------
 
-# flathub remote
-sudo -u $username flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# install flatpak apps
-FLATPAK_FLATHUB=(
-  com.discordapp.Discord  # Discord
-  com.spotify.Client      # Spotify
-  com.valsesoftware.Steam # Steam
-  org.telegram.desktop    # telegram
-)
-
-sudo -u $username flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
-
 # -----------------------
 
 # config version java
 alternatives --config java
 alternatives --config javac
 
+# config swap
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+
 # -----------------------
 
 # rust environpment
 sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-# -----------------------
-
-# config swap
-echo "vm.swappiness=10" >> /etc/sysctl.conf
 
 # -----------------------
 
