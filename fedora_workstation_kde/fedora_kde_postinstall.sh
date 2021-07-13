@@ -97,8 +97,6 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # -----------------------
 
-# -----------------------
-
 # config version java
 alternatives --config java
 alternatives --config javac
