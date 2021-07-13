@@ -97,6 +97,11 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # -----------------------
 
+# config sudoers
+usermod -aG wheel $username
+
+# -----------------------
+
 # config version java
 alternatives --config java
 alternatives --config javac
