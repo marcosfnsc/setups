@@ -117,7 +117,7 @@ cd alacritty                         && sudo -u $username ./setup_alacritty.sh &
 cd docker                            &&                   ./setup_docker.sh    && cd ..
 cd fedora_workstation_kde/dotfiles   && sudo -u $username ./setup_dotfiles.sh  && cd ../..
 cd fedora_workstation_kde/modprobe.d &&                   ./setup_modprobe.sh  && cd ../..
-cd flatpak                           && sudo -u $username ./setup_flatpk.sh    && cd ..
+cd flatpak                           && sudo -u $username ./setup_flatpak.sh   && cd ..
 cd fzf                               && sudo -u $username ./setup_fzf.sh       && cd ..
 cd git_config                        && sudo -u $username ./setup_git.sh       && cd ..
 cd nvim                              && sudo -u $username ./setup_nvim.sh      && cd ..
