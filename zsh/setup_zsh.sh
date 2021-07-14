@@ -6,7 +6,7 @@ fi
 
 # oh-my-zsh setup
 if [ ! -d "$HOME/.oh-my-zsh/" ]; then
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 fi
 
 {
@@ -15,3 +15,5 @@ fi
   echo "erro ao criar link fisico, copiando arquivo ..."
   cp zshrc $HOME/.zshrc
 }
+
+chsh -s $(which zsh)
