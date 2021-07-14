@@ -100,11 +100,10 @@ dnf remove -y ${APPS_REMOVE[@]}
 # config sudoers
 usermod -aG wheel $username
 
-# -----------------------
+# config hostmane
+hostnamectl set-hostname note
 
-# config version java
-alternatives --config java
-alternatives --config javac
+# -----------------------
 
 # config swap
 echo "vm.swappiness=10" >> /etc/sysctl.conf
