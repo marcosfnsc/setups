@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if test -f "$HOME/.tmux.conf"; then
   rm $HOME/.tmux.conf

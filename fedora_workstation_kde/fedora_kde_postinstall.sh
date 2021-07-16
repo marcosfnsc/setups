@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # based on https://github.com/realgrm/general-scripts/blob/main/Fedora-Workstation-post-install.sh
 

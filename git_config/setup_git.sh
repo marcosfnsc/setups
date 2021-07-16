@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if test -f "$HOME/.gitconfig"; then
   rm $HOME/.gitconfig
