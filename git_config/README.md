@@ -6,4 +6,4 @@ comandos interessantes:
 - `git remote prune origin`: remove branches locais que não existem no repo remoto
 - `git remote set-url origin <url>`: mudar url do repo
 - `git tag`: lista as tags
-- `git tag <nome da tag>`: cria um tag local
+- `git tag <nome da tag>`: cria um tag leve local
