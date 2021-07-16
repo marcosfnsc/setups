@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 cp $HOME/.config/dolphinrc          ./dolphinrc
 cp $HOME/.config/kglobalshortcutsrc ./kglobalshortcutsrc
