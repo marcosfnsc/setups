@@ -46,6 +46,7 @@ APPS_ADD=(
   libreoffice           # programas de escritorio
   neovim
   nodejs
+  okular                # leitor de pdf
   openssh
   openssl-devel
   qbittorrent           # cliente de torrent
