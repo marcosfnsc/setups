@@ -98,19 +98,6 @@ dnf remove -y ${APPS_REMOVE[@]}
 
 # -----------------------
 
-# config sudoers
-usermod -aG wheel $username
-
-# config hostmane
-hostnamectl set-hostname note
-
-# -----------------------
-
-# config swap
-echo "vm.swappiness=10" >> /etc/sysctl.conf
-
-# -----------------------
-
 # run other scripts
 cd ..
 cd alacritty                         && sudo -u $username ./setup_alacritty.sh && cd ..
@@ -124,15 +111,5 @@ cd nvim                              && sudo -u $username ./setup_nvim.sh      &
 cd tmux                              && sudo -u $username ./setup_tmux.sh      && cd ..
 cd zsh                               && sudo -u $username ./setup_zsh.sh       && cd ..
 cd fedora_workstation_kde
-
-# -----------------------
-
-# install pyenv
-sudo -u $username curl https://pyenv.run | bash
-
-# -----------------------
-
-# rust environpment
-sudo -u $username curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # -----------------------
