@@ -23,6 +23,11 @@ EOF
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
 
+# config luks2
+modprobe dm-crypt
+modprobe dm-mod
+
+
 #pacstrap /mnt base linux linux-firmware
 
 #genfstab -U -p /mnt /mnt/etc/fstab
