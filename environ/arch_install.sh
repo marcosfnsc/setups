@@ -20,16 +20,19 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
   w # write and exit
 EOF
 
-pacstrap /mnt base linux linux-firmware
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
 
-genfstab -U -p /mnt /mnt/etc/fstab
+#pacstrap /mnt base linux linux-firmware
 
-arch-chroot /mnt
+#genfstab -U -p /mnt /mnt/etc/fstab
 
-# fuso de brasilia
-ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+#arch-chroot /mnt
 
-# layout do teclado do sistema
-echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
+## fuso de brasilia
+#ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
-hostnamectl set-hostname note
+## layout do teclado do sistema
+#echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
+
+#hostnamectl set-hostname note
