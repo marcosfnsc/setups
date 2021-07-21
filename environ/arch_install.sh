@@ -27,6 +27,17 @@ mkfs.ext4 /dev/sda2
 modprobe dm-crypt
 modprobe dm-mod
 
+# config luks2
+cryptsetup \
+  --type luks2 \
+  --cipher aes-xts-plain64 \
+  --hash sha256 \
+  --key-size 512 \
+  --pbkdf argon2i \
+  --sector-size $(cat /sys/block/sda/queue/physical_block_size) \
+  --use-urandom \
+  --verify-passphrase \
+  luksFormat /dev/sda3
 
 #pacstrap /mnt base linux linux-firmware
 
