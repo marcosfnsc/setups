@@ -60,7 +60,7 @@ mkdir /mnt/home
 mount /dev/lvgroup/home /mnt/home
 
 mkdir /mnt/etc
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab -U /mnt > /mnt/etc/fstab
 
 #pacstrap /mnt base linux linux-firmware
 
