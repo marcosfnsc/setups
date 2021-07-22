@@ -38,6 +38,14 @@ cryptsetup \
   --use-urandom \
   --verify-passphrase \
   luksFormat /dev/sda3
+cryptsetup open --type luks2 /dev/sda3 crypt
+
+# config lvm
+pvcreate /dev/mapper/crypt
+vgcreate lvgroup /dev/mapper/crypt
+lvcreate -L 4GB      lvgroup -n swap
+lvcreate -L 60GB     lvgroup -n root
+lvcreate -l 100%FREE lvgroup -n home
 
 #pacstrap /mnt base linux linux-firmware
 
