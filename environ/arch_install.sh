@@ -48,6 +48,7 @@ lvcreate -l 100%FREE lvgroup -n home
 mkfs.fat -F32 /dev/sda1
 mkfs.ext4 /dev/sda2
 mkswap /dev/lvgroup/swap
+swapon /dev/lvgroup/swap
 mkfs.btrfs /dev/lvgroup/root
 mkfs.btrfs /dev/lvgroup/home
 
