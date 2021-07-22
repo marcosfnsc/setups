@@ -63,7 +63,18 @@ mount /dev/lvgroup/home /mnt/home
 mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
 
-#pacstrap /mnt base linux linux-firmware
+# mirrors
+pacman -Syu
+yes | pacman -S reflector
+reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
+
+APPS_INSTALL=(
+  git
+  neovim
+  tmux
+  zsh
+)
+pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
 #arch-chroot /mnt
 
