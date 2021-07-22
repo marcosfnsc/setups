@@ -20,9 +20,6 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
   w # write and exit
 EOF
 
-mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-
 # config luks2
 modprobe dm-crypt
 modprobe dm-mod
@@ -47,6 +44,12 @@ vgcreate lvgroup /dev/mapper/luks_part
 lvcreate -L 4GB      lvgroup -n swap
 lvcreate -L 60GB     lvgroup -n root
 lvcreate -l 100%FREE lvgroup -n home
+
+mkfs.fat -F32 /dev/sda1
+mkfs.ext4 /dev/sda2
+mkswap /dev/lvgroup/swap
+mkfs.btrfs /dev/lvgroup/root
+mkfs.btrfs /dev/lvgroup/home
 
 mount /dev/lvgroup/root /mnt
 mkdir /mnt/boot
