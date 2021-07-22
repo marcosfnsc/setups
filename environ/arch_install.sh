@@ -41,15 +41,25 @@ cryptsetup \
 cryptsetup open --type luks2 /dev/sda3 luks_part
 
 # config lvm
-pvcreate /dev/mapper/luks_part
+
+pvcreate --dataalignment 1m /dev/mapper/luks_part
 vgcreate lvgroup /dev/mapper/luks_part
 lvcreate -L 4GB      lvgroup -n swap
 lvcreate -L 60GB     lvgroup -n root
 lvcreate -l 100%FREE lvgroup -n home
 
-#pacstrap /mnt base linux linux-firmware
+mount /dev/lvgroup/root /mnt
+mkdir /mnt/boot
+mount /dev/sda2 /mnt/boot
+mkdir /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
+mkdir /mnt/home
+mount /dev/lvgroup/home /mnt/home
 
-#genfstab -U -p /mnt /mnt/etc/fstab
+mkdir /mnt/etc
+genfstab -U /mnt >> /mnt/etc/fstab
+
+#pacstrap /mnt base linux linux-firmware
 
 #arch-chroot /mnt
 
