@@ -53,10 +53,11 @@ mkfs.btrfs /dev/lvgroup/root
 mkfs.btrfs /dev/lvgroup/home
 
 mount /dev/lvgroup/root /mnt
-mkdir -p /mnt/{boot/efi,home}
+mkdir -p /mnt/{boot,home}
 mount /dev/sda2 /mnt/boot
-mount /dev/sda1 /mnt/boot/efi
 mount /dev/lvgroup/home /mnt/home
+mkdir /mnt/boot/efi
+mount /dev/sda1 /mnt/boot/efi
 
 mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
