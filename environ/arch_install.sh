@@ -69,10 +69,30 @@ yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
 
 APPS_INSTALL=(
+  alacritty
+  audacity
+  clang
+  cmake
+  curl
+  ffmpeg
+  flatpak
+  gimp
   git
   neovim
   tmux
   zsh
+  gcc
+  gparted
+  htop
+  kate
+  k3b
+  nodejs
+  okular
+  openssh
+  qbittorrent
+  screenfetch
+  the_silver_searcher
+  tree
 )
 pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
