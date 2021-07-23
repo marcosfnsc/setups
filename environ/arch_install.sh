@@ -53,11 +53,9 @@ mkfs.btrfs /dev/lvgroup/root
 mkfs.btrfs /dev/lvgroup/home
 
 mount /dev/lvgroup/root /mnt
-mkdir /mnt/boot
+mkdir -p /mnt/{boot/efi,home}
 mount /dev/sda2 /mnt/boot
-mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
-mkdir /mnt/home
 mount /dev/lvgroup/home /mnt/home
 
 mkdir /mnt/etc
@@ -76,32 +74,50 @@ APPS_INSTALL=(
   curl
   ffmpeg
   flatpak
+  gcc
   gimp
   git
-  neovim
-  tmux
-  zsh
-  gcc
   gparted
   htop
-  kate
   k3b
+  kate
+  lvm2
+  neovim
+  networkmanager
   nodejs
   okular
   openssh
   qbittorrent
   screenfetch
   the_silver_searcher
+  tmux
   tree
+  zsh
 )
 pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
-#arch-chroot /mnt
+arch-chroot /mnt
 
 ## fuso de brasilia
 #ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
 
 ## layout do teclado do sistema
-#echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
+echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
 
-#hostnamectl set-hostname note
+hostnamectl set-hostname note
+
+# root password
+passwd
+
+# users
+useradd -m marcos
+passwd marcos
+
+pacman -S grub efibootmgr os-prober mtools dosfstools
+grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
+
+systemctl enable NetworkManager
+
+#other scripts
+./anylinux.sh
