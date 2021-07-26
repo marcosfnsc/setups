@@ -36,6 +36,7 @@ pacman -S grub efibootmgr os-prober mtools dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
 UUID_SDA3=$(lsblk -no NAME,UUID /dev/sda3|head -n 1 | awk '{print $2}')
+sed -e "s;GRUB_CMDLINE_LINUX_DEFAULT=\"[[:print:]]*\";GRUB_CMDLINE_LINUX_DEFAULT=\"cryptdevice=UUID="$UUID_SDA3":cryptlvm root=/dev/lvgroup/root\";g" -i etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
