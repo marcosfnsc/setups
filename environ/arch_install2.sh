@@ -16,7 +16,7 @@ useradd -m marcos
 passwd marcos
 
 # config mkinitcpio
-HOOKS=$(cat /etc/mkinitcpio.conf | grep HOOKS)
+HOOKS=$(cat /etc/mkinitcpio.conf | grep ^HOOKS)
 if [[ $HOOKS == *"keyboard"* ]] ; then
   sed -e s/keyboard//g -i /etc/mkinitcpio.conf
 fi
