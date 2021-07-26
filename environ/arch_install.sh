@@ -20,11 +20,10 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
   w # write and exit
 EOF
 
-# config luks2
+## config luks2
 modprobe dm-crypt
 modprobe dm-mod
 
-# config luks2
 cryptsetup \
   --type luks2 \
   --cipher aes-xts-plain64 \
@@ -37,8 +36,7 @@ cryptsetup \
   luksFormat /dev/sda3
 cryptsetup open --type luks2 /dev/sda3 luks_part
 
-# config lvm
-
+## config lvm
 pvcreate --dataalignment 1m /dev/mapper/luks_part
 vgcreate lvgroup /dev/mapper/luks_part
 lvcreate -L 4GB      lvgroup -n swap
@@ -95,7 +93,7 @@ APPS_INSTALL=(
   tree
   zsh
 )
-pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
+yes | pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
