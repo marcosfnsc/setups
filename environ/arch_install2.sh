@@ -8,14 +8,15 @@ echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
 
 hostnamectl set-hostname note
 
-# root password
+echo "password root"
 passwd
 
 # users
 useradd -m marcos
+echo "password marcos"
 passwd marcos
 
-# config mkinitcpio
+## config mkinitcpio
 HOOKS=$(cat /etc/mkinitcpio.conf | grep ^HOOKS)
 if [[ $HOOKS == *"keyboard"* ]] ; then
   sed -e s/keyboard//g -i /etc/mkinitcpio.conf
@@ -32,6 +33,7 @@ sed -e "s/filesystems/lvm2 filesystems/g" -i /etc/mkinitcpio.conf
 sed -e "s/  / /g" -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
+## config grub
 pacman -S grub efibootmgr os-prober mtools dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
