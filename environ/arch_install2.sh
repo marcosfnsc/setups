@@ -6,6 +6,10 @@
 ## layout do teclado do sistema
 echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
 
+## lang
+echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
+export $(cat /etc/locale.conf)
+
 hostnamectl set-hostname note
 
 echo "password root"
