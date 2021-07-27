@@ -88,12 +88,13 @@ APPS_INSTALL=(
   openssh
   qbittorrent
   screenfetch
+  sudo
   the_silver_searcher
   tmux
   tree
   zsh
 )
-yes | pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
+pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
