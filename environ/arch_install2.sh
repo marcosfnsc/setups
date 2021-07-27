@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 ## fuso de brasilia
-#ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
+hwclock --systohc --utc
 
 ## layout do teclado do sistema
 echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
