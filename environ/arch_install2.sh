@@ -7,6 +7,8 @@
 echo KEYMAP=br-abnt2 >> /etc/vconsole.conf
 
 ## lang
+sed -e "s/#pt_BR.UTF-8 UTF-8/pt_BR.UTF-8 UTF-8/g" -i /etc/locale.gen
+locale-gen
 echo "LANG=pt_BR.UTF-8" > /etc/locale.conf
 export $(cat /etc/locale.conf)
 
