@@ -4,7 +4,8 @@ REPO_ROOT=$PWD/..
 _USERNAME=marcos
 
 # config sudoers
-usermod -aG wheel $_USERNAME
+echo "add user in sudoers"
+visudo
 
 # config hostmane
 hostnamectl set-hostname note
