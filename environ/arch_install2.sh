@@ -49,6 +49,7 @@ sed -e "s;GRUB_CMDLINE_LINUX_DEFAULT=\"[[:print:]]*\";GRUB_CMDLINE_LINUX_DEFAULT
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
+systemctl enable sddm
 
 #other scripts
 cd setups/environ && ./anylinux.sh
