@@ -50,10 +50,10 @@ swapon /dev/lvgroup/swap
 mkfs.btrfs /dev/lvgroup/root
 mkfs.btrfs /dev/lvgroup/home
 
-mount /dev/lvgroup/root /mnt
+mount -o autodefrag /dev/lvgroup/root /mnt
 mkdir -p /mnt/{boot,home}
 mount /dev/sda2 /mnt/boot
-mount /dev/lvgroup/home /mnt/home
+mount -o autodefrag /dev/lvgroup/home /mnt/home
 mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
@@ -68,6 +68,7 @@ reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
 APPS_INSTALL=(
   alacritty
   audacity
+  base-devel
   clang
   cmake
   curl
@@ -80,18 +81,22 @@ APPS_INSTALL=(
   htop
   k3b
   kate
+  kde-applications
   lvm2
   neovim
   networkmanager
   nodejs
   okular
   openssh
+  plasma
   qbittorrent
   screenfetch
+  sddm
   sudo
   the_silver_searcher
   tmux
   tree
+  xorg
   zsh
 )
 pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
