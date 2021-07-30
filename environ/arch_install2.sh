@@ -48,6 +48,14 @@ UUID_SDA3=$(lsblk -no NAME,UUID /dev/sda3|head -n 1 | awk '{print $2}')
 sed -e "s;GRUB_CMDLINE_LINUX_DEFAULT=\"[[:print:]]*\";GRUB_CMDLINE_LINUX_DEFAULT=\"cryptdevice=UUID="$UUID_SDA3":cryptlvm root=/dev/lvgroup/root\";g" -i etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
+## conf zram
+echo 'zram' > /etc/modules-load.d/zram.conf
+echo 'options zram num_devices=1' > /etc/modprobe.d/zram.conf
+
+RAM_SIZE=$(free -h | sed -n '2 p' | awk '{print $2}')
+echo "KERNEL==”zram0″, ATTR{disksize}=”$RAM_SIZE” RUN=”/usr/bin/mkswap /dev/zram0″, TAG+=”systemd”" > /etc/udev/rules.d/99-zram.rules
+echo "/dev/zram0 none swap defaults 0 0" >> /etc/fstab
+
 systemctl enable NetworkManager
 systemctl enable sddm
 
