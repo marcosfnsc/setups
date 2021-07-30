@@ -61,7 +61,7 @@ mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
 
 # mirrors
-pacman -Syu
+yes | pacman -Syu
 yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
 
@@ -99,7 +99,7 @@ APPS_INSTALL=(
   xorg
   zsh
 )
-pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
+yes | pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
