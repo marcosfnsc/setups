@@ -64,7 +64,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 yes | pacman -Syu
 yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
-yes | pacstrap /mnt base linux linux-firmware 
+yes | pacstrap /mnt base linux linux-firmware lvm2
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
