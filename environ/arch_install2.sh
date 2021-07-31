@@ -34,10 +34,11 @@ fi
 if [[ $HOOKS == *"lvm2"* ]] ; then
   sed -e s/lvm2//g -i /etc/mkinitcpio.conf
 fi
-sed -e "s/autodetect/autodetect keyboard/g" -i /etc/mkinitcpio.conf
+sed -e "s/autodetect/autodetect keyboard/g"  -i /etc/mkinitcpio.conf
+sed -e "s/keyboard/keyboard keymap/g"        -i /etc/mkinitcpio.conf
 sed -e "s/filesystems/encrypt filesystems/g" -i /etc/mkinitcpio.conf
-sed -e "s/filesystems/lvm2 filesystems/g" -i /etc/mkinitcpio.conf
-sed -e "s/  / /g" -i /etc/mkinitcpio.conf
+sed -e "s/filesystems/lvm2 filesystems/g"    -i /etc/mkinitcpio.conf
+sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 ## config grub
