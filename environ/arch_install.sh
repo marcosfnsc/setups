@@ -64,42 +64,7 @@ genfstab -U /mnt > /mnt/etc/fstab
 yes | pacman -Syu
 yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
-
-APPS_INSTALL=(
-  alacritty
-  audacity
-  base-devel
-  clang
-  cmake
-  curl
-  ffmpeg
-  flatpak
-  gcc
-  gimp
-  git
-  gparted
-  htop
-  k3b
-  kate
-  kde-applications
-  lvm2
-  neovim
-  networkmanager
-  nodejs
-  okular
-  openssh
-  plasma
-  qbittorrent
-  screenfetch
-  sddm
-  sudo
-  the_silver_searcher
-  tmux
-  tree
-  xorg
-  zsh
-)
-yes | pacstrap /mnt base linux linux-firmware ${APPS_INSTALL[@]}
+yes | pacstrap /mnt base linux linux-firmware 
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
