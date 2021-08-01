@@ -34,7 +34,7 @@ APPS_INSTALL=(
   zsh
 )
 
-pacman -S ${APPS_INSTALL[@]}
+pacman -S --needed ${APPS_INSTALL[@]}
 
 ## fuso de brasilia
 ln -sf /usr/share/zoneinfo/America/Sao_Paulo /etc/localtime
@@ -78,7 +78,7 @@ sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 ## config grub
-pacman -S grub efibootmgr os-prober mtools dosfstools
+pacman -S --needed grub efibootmgr os-prober mtools dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
 UUID_SDA3=$(lsblk -no NAME,UUID /dev/sda3|head -n 1 | awk '{print $2}')
