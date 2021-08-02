@@ -9,7 +9,7 @@ set softtabstop=0
 set tabstop=8
 set relativenumber
 set updatetime=100
-set inccommand=nosplit
+set inccommand=split
 
 " natural split
 set splitbelow
