@@ -93,8 +93,24 @@ RAM_SIZE=$(free -h | sed -n '2 p' | awk '{print $2}')
 echo "KERNEL==”zram0″, ATTR{disksize}=”$RAM_SIZE” RUN=”/usr/bin/mkswap /dev/zram0″, TAG+=”systemd”" > /etc/udev/rules.d/99-zram.rules
 echo "/dev/zram0 none swap defaults 0 0" >> /etc/fstab
 
+echo \
+  "[Unit]
+Description=Swap with zram
+After=multi-user.target
+
+[Service]
+Type=oneshot 
+RemainAfterExit=true
+ExecStartPre=/sbin/mkswap /dev/zram0
+ExecStart=/sbin/swapon /dev/zram0
+ExecStop=/sbin/swapoff /dev/zram0
+
+[Install]
+WantedBy=multi-user.target" > /etc/systemd/system/zram.service
+
 systemctl enable NetworkManager
 systemctl enable sddm
+systemctl enable zram
 
 #other scripts
 cd setups/environ && ./anylinux.sh
