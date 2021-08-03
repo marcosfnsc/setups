@@ -61,7 +61,6 @@ mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
 
 # mirrors
-yes | pacman -Syu
 yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
 yes | pacstrap /mnt base linux linux-firmware lvm2
