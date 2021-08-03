@@ -58,12 +58,12 @@ mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
 mkdir /mnt/etc
-genfstab -U /mnt > /mnt/etc/fstab
+genfstab -U /mnt >> /mnt/etc/fstab
 
 # mirrors
 yes | pacman -S reflector
 reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
-yes | pacstrap /mnt base linux linux-firmware lvm2
+yes | pacstrap /mnt base linux linux-firmware lvm2 networkmanager
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
