@@ -41,4 +41,4 @@ hostnamectl set-hostname note
 systemctl enable sddm
 
 #other scripts
-cd setups/environ && ./anylinux.sh
+./anylinux.sh
