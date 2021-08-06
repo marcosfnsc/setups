@@ -27,7 +27,7 @@ echo 'zram' > /etc/modules-load.d/zram.conf
 echo 'options zram num_devices=1' > /etc/modprobe.d/zram.conf
 
 RAM_SIZE=$(free -h | sed -n '2 p' | awk '{print $2}')
-echo "KERNEL==”zram0″, ATTR{disksize}=”$RAM_SIZE” RUN=”/usr/bin/mkswap /dev/zram0″, TAG+=”systemd”" > /etc/udev/rules.d/99-zram.rules
+echo "KERNEL==”zram0\", ATTR{disksize}=”$RAM_SIZE” RUN=”/usr/bin/mkswap /dev/zram0\", TAG+=”systemd”" > /etc/udev/rules.d/99-zram.rules
 
 echo "/dev/zram0 none swap defaults,pri=100 0 0" >> /etc/fstab
 
@@ -43,7 +43,6 @@ fi
 if [[ $HOOKS == *"lvm2"* ]] ; then
   sed -e s/lvm2//g -i /etc/mkinitcpio.conf
 fi
-sed -e "s/MODULES=()/MODULES=(zram)/g"       -i /etc/mkinitcpio.conf
 sed -e "s/autodetect/autodetect keyboard/g"  -i /etc/mkinitcpio.conf
 sed -e "s/keyboard/keyboard keymap/g"        -i /etc/mkinitcpio.conf
 sed -e "s/filesystems/encrypt filesystems/g" -i /etc/mkinitcpio.conf
