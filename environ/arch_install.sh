@@ -24,13 +24,15 @@ EOF
 modprobe dm-crypt
 modprobe dm-mod
 
+SECTOR_SIZE=$(cat /sys/block/sda/queue/physical_block_size)
 cryptsetup \
   --type luks2 \
   --cipher aes-xts-plain64 \
   --hash sha256 \
   --key-size 512 \
   --pbkdf argon2i \
-  --sector-size $(cat /sys/block/sda/queue/physical_block_size) \
+  --sector-size $SECTOR_SIZE \
+  --align-payload $(expr $SECTOR_SIZE / 512)
   --use-urandom \
   --verify-passphrase \
   luksFormat /dev/sda3
