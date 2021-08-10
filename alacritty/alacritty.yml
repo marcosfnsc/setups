@@ -8,7 +8,23 @@ window:
     y: 70
 
 font:
-  size: 9.4
+  normal:
+    family: Source Code Pro
+    style: Regular
+
+  bold:
+    family: Source Code Pro
+    style: Bold
+
+  italic:
+    family: Source Code Pro
+    style: Italic
+
+  bold_italic:
+    family: Source Code Pro
+    style: Bold Italic
+
+  size: 9.0
 
 background_opacity: 0.95
 
