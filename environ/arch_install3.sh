@@ -22,6 +22,7 @@ APPS_INSTALL=(
   nodejs
   okular
   openssh
+  pacman-contrib
   plasma
   qbittorrent
   screenfetch
@@ -38,6 +39,7 @@ pacman -S --needed ${APPS_INSTALL[@]}
 
 hostnamectl set-hostname note
 
+systemctl enable paccache.timer
 systemctl enable sddm
 
 #other scripts
