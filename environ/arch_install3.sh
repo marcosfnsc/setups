@@ -31,6 +31,7 @@ APPS_INSTALL=(
   the_silver_searcher
   tmux
   tree
+  usbutils
   xorg
   zsh
 )
