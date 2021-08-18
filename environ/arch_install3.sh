@@ -17,6 +17,7 @@ APPS_INSTALL=(
   k3b
   kate
   kde-applications
+  man-pages
   neovim
   networkmanager
   nodejs
