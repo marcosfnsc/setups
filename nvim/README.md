@@ -26,13 +26,17 @@ em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>$</kbd> no modo normal: ir para o final da linha
 * <kbd>0</kbd> no modo normal: ir para o começo da linha
 * <kbd>^</kbd> no modo normal: ir para o primeiro caractere da linha
+* <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
 * <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
 * <kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>g\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
-* <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere
+* <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor
+sobre o caractere encontado
+* <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor
+do lado esquerdo do caractere encontado
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
