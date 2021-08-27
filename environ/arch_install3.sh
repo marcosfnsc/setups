@@ -24,6 +24,7 @@ APPS_INSTALL=(
   okular
   openssh
   pacman-contrib
+  pipewire-pulse
   plasma
   qbittorrent
   screenfetch
