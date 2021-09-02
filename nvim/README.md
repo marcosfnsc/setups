@@ -1,5 +1,5 @@
 (neo)vim
-=============
+========
 
 atalhos:
 ------------------------------------
@@ -38,9 +38,17 @@ sobre o caractere encontado
 * <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor
 do lado esquerdo do caractere encontado
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
+* <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
+* <kbd>M</kbd> no modo normal: mover cursor para o centro da janela
+* <kbd>L</kbd> no modo normal: mover cursor para a parte inferior da janela
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
+* <kbd>z</kbd><kbd>z</kbd> no modo normal: mover linha para o centro da janela
+* <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela
+* <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela
+* <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para `:wq`
+* <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento
 * <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
 * <kbd>g</kbd><kbd>T</kbd> no modo normal: alterna para a guia anterior
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
