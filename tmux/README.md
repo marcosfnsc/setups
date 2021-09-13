@@ -4,6 +4,10 @@ dicas tmux:
 atalhos:
 --------
 * <kbd>prefix</kbd><kbd>:</kbd>: entra modo de comando
+* <kbd>prefix</kbd><kbd>d</kbd>: sai da sessão atual sem fechar ela (fica rodando em background)
+* <kbd>prefix</kbd><kbd>space</kbd>: muda o layout dos paineis na janela atual
+* <kbd>prefix</kbd><kbd>(</kbd> ou <kbd>prefix</kbd><kbd>)</kbd>: alterna de uma sessão pra outra
+* <kbd>prefix</kbd><kbd>&</kbd>: fecha a janela atual e tudo que estiver nela
 * <kbd>prefix</kbd><kbd>!</kbd>: cria uma nova janela com o painel que estava em foco
 * <kbd>prefix</kbd><kbd>c</kbd>: cria uma nova janela
 * <kbd>prefix</kbd><kbd>[</kbd>: entra no modo copia
