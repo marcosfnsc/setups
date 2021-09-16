@@ -31,7 +31,7 @@ noremap <Right> <Nop>
 nnoremap <space>e :CocCommand explorer<CR>
 
 " go to definition
-nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gd :call CocAction('jumpDefinition', 'vsplit')<CR>
 
 call plug#begin()
 Plug 'airblade/vim-gitgutter'
