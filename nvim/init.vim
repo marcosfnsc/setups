@@ -37,9 +37,9 @@ call plug#begin()
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
-Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
+"Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 Plug 'rakr/vim-one'
-Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
+"Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
