@@ -4,10 +4,9 @@ set hidden                        "allow hiding the buffer without saving change
 set inccommand=split
 set number                        "show number of lines
 set relativenumber                "show relative distance in lines
-set shiftwidth=2                  "number of spaces inserts when tab pressd
-set smarttab                      "transform tab into spaces
-set softtabstop=0                 "number of spaces entered by pressing tab
-set tabstop=8                     "number of visual spaces per TAB
+set shiftwidth=4                  "how many columns text will be indented when using indent operations (>> or <<)
+set smarttab                      "transform tab into spaces in insert mode
+set tabstop=4                     "number of visual spaces per TAB
 set termguicolors                 "24 bit color supoort
 set updatetime=100
 syntax on
