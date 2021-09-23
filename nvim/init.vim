@@ -24,10 +24,10 @@ nnoremap <space>e :CocCommand explorer<CR>                      "coc-explorer
 
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
+"Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
 Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
-Plug 'bfrg/vim-cpp-modern'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
