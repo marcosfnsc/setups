@@ -5,7 +5,6 @@ set inccommand=split
 set number                        "show number of lines
 set relativenumber                "show relative distance in lines
 set shiftwidth=4                  "how many columns text will be indented when using indent operations (>> or <<)
-set smarttab                      "transform tab into spaces in insert mode
 set tabstop=4                     "number of visual spaces per TAB
 set termguicolors                 "24 bit color supoort
 set updatetime=100
