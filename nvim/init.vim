@@ -1,15 +1,16 @@
-syntax on
-set clipboard=unnamed,unnamedplus " use system clipboard
-set expandtab                     " insert space when tab pressd
-set hidden                        " hiddne a buffer
-set number
-set shiftwidth=2                  " number of spaces inserts when tab pressd
-set smarttab
-set softtabstop=0
-set tabstop=8
-set relativenumber
-set updatetime=100
+set clipboard=unnamed,unnamedplus "use system clipboard
+set expandtab                     "insert spaces when tab pressd
+set hidden                        "allow hiding the buffer without saving changes
 set inccommand=split
+set number                        "show number of lines
+set relativenumber                "show relative distance in lines
+set shiftwidth=2                  "number of spaces inserts when tab pressd
+set smarttab                      "transform tab into spaces
+set softtabstop=0                 "number of spaces entered by pressing tab
+set tabstop=8                     "number of visual spaces per TAB
+set termguicolors                 "24 bit color supoort
+set updatetime=100
+syntax on
 
 " natural split
 set splitbelow
@@ -18,38 +19,27 @@ set splitright
 set foldmethod=manual
 set nofoldenable
 
-" 24 bit color supoort
-set termguicolors
-
-"learn to use hjkl
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
-
-"coc-explorer
-nnoremap <space>e :CocCommand explorer<CR>
-
-" go to definition
-nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>
+nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR> "go to definition
+nnoremap <space>e :CocCommand explorer<CR>                      "coc-explorer
 
 call plug#begin()
+"Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
+"Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
+Plug 'Yggdroot/indentLine'
 Plug 'airblade/vim-gitgutter'
+Plug 'bfrg/vim-cpp-modern'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
-"Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
-Plug 'rakr/vim-one'
-"Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'Yggdroot/indentLine'
-Plug 'bfrg/vim-cpp-modern'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rakr/vim-one'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
+" theme
 colorscheme one
 set background=dark
 
