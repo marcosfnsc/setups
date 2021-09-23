@@ -19,8 +19,10 @@ set splitright
 set foldmethod=manual
 set nofoldenable
 
-nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR> "go to definition
-nnoremap <space>e :CocCommand explorer<CR>                      "coc-explorer
+"go to definition
+nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>
+"coc-explorer
+nnoremap <space>e :CocCommand explorer<CR>
 
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
