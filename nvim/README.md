@@ -50,7 +50,7 @@
   <LI> <kbd>ctrol</kbd><kbd>w</kbd> <kbd>></kbd> no modo normal: aumenta a largura da janela </LI>
   <LI> <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas </LI>
   <LI> <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>c</kbd> no modo normal: fecha uma janela </LI>
-  <LI> <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>shift</kbd>{<kbd>h</kbd>,<kbd>j</kbd>,<kbd>k</kbd>,<kbd>l</kbd>} no modo normal: move a janela em destaque para um dos cantos da tela </LI>
+  <LI> <kbd>ctrol</kbd><kbd>w</kbd>+{<kbd>H</kbd>,<kbd>J</kbd>,<kbd>K</kbd>,<kbd>L</kbd>} no modo normal: move a janela em destaque para um dos cantos da tela </LI>
   <LI> <kbd>g</kbd><kbd>T</kbd> no modo normal: alterna para a guia anterior </LI>
   <LI> <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia </LI>
   </UL>
