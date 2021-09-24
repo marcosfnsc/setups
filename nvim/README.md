@@ -30,6 +30,8 @@
   <LI> <kbd>M</kbd> no modo normal: mover cursor para o centro da janela </LI>
   <LI> <kbd>^</kbd> no modo normal: ir para o primeiro caractere da linha </LI>
   <LI> <kbd>b</kbd> no modo normal: saltar retrocedendo palavras </LI>
+  <LI> <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posicao do cursor </LI>
+  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo normal: saltar para a posicao anterior do cursor </LI>
   <LI> <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere </LI>
   <LI> <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado </LI>
   <LI> <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado </LI>
@@ -74,11 +76,12 @@
 </details>
 
 ## comandos:
-* `:help digraph-table`: mostra a lista de digrafos
-* `:retab`: transforma tabulações em caracteres de espaço
-* `:tabnew` ou `:tabe`: abre uma nova guia
-* `:tabclose` ou `:tac`: fecha uma nova guia
-* `:tabonly` ou `:tao`: fecha todas as guias menos a atual
-* `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
-* `set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
+* `:help digraph-table`: mostra a lista de digrafos
+* `:jumps`: mostra uma lista com todos os saltos
+* `:retab`: transforma tabulações em caracteres de espaço
+* `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
+* `:set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
+* `:tabclose` ou `:tac`: fecha uma nova guia
+* `:tabnew` ou `:tabe`: abre uma nova guia
+* `:tabonly` ou `:tao`: fecha todas as guias menos a atual
