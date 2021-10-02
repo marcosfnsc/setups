@@ -51,12 +51,10 @@ let g:ale_linters = {
   \}
 
 let g:coc_global_extensions = [
-  \ 'coc-clangd',
   \ 'coc-css',
   \ 'coc-emmet',
   \ 'coc-explorer',
   \ 'coc-html',
-  \ 'coc-java',
   \ 'coc-jedi',
   \ 'coc-json',
   \ 'coc-pairs',
@@ -65,3 +63,5 @@ let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-vimlsp',
   \ ]
+"  \ 'coc-clangd',
+"  \ 'coc-java',
