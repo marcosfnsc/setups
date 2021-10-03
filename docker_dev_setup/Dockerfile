@@ -1,20 +1,13 @@
-FROM fedora:latest
+FROM archlinux:latest
 
-RUN dnf install tmux neovim nodejs the_silver_searcher python zsh curl git -y
+RUN sed '/^#\ Misc\ options/a ParallelDownloads\ =\ 5' /etc/pacman.conf
 
-# rust
-#RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+RUN yes | pacman -Sy reflector
+RUN reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
 
-# install fzf
-RUN git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf \
-  && ~/.fzf/install --all
+RUN yes | pacman -S tmux neovim nodejs the_silver_searcher python zsh curl git
 
-RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git \
-  && cd setups/nvim && ./setup_nvim.sh \
-  && cd ../tmux     && ./setup_tmux.sh \
-  && cd ../zsh      && ./setup_zsh.sh
-
-RUN chsh -s $(which zsh)
+RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git
 
 ENTRYPOINT ["tail"]
 CMD ["-f","/dev/null"]
