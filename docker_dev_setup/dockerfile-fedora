@@ -1,0 +1,14 @@
+FROM  fedora:latest
+
+RUN dnf install -y 'dnf-command(config-manager)'
+RUN dnf config-manager --setopt=deltarpm=True --save
+RUN dnf config-manager --setopt=fastestmirror=True --save
+RUN dnf makecache --refresh
+
+RUN dnf install -y tmux neovim nodejs the_silver_searcher python zsh curl git
+
+RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git
+RUN cd setups/docker_dev_setup && ./setup_dev_environ.sh
+
+ENTRYPOINT ["tail"]
+CMD ["-f","/dev/null"]
