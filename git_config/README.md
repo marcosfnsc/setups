@@ -7,3 +7,5 @@ comandos interessantes:
 - `git remote set-url origin <url>`: mudar url do repo
 - `git tag`: lista as tags
 - `git tag <nome da tag>`: cria um tag leve local
+- `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `ú`
+é um atalho para `--set-upstream`
