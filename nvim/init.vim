@@ -26,7 +26,7 @@ call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 "Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
-Plug 'Yggdroot/indentLine'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
