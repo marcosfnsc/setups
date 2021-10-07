@@ -17,14 +17,16 @@
   <LI> <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas </LI>
   <LI> <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert </LI>
   <LI> <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert </LI>
+  <LI> <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado </LI>
+  <LI> <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado </LI>
   </UL>
 </details>
 
 <details>
   <summary><b>movimento</b></summary>
   <UL>
-  <LI> <kbd>$</kbd> no modo normal: ir para o final da linha </LI>
-  <LI> <kbd>0</kbd> no modo normal: ir para o começo da linha </LI>
+  <LI> <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha </LI>
+  <LI> <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha </LI>
   <LI> <kbd>H</kbd> no modo normal: mover cursor para o topo da janela </LI>
   <LI> <kbd>L</kbd> no modo normal: mover cursor para a parte inferior da janela </LI>
   <LI> <kbd>M</kbd> no modo normal: mover cursor para o centro da janela </LI>
@@ -34,7 +36,10 @@
   <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo normal: saltar para a posicao anterior do cursor </LI>
   <LI> <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere </LI>
   <LI> <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado </LI>
+  <LI> <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa </LI>
+  <LI> <kbd>g_</kbd> no modo normal: ir para o ultimo caractere da linha </LI>
   <LI> <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado </LI>
+  <LI> <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa</LI>
   <LI> <kbd>w</kbd> no modo normal: saltar palavras </LI>
   <LI> <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela </LI>
   <LI> <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela </LI>
