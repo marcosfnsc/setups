@@ -23,6 +23,7 @@
   <LI> <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert </LI>
   <LI> <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert </LI>
   <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos algima ação, automaticamente volta para o modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code> </LI>
   </UL>
 </details>
 
@@ -86,6 +87,28 @@
   <LI> <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal </LI>
   </UL>
 </details>
+
+## registros:
+### tipos de registros:
+* registro sem nome ("): Contém o último conteúdo excluído, alterado ou retirado, mesmo se um registro foi especificado.
+* registros numerados (0-9):
+    * 0: conteḿ o ultimo conteudo arrancado
+    * 1-9: é uma pilha que conteḿ o ultimo conteudo que foi excluido ou alterado
+
+cada vez que alterar ou exluir um conteudo ele sera adicionado ao registro 1, quandoo outro conteudo
+é adicionado ao registro 1, o que havia nele é transferido para o proximo registro, que neste caso é
+o 2, o conteudo vai saltando de um registro para outro até chegar no registro 9, quando outro conteudo
+for movido para o registro 9, o que havia antes nele é perdido
+
+* registro de exclusao: Contém qualquer conteúdo excluído ou alterado menor que uma linha
+
+Nenhum desses registros mensionados acima é escrito se você especificou um antes com o pressionamento de tecla <kbd>"</kbd>
+
+* registros nomeados (a-z):
+    * o editor so vai sobrescrever se esse tipo de registro for especificado
+    * colocar a letra em maiscula vai anexar o conteudo ao registro, em vez de sobrescrever
+* registro de buraco negro (\_): tudo que for escrito lá sera perdido
+* registro do ultimo padrão de epsquisa (/): contem o ultimo conteudo pesquisado
 
 ## comandos:
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
