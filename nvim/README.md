@@ -72,10 +72,10 @@
 <details>
   <summary><b>outros atalhos</b></summary>
   <UL>
-  <LI> <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar `"` representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de `a`, apos isso basta digitar algum comando de corte </LI>
-  <LI> <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para `:wq` </LI>
+  <LI> <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte </LI>
+  <LI> <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code> </LI>
   <LI> <kbd>&#42;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor </LI>
-  <LI> <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando `/palavra`, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd> </LI>
+  <LI> <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd> </LI>
   <LI> <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco </LI>
   <LI> <kbd>g</kbd><kbd>&#42;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial </LI>
   <LI> <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras </LI>
