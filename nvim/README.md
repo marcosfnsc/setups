@@ -2,14 +2,25 @@
 
 ## atalhos:
 <details>
-  <summary><b>edicao</b></summary>
+  <summary><b>edição</b></summary>
   <UL>
   <LI> <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha </LI>
   <LI> <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd> </LI>
+  <LI> <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteudo da linha atual e entra no modo normal </LI>
   <LI> <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd> </LI>
   <LI> <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert </LI>
+  <LI> <kbd>R</kbd> no modo normal: entra no modo replace </LI>
+  <LI> <kbd>V</kbd> no modo normal: modo visual de linha </LI>
   <LI> <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere </LI>
   <LI> <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteudo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor </LI>
+  <LI> <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado </LI>
+  <LI> <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado </LI>
+  <LI> <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code> </LI>
+  <LI> <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos algima ação, automaticamente volta para o modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd> </LI>
+  <LI> <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor no modo insert </LI>
   <LI> <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas </LI>
   <LI> <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas </LI>
   <LI> <kbd>g</kbd><kbd>g</kbd><kbd>=</kbd><kbd>G</kbd> no modo normal: corrigir indentação do codigo inteiro </LI>
@@ -17,13 +28,7 @@
   <LI> <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas </LI>
   <LI> <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert </LI>
   <LI> <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert </LI>
-  <LI> <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado </LI>
-  <LI> <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado </LI>
-  <LI> <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: esclua tudo que estiver antes do cursor no modo insert </LI>
-  <LI> <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert </LI>
-  <LI> <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert </LI>
-  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos algima ação, automaticamente volta para o modo insert </LI>
-  <LI> <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code> </LI>
+  <LI> <kbd>u</kbd> no modo normal: desfaz as mudanças </LI>
   </UL>
 </details>
 
@@ -75,6 +80,7 @@
   <UL>
   <LI> <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte </LI>
   <LI> <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code> </LI>
+  <LI> <kbd>Z</kbd><kbd>Q</kbd> no modo normal: sai sem salvar alterações, atalho para <code>:q!</code> </LI>
   <LI> <kbd>&#42;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor </LI>
   <LI> <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd> </LI>
   <LI> <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco </LI>
