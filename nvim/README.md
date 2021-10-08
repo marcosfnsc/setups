@@ -19,6 +19,10 @@
   <LI> <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert </LI>
   <LI> <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado </LI>
   <LI> <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado </LI>
+  <LI> <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: esclua tudo que estiver antes do cursor no modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos algima ação, automaticamente volta para o modo insert </LI>
   </UL>
 </details>
 
@@ -44,6 +48,8 @@
   <LI> <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela </LI>
   <LI> <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela </LI>
   <LI> <kbd>z</kbd><kbd>z</kbd> no modo normal: mover linha para o centro da janela </LI>
+  <LI> <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert </LI>
   </UL>
 </details>
 
@@ -68,15 +74,16 @@
   <UL>
   <LI> <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar `"` representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de `a`, apos isso basta digitar algum comando de corte </LI>
   <LI> <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para `:wq` </LI>
-  <LI> <kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor </LI>
+  <LI> <kbd>&#42;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor </LI>
   <LI> <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando `/palavra`, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd> </LI>
   <LI> <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco </LI>
-  <LI> <kbd>g\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial </LI>
+  <LI> <kbd>g</kbd><kbd>&#42;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial </LI>
   <LI> <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras </LI>
   <LI> <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras </LI>
   <LI> <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra </LI>
   <LI> <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento </LI>
   <LI> <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra </LI>
+  <LI> <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal </LI>
   </UL>
 </details>
 
