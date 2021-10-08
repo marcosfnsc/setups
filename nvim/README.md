@@ -120,3 +120,4 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
+* `:x`: atalho para `:wq`
