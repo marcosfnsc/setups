@@ -16,4 +16,7 @@ fi
   cp zshrc $HOME/.zshrc
 }
 
-chsh -s $(which zsh)
+if [ ! -f "$HOME/.bashrc-old" ]; then
+  mv $HOME/.bashrc $HOME/.bashrc-old
+fi
+echo "exec zsh" > $HOME/.bashrc
