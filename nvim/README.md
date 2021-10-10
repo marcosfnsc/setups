@@ -17,7 +17,7 @@
   <LI> <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado </LI>
   <LI> <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code> </LI>
   <LI> <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert </LI>
-  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos algima ação, automaticamente volta para o modo insert </LI>
+  <LI> <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos alguma ação, automaticamente volta para o modo insert </LI>
   <LI> <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd> </LI>
   <LI> <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert </LI>
   <LI> <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor no modo insert </LI>
