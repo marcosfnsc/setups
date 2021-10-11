@@ -4,11 +4,15 @@ set hidden                        "allow hiding the buffer without saving change
 set inccommand=split
 set number                        "show number of lines
 set relativenumber                "show relative distance in lines
-set shiftwidth=4                  "how many columns text will be indented when using indent operations (>> or <<)
-set tabstop=4                     "number of visual spaces per TAB
+set shiftwidth=2                  "how many columns text will be indented when using indent operations (>> or <<)
+set tabstop=2                     "number of visual spaces per TAB
 set termguicolors                 "24 bit color supoort
 set updatetime=100
 syntax on
+
+" 4 spaces of indent for python and rust, 2 by default
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 
 " natural split
 set splitbelow
