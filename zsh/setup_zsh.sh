@@ -15,8 +15,3 @@ fi
   echo "erro ao criar link fisico, copiando arquivo ..."
   cp zshrc $HOME/.zshrc
 }
-
-if [ ! -f "$HOME/.bashrc-old" ]; then
-  mv $HOME/.bashrc $HOME/.bashrc-old
-fi
-echo "exec zsh" > $HOME/.bashrc
