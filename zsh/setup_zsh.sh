@@ -5,7 +5,7 @@ if test -f "$HOME/.zshrc"; then
 fi
 
 if test -f "$HOME/.shell_functions"; then
-  rm $HOME/.zshrc
+  rm $HOME/.shell_functions
 fi
 
 # oh-my-zsh setup
