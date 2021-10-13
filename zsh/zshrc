@@ -4,7 +4,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 # java environment
-export JAVA_HOME=/usr/lib/jvm/default
+#export JAVA_HOME=/usr/lib/jvm/default
 
 # rust environment
 if [ -d "$HOME/.cargo/" ]; then
