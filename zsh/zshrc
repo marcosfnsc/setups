@@ -33,29 +33,4 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# pyvenv
-pyvenv() {
-  venvs_path="$HOME/code_space/python_venvs"
-  dirname=`{basename $PWD}`
-
-  case $1 in
-    up) if [ ! -d "$venvs_path/$dirname" ]; then
-          python -m venv "$venvs_path/$dirname"
-          source "$venvs_path/$dirname/bin/activate"
-          pip install --upgrade pip
-        else
-          source "$venvs_path/$dirname/bin/activate"
-        fi
-        ;;
-
-    delete) if [ ! -d "$venvs_path/$dirname" ]; then
-              echo "error: venv $dirname not exists"
-            else
-              rm -rf "$venvs_path/$dirname"
-              echo "venv $dirname deleted"
-            fi
-            ;;
-
-    *) echo "command $1 not found"
-    esac
-}
+source $HOME/.shell_functions
