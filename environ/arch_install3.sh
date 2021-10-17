@@ -27,10 +27,10 @@ APPS_INSTALL=(
   pipewire-pulse
   plasma
   qbittorrent
+  ripgrep
   screenfetch
   sddm
   sudo
-  the_silver_searcher
   tmux
   tree
   usbutils
