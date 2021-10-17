@@ -24,9 +24,11 @@ dnf install -y \
 
 # add apps
 APPS_ADD=(
+  #pavucontrol-qt # ferramenta simples para editar opções de som
+  VirtualBox
+  akmod-wl              # driver do wifi
   alacritty
   audacity              # editor de audio
-  akmod-wl              # driver do wifi
   bzip2-devel
   clang
   cmake                 # utilitario de compilação de codigo c/c++
@@ -34,15 +36,15 @@ APPS_ADD=(
   ffmpeg                # conversor de arquivos de midia
   flatpak
   gcc-g++               # compilador de c++
-  git                   # ferramenta de versionamento de arquivos
   gimp                  # editor de imagem
+  git                   # ferramenta de versionamento de arquivos
   google-chrome-stable
   gparted               # gerenciador grafico de partições do disco rigido
   htop                  # monitor de tarefas via terminal
   java-11-openjdk       # runtime do jdk 11
   java-11-openjdk-devel # ferramentas de compilação do jdk 11
-  kate                  # editor de texto simples com alguns recursos avançados
   k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
+  kate                  # editor de texto simples com alguns recursos avançados
   libreoffice           # programas de escritorio
   neovim
   nodejs
@@ -50,15 +52,13 @@ APPS_ADD=(
   openssh
   openssl-devel
   qbittorrent           # cliente de torrent
-  #pavucontrol-qt # ferramenta simples para editar opções de som
   readline-devel
+  ripgrep
   screenfetch
   skanlite              # scanner de impressora
   sqlite-devel
-  the_silver_searcher   # ag
   tmux
   tree
-  VirtualBox
   vlc                   # reprodutor de audio e video
   zeal                  # ferramenta pra gerenciar documentação de softwares
   zsh
