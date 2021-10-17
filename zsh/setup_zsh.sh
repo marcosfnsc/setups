@@ -24,5 +24,5 @@ fi
   ln shell_functions $HOME/.shell_functions 2>/dev/null
 } || {
   echo "erro ao criar link fisico, copiando arquivo ..."
-  cp zshrc $HOME/.shell_functions
+  cp shell_functions $HOME/.shell_functions
 }
