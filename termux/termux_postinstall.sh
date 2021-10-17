@@ -10,7 +10,7 @@ PACKAGES_ADD=(
   nodejs
   openssh
   python
-  silversearcher-ag
+  ripgrep
   tmux
   tree
   zsh
