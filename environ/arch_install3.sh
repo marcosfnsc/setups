@@ -12,7 +12,6 @@ APPS_INSTALL=(
   gcc
   gimp
   git
-  gparted
   htop
   k3b
   kate
