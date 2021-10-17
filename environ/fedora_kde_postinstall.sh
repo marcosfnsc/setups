@@ -39,7 +39,6 @@ APPS_ADD=(
   gimp                  # editor de imagem
   git                   # ferramenta de versionamento de arquivos
   google-chrome-stable
-  gparted               # gerenciador grafico de partições do disco rigido
   htop                  # monitor de tarefas via terminal
   java-11-openjdk       # runtime do jdk 11
   java-11-openjdk-devel # ferramentas de compilação do jdk 11
