@@ -34,6 +34,10 @@ APPS_INSTALL=(
   usbutils
   xorg
   zsh
+  noto-fonts
+  noto-fonts-cjk
+  noto-fonts-extra
+  noto-fonts-emoji
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}
