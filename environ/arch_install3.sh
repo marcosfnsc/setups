@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
+  #pipewire-pulse
   alacritty
   audacity
   base-devel
   clang
-  cmake
   curl
   ffmpeg
   flatpak
@@ -23,7 +23,6 @@ APPS_INSTALL=(
   okular
   openssh
   pacman-contrib
-  pipewire-pulse
   plasma
   qbittorrent
   ripgrep
