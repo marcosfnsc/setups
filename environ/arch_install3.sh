@@ -5,6 +5,7 @@ APPS_INSTALL=(
   alacritty
   audacity
   base-devel
+  broadcom-wl # drivers wifi
   clang
   curl
   ffmpeg
@@ -20,6 +21,10 @@ APPS_INSTALL=(
   neovim
   networkmanager
   nodejs
+  noto-fonts
+  noto-fonts-cjk
+  noto-fonts-emoji
+  noto-fonts-extra
   okular
   openssh
   pacman-contrib
@@ -34,10 +39,6 @@ APPS_INSTALL=(
   usbutils
   xorg
   zsh
-  noto-fonts
-  noto-fonts-cjk
-  noto-fonts-extra
-  noto-fonts-emoji
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}
