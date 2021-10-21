@@ -45,6 +45,7 @@ pacman -S --needed ${APPS_INSTALL[@]}
 
 hostnamectl set-hostname note
 
+#systemctl enable fstrim.timer for sdd with TRIM support
 systemctl enable paccache.timer
 systemctl enable sddm
 
