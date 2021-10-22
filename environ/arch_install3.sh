@@ -43,7 +43,13 @@ APPS_INSTALL=(
 
 pacman -S --needed ${APPS_INSTALL[@]}
 
-hostnamectl set-hostname note
+
+## install yay
+pacman -S --needed git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
+
 
 #systemctl enable fstrim.timer for sdd with TRIM support
 systemctl enable paccache.timer
