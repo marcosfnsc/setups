@@ -1,23 +1,24 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
+  #clang
+  #gimp
   #kate
   #pipewire-pulse
   alacritty
   audacity
   base-devel
   broadcom-wl # drivers wifi
-  clang
   curl
   ffmpeg
   flatpak
   gcc
-  gimp
   git
   htop
   k3b
   kde-applications
   man-pages
+  neofetch
   neovim
   networkmanager
   nodejs
@@ -31,7 +32,6 @@ APPS_INSTALL=(
   plasma
   qbittorrent
   ripgrep
-  screenfetch
   sddm
   sudo
   tmux
