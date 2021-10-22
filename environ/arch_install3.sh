@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
+  #kate
   #pipewire-pulse
   alacritty
   audacity
@@ -15,7 +16,6 @@ APPS_INSTALL=(
   git
   htop
   k3b
-  kate
   kde-applications
   man-pages
   neovim
