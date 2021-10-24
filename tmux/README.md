@@ -16,7 +16,9 @@ atalhos:
 * <kbd>prefix</kbd><kbd>$</kbd>: permite reonomear a sessão
 * <kbd>prefix</kbd><kbd>s</kbd>: listar todas as sessões
 * <kbd>prefix</kbd><kbd>,</kbd>: permite renomear a janela
-* <kbd>prefix</kbd>+<kbd>ctrol</kbd><kbd>o</kbd>: trocar paineis
+* <kbd>prefix</kbd><kbd>ctrol</kbd><kbd>o</kbd>: trocar paineis
+* <kbd>prefix</kbd><kbd>[</kbd>: entrar no modo copia
+* <kbd>prefix</kbd><kbd>]</kbd>: colar a partir do buffer do tmux
 
 comandos dentro do tmux:
 ---------
