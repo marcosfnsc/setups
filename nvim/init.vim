@@ -30,23 +30,25 @@ call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 "Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
-Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'airblade/vim-gitgutter'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-python/python-syntax'
 call plug#end()
 
 " theme
 colorscheme one
 set background=dark
 
+let g:python_highlight_all = 1 " enable highlight for python
 let g:airline#extensions#tabline#enabled = 1 " vim-airline tabline
 
 " ale config
