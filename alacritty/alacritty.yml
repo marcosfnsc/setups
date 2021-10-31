@@ -24,8 +24,8 @@ font:
     family: Source Code Pro
     style: Bold Italic
 
-  #size: 9.0   -> xorg
-  size: 10.0 # -> wayland
+  size: 9.0
+  #size: 10.0 # -> wayland
 
 background_opacity: 0.95
 
