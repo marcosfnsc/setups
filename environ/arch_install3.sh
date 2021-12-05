@@ -10,6 +10,7 @@ APPS_INSTALL=(
   base-devel
   broadcom-wl # drivers wifi
   curl
+  earlyoom
   ffmpeg
   flatpak
   gcc
@@ -52,6 +53,7 @@ makepkg -si
 
 
 #systemctl enable fstrim.timer for sdd with TRIM support
+systemctl enable earlyoom
 systemctl enable paccache.timer
 systemctl enable sddm
 
