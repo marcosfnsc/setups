@@ -127,3 +127,11 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:x`: atalho para `:wq`
+
+## Truques:
+#### substituição de palavras em todos os arquivos
+digitar no modo comando `:args **` para adicionar todos os arquivos em um direitorio de forma
+recursiva e por fim executar o comando de substituição em todos os arquivos usando o comando
+`:argdo %s/palavra_antiga/palavra_nova/g`
+
+o comando `argdo` vai executar o subcomando em cada arquivo presente no args do vim
