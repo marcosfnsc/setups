@@ -72,3 +72,7 @@ let g:coc_global_extensions = [
   \ ]
 "  \ 'coc-clangd',
 "  \ 'coc-java',
+
+
+" remove trailing whitespace
+command RmTrailingWhitespaces :%s/\s\+$//e | :noh
