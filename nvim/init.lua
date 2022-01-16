@@ -1,31 +1,34 @@
 vim.opt.clipboard = 'unnamed,unnamedplus' -- use system clipboard
-vim.opt.expandtab = true                    -- insert spaces when tab pressd
-vim.opt.hidden = true                        -- allow hiding the buffer without saving changes
+vim.opt.expandtab = true                  -- insert spaces when tab pressd
+vim.opt.hidden = true                     -- allow hiding the buffer without saving changes
 vim.opt.inccommand = 'split'
-vim.opt.number = true                        -- show number of lines
-vim.opt.relativenumber = true                -- show relative distance in lines
-vim.opt.shiftwidth = 2                  -- how many columns text will be indented when using indent operations (>> or <<)
-vim.opt.tabstop = 2                     -- number of visual spaces per TAB
-vim.opt.termguicolors = true                 -- 24 bit color supoort
+vim.opt.number = true                     -- show number of lines
+vim.opt.relativenumber = true             -- show relative distance in lines
+vim.opt.shiftwidth = 2                    -- how many columns text will be indented when using indent operations (>> or <<)
+vim.opt.tabstop = 2                       -- number of visual spaces per TAB
+vim.opt.termguicolors = true              -- 24 bit color supoort
 vim.opt.updatetime = 100
 vim.cmd([[ syntax on ]])
 
-" 4 spaces of indent for python and rust, 2 by default
+-- 4 spaces of indent for python and rust, 2 by default
+vim.cmd([[
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
+]])
 
-" natural split
-set splitbelow
-set splitright
+-- natural split
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
-set foldmethod=manual
-set nofoldenable
+vim.opt.foldmethod = 'manual'
+-- vim.opt.nofoldenable = true
 
-"go to definition
-nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>
-"coc-explorer
-nnoremap <space>e :CocCommand explorer<CR>
+-- go to definition
+vim.cmd([[ nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR> ]])
+-- coc-explorer
+vim.cmd([[ nnoremap <space>e :CocCommand explorer<CR> ]])
 
+vim.cmd([[
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 "Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
@@ -44,15 +47,17 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
 call plug#end()
+]])
 
-" theme
-colorscheme one
-set background=dark
+-- theme
+vim.cmd([[ colorscheme one]])
+vim.opt.background = 'dark'
 
-let g:python_highlight_all = 1 " enable highlight for python
-let g:airline#extensions#tabline#enabled = 1 " vim-airline tabline
+vim.g['python_highlight_all'] = 1 -- enable highlight for python
+vim.g['airline#extensions#tabline#enabled'] = 1 -- vim-airline tabline
 
-" ale config
+-- ale config
+vim.cmd([[
 let g:ale_linters = {
   \ 'python': ['pylint'],
   \}
@@ -72,7 +77,8 @@ let g:coc_global_extensions = [
 "  \ 'coc-clangd',
 "  \ 'coc-java',
 "  \ 'coc-css',
+  ]])
 
 
-" remove trailing whitespace
-command RmTrailingWhitespaces :%s/\s\+$//e | :noh
+-- remove trailing whitespace
+vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
