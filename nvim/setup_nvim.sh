@@ -7,14 +7,14 @@ if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
 fi
 
 mkdir -p $HOME/.config/nvim
-if test -f "$HOME/.config/nvim/init.vim"; then
-  rm $HOME/.config/nvim/init.vim
+if test -f "$HOME/.config/nvim/init.lua"; then
+  rm $HOME/.config/nvim/init.lua
 fi
 {
-  ln init.vim $HOME/.config/nvim/init.vim 2>/dev/null
+  ln init.lua $HOME/.config/nvim/init.lua 2>/dev/null
 } || {
   echo "erro ao criar link fisico, copiando arquivo ..."
-  cp init.vim $HOME/.config/nvim
+  cp init.lua $HOME/.config/nvim
 }
 
 # install vim-plug extension

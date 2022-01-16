@@ -1,14 +1,14 @@
-set clipboard=unnamed,unnamedplus "use system clipboard
-set expandtab                     "insert spaces when tab pressd
-set hidden                        "allow hiding the buffer without saving changes
-set inccommand=split
-set number                        "show number of lines
-set relativenumber                "show relative distance in lines
-set shiftwidth=2                  "how many columns text will be indented when using indent operations (>> or <<)
-set tabstop=2                     "number of visual spaces per TAB
-set termguicolors                 "24 bit color supoort
-set updatetime=100
-syntax on
+vim.opt.clipboard = 'unnamed,unnamedplus' -- use system clipboard
+vim.opt.expandtab = true                    -- insert spaces when tab pressd
+vim.opt.hidden = true                        -- allow hiding the buffer without saving changes
+vim.opt.inccommand = 'split'
+vim.opt.number = true                        -- show number of lines
+vim.opt.relativenumber = true                -- show relative distance in lines
+vim.opt.shiftwidth = 2                  -- how many columns text will be indented when using indent operations (>> or <<)
+vim.opt.tabstop = 2                     -- number of visual spaces per TAB
+vim.opt.termguicolors = true                 -- 24 bit color supoort
+vim.opt.updatetime = 100
+vim.cmd([[ syntax on ]])
 
 " 4 spaces of indent for python and rust, 2 by default
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
