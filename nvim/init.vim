@@ -58,7 +58,6 @@ let g:ale_linters = {
   \}
 
 let g:coc_global_extensions = [
-  \ 'coc-css',
   \ 'coc-emmet',
   \ 'coc-explorer',
   \ 'coc-html',
@@ -72,6 +71,7 @@ let g:coc_global_extensions = [
   \ ]
 "  \ 'coc-clangd',
 "  \ 'coc-java',
+"  \ 'coc-css',
 
 
 " remove trailing whitespace
