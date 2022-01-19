@@ -8,10 +8,10 @@ vim.opt.shiftwidth = 2                    -- how many columns text will be inden
 vim.opt.tabstop = 2                       -- number of visual spaces per TAB
 vim.opt.termguicolors = true              -- 24 bit color supoort
 vim.opt.updatetime = 100
-vim.cmd([[ syntax on ]])
 
 -- 4 spaces of indent for python and rust, 2 by default
 vim.cmd([[
+autocmd FileType lua setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 ]])
@@ -57,27 +57,24 @@ vim.g['python_highlight_all'] = 1 -- enable highlight for python
 vim.g['airline#extensions#tabline#enabled'] = 1 -- vim-airline tabline
 
 -- ale config
-vim.cmd([[
-let g:ale_linters = {
-  \ 'python': ['pylint'],
-  \}
+vim.g['ale_linters'] = {
+    python = {'pylint'},
+}
 
-let g:coc_global_extensions = [
-  \ 'coc-emmet',
-  \ 'coc-explorer',
-  \ 'coc-html',
-  \ 'coc-jedi',
-  \ 'coc-json',
-  \ 'coc-pairs',
-  \ 'coc-rust-analyzer',
-  \ 'coc-sh',
-  \ 'coc-tsserver',
-  \ ]
-"  \ 'coc-clangd',
-"  \ 'coc-java',
-"  \ 'coc-css',
-  ]])
-
+vim.g['coc_global_extensions'] = {
+    'coc-emmet',
+    'coc-explorer',
+    'coc-html',
+    'coc-jedi',
+    'coc-json',
+    'coc-pairs',
+    'coc-rust-analyzer',
+    'coc-sh',
+    'coc-tsserver',
+}
+--    'coc-clangd',
+--    'coc-java',
+--    'coc-css',
 
 -- remove trailing whitespace
 vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
