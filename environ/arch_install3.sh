@@ -3,6 +3,7 @@
 APPS_INSTALL=(
   #clang
   #gimp
+  #glow
   #kate
   #pipewire-pulse
   alacritty
