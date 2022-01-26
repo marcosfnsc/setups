@@ -118,6 +118,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 
 ## comandos:
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
+* `:g/string/d`: apaga todas as linhas que contenham "string"
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
 * `:retab`: transforma tabulações em caracteres de espaço
