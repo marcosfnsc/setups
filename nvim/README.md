@@ -123,6 +123,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:retab`: transforma tabulações em caracteres de espaço
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
 * `:set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
+* `:set rightleft`: altera a ordem das colulas, deixa o texto invertido, execute novamente para o estado anterior
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
