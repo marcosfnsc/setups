@@ -29,6 +29,7 @@
   <LI> <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert </LI>
   <LI> <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert </LI>
   <LI> <kbd>u</kbd> no modo normal: desfaz as mudanças </LI>
+  <LI> <kbd>D</kbd> no modo normal: apaga que estivr entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>_</kbd> </LI>
   </UL>
 </details>
 
