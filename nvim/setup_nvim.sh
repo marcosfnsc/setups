@@ -24,9 +24,14 @@ nvim +PlugInstall +qa
 if test -f "$HOME/.config/nvim/coc-settings.json"; then
   rm $HOME/.config/nvim/coc-settings.json
 fi
+
+echo "{
+  \"explorer.width\": 30,
+  \"explorer.file.showHiddenFiles\": true," > $HOME/.config/nvim/coc-settings.json
 {
-  ln coc-settings.json $HOME/.config/nvim/coc-settings.json 2>/dev/null
+  PATH_RUST_ANALYZER=$(which rust-analyzer)
+  echo "  \"rust-analyzer.server.path\": \"$PATH_RUST_ANALYZER\"" >> $HOME/.config/nvim/coc-settings.json
 } || {
-  echo "erro ao criar link fisico, copiando arquivo ..."
-  cp coc-settings.json $HOME/.config/nvim
+  echo "  \"rust-analyzer.server.path\": ''" >> $HOME/.config/nvim/coc-settings.json
 }
+echo "}" >> $HOME/.config/nvim/coc-settings.json
