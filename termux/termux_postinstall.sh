@@ -6,11 +6,13 @@ termux-setup-storage
 PACKAGES_ADD=(
   clang
   git
+  glow
   neovim
   nodejs
   openssh
   python
   ripgrep
+  rust-analyzer
   tmux
   tree
   zsh
