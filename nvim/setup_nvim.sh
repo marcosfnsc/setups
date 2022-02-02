@@ -29,7 +29,7 @@ echo "{
   \"explorer.width\": 30,
   \"explorer.file.showHiddenFiles\": true," > $HOME/.config/nvim/coc-settings.json
 {
-  PATH_RUST_ANALYZER=$(which rust-analyzer) &&
+  PATH_RUST_ANALYZER=$(command -v rust-analyzer) &&
   echo "  \"rust-analyzer.server.path\": \"$PATH_RUST_ANALYZER\",
   \"rust-analyzer.updates.checkOnStartup\": false" >> $HOME/.config/nvim/coc-settings.json
 } || {
