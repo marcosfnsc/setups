@@ -8,6 +8,7 @@ vim.opt.shiftwidth = 2                    -- how many columns text will be inden
 vim.opt.tabstop = 2                       -- number of visual spaces per TAB
 vim.opt.termguicolors = true              -- 24 bit color supoort
 vim.opt.updatetime = 100
+vim.opt.wrap = false
 
 -- 4 spaces of indent for python and rust, 2 by default
 vim.cmd([[
