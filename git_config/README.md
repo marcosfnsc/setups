@@ -1,5 +1,6 @@
 comandos interessantes:
 -----------------------
+- `git branch -a`: listar todas as branches, inclusive remotas
 - `git branch -d <nome da branch>`: deletar branch local
 - `git branch -m <novo nome da branch>`: mudar o nome da branch atual para outro nome
 - `git checkout -b <nome da branch>`: cria uma nova branch e alterna para ela
