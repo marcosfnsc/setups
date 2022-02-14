@@ -7,7 +7,6 @@ comandos interessantes:
 - `git config --get remote.origin.url`: mostra a url do repo remoto
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `ú` é um atalho para `--set-upstream`
 - `git remote prune origin`: remove branches locais que não existem no repo remoto
-- `git remote set-url origin <url>`: mudar url do repo
 - `git remote set-url origin url_do_repo`: alterar url do repo rempto
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 - `git tag <nome da tag>`: cria um tag leve local
