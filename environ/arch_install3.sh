@@ -6,7 +6,6 @@ APPS_INSTALL=(
   #glow
   #kate
   #pipewire-pulse
-  alacritty
   audacity
   base-devel
   broadcom-wl # drivers wifi
@@ -19,6 +18,7 @@ APPS_INSTALL=(
   htop
   k3b
   kde-applications
+  kitty
   man-pages
   neofetch
   neovim

@@ -27,7 +27,6 @@ APPS_ADD=(
   #pavucontrol-qt # ferramenta simples para editar opções de som
   VirtualBox
   akmod-wl              # driver do wifi
-  alacritty
   audacity              # editor de audio
   bzip2-devel
   clang
@@ -44,6 +43,7 @@ APPS_ADD=(
   java-11-openjdk-devel # ferramentas de compilação do jdk 11
   k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
   kate                  # editor de texto simples com alguns recursos avançados
+  kitty
   libreoffice           # programas de escritorio
   neovim
   nodejs
