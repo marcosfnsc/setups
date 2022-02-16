@@ -22,7 +22,7 @@ sudo -u $_USERNAME curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | s
 # -----------------------
 
 # run other scripts
-cd $REPO_ROOT/alacritty          && sudo -u $_USERNAME ./setup_alacritty.sh
+cd $REPO_ROOT/kitty              && sudo -u $_USERNAME ./setup_kitty.sh
 cd $REPO_ROOT/environ/dotfiles   && sudo -u $_USERNAME ./setup_dotfiles.sh
 cd $REPO_ROOT/environ/modprobe.d &&                    ./setup_modprobe.sh
 cd $REPO_ROOT/flatpak            && sudo -u $_USERNAME ./setup_flatpak.sh
