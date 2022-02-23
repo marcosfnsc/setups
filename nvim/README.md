@@ -66,13 +66,13 @@
 
 ###outros atalhos
 * <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
-* <kbd>*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
+* <kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>Z</kbd><kbd>Q</kbd> no modo normal: sai sem salvar alterações, atalho para <code>:q!</code>
 * <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code>
 * <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal
-* <kbd>g</kbd><kbd>*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
+* <kbd>g</kbd><kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
