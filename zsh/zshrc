@@ -11,13 +11,14 @@ fi
 ## Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
-source $ZSH/oh-my-zsh.sh
 
 plugins=(
   git
   docker
   docker-compose
 )
+
+source $ZSH/oh-my-zsh.sh
 
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
