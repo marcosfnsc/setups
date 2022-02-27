@@ -37,9 +37,9 @@ vim.cmd([[ nnoremap <space>e :CocCommand explorer<CR> ]])
 vim.cmd([[
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
-"Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
 Plug 'airblade/vim-gitgutter'
+Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
@@ -68,6 +68,7 @@ vim.g['ale_linters'] = {
 }
 
 vim.g['coc_global_extensions'] = {
+    'coc-clangd',
     'coc-emmet',
     'coc-explorer',
     'coc-html',
@@ -78,7 +79,6 @@ vim.g['coc_global_extensions'] = {
     'coc-sh',
     'coc-tsserver',
 }
---    'coc-clangd',
 --    'coc-java',
 --    'coc-css',
 
