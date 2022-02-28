@@ -24,6 +24,13 @@ source $ZSH/oh-my-zsh.sh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
+## use nvim buffer to edit command in shell
+export EDITOR=nvim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\033' edit-command-line # Use ESC to edit the current command line:
+export KEYTIMEOUT=1
+
 source $HOME/.shell_functions
 
 ## java environment
