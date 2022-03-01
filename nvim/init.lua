@@ -47,8 +47,8 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rakr/vim-one'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-python/python-syntax'
@@ -56,8 +56,7 @@ call plug#end()
 ]])
 
 -- theme
-vim.cmd([[ colorscheme one]])
-vim.opt.background = 'dark'
+vim.cmd([[ colorscheme onedark]])
 
 vim.g['python_highlight_all'] = 1 -- enable highlight for python
 vim.g['airline#extensions#tabline#enabled'] = 1 -- vim-airline tabline
