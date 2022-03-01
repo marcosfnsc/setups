@@ -51,6 +51,7 @@ Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-python/python-syntax'
 call plug#end()
 ]])
@@ -60,6 +61,7 @@ vim.cmd([[ colorscheme onedark]])
 
 vim.g['python_highlight_all'] = 1 -- enable highlight for python
 vim.g['airline#extensions#tabline#enabled'] = 1 -- vim-airline tabline
+vim.g['airline_theme'] = 'deus'
 
 -- ale config
 vim.g['ale_linters'] = {
