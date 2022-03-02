@@ -44,8 +44,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
+Plug 'lotabout/skim.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
