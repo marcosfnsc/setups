@@ -30,9 +30,11 @@ vim.opt.foldmethod = 'manual'
 -- vim.opt.nofoldenable = true
 
 -- go to definition
-vim.cmd([[ nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR> ]])
+vim.cmd([[ nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>]])
 -- coc-explorer
-vim.cmd([[ nnoremap <space>e :CocCommand explorer<CR> ]])
+vim.cmd([[ nnoremap <space>e :CocCommand explorer<CR>]])
+--escape from insert mode using jj
+vim.cmd([[ inoremap jj <Esc>]])
 
 vim.cmd([[
 call plug#begin()
