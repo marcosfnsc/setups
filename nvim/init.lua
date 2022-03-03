@@ -40,17 +40,18 @@ vim.cmd([[
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
-Plug 'airblade/vim-gitgutter'
 Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+Plug 'lewis6991/gitsigns.nvim',
 Plug 'lotabout/skim', { 'dir': '~/.skim', 'do': './install' }
 Plug 'lotabout/skim.vim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-lua/plenary.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -87,3 +88,5 @@ vim.g['coc_global_extensions'] = {
 
 -- remove trailing whitespace
 vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
+
+require('gitsigns').setup()
