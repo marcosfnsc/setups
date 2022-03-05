@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
-if test -f "$HOME/.gitconfig"; then
-  rm $HOME/.gitconfig
-fi
-
 {
-  ln gitconfig $HOME/.gitconfig
+  ln -f gitconfig $HOME/.gitconfig
 } || {
   echo "erro ao criar link fisico, copiando arquivo ..."
-  cp gitconfig $HOME/.gitconfig
+  cp -f gitconfig $HOME/.gitconfig
 }
