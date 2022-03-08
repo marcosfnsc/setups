@@ -29,6 +29,14 @@ zle -N edit-command-line
 bindkey '\033' edit-command-line # Use ESC to edit the current command line:
 export KEYTIMEOUT=1
 
+## command history config
+export HISTFILE="$HOME/.zsh_history"
+setopt HIST_IGNORE_ALL_DUPS # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS # do not save duplicated command
+setopt INC_APPEND_HISTORY # append command to history file immediately after execution
+setopt NO_EXTENDED_HISTORY # disable timestamp in history
+setopt NO_SHARE_HISTORY # disable timestamp in history
+
 source $HOME/.shell_functions
 
 ## java environment
