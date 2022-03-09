@@ -86,7 +86,16 @@ vim.g['coc_global_extensions'] = {
 --    'coc-java',
 --    'coc-css',
 
+vim.cmd([[let g:indentLine_setColors = 0]])
+
 -- remove trailing whitespace
 vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
 
 require('gitsigns').setup()
+
+vim.cmd [[highlight IndentBlanklineIndent1 guifg=#353d44 gui=nocombine]]
+require("indent_blankline").setup {
+    char_highlight_list = {
+        "IndentBlanklineIndent1",
+    },
+}
