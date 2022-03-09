@@ -52,10 +52,10 @@ swapon /dev/lvgroup/swap
 mkfs.btrfs /dev/lvgroup/root
 mkfs.btrfs /dev/lvgroup/home
 
-mount -o autodefrag /dev/lvgroup/root /mnt
+mount -o autodefrag,compress=zstd /dev/lvgroup/root /mnt
 mkdir -p /mnt/{boot,home}
 mount /dev/sda2 /mnt/boot
-mount -o autodefrag /dev/lvgroup/home /mnt/home
+mount -o autodefrag,compress=zstd /dev/lvgroup/home /mnt/home
 mkdir /mnt/boot/efi
 mount /dev/sda1 /mnt/boot/efi
 
