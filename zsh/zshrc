@@ -29,8 +29,10 @@ zle -N edit-command-line
 bindkey '\033' edit-command-line # Use ESC to edit the current command line:
 export KEYTIMEOUT=1
 
-## command history config
+## zsh history config
 export HISTFILE="$HOME/.zsh_history"
+export SAVEHIST=10000 # maximum number of commands stored in the history file
+export HISTSIZE=$SAVEHIST # number of commands loaded into the memory from the history file
 setopt HIST_IGNORE_ALL_DUPS # do not put duplicated command into history list
 setopt HIST_SAVE_NO_DUPS # do not save duplicated command
 setopt INC_APPEND_HISTORY # append command to history file immediately after execution
