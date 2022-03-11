@@ -53,7 +53,7 @@ cd yay
 makepkg -si
 
 
-#systemctl enable fstrim.timer for sdd with TRIM support
+#systemctl enable fstrim.timer # for sdd with TRIM support
 systemctl enable earlyoom
 systemctl enable paccache.timer
 systemctl enable sddm
