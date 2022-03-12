@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# dicas-> loadkeys br-abnt2
+
 # create partitions
 sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
   g # clear the disk and create GPT table
