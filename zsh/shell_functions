@@ -17,7 +17,7 @@ pyvenv() {
           echo "error: venv $dirname not exists"
         else
           rm -rf "$venvs_path/$dirname"
-          echo "venv $dirname deleted"
+          echo "venv \"$dirname\" deleted"
         fi
         ;;
 
