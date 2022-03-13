@@ -6,7 +6,6 @@ APPS_INSTALL=(
   #glow
   #kate
   #pipewire-pulse
-  audacity
   base-devel
   broadcom-wl # drivers wifi
   curl

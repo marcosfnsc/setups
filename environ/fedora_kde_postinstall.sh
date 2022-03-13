@@ -27,7 +27,6 @@ APPS_ADD=(
   #pavucontrol-qt # ferramenta simples para editar opções de som
   VirtualBox
   akmod-wl              # driver do wifi
-  audacity              # editor de audio
   bzip2-devel
   clang
   cmake                 # utilitario de compilação de codigo c/c++
