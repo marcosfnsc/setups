@@ -10,6 +10,7 @@ PACKAGES_ADD=(
   neovim
   nodejs
   openssh
+  perl # required by fzf
   python
   ripgrep
   rust-analyzer
