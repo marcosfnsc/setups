@@ -15,7 +15,7 @@
 * <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado
 * <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code>
 * <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert
-* <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e apos alguma ação, automaticamente volta para o modo insert
+* <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e após alguma ação, automaticamente volta para o modo insert
 * <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd>
 * <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert
 * <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor no modo insert
@@ -65,7 +65,7 @@
 * <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
 
 ### outros atalhos
-* <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
+* <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode usar outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
 * <kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>Z</kbd><kbd>Q</kbd> no modo normal: sai sem salvar alterações, atalho para <code>:q!</code>
 * <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code>
@@ -82,7 +82,7 @@
 
 ## registros:
 ### tipos de registros:
-* registro sem nome ("): Contém o último conteúdo excluído, alterado ou retirado, mesmo se um registro foi especificado.
+* registro sem nome (`"`): Contém o último conteúdo excluído, alterado ou retirado, mesmo se um registro foi especificado.
 * registros numerados (0-9):
     * 0: conteḿ o ultimo conteudo arrancado
     * 1-9: é uma pilha que conteḿ o ultimo conteudo que foi excluido ou alterado
