@@ -33,4 +33,9 @@ cd $REPO_ROOT/tmux               && sudo -u $_USERNAME ./setup_tmux.sh
 cd $REPO_ROOT/zsh                && sudo -u $_USERNAME ./setup_zsh.sh
 
 sudo -u $_USERNAME chsh -s $(which zsh)
+
+## config ssh
 sudo -u $_USERNAME ssh-keygen -t ed25519 -a 100 -f /home/$_USERNAME/.ssh/id_marcosfnsc_github_note -C "marcosfnsc_github_note"
+sudo -u $_USERNAME echo "Host github.com
+  HostName github.com
+  IdentityFile ~/.ssh/id_marcosfnsc_github_note" > /home/$_USERNAME/.ssh/config
