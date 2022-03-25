@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
+  #android-tools @ adb and fastboot
   #clang
   #gimp
-  #glow
   #kate
   #pipewire-pulse
   base-devel
@@ -15,6 +15,7 @@ APPS_INSTALL=(
   flatpak
   gcc
   git
+  glow
   htop
   k3b
   kde-applications
