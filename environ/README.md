@@ -9,3 +9,4 @@ principais comandos para archlinux:
 * `pacman -Sc`: remover do cache arquivos de pacotes que não estão instalados
 * `pacman -Scc`: remover do cache todos os arquivos de pacotes
 * `pacman -Si nome_do_pacote`:
+* `pacman -Sw nome_do_pacote`: baixar pacotes mas sem instalar
