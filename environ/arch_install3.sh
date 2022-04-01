@@ -24,6 +24,7 @@ APPS_INSTALL=(
   neofetch
   neovim
   networkmanager
+  nmap
   nodejs
   noto-fonts
   noto-fonts-cjk
