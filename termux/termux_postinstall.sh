@@ -8,6 +8,7 @@ PACKAGES_ADD=(
   git
   glow
   neovim
+  nmap
   nodejs
   openssh
   perl # required by fzf
