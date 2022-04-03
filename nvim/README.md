@@ -27,9 +27,9 @@
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
 * <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>u</kbd> no modo normal: desfaz as mudanças
-* <kbd>D</kbd> no modo normal: apaga que estivr entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>_</kbd>
+* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
 
-### movimento;
+### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha
 * <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
@@ -39,12 +39,12 @@
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posicao do cursor
 * <kbd>ctrol</kbd><kbd>o</kbd> no modo normal: saltar para a posicao anterior do cursor
-* <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
+* <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere, usar <kbd>;</kbd> para ir para proxima ocorrencia e <kbd>,</kbd> para retroceder
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
-* <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa
-* <kbd>g_</kbd> no modo normal: ir para o ultimo caractere da linha
-* <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado
-* <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa</LI>
+* <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
+* <kbd>g&lowbar;</kbd> no modo normal: ir para o ultimo caractere da linha
+* <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
+* <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>w</kbd> no modo normal: saltar palavras
 * <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela
 * <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela
@@ -99,7 +99,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * registros nomeados (a-z):
     * o editor so vai sobrescrever se esse tipo de registro for especificado
     * colocar a letra em maiscula vai anexar o conteudo ao registro, em vez de sobrescrever
-* registro de buraco negro (\_): tudo que for escrito lá sera perdido
+* registro de buraco negro (`&lowbar;`): tudo que for escrito lá sera perdido
 * registro do ultimo padrão de epsquisa (/): contem o ultimo conteudo pesquisado
 
 ## comandos:
