@@ -35,6 +35,8 @@ vim.cmd([[ nmap <silent> gd :call CocAction('jumpDefinition', 'split')<CR>]])
 vim.cmd([[ nnoremap <space>e :CocCommand explorer<CR>]])
 --escape from insert mode using jj
 vim.cmd([[ inoremap jj <Esc>]])
+--save buffer
+vim.cmd([[ noremap <Leader>s :update<CR>]])
 
 vim.cmd([[
 call plug#begin()
