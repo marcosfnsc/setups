@@ -107,7 +107,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 
 ## comandos:
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
-* `:g/string/d`: apaga todas as linhas que contenham "string"
+* `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
+* `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
 * `:retab`: transforma tabulações em caracteres de espaço
