@@ -5,6 +5,7 @@ termux-setup-storage
 
 PACKAGES_ADD=(
   clang
+  curl
   git
   glow
   neovim
