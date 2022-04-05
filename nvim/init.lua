@@ -22,6 +22,9 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 ]])
 
+-- fix json to jsonc
+--vim.cmd([[ autocmd FileType json set filetype=jsonc ]])
+
 -- natural split
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -48,6 +51,7 @@ Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'kevinoid/vim-jsonc'
 Plug 'lewis6991/gitsigns.nvim',
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
@@ -78,7 +82,6 @@ vim.g['coc_global_extensions'] = {
     'coc-explorer',
     'coc-html',
     'coc-jedi',
-    'coc-json',
     'coc-pairs',
     'coc-rust-analyzer',
     'coc-sh',
@@ -86,6 +89,7 @@ vim.g['coc_global_extensions'] = {
 }
 --    'coc-java',
 --    'coc-css',
+--    'coc-json',
 
 vim.cmd([[let g:indentLine_setColors = 0]])
 
