@@ -40,6 +40,7 @@ APPS_INSTALL=(
   sudo
   tmux
   tree
+  unzip
   usbutils
   xorg
   zsh
