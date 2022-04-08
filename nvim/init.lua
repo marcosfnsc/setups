@@ -77,7 +77,6 @@ vim.g['ale_linters'] = {
 }
 
 vim.g['coc_global_extensions'] = {
-    'coc-clangd',
     'coc-emmet',
     'coc-explorer',
     'coc-html',
@@ -87,6 +86,7 @@ vim.g['coc_global_extensions'] = {
     'coc-sh',
     'coc-tsserver',
 }
+--    'coc-clangd',
 --    'coc-java',
 --    'coc-css',
 --    'coc-json',
