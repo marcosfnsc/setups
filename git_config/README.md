@@ -23,6 +23,7 @@ comandos interessantes:
 - `git pull --unshallow`: ao clonar um repo no modo superficial, esse comando permite baixar todo o historico como um clone normal
 
 ### outros comandos
+- `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
 - `git tag <nome da tag>`: cria um tag leve local
 - `git tag`: lista as tags
