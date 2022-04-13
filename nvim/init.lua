@@ -52,6 +52,7 @@ vim.cmd([[
 call plug#begin()
 "Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
 "Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
+Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
@@ -75,7 +76,6 @@ call plug#end()
 vim.cmd([[ colorscheme onedark]])
 
 vim.g['python_highlight_all'] = 1 -- enable highlight for python
-vim.g['airline#extensions#tabline#enabled'] = 1 -- vim-airline tabline
 vim.g['airline_theme'] = 'deus'
 
 -- ale config
@@ -103,6 +103,11 @@ vim.cmd([[let g:indentLine_setColors = 0]])
 -- remove trailing whitespace
 vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
 
+require('bufferline').setup {
+  options = {
+    show_buffer_close_icons = false,
+  }
+}
 require('gitsigns').setup()
 
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#353d44 gui=nocombine]]
