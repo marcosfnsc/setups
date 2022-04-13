@@ -21,6 +21,7 @@ comandos interessantes:
 - `git log --follow nome_do_arquivo`: mostra todos os commits referentes ao um determinado arquivo
 - `git log --oneline --graph`: mostrar o log com uma representação das branches, o `--oneline` serve para resumir os dados mostrados dos commits
 - `git pull --unshallow`: ao clonar um repo no modo superficial, esse comando permite baixar todo o historico como um clone normal
+- `git rebase -i --root`: realizar rebase no modo interativo, `--root` quer dizer para realizar rebase em todos os commits
 
 ### outros comandos
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
