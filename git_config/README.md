@@ -24,7 +24,12 @@ comandos interessantes:
 - `git rebase -i --root`: realizar rebase no modo interativo, `--root` quer dizer para realizar rebase em todos os commits
 
 ### outros comandos
+- `git diff branch1:branch2 -- nome_do_arquivo`: mostra as diferenças em um determinado arquivo
+- `git diff branch1:branch2`: mostra as diferenças entre as duas branches especificadas
+- `git log branch1:branch2 -- nome_do_arquivo`: mostra as os commits que diferem uma branch da outra em relação a um determinado arquivo
+- `git log branch1:branch2`: mostra as os commits que diferem uma branch da outra
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
+- `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `git tag <nome da tag>`: cria um tag leve local
 - `git tag`: lista as tags
