@@ -5,10 +5,12 @@
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
 * <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd>
 * <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteudo da linha atual e entra no modo normal
+* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
 * <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
 * <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
 * <kbd>R</kbd> no modo normal: entra no modo replace
 * <kbd>V</kbd> no modo normal: modo visual de linha
+* <kbd>X</kbd> no modo normal: apaga que estiver a direita do cursor
 * <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
 * <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteudo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
 * <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado
@@ -27,30 +29,33 @@
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
 * <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>u</kbd> no modo normal: desfaz as mudanças
-* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
+* <kbd>x</kbd> no modo normal: apaga que estiver sub o cursor
+* <kbd>~</kbd> no modo normal: altera o caractere sub o cursor para maiusculo ou minusculo
 
 ### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha (incluindo o caractere de quebra de linha)
+* <kbd>%</kbd> no modo normal: acha o proximo parêntese, colchete, chave etc
 * <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha
+* <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
 * <kbd>L</kbd> no modo normal: mover cursor para a parte inferior da janela
 * <kbd>M</kbd> no modo normal: mover cursor para o centro da janela
+* <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>^</kbd> no modo normal: ir para o primeiro caractere da linha
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posicao do cursor
 * <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posicao anterior do cursor
-* <kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere, usar <kbd>;</kbd> para ir para proxima ocorrencia e <kbd>,</kbd> para retroceder
+* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert
+* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert
+* <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
-* <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>g&lowbar;</kbd> no modo normal: ir para o ultimo caractere da linha
+* <kbd>ge</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
-* <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>w</kbd> no modo normal: saltar palavras
 * <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela
 * <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela
 * <kbd>z</kbd><kbd>z</kbd> no modo normal: mover linha para o centro da janela
-* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert
-* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert
 
 ### gerenciamento de janela:
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>+</kbd> no modo normal: almenta a altura da janela
@@ -75,13 +80,14 @@
 * <kbd>g</kbd><kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
+* <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
+* <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
+* <kbd>q</kbd><kbd>:</kbd> no modo normal: abrir a janela de linha de comando, onde você tem qualquer poder de edição do Vim em suas mãos
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
 * <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
-* <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
-* <kbd>q</kbd><kbd>:</kbd> no modo normal: abrir a janela de linha de comando, onde você tem qualquer poder de edição do Vim em suas mãos
 
 ## registros:
 ### tipos de registros:
@@ -90,7 +96,7 @@
     * 0: conteḿ o ultimo conteudo arrancado
     * 1-9: é uma pilha que conteḿ o ultimo conteudo que foi excluido ou alterado
 
-      cada vez que alterar ou exluir um conteudo ele sera adicionado ao registro 1, quandoo outro conteudo
+      cada vez que alterar ou exluir um conteudo ele sera adicionado ao registro 1, quando outro conteudo
       é adicionado ao registro 1, o que havia nele é transferido para o proximo registro, que neste caso é
       o 2, o conteudo vai saltando de um registro para outro até chegar no registro 9, quando outro conteudo
       for movido para o registro 9, o que havia antes nele é perdido
