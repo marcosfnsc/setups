@@ -24,7 +24,6 @@ call plug#end()
 ]])
 
 vim.cmd([[ colorscheme onedark]]) -- theme
-vim.cmd([[let g:indentLine_setColors = 0]])
 vim.g['airline_theme'] = 'deus' --
 vim.g['ale_linters'] = {python = {'pylint'}} -- ale config
 vim.g['python_highlight_all'] = 1 -- enable highlight for python
