@@ -1,10 +1,7 @@
 
 vim.cmd([[
 call plug#begin()
-"Plug 'HerringtonDarkholme/yats.vim' "syntax highlighting for TypeScript, includes react project
-"Plug 'maxmellon/vim-jsx-pretty' "syntax highlighting for javascript, includes react project
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
-Plug 'bfrg/vim-cpp-modern' "syntax highlighting c/c++
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
@@ -26,7 +23,6 @@ call plug#end()
 vim.cmd([[ colorscheme onedark]]) -- theme
 vim.g['airline_theme'] = 'deus' --
 vim.g['ale_linters'] = {python = {'pylint'}} -- ale config
-vim.g['python_highlight_all'] = 1 -- enable highlight for python
 vim.g['coc_global_extensions'] = {
     'coc-emmet',
     'coc-explorer',
