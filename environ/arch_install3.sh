@@ -1,12 +1,8 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
-  #android-tools @ adb and fastboot
-  #clang
-  #gimp
-  #kate
-  #pipewire-pulse
-  base-devel
+  android-tools # adb and fastboot
+  base-devel # for yay
   broadcom-wl # drivers wifi
   curl
   earlyoom
@@ -33,10 +29,12 @@ APPS_INSTALL=(
   okular
   openssh
   pacman-contrib
+  pipewire-pulse
   plasma
   qbittorrent
   ripgrep
   sddm
+  sshfs
   sudo
   tmux
   tree
