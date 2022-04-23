@@ -25,8 +25,10 @@ autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust setlocal shiftwidth=4 tabstop=4
 ]])
 
--- remove trailing whitespace
-vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]])
+
+vim.cmd([[ command RmTrailingWhitespaces :%s/\s\+$//e | :noh ]]) -- remove trailing whitespace
+vim.cmd([[ command TtyModeOff :colorscheme onedark ]])
+vim.cmd([[ command TtyModeOn :colorscheme default ]])
 
 require("mappings")
 require("plugins")
