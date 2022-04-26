@@ -134,3 +134,14 @@ recursiva e por fim executar o comando de substituição em todos os arquivos us
 `:argdo %s/palavra_antiga/palavra_nova/g`
 
 o comando `argdo` vai executar o subcomando em cada arquivo presente no args do vim
+
+## macros:
+é um recurso que permite gravar uma sequencia de comandos e salvar para ser usado de
+novo qantas vezes por necessario
+
+#### sintaxe:
+* para gravar uma macro: `q<reg><comandos>q`
+* para executar uma macro: `@<reg>`
+
+como a macro em gravada nos registros, é possivel colar uma macro usando<kbd>p</kbd>
+e depois copiando para o mesmo registro usando algum movimento de corte
