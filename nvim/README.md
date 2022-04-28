@@ -53,9 +53,9 @@
 * <kbd>ge</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>w</kbd> no modo normal: saltar palavras
-* <kbd>z</kbd><kbd>b</kbd> no modo normal: mover linha para a parte inferior da janela
-* <kbd>z</kbd><kbd>t</kbd> no modo normal: mover linha para o topo da janela
-* <kbd>z</kbd><kbd>z</kbd> no modo normal: mover linha para o centro da janela
+* <kbd>z</kbd><kbd>b</kbd> no modo normal: mover a janela para que a linha sob o cursor fique na parte inferior da janela
+* <kbd>z</kbd><kbd>t</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no topo da janela
+* <kbd>z</kbd><kbd>z</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no centro da janela
 
 ### gerenciamento de janela:
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>+</kbd> no modo normal: almenta a altura da janela
