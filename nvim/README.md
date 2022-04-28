@@ -43,10 +43,14 @@
 * <kbd>T</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>T</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>^</kbd> no modo normal: ir para o primeiro caractere da linha
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
+* <kbd>ctrol</kbd><kbd>d</kbd> no modo normal: mover metade da janela para baixo
+* <kbd>ctrol</kbd><kbd>e</kbd> no modo normal: mover janela uma linha para baixo
 * <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posicao do cursor
 * <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posicao anterior do cursor
+* <kbd>ctrol</kbd><kbd>u</kbd> no modo normal: mover metade da janela para cima
 * <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert
 * <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert
+* <kbd>ctrol</kbd><kbd>y</kbd> no modo normal: mover janela uma linha para cima
 * <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
 * <kbd>g&lowbar;</kbd> no modo normal: ir para o ultimo caractere da linha
