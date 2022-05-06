@@ -1,6 +1,6 @@
 ## start with tmux
 if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
-  exec tmux
+  exec tmux new -A
 fi
 
 ## rust environment
