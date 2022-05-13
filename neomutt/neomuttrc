@@ -1,0 +1,12 @@
+# vim: filetype=muttrc
+
+set editor = "nvim"
+set ssl_force_tls = yes # all connection established with remote server should be encrypted
+
+# cache
+set header_cache     = ~/.config/neomutt/cache/headers # store headers
+set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
+
+#set certificate_file = ~/.mutt/certificates  # store certs
+
+# accounts
