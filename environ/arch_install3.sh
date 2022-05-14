@@ -15,9 +15,11 @@ APPS_INSTALL=(
   htop
   k3b
   kde-applications
+  keepassxc
   kitty
   man-pages
   neofetch
+  neomutt
   neovim
   networkmanager
   nmap
