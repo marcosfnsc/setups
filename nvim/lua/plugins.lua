@@ -30,7 +30,6 @@ vim.g['coc_global_extensions'] = {
     'coc-jedi',
     'coc-pairs',
     'coc-rust-analyzer',
-    'coc-sh',
     'coc-tsserver',
 }
 --    'coc-clangd',
