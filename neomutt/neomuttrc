@@ -10,3 +10,4 @@ set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
 #set certificate_file = ~/.mutt/certificates  # store certs
 
 # accounts
+source ~/.config/neomutt/accounts/gmail_uern
