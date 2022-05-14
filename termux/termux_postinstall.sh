@@ -8,6 +8,8 @@ PACKAGES_ADD=(
   curl
   git
   glow
+  keepassxc
+  neomutt
   neovim
   nmap
   nodejs
@@ -21,7 +23,8 @@ PACKAGES_ADD=(
   zsh
 )
 
-pkg install  ${APPS_ADD[@]} -y
+pkg install x11-repo -y
+pkg install ${APPS_ADD[@]} -y
 
 cd ..
 cd git_config && ./setup_git.sh  && cd ..
