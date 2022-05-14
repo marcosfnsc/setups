@@ -3,6 +3,12 @@
 set editor = "nvim"
 set ssl_force_tls = yes # all connection established with remote server should be encrypted
 
+bind index G last-entry
+bind index g noop
+bind index gg first-entry
+bind pager j next-line
+bind pager k previous-line
+
 # cache
 set header_cache     = ~/.config/neomutt/cache/headers # store headers
 set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
