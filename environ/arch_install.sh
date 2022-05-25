@@ -30,10 +30,10 @@ cryptsetup \
   --key-size 512 \
   --pbkdf argon2i \
   --sector-size $SECTOR_SIZE \
-  --align-payload $(expr $SECTOR_SIZE / 512)
+  --align-payload $(expr $SECTOR_SIZE / 512) \
   --use-urandom \
   --verify-passphrase \
-  luksFormat /dev/sda3
+  luksFormat /dev/sda2
 cryptsetup open --type luks2 /dev/sda2 luks_part
 
 mkfs.fat -F32 /dev/sda1
