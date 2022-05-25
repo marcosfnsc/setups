@@ -47,13 +47,11 @@ mount -o subvol=@swap                          /dev/mapper/container /mnt/swap
 mkdir /mnt/etc
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# mirrors
-yes | pacman -S reflector
-reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
+reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist # mirrors
 yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
 
 arch-chroot /mnt ./arch_install2.sh
-
