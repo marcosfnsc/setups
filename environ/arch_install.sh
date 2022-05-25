@@ -26,22 +26,22 @@ cryptsetup \
   --use-urandom \
   --verify-passphrase \
   luksFormat /dev/sda2
-cryptsetup open --type luks2 /dev/sda2 luks_part
+cryptsetup open --type luks2 /dev/sda2 container
 
 mkfs.fat -F32 /dev/sda1
-mkfs.btrfs /dev/mapper/luks_part
+mkfs.btrfs /dev/mapper/container
 
-mount /dev/mapper/luks_part /mnt
+mount /dev/mapper/container /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
 btrfs subvolume create /mnt/@swap
 umount /mnt
 
-mount -o autodefrag,compress=zstd,subvol=@ /dev/mapper/luks_part /mnt
+mount -o autodefrag,compress=zstd,subvol=@ /dev/mapper/container /mnt
 mkdir /mnt/{boot,home,swap}
 mount /dev/sda1 /mnt/boot
-mount -o autodefrag,compress=zstd,subvol=@home /dev/mapper/luks_part /mnt/home
-mount -o subvol=@swap                          /dev/mapper/luks_part /mnt/swap
+mount -o autodefrag,compress=zstd,subvol=@home /dev/mapper/container /mnt/home
+mount -o subvol=@swap                          /dev/mapper/container /mnt/swap
 
 
 mkdir /mnt/etc
