@@ -40,16 +40,12 @@ fi
 if [[ $HOOKS == *"encrypt"* ]] ; then
   sed -e s/encrypt//g -i /etc/mkinitcpio.conf
 fi
-if [[ $HOOKS == *"lvm2"* ]] ; then
-  sed -e s/lvm2//g -i /etc/mkinitcpio.conf
-fi
 if [[ $HOOKS == *"resume"* ]] ; then
   sed -e s/resume//g -i /etc/mkinitcpio.conf
 fi
 sed -e "s/autodetect/autodetect keyboard/g"  -i /etc/mkinitcpio.conf
 sed -e "s/keyboard/keyboard keymap/g"        -i /etc/mkinitcpio.conf
 sed -e "s/filesystems/encrypt filesystems/g" -i /etc/mkinitcpio.conf
-sed -e "s/filesystems/lvm2 filesystems/g"    -i /etc/mkinitcpio.conf
 sed -e "s/fsck/resume fsck/g"                -i /etc/mkinitcpio.conf
 sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
