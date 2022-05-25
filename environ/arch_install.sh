@@ -14,10 +14,6 @@ sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
   n # new partition
   2 # partion number 2
     # default
-  +1G # 1 GB boot parttion
-  n # new partition
-  3 # partion number 3
-    # default
     # full size partition
   w # write and exit
 EOF
@@ -38,28 +34,23 @@ cryptsetup \
   --use-urandom \
   --verify-passphrase \
   luksFormat /dev/sda3
-cryptsetup open --type luks2 /dev/sda3 luks_part
-
-## config lvm
-pvcreate --dataalignment 1m /dev/mapper/luks_part
-vgcreate lvgroup /dev/mapper/luks_part
-lvcreate -L 4GB      lvgroup -n swap
-lvcreate -L 60GB     lvgroup -n root
-lvcreate -l 100%FREE lvgroup -n home
+cryptsetup open --type luks2 /dev/sda2 luks_part
 
 mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mkswap /dev/lvgroup/swap
-swapon /dev/lvgroup/swap
-mkfs.btrfs /dev/lvgroup/root
-mkfs.btrfs /dev/lvgroup/home
+mkfs.btrfs /dev/mapper/luks_part
 
-mount -o autodefrag,compress=zstd /dev/lvgroup/root /mnt
-mkdir -p /mnt/{boot,home}
-mount /dev/sda2 /mnt/boot
-mount -o autodefrag,compress=zstd /dev/lvgroup/home /mnt/home
-mkdir /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
+mount /dev/mapper/luks_part /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@swap
+umount /mnt
+
+mount -o autodefrag,compress=zstd,subvol=@ /dev/mapper/luks_part /mnt
+mkdir /mnt/{boot,home,swap}
+mount /dev/sda1 /mnt/boot
+mount -o autodefrag,compress=zstd,subvol=@home /dev/mapper/luks_part /mnt/home
+mount -o subvol=@swap                          /dev/mapper/luks_part /mnt/swap
+
 
 mkdir /mnt/etc
 genfstab -U /mnt >> /mnt/etc/fstab
@@ -67,7 +58,7 @@ genfstab -U /mnt >> /mnt/etc/fstab
 # mirrors
 yes | pacman -S reflector
 reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-yes | pacstrap /mnt base linux linux-firmware lvm2 networkmanager
+yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
