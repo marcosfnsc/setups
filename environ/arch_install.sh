@@ -43,10 +43,16 @@ mount /dev/sda1 /mnt/boot
 mount -o autodefrag,compress=zstd,subvol=@home /dev/mapper/container /mnt/home
 mount -o subvol=@swap                          /dev/mapper/container /mnt/swap
 
+## swapfile
+touch /mnt/swap/swapfile
+chmod 600 /mnt/swap/swapfile
+chattr +C /mnt/swap/swapfile
+dd if=/dev/zero of /mnt/swap/swapfile bs=1M count=4096
+mkswap /mnt/swap/swapfile
+swapon /mnt/swap/swapfile
 
 mkdir /mnt/etc
 genfstab -U /mnt >> /mnt/etc/fstab
-
 
 reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist # mirrors
 yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
