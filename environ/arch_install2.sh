@@ -67,7 +67,7 @@ ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/swap/swapfile" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
-LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE"
+LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET"
 sed \
   -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g"
   -i etc/default/grub
