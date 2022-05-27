@@ -47,7 +47,7 @@ mount -o subvol=@swap                          /dev/mapper/container /mnt/swap
 touch /mnt/swap/swapfile
 chmod 600 /mnt/swap/swapfile
 chattr +C /mnt/swap/swapfile
-dd if=/dev/zero of /mnt/swap/swapfile bs=1M count=4096
+dd if=/dev/zero of /mnt/swap/swapfile bs=1M count=4096 status=progress
 mkswap /mnt/swap/swapfile
 swapon /mnt/swap/swapfile
 
