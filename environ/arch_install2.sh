@@ -54,12 +54,19 @@ mkinitcpio -p linux
 pacman -S --needed grub efibootmgr os-prober mtools dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
+curl \
+  https://raw.githubusercontent.com/osandov/osandov-linux/master/scripts/btrfs_map_physical.c \
+  -o btrfs_map_physical.c
+gcc -O2 -obtrfs_map_physical btrfs_map_physical.c
+RESUME_OFFSET=$(./btrfs_map_physical /swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
+RESUME_OFFSET=$(expr $off_set / $(getconf PAGESIZE))
+
 UUID_SDA2=$(lsblk -no NAME,UUID /dev/sda2 | head -n 1 | awk '{print $2}')
 CRYPT_DEVICE="cryptdevice=UUID=$UUID_SDA2:container" # add :allow-discards to enable TRIM commands
 ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/swap/swapfile" # for hibernation
-RESUME_OFFSET="resume_offset= rw" # when swap is a swapfile
+RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE"
 sed \
   -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g"
