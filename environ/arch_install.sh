@@ -56,7 +56,7 @@ mkdir /mnt/etc
 genfstab -U /mnt >> /mnt/etc/fstab
 
 reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist # mirrors
-yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs gcc
+yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt

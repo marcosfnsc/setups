@@ -51,9 +51,10 @@ sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 ## config grub
-pacman -S --needed grub efibootmgr os-prober mtools dosfstools
+pacman -Sy --needed grub efibootmgr os-prober mtools dosfstools
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB
 
+pacman -S --needed curl gcc
 curl \
   https://raw.githubusercontent.com/osandov/osandov-linux/master/scripts/btrfs_map_physical.c \
   -o btrfs_map_physical.c
