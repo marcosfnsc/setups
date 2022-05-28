@@ -37,12 +37,12 @@ btrfs subvolume create /mnt/@home
 btrfs subvolume create /mnt/@swap
 umount /mnt
 
-mount -o autodefrag,compress=zstd,subvol=@ /dev/mapper/container /mnt
+mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@     /dev/mapper/container /mnt
 mkdir /mnt/{boot,home,swap}
 mount /dev/sda1 /mnt/boot
 mkdir /mnt/boot/efi
-mount -o autodefrag,compress=zstd,subvol=@home /dev/mapper/container /mnt/home
-mount -o subvol=@swap                          /dev/mapper/container /mnt/swap
+mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@home /dev/mapper/container /mnt/home
+mount -o notatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
 
 ## swapfile
 touch /mnt/swap/swapfile
