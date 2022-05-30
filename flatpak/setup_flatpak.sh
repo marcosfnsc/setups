@@ -7,7 +7,6 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 FLATPAK_FLATHUB=(
   com.discordapp.Discord    # Discord
   com.google.AndroidStudio  # Android Studio
-  com.google.Chrome         # google chrome
   com.spotify.Client        # Spotify
   com.valsesoftware.Steam   # Steam
   org.audacityteam.Audacity # Audacity
