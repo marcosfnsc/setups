@@ -7,6 +7,7 @@ APPS_INSTALL=(
   curl
   earlyoom
   ffmpeg
+  firefox
   firewalld
   flatpak
   gcc
