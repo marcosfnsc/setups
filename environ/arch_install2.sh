@@ -60,7 +60,7 @@ curl \
   -o btrfs_map_physical.c
 gcc -O2 -obtrfs_map_physical btrfs_map_physical.c
 RESUME_OFFSET=$(./btrfs_map_physical /swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
-RESUME_OFFSET=$(expr $off_set / $(getconf PAGESIZE))
+RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
 UUID_SDA2=$(lsblk -no NAME,UUID /dev/sda2 | head -n 1 | awk '{print $2}')
 CRYPT_DEVICE="cryptdevice=UUID=$UUID_SDA2:container" # add :allow-discards to enable TRIM commands
