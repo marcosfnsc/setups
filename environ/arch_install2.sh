@@ -69,6 +69,11 @@ ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/swap/swapfile" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET"
+
+if ! grep -q "^GRUB_CMDLINE_LINUX=" etc/default/grub ; then
+  echo "GRUB_CMDLINE_LINUX=\"\"" >> etc/default/grub
+fi
+
 sed \
   -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g" \
   -i etc/default/grub
