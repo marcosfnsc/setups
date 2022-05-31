@@ -66,7 +66,7 @@ UUID_SDA2=$(lsblk -no NAME,UUID /dev/sda2 | head -n 1 | awk '{print $2}')
 CRYPT_DEVICE="cryptdevice=UUID=$UUID_SDA2:container" # add :allow-discards to enable TRIM commands
 ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
-RESUME_DEVICE="resume=/swap/swapfile" # for hibernation
+RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET"
 
