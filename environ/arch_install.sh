@@ -41,7 +41,6 @@ umount /mnt
 mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@     /dev/mapper/container /mnt
 mkdir /mnt/{boot,home,swap,snapshots}
 mount /dev/sda1 /mnt/boot
-mkdir /mnt/boot/efi
 mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@home /dev/mapper/container /mnt/home
 mount -o notatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
 mount -o subvol=@snapshots                                         /dev/mapper/container /mnt/snapshots
