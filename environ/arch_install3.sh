@@ -34,6 +34,7 @@ APPS_INSTALL=(
   pacman-contrib
   pipewire-pulse
   plasma
+  plasma-wayland-session # for wayland session
   qbittorrent
   ripgrep
   sddm
