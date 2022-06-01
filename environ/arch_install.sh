@@ -3,24 +3,12 @@
 # dicas-> loadkeys br-abnt2
 
 # create partitions
-sed -e 's/\s*\([\+0-9a-zA-Z]*\).*/\1/' << EOF | fdisk /dev/sda
-  g # clear the disk and create GPT table
-  n # new partition
-  1 # partition number 1
-    # default
-  +500M # 500 MB efi parttion
-  t # change the type partition
-  1 # selected type EFI system
-  n # new partition
-  2 # partion number 2
-    # default
-  +1G # 1 GB boot parttion
-  n # new partition
-  3 # partion number 3
-    # default
-    # full size partition
-  w # write and exit
-EOF
+parted -s /dev/sda \
+  mklabel gpt \
+  mkpart primary 1MiB 500MiB \
+  mkpart primary 500MiB 100% \
+  --align optimal \
+  align-check min 1
 
 ## config luks2
 modprobe dm-crypt
@@ -34,43 +22,45 @@ cryptsetup \
   --key-size 512 \
   --pbkdf argon2i \
   --sector-size $SECTOR_SIZE \
-  --align-payload $(expr $SECTOR_SIZE / 512)
+  --align-payload $(expr $SECTOR_SIZE / 512) \
   --use-urandom \
   --verify-passphrase \
-  luksFormat /dev/sda3
-cryptsetup open --type luks2 /dev/sda3 luks_part
-
-## config lvm
-pvcreate --dataalignment 1m /dev/mapper/luks_part
-vgcreate lvgroup /dev/mapper/luks_part
-lvcreate -L 4GB      lvgroup -n swap
-lvcreate -L 60GB     lvgroup -n root
-lvcreate -l 100%FREE lvgroup -n home
+  luksFormat /dev/sda2
+cryptsetup open --type luks2 /dev/sda2 container
 
 mkfs.fat -F32 /dev/sda1
-mkfs.ext4 /dev/sda2
-mkswap /dev/lvgroup/swap
-swapon /dev/lvgroup/swap
-mkfs.btrfs /dev/lvgroup/root
-mkfs.btrfs /dev/lvgroup/home
+mkfs.btrfs /dev/mapper/container
 
-mount -o autodefrag,compress=zstd /dev/lvgroup/root /mnt
-mkdir -p /mnt/{boot,home}
-mount /dev/sda2 /mnt/boot
-mount -o autodefrag,compress=zstd /dev/lvgroup/home /mnt/home
+mount /dev/mapper/container /mnt
+btrfs subvolume create /mnt/@
+btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@swap
+btrfs subvolume create /mnt/@snapshots
+umount /mnt
+
+mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@     /dev/mapper/container /mnt
+mkdir /mnt/{boot,home,swap,snapshots}
+mount /dev/sda1 /mnt/boot
 mkdir /mnt/boot/efi
-mount /dev/sda1 /mnt/boot/efi
+mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@home /dev/mapper/container /mnt/home
+mount -o notatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
+mount -o subvol=@snapshots                                         /dev/mapper/container /mnt/snapshots
+
+## swapfile
+touch /mnt/swap/swapfile
+chmod 600 /mnt/swap/swapfile
+chattr +C /mnt/swap/swapfile
+dd if=/dev/zero of=/mnt/swap/swapfile bs=1M count=4096 status=progress
+mkswap /mnt/swap/swapfile
+swapon /mnt/swap/swapfile
 
 mkdir /mnt/etc
 genfstab -U /mnt >> /mnt/etc/fstab
 
-# mirrors
-yes | pacman -S reflector
-reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-yes | pacstrap /mnt base linux linux-firmware lvm2 networkmanager
+reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist # mirrors
+yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
 
 arch-chroot /mnt ./arch_install2.sh
-
