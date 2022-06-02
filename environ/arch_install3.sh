@@ -36,6 +36,7 @@ APPS_INSTALL=(
   plasma
   plasma-wayland-session # for wayland session
   qbittorrent
+  rclone
   ripgrep
   sddm
   sshfs
