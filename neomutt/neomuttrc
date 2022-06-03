@@ -16,6 +16,10 @@ bind pager gg top
 bind pager j next-line
 bind pager k previous-line
 
+## colors
+color header brightcyan default "^(From)"
+color header brightcyan default "^(Subject)"
+
 # cache
 set header_cache     = ~/.config/neomutt/cache/headers # store headers
 set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
