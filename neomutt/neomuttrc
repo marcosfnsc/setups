@@ -3,9 +3,12 @@
 set editor = "nvim"
 set ssl_force_tls = yes # all connection established with remote server should be encrypted
 
+bind index,pager g noop
+
 bind index G last-entry
-bind index g noop
 bind index gg first-entry
+bind pager G bottom
+bind pager gg top
 bind pager j next-line
 bind pager k previous-line
 
