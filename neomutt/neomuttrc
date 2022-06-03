@@ -1,8 +1,12 @@
 # vim: filetype=muttrc
 
+set charset = "utf-8"
 set editor = "nvim"
+set send_charset = "utf-8"
 set ssl_force_tls = yes # all connection established with remote server should be encrypted
+#set certificate_file = ~/.mutt/certificates  # store certs
 
+## keybinds
 bind index,pager g noop
 
 bind index G last-entry
@@ -15,8 +19,6 @@ bind pager k previous-line
 # cache
 set header_cache     = ~/.config/neomutt/cache/headers # store headers
 set message_cachedir = ~/.config/neomutt/cache/bodies  # store bodies
-
-#set certificate_file = ~/.mutt/certificates  # store certs
 
 # accounts
 source ~/.config/neomutt/accounts/gmail_uern
