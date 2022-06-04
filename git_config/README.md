@@ -3,9 +3,9 @@ comandos interessantes:
 
 ### gerenciamento de branches
 - `git branch -a`: listar todas as branches, inclusive remotas
-- `git branch -d <nome da branch>`: deletar branch local
-- `git branch -m <novo nome da branch>`: mudar o nome da branch atual para outro nome
-- `git checkout -b <nome da branch>`: cria uma nova branch e alterna para ela
+- `git branch -d nome da branch`: deletar branch local
+- `git branch -m novo nome da branch`: mudar o nome da branch atual para outro nome
+- `git checkout -b nome da branch`: cria uma nova branch e alterna para ela
 - `git push origin --delete nome_da_branch`: apaga a branch remota
 - `git fetch -p`: remove referencias de branches que não existem no repo remoto, `-p` é a versão curta de `--prune`
 
@@ -23,6 +23,7 @@ comandos interessantes:
 - `git log --oneline --graph`: mostrar o log com uma representação das branches, o `--oneline` serve para resumir os dados mostrados dos commits
 - `git log branch1:branch2 -- nome_do_arquivo`: mostra as os commits que diferem uma branch da outra em relação a um determinado arquivo
 - `git log branch1:branch2`: mostra as os commits que diferem uma branch da outra
+- `git shortlog -sn`: classifica todos os contribuidores com base na contagem de commits
 
 ### url do repositorio
 - `git config --get remote.origin.url`: mostra a url do repo remoto
@@ -30,11 +31,12 @@ comandos interessantes:
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 
 ### outros comandos
+- `git commit -a`: mesmo comportamento de digitar `git add .` e depois `git commit`
+- `git commit -am`: mesmo comportamento de digitar `git add .` e depois `git commit -m mensagem_do_commit`
 - `git diff branch1:branch2 -- nome_do_arquivo`: mostra as diferenças em um determinado arquivo
 - `git diff branch1:branch2`: mostra as diferenças entre as duas branches especificadas
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
-- `git tag <nome da tag>`: cria um tag leve local
+- `git tag nome da tag`: cria um tag leve local
 - `git tag`: lista as tags
-
