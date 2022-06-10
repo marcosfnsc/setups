@@ -68,7 +68,8 @@ ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
-LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET"
+OTHER_PARAMETERS="zswap.enabled=0" # disable zswap
+LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
 if ! grep -q "^GRUB_CMDLINE_LINUX=" etc/default/grub ; then
   echo "GRUB_CMDLINE_LINUX=\"\"" >> etc/default/grub
