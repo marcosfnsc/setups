@@ -12,6 +12,7 @@ APPS_INSTALL=(
   ffmpeg
   firefox
   firewalld
+  flameshot
   flatpak
   gcc
   git
