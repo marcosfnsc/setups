@@ -4,6 +4,7 @@ APPS_INSTALL=(
   android-tools # adb and fastboot
   base-devel # for yay
   broadcom-wl # drivers wifi
+  calibre
   cdrdao # for k3b
   cdrtools # for k3b 
   curl
