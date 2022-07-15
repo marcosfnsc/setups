@@ -130,8 +130,9 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:x`: atalho para `:wq`
-* `sort`: ordena as linhas
-* `sort u`: ordena as linhas e remove duplicatas
+* `sort`: ordena as linhas selecionadas
+* `sort u`: ordena as linhas selecionadas e remove duplicatas
+* `sort!`: ordena de forma inversa as linhas selecionadas
 
 ## Truques:
 #### substituição de palavras em todos os arquivos
