@@ -1,9 +1,7 @@
 FROM archlinux:latest
 
-RUN sed '/^#\ Misc\ options/a ParallelDownloads\ =\ 5' /etc/pacman.conf
-
 RUN yes | pacman -Sy reflector rsync
-RUN reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist
+RUN reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist --verbose
 
 RUN yes | pacman -S --needed tmux neovim nodejs ripgrep python zsh curl git
 
