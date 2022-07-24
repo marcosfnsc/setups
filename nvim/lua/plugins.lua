@@ -1,6 +1,7 @@
 
 vim.cmd([[
 call plug#begin()
+Plug 'OmniSharp/omnisharp-vim'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}

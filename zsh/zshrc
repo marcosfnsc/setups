@@ -3,6 +3,9 @@ if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
   exec tmux new -A
 fi
 
+## c charp environment
+export DOTNET_CLI_TELEMETRY_OPTOUT=1 # disable telemetry
+
 ## rust environment
 [ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
