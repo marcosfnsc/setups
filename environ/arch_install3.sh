@@ -23,6 +23,8 @@ APPS_INSTALL=(
   kde-applications
   keepassxc
   kitty
+  libreoffice-fresh # suite office
+  libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
   man-pages
   neofetch
   neomutt
