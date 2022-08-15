@@ -13,6 +13,7 @@ Plug 'lewis6991/gitsigns.nvim',
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -47,4 +48,25 @@ require("indent_blankline").setup {
     char_highlight_list = {
         "IndentBlanklineIndent1",
     },
+}
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {
+    "bash",
+    "c",
+    "c_sharp",
+    "cpp",
+    "css",
+    "html",
+    "java",
+    "javascript",
+    "lua",
+    "python",
+    "rust",
+  },
+  sync_install = false,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
 }
