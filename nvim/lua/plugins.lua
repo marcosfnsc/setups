@@ -27,14 +27,14 @@ vim.g['coc_global_extensions'] = {
     'coc-emmet',
     'coc-explorer',
     'coc-html',
-    'coc-jedi',
     'coc-pairs',
     'coc-rust-analyzer',
     'coc-tsserver',
 }
 --    'coc-clangd',
---    'coc-java',
 --    'coc-css',
+--    'coc-java',
+--    'coc-jedi',
 
 require('bufferline').setup {
   options = {
