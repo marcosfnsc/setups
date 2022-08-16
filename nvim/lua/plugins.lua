@@ -9,6 +9,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'kevinoid/vim-jsonc'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'lewis6991/gitsigns.nvim',
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
@@ -25,7 +26,6 @@ vim.g['airline_theme'] = 'deus' --
 vim.g['ale_linters'] = {python = {'pylint'}} -- ale config
 vim.g['coc_global_extensions'] = {
     'coc-emmet',
-    'coc-explorer',
     'coc-html',
     'coc-pairs',
     'coc-rust-analyzer',
@@ -70,3 +70,21 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = false,
   },
 }
+
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  view = {
+    adaptive_size = true,
+    mappings = {
+        list = {
+            { key = "l", action = "open_file" },
+        },
+    },
+  },
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
