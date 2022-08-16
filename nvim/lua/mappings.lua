@@ -6,8 +6,8 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 
-"coc-explorer
-nnoremap <space>e :CocCommand explorer<CR>
+"file explorer
+nnoremap <space>e :NvimTreeToggle <CR>
 
 "escape from insert mode using jj
 inoremap jj <Esc>
