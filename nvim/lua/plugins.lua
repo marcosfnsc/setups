@@ -37,9 +37,9 @@ vim.g['coc_global_extensions'] = {
 --    'coc-jedi',
 
 require('bufferline').setup {
-  options = {
-    show_buffer_close_icons = false,
-  }
+    options = {
+        show_buffer_close_icons = false,
+    }
 }
 require('gitsigns').setup()
 
@@ -51,40 +51,40 @@ require("indent_blankline").setup {
 }
 
 require'nvim-treesitter.configs'.setup {
-  ensure_installed = {
-    "bash",
-    "c",
-    "c_sharp",
-    "cpp",
-    "css",
-    "html",
-    "java",
-    "javascript",
-    "lua",
-    "python",
-    "rust",
-  },
-  sync_install = false,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = false,
-  },
+    ensure_installed = {
+        "bash",
+        "c",
+        "c_sharp",
+        "cpp",
+        "css",
+        "html",
+        "java",
+        "javascript",
+        "lua",
+        "python",
+        "rust",
+    },
+    sync_install = false,
+    highlight = {
+        enable = true,
+        additional_vim_regex_highlighting = false,
+    },
 }
 
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
-  view = {
-    adaptive_size = true,
-    mappings = {
-        list = {
-            { key = "l", action = "open_file" },
+    sort_by = "case_sensitive",
+    view = {
+        adaptive_size = true,
+        mappings = {
+            list = {
+                { key = "l", action = "open_file" },
+            },
         },
     },
-  },
-  renderer = {
-    group_empty = true,
-  },
-  filters = {
-    dotfiles = true,
-  },
+    renderer = {
+        group_empty = true,
+    },
+    filters = {
+        dotfiles = true,
+    },
 })
