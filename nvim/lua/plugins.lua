@@ -46,25 +46,25 @@ require('bufferline').setup {
 require('gitsigns').setup()
 
 vim.cmd [[highlight IndentBlanklineIndent1 guifg=#353d44 gui=nocombine]]
-require("indent_blankline").setup {
+require('indent_blankline').setup {
     char_highlight_list = {
-        "IndentBlanklineIndent1",
+        'IndentBlanklineIndent1',
     },
 }
 
-require'nvim-treesitter.configs'.setup {
+require('nvim-treesitter.configs').setup {
     ensure_installed = {
-        "bash",
-        "c",
-        "c_sharp",
-        "cpp",
-        "css",
-        "html",
-        "java",
-        "javascript",
-        "lua",
-        "python",
-        "rust",
+        'bash',
+        'c',
+        'c_sharp',
+        'cpp',
+        'css',
+        'html',
+        'java',
+        'javascript',
+        'lua',
+        'python',
+        'rust',
     },
     sync_install = false,
     highlight = {
@@ -73,13 +73,13 @@ require'nvim-treesitter.configs'.setup {
     },
 }
 
-require("nvim-tree").setup({
-    sort_by = "case_sensitive",
+require('nvim-tree').setup({
+    sort_by = 'case_sensitive',
     view = {
         adaptive_size = true,
         mappings = {
             list = {
-                { key = "l", action = "open_file" },
+                { key = 'l', action = 'open_file' },
             },
         },
     },
@@ -91,7 +91,7 @@ require("nvim-tree").setup({
     },
 })
 
-require'treesitter-context'.setup{
+require('treesitter-context').setup{
     enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
     max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
     trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
