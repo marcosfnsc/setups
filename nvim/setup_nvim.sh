@@ -20,16 +20,3 @@ mkdir -p $HOME/.config/nvim/lua
 
 # install vim-plug extension
 nvim +PlugInstall +qa
-
-# settings coc
-echo "{
-  \"explorer.width\": 30,
-  \"explorer.file.showHiddenFiles\": true," > $HOME/.config/nvim/coc-settings.json
-{
-  PATH_RUST_ANALYZER=$(command -v rust-analyzer) &&
-  echo "  \"rust-analyzer.server.path\": \"$PATH_RUST_ANALYZER\",
-  \"rust-analyzer.updates.checkOnStartup\": false" >> $HOME/.config/nvim/coc-settings.json
-} || {
-  echo "  \"rust-analyzer.server.path\": \"\"" >> $HOME/.config/nvim/coc-settings.json
-}
-echo "}" >> $HOME/.config/nvim/coc-settings.json
