@@ -5,6 +5,7 @@ Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'dense-analysis/ale', {'for': ['python']}
 Plug 'editorconfig/editorconfig-vim'
+Plug 'folke/trouble.nvim'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-vsnip'
@@ -20,6 +21,7 @@ Plug 'lewis6991/gitsigns.nvim',
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'navarasu/onedark.nvim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'ray-x/lsp_signature.nvim'
@@ -31,7 +33,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 Plug 'windwp/nvim-autopairs'
-Plug 'nvim-lua/plenary.nvim'
 call plug#end()
 ]])
 
@@ -144,6 +145,10 @@ require('mason-lspconfig').setup({
     },
     automatic_installation = true,
 })
+
+require("trouble").setup {
+    icons = false
+}
 
 cfg = {}
 require('lsp_signature').setup(cfg)
