@@ -11,6 +11,7 @@ vim.opt.splitright = true                 -- natural split
 vim.opt.tabstop = 2                       -- number of visual spaces per TAB
 vim.opt.termguicolors = true              -- 24 bit color supoort
 vim.opt.updatetime = 100
+vim.opt.virtualedit = 'all'
 
 if (os.getenv("TERMUX_VERSION") == nil) then -- check if run in termux
     vim.opt.wrap = true
