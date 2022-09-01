@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-# install vim-plug
-if [ ! -f "$HOME/.local/share/nvim/site/autoload/plug.vim" ]; then
-  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+# install packer.nvim
+if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+    ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
 fi
 
 mkdir -p $HOME/.config/nvim/lua
@@ -18,5 +18,5 @@ mkdir -p $HOME/.config/nvim/lua
   cp -f lua/plugins.lua  $HOME/.config/nvim/lua
 }
 
-# install vim-plug extension
-nvim +PlugInstall +qa
+# install plugins
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
