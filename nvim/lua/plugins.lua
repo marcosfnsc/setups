@@ -147,8 +147,8 @@ return require('packer').startup(function(use)
         end
     }
     use {
-        'navarasu/onedark.nvim',
-        config = function() vim.cmd([[ colorscheme onedark]]) end
+        'folke/tokyonight.nvim',
+        config = function() vim.cmd[[colorscheme tokyonight]] end
     }
     use {
         'lewis6991/gitsigns.nvim',
@@ -157,12 +157,7 @@ return require('packer').startup(function(use)
     use {
         'lukas-reineke/indent-blankline.nvim',
         config = function()
-            --vim.cmd [[highlight IndentBlanklineIndent1 guifg=#353d44 gui=nocombine]]
-            require('indent_blankline').setup {
-                char_highlight_list = {
-                    'IndentBlanklineIndent1',
-                },
-            }
+            require('indent_blankline').setup{}
         end
     }
     use {
