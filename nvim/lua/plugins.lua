@@ -48,9 +48,15 @@ return require('packer').startup(function(use)
         end
     }
     use {
-        'vim-airline/vim-airline',
-        'vim-airline/vim-airline-themes',
-        config = function() vim.g['airline_theme'] = 'deus' end
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('lualine').setup({
+                options = {
+                    icons_enabled = false,
+                    theme = 'onedark'
+                }
+            })
+        end
     }
     use {
         'williamboman/mason.nvim',
