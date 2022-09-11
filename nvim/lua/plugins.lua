@@ -6,9 +6,9 @@ return require('packer').startup(function(use)
     use 'editorconfig/editorconfig-vim'
     use 'junegunn/fzf.vim'
     use 'kevinoid/vim-jsonc'
-    use 'tpope/vim-fugitive'
     use 'tpope/vim-surround'
     use { 'junegunn/fzf', run = './install --all' }
+    use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {
         'hrsh7th/nvim-cmp',
         requires = {
