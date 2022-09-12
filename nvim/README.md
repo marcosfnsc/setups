@@ -35,6 +35,7 @@
 ### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha (incluindo o caractere de quebra de linha)
 * <kbd>%</kbd> no modo normal: acha o proximo parêntese, colchete, chave etc
+* <kbd>+</kbd> no modo normal: atalho para <kbd>j^</kbd> 
 * <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
@@ -75,6 +76,7 @@
 
 ### outros atalhos:
 * <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode usar outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
+* <kbd>#</kbd> no modo normal: pesquisa para tras a palavra que esta sob o cursor
 * <kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>Z</kbd><kbd>Q</kbd> no modo normal: sai sem salvar alterações, atalho para <code>:q!</code>
 * <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code>
@@ -117,6 +119,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 
 ## comandos:
 * `:%bd|e#|bd#`: apaga todos os buffers menos o atual
+* `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
@@ -130,9 +133,9 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:x`: atalho para `:wq`
-* `sort`: ordena as linhas selecionadas
 * `sort u`: ordena as linhas selecionadas e remove duplicatas
 * `sort!`: ordena de forma inversa as linhas selecionadas
+* `sort`: ordena as linhas selecionadas
 
 ## Truques:
 #### substituição de palavras em todos os arquivos
