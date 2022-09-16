@@ -68,10 +68,11 @@ return require('packer').startup(function(use)
         config = function()
             require('mason-lspconfig').setup({
                 ensure_installed = {
-                    'rust_analyzer',
                     'clangd',
                     'pyright',
+                    'rust_analyzer',
                     'sumneko_lua',
+                    'tsserver',
                 },
                 automatic_installation = true,
             })
@@ -136,10 +137,10 @@ return require('packer').startup(function(use)
         end
     }
 
-    use {
-        'jose-elias-alvarez/typescript.nvim',
-        config = function() require('typescript').setup() end
-    }
+   --use {
+   --    'jose-elias-alvarez/typescript.nvim',
+   --    config = function() require('typescript').setup() end
+   --}
     use {
         'simrat39/rust-tools.nvim',
         config = function() require('rust-tools').setup() end
@@ -149,6 +150,7 @@ return require('packer').startup(function(use)
         config = function()
             require('lspconfig').clangd.setup{}
             require('lspconfig').pyright.setup{}
+            require('lspconfig').tsserver.setup{}
         end
     }
     use {
