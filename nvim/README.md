@@ -136,6 +136,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `sort u`: ordena as linhas selecionadas e remove duplicatas
 * `sort!`: ordena de forma inversa as linhas selecionadas
 * `sort`: ordena as linhas selecionadas
+* `virtualedit=all`: permite o cursor percorrer livremente pela tela, isso é conveniente ao usar ao fazer uma seleção em bloco
 
 ## Truques:
 #### substituição de palavras em todos os arquivos
