@@ -1,10 +1,12 @@
-vim.cmd([[
-"file explorer
-nnoremap <space>e :NvimTreeToggle <CR>
+-- based on https://github.com/ellisonleao/neovimfiles/blob/main/plugin/keymaps.lua
 
-"escape from insert mode using jj
-inoremap jj <Esc>
+local opts = { remap = false, silent = true }
+local mappings = {
+  { 'i', 'jj', [[<ESC>]], opts },                         -- escape from insert mode using jj
+  { 'n', '<leader>s', [[<Cmd>update<CR>]], opts },        -- save buffer
+  { 'n', '<space>e', [[<Cmd>NvimTreeToggle<CR>]], opts }, -- file explorer
+}
 
-"save buffer
-noremap <Leader>s :update<CR>
-]])
+for _, map in pairs(mappings) do
+  vim.keymap.set(unpack(map))
+end
