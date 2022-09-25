@@ -150,6 +150,7 @@ return require('packer').startup(function(use)
         config = function()
             require('lspconfig').clangd.setup{}
             require('lspconfig').pyright.setup{}
+            require('lspconfig').sumneko_lua.setup{}
             require('lspconfig').tsserver.setup{}
         end
     }
