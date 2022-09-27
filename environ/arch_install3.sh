@@ -4,6 +4,7 @@ APPS_INSTALL=(
   android-tools # adb and fastboot
   base-devel # for yay
   broadcom-wl # drivers wifi
+  btop
   calibre
   cdrdao # for k3b
   cdrtools # for k3b 
@@ -18,7 +19,6 @@ APPS_INSTALL=(
   gcc
   git
   glow
-  htop
   k3b
   kde-applications
   keepassxc

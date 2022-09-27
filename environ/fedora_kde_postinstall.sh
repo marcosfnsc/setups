@@ -27,6 +27,7 @@ APPS_ADD=(
   #pavucontrol-qt # ferramenta simples para editar opções de som
   VirtualBox
   akmod-wl              # driver do wifi
+  btop                  # monitor de tarefas via terminal
   bzip2-devel
   clang
   cmake                 # utilitario de compilação de codigo c/c++
@@ -37,7 +38,6 @@ APPS_ADD=(
   gimp                  # editor de imagem
   git                   # ferramenta de versionamento de arquivos
   google-chrome-stable
-  htop                  # monitor de tarefas via terminal
   java-11-openjdk       # runtime do jdk 11
   java-11-openjdk-devel # ferramentas de compilação do jdk 11
   k3b                   # programa pra gravar, copiar e apagar CDs/DVDs
