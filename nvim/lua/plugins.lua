@@ -11,18 +11,17 @@ return require('packer').startup(function(use)
     use {
         'hrsh7th/nvim-cmp',
         requires = {
+            'L3MON4D3/LuaSnip',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-nvim-lsp',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/cmp-vsnip',
-            'hrsh7th/vim-vsnip'
+            'saadparwaiz1/cmp_luasnip'
         },
         config = function()
             local cmp = require'cmp'
             cmp.setup {
                 snippet = {
                     expand = function(args)
-                        vim.fn['vsnip#anonymous'](args.body)
+                        require("luasnip").lsp_expand(args.body)
                     end,
                 },
                 mapping = {
@@ -40,10 +39,21 @@ return require('packer').startup(function(use)
                     }),
                 },
                 sources = {
+                    { name = 'luasnip' },
                     { name = 'buffer' },
                     { name = 'nvim_lsp' },
                 }
             }
+        end
+    }
+    use {
+        'L3MON4D3/LuaSnip',
+        tag = 'v<CurrentMajor>.*',
+        requires = {
+            'rafamadriz/friendly-snippets'
+        },
+        config = function ()
+            require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.local/share/nvim/site/pack/packer/start/friendly-snippets' } })
         end
     }
     use {
