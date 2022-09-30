@@ -73,4 +73,4 @@ systemctl enable paccache.timer
 systemctl enable sddm
 
 #other scripts
-./anylinux.sh
+../any_linux/anylinux.sh
