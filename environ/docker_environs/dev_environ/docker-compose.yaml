@@ -4,4 +4,4 @@ services:
   dev:
     container_name: dev_environ
     build:
-      dockerfile: dockerfile-fedora
+      dockerfile: dockerfile-arch

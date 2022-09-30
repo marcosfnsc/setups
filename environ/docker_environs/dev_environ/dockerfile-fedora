@@ -7,8 +7,5 @@ RUN dnf makecache --refresh
 
 RUN dnf install -y tmux neovim nodejs ripgrep python zsh curl git
 
-RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git
-RUN cd setups/docker_dev_setup && ./setup_dev_environ.sh
-
 ENTRYPOINT ["tail"]
 CMD ["-f","/dev/null"]

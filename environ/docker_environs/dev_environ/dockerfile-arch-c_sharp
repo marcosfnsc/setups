@@ -5,8 +5,5 @@ RUN reflector -c BR --sort rate -a 6 --save /etc/pacman.d/mirrorlist --verbose
 
 RUN yes | pacman -S --needed tmux neovim nodejs ripgrep python zsh curl git mono mono-msbuild dotnet-runtime dotnet-sdk
 
-RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git
-RUN cd setups/docker_dev_setup && ./setup_dev_environ.sh
-
 ENTRYPOINT ["tail"]
 CMD ["-f","/dev/null"]
