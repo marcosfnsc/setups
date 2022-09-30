@@ -9,6 +9,12 @@ return require('packer').startup(function(use)
     use { 'junegunn/fzf', run = './install --all' }
     use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {
+        'rcarriga/nvim-notify',
+        config = function ()
+            vim.notify = require('notify')
+        end
+    }
+    use {
         'hrsh7th/nvim-cmp',
         requires = {
             'L3MON4D3/LuaSnip',
