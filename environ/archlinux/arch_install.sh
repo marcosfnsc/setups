@@ -35,15 +35,15 @@ mount /dev/mapper/container /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
 btrfs subvolume create /mnt/@swap
-btrfs subvolume create /mnt/@snapshots
+btrfs subvolume create /mnt/@.snapshots
 umount /mnt
 
 mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@     /dev/mapper/container /mnt
-mkdir /mnt/{boot,home,swap,snapshots}
+mkdir /mnt/{boot,home,swap,.snapshots}
 mount /dev/sda1 /mnt/boot
 mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@home /dev/mapper/container /mnt/home
 mount -o notatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
-mount -o subvol=@snapshots                                         /dev/mapper/container /mnt/snapshots
+mount -o subvol=@.snapshots                                        /dev/mapper/container /mnt/.snapshots
 
 ## swapfile
 touch /mnt/swap/swapfile
