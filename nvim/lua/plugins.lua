@@ -152,11 +152,6 @@ return require('packer').startup(function(use)
             require('nvim-autopairs').setup({ map_cr = true })
         end
     }
-
-   --use {
-   --    'jose-elias-alvarez/typescript.nvim',
-   --    config = function() require('typescript').setup() end
-   --}
     use {
         'simrat39/rust-tools.nvim',
         config = function() require('rust-tools').setup() end
