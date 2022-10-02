@@ -10,7 +10,7 @@ return require('packer').startup(function(use)
     use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {
         'rcarriga/nvim-notify',
-        config = function ()
+        config = function()
             vim.notify = require('notify')
         end
     }
@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
         requires = {
             'rafamadriz/friendly-snippets'
         },
-        config = function ()
+        config = function()
             require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.local/share/nvim/site/pack/packer/start/friendly-snippets' } })
         end
     }
