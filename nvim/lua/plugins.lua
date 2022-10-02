@@ -129,7 +129,8 @@ return require('packer').startup(function(use)
                     'java',
                     'javascript',
                     'lua',
-                    'python', 'rust',
+                    'python',
+                    'rust'
                 },
                 sync_install = false,
                 highlight = {
