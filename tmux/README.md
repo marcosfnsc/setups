@@ -21,10 +21,14 @@ atalhos:
 * <kbd>prefix</kbd><kbd>]</kbd>: colar a partir do buffer do tmux
 
 comandos dentro do tmux:
----------
+------------------------
 * `swap-window -t n`: troca a posição da janela atual, sendo `n` a posição desejada
 * `join-pane -t N:N`: move o painel em foco para o painel definido na posição `N:N`
 * `join-pane -t N:N -v`: move o painel em foco para o painel definido na posição `N:N` e os painei divididos na vertical
 * `join-pane -t N:N -h`: move o painel em foco para o painel definido na posição `N:N` e os painei divididos na horizontal
 * `break-pane -t :`: move o painel em foco para uma nova janela
 * `setw synchronise-panes`: envia simultaneamente entrada do teclado de um painel para o resto dos painéis na mesma janela, para desativar o comando basta digita-lo novamente
+
+comandos da cli:
+----------------
+* `tmux new -d -s nome_da_sessao`: permite criar uma nova sessão sem entrar dentro dela, util quando se ja está em uma sessão do tmux e deseja criar outra
