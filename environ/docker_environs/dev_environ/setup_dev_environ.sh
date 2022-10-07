@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 
-git clone --depth 1 https://github.com/marcosfnsc/setups.git
-
-ROOT_DIRECTORY=$PWD/setups
+ROOT_DIRECTORY=$PWD/../../..
 cd $ROOT_DIRECTORY/fzf        && ./setup_fzf.sh
 cd $ROOT_DIRECTORY/git_config && ./setup_git.sh
 cd $ROOT_DIRECTORY/nvim       && ./setup_nvim.sh
