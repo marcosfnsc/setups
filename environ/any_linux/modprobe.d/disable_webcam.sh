@@ -1,8 +1,4 @@
 #!/usr/bin/env bash
 
-if test -f "/etc/modprobe.d/webcam-blacklist.conf"; then
-  rm /etc/modprobe.d/webcam-blacklist.conf
-fi
-
+echo -e "blacklist uvcvideo\nalias uvcvideo off" > /etc/modprobe.d/webcam-blacklist.conf
 modprobe -r uvcvideo
-cp webcam-blacklist.conf /etc/modprobe.d/webcam-blacklist.conf
