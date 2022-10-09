@@ -85,6 +85,7 @@ return require('packer').startup(function(use)
             require('mason-lspconfig').setup({
                 ensure_installed = {
                     'clangd',
+                    'csharp_ls',
                     'pyright',
                     'rust_analyzer',
                     'sumneko_lua',
@@ -98,7 +99,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter-context',
         config = function()
             require('treesitter-context').setup{
-                enable = true, -- Enable this plugin (Can be enabled/disabled later via commands)
+                enable = true,
                 max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
                 trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
                 patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
@@ -164,6 +165,7 @@ return require('packer').startup(function(use)
             require('lspconfig').pyright.setup{}
             require('lspconfig').sumneko_lua.setup{}
             require('lspconfig').tsserver.setup{}
+            require('lspconfig').csharp_ls.setup{}
         end
     }
     use {
