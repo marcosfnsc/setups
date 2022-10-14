@@ -48,6 +48,7 @@ APPS_INSTALL=(
   sddm
   sshfs
   sudo
+  tlp
   tmux
   tree
   unzip
@@ -71,6 +72,11 @@ systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
 systemctl enable sddm
+systemctl enable tlp.service 
+
+systemctl mask lvm2-monitor.service   # I will not use lvm2
+systemctl mask systemd-rfkill.service # eliminate conflicts with tlp
+systemctl mask systemd-rfkill.socket  # eliminate conflicts with tlp
 
 #other scripts
 ../any_linux/anylinux.sh
