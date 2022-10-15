@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ ! "$EUID" -ne 0 ];then
+  echo "Please run this script as non root"
+  exit 1
+fi
+
 # flathub remote
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo --user
 
