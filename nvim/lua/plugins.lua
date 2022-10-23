@@ -124,6 +124,7 @@ return require('packer').startup(function(use)
                     'bash',
                     'c',
                     'c_sharp',
+                    'cmake',
                     'cpp',
                     'css',
                     'html',
