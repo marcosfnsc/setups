@@ -2,7 +2,7 @@ principais comandos para archlinux:
 ===================================
 * `pacman -Fy nome_do_binario`: achar qual o pacote pertence o arquivo
 * `pacman -Q`: listar todos os pacotes e depedencias instalados, `-Qq` faz com que ele mão mostre a versão dos pacotes
-* `pacman -Qdt`: listar depedencias orfãs instaladas
+* `pacman -Qdt`: listar pacotes orfãos instalados
 * `pacman -Qe`: listar pacotes instalados mas não mostrar os pacotes instalados como depedencias
 * `pacman -Qi nome_do_pacote`: mostra informações de um pacote instalado
 * `pacman -Ql nome_do_pacote`: listar arquivos instalados por um pacote
