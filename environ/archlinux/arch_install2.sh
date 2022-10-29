@@ -59,7 +59,7 @@ curl \
   https://raw.githubusercontent.com/osandov/osandov-linux/master/scripts/btrfs_map_physical.c \
   -o btrfs_map_physical.c
 gcc -O2 -o btrfs_map_physical btrfs_map_physical.c
-RESUME_OFFSET=$(./btrfs_map_physical /swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
+RESUME_OFFSET=$(./btrfs_map_physical /.swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
 RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
 UUID_SDA2=$(lsblk -no NAME,UUID /dev/sda2 | head -n 1 | awk '{print $2}')
