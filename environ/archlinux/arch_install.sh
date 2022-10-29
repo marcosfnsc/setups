@@ -42,7 +42,7 @@ mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@     /dev/mapper/c
 mkdir /mnt/{boot,home,swap,.snapshots}
 mount /dev/sda1 /mnt/boot
 mount -o defaults,autodefrag,compress=zstd,commit=120,subvol=@home /dev/mapper/container /mnt/home
-mount -o notatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
+mount -o noatime,subvol=@swap                                     /dev/mapper/container /mnt/swap
 mount -o subvol=@.snapshots                                        /dev/mapper/container /mnt/.snapshots
 
 ## swapfile
