@@ -192,6 +192,7 @@ return require('packer').startup(function(use)
                     adaptive_size = true,
                     mappings = {
                         list = {
+                            { key = 'h', action = 'open_file' },
                             { key = 'l', action = 'open_file' },
                         },
                     },
