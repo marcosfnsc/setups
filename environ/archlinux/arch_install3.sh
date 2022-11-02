@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
+  #kde-applications
   android-tools # adb and fastboot
   base-devel # for yay
-  broadcom-wl # drivers wifi
+  broadcom-wl-dkms # drivers wifi
   btop
-  calibre
+  calibre # manage ebooks
   cdrdao # for k3b
-  cdrtools # for k3b 
+  cdrtools # for k3b
   curl
   dvd+rw-tools # for k3b
   earlyoom
@@ -19,15 +20,21 @@ APPS_INSTALL=(
   gcc
   git
   glow
+  gwenview
   k3b
-  kde-applications
+  kamoso
+  kate
+  kcolorchooser # color selector
+  kdeconnect
   keepassxc
   kitty
+  krunner
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
+  linux-headers # Headers and scripts for building modules for the Linux kernel
   man-pages
   neofetch
-  neomutt
+  neomutt # email client in terminal
   neovim
   networkmanager
   nmap
@@ -39,40 +46,37 @@ APPS_INSTALL=(
   okular
   openssh
   pacman-contrib
+  partitionmanager
+  pipewire
   pipewire-pulse
   plasma
   plasma-wayland-session # for wayland session
   qbittorrent
   rclone
   ripgrep
-  sddm
-  sshfs
+  sddm # lock screen
+  spectacle
+  sshfs # for the kdeconnect
   sudo
+  texlive-core # for get the latexmk command
   tlp
   tmux
   tree
-  unzip
-  usbutils
+  usbutils # for get the lsusb command
+  vlc
   xorg
+  yt-dlp
   zsh
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}
-
-
-## install yay
-pacman -S --needed git base-devel
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-
 
 #systemctl enable fstrim.timer # for sdd with TRIM support
 systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
 systemctl enable sddm
-systemctl enable tlp.service 
+systemctl enable tlp.service
 
 systemctl mask lvm2-monitor.service   # I will not use lvm2
 systemctl mask systemd-rfkill.service # eliminate conflicts with tlp
