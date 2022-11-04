@@ -85,10 +85,10 @@ return require('packer').startup(function(use)
             require('mason-lspconfig').setup({
                 ensure_installed = {
                     'clangd',
-                    'csharp_ls',
                     'pyright',
                     'rust_analyzer',
                     'sumneko_lua',
+                    'texlab',
                     'tsserver',
                 },
                 automatic_installation = true,
@@ -123,7 +123,6 @@ return require('packer').startup(function(use)
                 ensure_installed = {
                     'bash',
                     'c',
-                    'c_sharp',
                     'cmake',
                     'cpp',
                     'css',
@@ -165,8 +164,8 @@ return require('packer').startup(function(use)
             require('lspconfig').clangd.setup{}
             require('lspconfig').pyright.setup{}
             require('lspconfig').sumneko_lua.setup{}
+            require('lspconfig').texlab.setup{}
             require('lspconfig').tsserver.setup{}
-            require('lspconfig').csharp_ls.setup{}
         end
     }
     use {
