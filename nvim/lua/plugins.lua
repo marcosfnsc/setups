@@ -129,6 +129,7 @@ return require('packer').startup(function(use)
                     'html',
                     'java',
                     'javascript',
+                    'latex',
                     'lua',
                     'python',
                     'rust'
