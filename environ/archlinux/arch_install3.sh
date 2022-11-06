@@ -28,6 +28,7 @@ APPS_INSTALL=(
   kdeconnect
   keepassxc
   kitty
+  konsole
   krunner
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
@@ -62,10 +63,13 @@ APPS_INSTALL=(
   tlp
   tmux
   tree
+  unzip
   usbutils # for get the lsusb command
   vlc
   xorg
   yt-dlp
+  zathura
+  zathura-pdf-mupdf
   zsh
 )
 
