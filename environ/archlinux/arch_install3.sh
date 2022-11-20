@@ -44,6 +44,7 @@ APPS_INSTALL=(
   noto-fonts-cjk
   noto-fonts-emoji
   noto-fonts-extra
+  npm
   okular
   openssh
   pacman-contrib
