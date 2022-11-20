@@ -13,7 +13,7 @@ FLATPAK_FLATHUB=(
   com.discordapp.Discord    # Discord
   com.google.AndroidStudio  # Android Studio
   com.spotify.Client        # Spotify
-  com.valsesoftware.Steam   # Steam
+  com.valvesoftware.Steam   # Steam
   net.lutris.Lutris         # lutris
   org.audacityteam.Audacity # Audacity
   org.telegram.desktop      # telegram
