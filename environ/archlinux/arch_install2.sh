@@ -63,12 +63,12 @@ RESUME_OFFSET=$(./btrfs_map_physical /.swap/swapfile | head -n 2 | tail -1 | awk
 RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
 UUID_SDA2=$(lsblk -no NAME,UUID /dev/sda2 | head -n 1 | awk '{print $2}')
-CRYPT_DEVICE="cryptdevice=UUID=$UUID_SDA2:container" # add :allow-discards to enable TRIM commands
+CRYPT_DEVICE="cryptdevice=UUID=$UUID_SDA2:container:allow-discards]" # :allow-discards to enable TRIM commands
 ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
-OTHER_PARAMETERS="zswap.enabled=0" # disable zswap
+OTHER_PARAMETERS="zswap.enabled=0 snd_intel_dspcfg.dsp_driver=1" # disable zswap and enable audio for intel driver
 LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
 if ! grep -q "^GRUB_CMDLINE_LINUX=" etc/default/grub ; then
