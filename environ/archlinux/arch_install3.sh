@@ -3,6 +3,7 @@
 APPS_INSTALL=(
   #kde-applications
   android-tools # adb and fastboot
+  ark
   base-devel # for yay
   broadcom-wl-dkms # drivers wifi
   btop
@@ -10,6 +11,7 @@ APPS_INSTALL=(
   cdrdao # for k3b
   cdrtools # for k3b
   curl
+  dolphin
   dvd+rw-tools # for k3b
   earlyoom
   ffmpeg
