@@ -57,6 +57,7 @@ APPS_INSTALL=(
   plasma-wayland-session # for wayland session
   qbittorrent
   rclone
+  reflector
   ripgrep
   sddm # lock screen
   spectacle
