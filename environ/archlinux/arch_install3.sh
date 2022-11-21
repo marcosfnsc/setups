@@ -64,7 +64,7 @@ APPS_INSTALL=(
   sshfs # for the kdeconnect
   sudo
   texlive-core # for get the latexmk command
-  tlp
+  power-profiles-daemon
   tmux
   tree
   unzip
@@ -79,16 +79,12 @@ APPS_INSTALL=(
 
 pacman -S --needed ${APPS_INSTALL[@]}
 
-#systemctl enable fstrim.timer # for sdd with TRIM support
 systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
 systemctl enable sddm
-systemctl enable tlp.service
 
 systemctl mask lvm2-monitor.service   # I will not use lvm2
-systemctl mask systemd-rfkill.service # eliminate conflicts with tlp
-systemctl mask systemd-rfkill.socket  # eliminate conflicts with tlp
 
 #other scripts
 ../any_linux/anylinux.sh
