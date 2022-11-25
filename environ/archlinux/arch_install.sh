@@ -3,7 +3,7 @@
 # dicas-> loadkeys br-abnt2
 
 # create partitions
-parted -s /dev/sda \
+parted -s /dev/nvme0n1 \
   mklabel gpt \
   mkpart primary 1MiB 500MiB \
   mkpart primary 500MiB 100% \
@@ -14,7 +14,7 @@ parted -s /dev/sda \
 modprobe dm-crypt
 modprobe dm-mod
 
-SECTOR_SIZE=$(cat /sys/block/sda/queue/physical_block_size)
+SECTOR_SIZE=$(cat /sys/block/nvme0n1/queue/physical_block_size)
 cryptsetup \
   --type luks2 \
   --cipher aes-xts-plain64 \
@@ -26,9 +26,9 @@ cryptsetup \
   --use-urandom \
   --verify-passphrase \
   luksFormat /dev/sda2
-cryptsetup open --type luks2 /dev/sda2 container
+cryptsetup open --type luks2 /dev/nvme0n1p2 container
 
-mkfs.fat -F32 /dev/sda1
+mkfs.fat -F32 /dev/nvme0n1p1
 mkfs.btrfs /dev/mapper/container
 
 mount /dev/mapper/container /mnt
@@ -38,7 +38,7 @@ btrfs subvolume create /mnt/@.snapshots
 btrfs subvolume create /mnt/@.swap
 umount /mnt
 
-BTRFS_MOUNT_OPTIONS="defaults,noatime,autodefrag,compress-force=zstd,commit=120"
+BTRFS_MOUNT_OPTIONS="defaults,noatime,compress-force=zstd,commit=120"
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@     /dev/mapper/container /mnt
 mkdir /mnt/{boot,home,.snapshots,.swap}
 mount /dev/sda1 /mnt/boot
