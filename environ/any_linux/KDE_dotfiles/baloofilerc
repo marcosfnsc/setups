@@ -1,6 +1,0 @@
-[General]
-dbVersion=2
-exclude folders[$e]=$HOME/code_space
-exclude filters=*.faa,.pch,*.tmp,.xsession-errors*,*.vbox*,node_packages,*.csproj,*.gmo,.uic,*.vhdx,*.sql.gz,*.nvram,.obj,*.part,*.gcode,*.m4,confstat,CTestTestfile.cmake,*.omf,*.qcow2,*.qmlc,*.sql,CMakeFiles,*.gbff,lost+found,*.orig,*.db,*.init,*.pyc,core-dumps,*.rcore,*.vhd,*.fq,cmake_install.cmake,.yarn,*.jsc,vbox.log,libtool,CMakeCache.txt,*.vdi,.bzr,*.lo,__pycache__,*.swap,*.fna,_darcs,.hg,*.aux,nbproject,*.vmdk,*.so,*.fasta,*.img,*.fastq,*.ini,*.rej,Makefile.am,*.map,qrc_*.cpp,moc_*.cpp,*.loT,litmain.sh,*.gb,po,.npm,*.pc,config.status,conftest,CMakeTmp,*.qrc,ui_*.h,*.vm*,*.a,*.moc,*.o,autom4te,.yarn-cache,lzo,CMakeTmpQmake,*.elc,.git,*.class,node_modules,*~,.svn,.moc,*.pyo,*.la,confdefs.h,CVS,.histfile.*,*.po
-exclude filters version=5
-first run=false
