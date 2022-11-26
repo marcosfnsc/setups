@@ -25,7 +25,7 @@ cryptsetup \
   --align-payload $(expr $SECTOR_SIZE / 512) \
   --use-urandom \
   --verify-passphrase \
-  luksFormat /dev/sda2
+  luksFormat /dev/nvme0n1p2
 cryptsetup open --type luks2 /dev/nvme0n1p2 container
 
 mkfs.fat -F32 /dev/nvme0n1p1
