@@ -5,7 +5,6 @@ APPS_INSTALL=(
   android-tools # adb and fastboot
   ark
   base-devel # for yay
-  broadcom-wl-dkms # drivers wifi
   btop
   calibre # manage ebooks
   cdrdao # for k3b
@@ -34,7 +33,6 @@ APPS_INSTALL=(
   krunner
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
-  linux-headers # Headers and scripts for building modules for the Linux kernel
   man-pages
   neofetch
   neomutt # email client in terminal
