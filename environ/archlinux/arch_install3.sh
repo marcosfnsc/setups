@@ -3,6 +3,8 @@
 APPS_INSTALL=(
   #kde-applications
   android-tools # adb and fastboot
+  pbzip2 # parallel implementation of the bzip2
+  clamav
   ark
   base-devel # for yay
   btop
