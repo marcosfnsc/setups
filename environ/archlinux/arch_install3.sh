@@ -3,14 +3,13 @@
 APPS_INSTALL=(
   #kde-applications
   android-tools # adb and fastboot
-  pbzip2 # parallel implementation of the bzip2
-  clamav
   ark
   base-devel # for yay
   btop
   calibre # manage ebooks
   cdrdao # for k3b
   cdrtools # for k3b
+  clamav
   curl
   dolphin
   dvd+rw-tools # for k3b
@@ -51,11 +50,14 @@ APPS_INSTALL=(
   openssh
   pacman-contrib
   partitionmanager
+  pbzip2 # parallel implementation of the bzip2
   pipewire
   pipewire-pulse
   plasma
   plasma-wayland-session # for wayland session
+  power-profiles-daemon
   qbittorrent
+  qemu-full # virtual machine manager
   rclone
   reflector
   ripgrep
@@ -64,7 +66,6 @@ APPS_INSTALL=(
   sshfs # for the kdeconnect
   sudo
   texlive-core # for get the latexmk command
-  power-profiles-daemon
   tmux
   tree
   unzip
