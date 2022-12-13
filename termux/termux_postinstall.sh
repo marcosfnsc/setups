@@ -36,6 +36,3 @@ cd termux
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
 $HOME/.fzf/install
-
-## config ssh
-ssh-keygen -t ed25519 -a 100 -f $HOME/.ssh/id_marcosfnsc_github_sanders -C "marcosfnsc_github_sanders"
