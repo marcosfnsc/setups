@@ -64,12 +64,13 @@ RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
 UUID_STORAGE_DEVICE=$(lsblk -no NAME,UUID /dev/nvme0n1p2 | head -n 1 | awk '{print $2}')
 CRYPT_DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards]" # :allow-discards to enable TRIM commands
+DISABLE_WORKQUEUE="no-read-workqueue,no-write-workqueue" # for better performance in ssd, not recomended for hdd
 ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for  enable audio intel driver 
-LINUX_CMDLINE="$CRYPT_DEVICE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
+LINUX_CMDLINE="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
 if ! grep -q "^GRUB_CMDLINE_LINUX=" etc/default/grub ; then
   echo "GRUB_CMDLINE_LINUX=\"\"" >> etc/default/grub
