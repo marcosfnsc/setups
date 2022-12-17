@@ -59,6 +59,8 @@
 * <kbd>t</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor no lado esquerdo do caractere encontado, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>w</kbd> no modo normal: saltar palavras
 * <kbd>z</kbd><kbd>b</kbd> no modo normal: mover a janela para que a linha sob o cursor fique na parte inferior da janela
+* <kbd>z</kbd><kbd>h</kbd> no modo normal: mover a janela para a esquerda
+* <kbd>z</kbd><kbd>l</kbd> no modo normal: mover a janela para a direita
 * <kbd>z</kbd><kbd>t</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no topo da janela
 * <kbd>z</kbd><kbd>z</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no centro da janela
 
