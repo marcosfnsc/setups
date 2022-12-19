@@ -2,6 +2,7 @@
 
 APPS_INSTALL=(
   #kde-applications
+  rsync
   android-tools # adb and fastboot
   ark
   base-devel # for yay
