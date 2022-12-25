@@ -35,7 +35,7 @@
 ### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha (incluindo o caractere de quebra de linha)
 * <kbd>%</kbd> no modo normal: acha o proximo parêntese, colchete, chave etc
-* <kbd>+</kbd> no modo normal: atalho para <kbd>j^</kbd> 
+* <kbd>+</kbd> no modo normal: atalho para <kbd>j^</kbd>
 * <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
@@ -90,12 +90,20 @@
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
 * <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
 * <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
-* <kbd>q</kbd><kbd>:</kbd> no modo normal: abrir a janela de linha de comando, onde você tem qualquer poder de edição do Vim em suas mãos
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
 * <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
+
+### modo comando:
+* <kbd>control</kbd><kbd>b</kbd> no modo comando: move o cursor para o começo da linha
+* <kbd>control</kbd><kbd>e</kbd> no modo comando: move o cursor para o fim da linha
+* <kbd>control</kbd><kbd>f</kbd> no modo comando: abre uma janela de linha de comando, onde você tem qualquer poder de edição do Vim em suas mãos
+* <kbd>control</kbd><kbd>h</kbd> no modo comando: remove um caractere que está no lado esquerdo do cursor
+* <kbd>control</kbd><kbd>u</kbd> no modo comando: apaga todos os caracteres que estão entre o cursor e o começo da linha
+* <kbd>control</kbd><kbd>w</kbd> no modo comando: remove uma palavra que está no lado esquerdo do ursor
+* <kbd>q</kbd><kbd>:</kbd> no modo normal: abre uma janela dos comandos executados no modo comando e permite usar os atalhos do modo normal nessa janela, e quando terminar basta apertar enter sobre o comando digitado
 
 ## registros:
 ### tipos de registros:
