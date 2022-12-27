@@ -17,6 +17,7 @@ PACKAGES_ADD=(
   perl # required by fzf
   python
   ripgrep
+  rsync
   rust-analyzer
   tmux
   tree
