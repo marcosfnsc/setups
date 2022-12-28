@@ -109,8 +109,8 @@
 ### tipos de registros:
 * registro sem nome (`"`): Contém o último conteúdo excluído, alterado ou retirado, mesmo se um registro foi especificado.
 * registros numerados (0-9):
-    * 0: conteḿ o ultimo conteudo arrancado
-    * 1-9: é uma pilha que conteḿ o ultimo conteudo que foi excluido ou alterado
+    * 0: contém o ultimo conteudo arrancado
+    * 1-9: é uma pilha que contém o ultimo conteudo que foi excluido ou alterado
 
       cada vez que alterar ou exluir um conteudo ele sera adicionado ao registro 1, quando outro conteudo
       é adicionado ao registro 1, o que havia nele é transferido para o proximo registro, que neste caso é
