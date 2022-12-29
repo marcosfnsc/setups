@@ -25,5 +25,5 @@ nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 if [[ -z $TERMUX_VERSION ]] ; then
   nvim --headless -c 'LspInstall clangd pyright rust_analyzer sumneko_lua texlab tsserver' -c 'qa'
 else
-  nvim --headless -c 'LspInstall clangd pyright' -c 'qa'
+  nvim --headless -c 'LspInstall pyright' -c 'qa'
 fi
