@@ -177,6 +177,10 @@ return require('packer').startup(function(use)
         'kyazdani42/nvim-tree.lua',
         config = function()
             require('nvim-tree').setup({
+
+                update_focused_file = {
+                    enable = true,
+                },
                 sort_by = 'case_sensitive',
                 view = {
                     adaptive_size = true,
