@@ -27,5 +27,3 @@ if [[ -z $TERMUX_VERSION ]] ; then
 else
   nvim --headless -c 'LspInstall clangd pyright' -c 'qa'
 fi
-
-
