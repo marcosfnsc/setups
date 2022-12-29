@@ -20,3 +20,12 @@ mkdir -p $HOME/.config/nvim/lua
 
 # install plugins
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+
+# install LSPs
+if [[ -z $TERMUX_VERSION ]] ; then
+  nvim --headless -c 'LspInstall clangd pyright rust_analyzer sumneko_lua texlab tsserver' -c 'qa'
+else
+  nvim --headless -c 'LspInstall clangd pyright' -c 'qa'
+fi
+
+
