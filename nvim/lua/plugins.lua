@@ -82,17 +82,7 @@ return require('packer').startup(function(use)
     use {
         'williamboman/mason-lspconfig.nvim',
         config = function()
-            require('mason-lspconfig').setup({
-                ensure_installed = {
-                    'clangd',
-                    'pyright',
-                    'rust_analyzer',
-                    'sumneko_lua',
-                    'texlab',
-                    'tsserver',
-                },
-                automatic_installation = true,
-            })
+            require('mason-lspconfig').setup()
         end
     }
     use {
