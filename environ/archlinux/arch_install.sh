@@ -18,9 +18,9 @@ SECTOR_SIZE=$(cat /sys/block/nvme0n1/queue/physical_block_size)
 cryptsetup \
   --type luks2 \
   --cipher aes-xts-plain64 \
-  --hash sha256 \
+  --hash sha512 \
   --key-size 512 \
-  --pbkdf argon2i \
+  --pbkdf argon2id \
   --sector-size $SECTOR_SIZE \
   --align-payload $(expr $SECTOR_SIZE / 512) \
   --use-urandom \
