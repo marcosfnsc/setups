@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
-  #kde-applications
-  rsync
+  #xorg 
   android-tools # adb and fastboot
   ark
   base-devel # for yay
@@ -62,6 +61,7 @@ APPS_INSTALL=(
   rclone
   reflector
   ripgrep
+  rsync
   sddm # lock screen
   spectacle
   sshfs # for the kdeconnect
@@ -72,7 +72,6 @@ APPS_INSTALL=(
   unzip
   usbutils # for get the lsusb command
   vlc
-  xorg
   yt-dlp
   zathura
   zathura-pdf-mupdf
