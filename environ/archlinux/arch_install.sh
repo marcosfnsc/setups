@@ -43,7 +43,7 @@ umount /mnt
 BTRFS_MOUNT_OPTIONS="defaults,noatime,compress-force=zstd,commit=120"
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@     /dev/mapper/container /mnt
 mkdir /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
-mount /dev/sda1 /mnt/boot
+mount /dev/nvme0n1p1 /mnt/boot
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@home /dev/mapper/container /mnt/home
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@log  /dev/mapper/container /mnt/var/log
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@tmp  /dev/mapper/container /mnt/tmp
