@@ -23,7 +23,7 @@ cryptsetup \
   --pbkdf argon2id \
   --sector-size $SECTOR_SIZE \
   --align-payload $(expr $SECTOR_SIZE / 512) \
-  --use-urandom \
+  --use-random \
   --verify-passphrase \
   luksFormat /dev/nvme0n1p2
 cryptsetup open --type luks2 /dev/nvme0n1p2 container
