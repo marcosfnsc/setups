@@ -2,8 +2,11 @@
 
 # dicas-> loadkeys br-abnt2
 
+DISK="/dev/nvme0n1"
+PART="p"
+
 # create partitions
-parted -s /dev/nvme0n1 \
+parted -s $DISK \
   mklabel gpt \
   mkpart primary 1MiB 500MiB \
   mkpart primary 500MiB 100% \
@@ -14,7 +17,7 @@ parted -s /dev/nvme0n1 \
 modprobe dm-crypt
 modprobe dm-mod
 
-SECTOR_SIZE=$(cat /sys/block/nvme0n1/queue/physical_block_size)
+SECTOR_SIZE=$(cat /sys/block/$DISK/queue/physical_block_size)
 cryptsetup \
   --type luks2 \
   --cipher aes-xts-plain64 \
@@ -25,10 +28,10 @@ cryptsetup \
   --align-payload $(expr $SECTOR_SIZE / 512) \
   --use-random \
   --verify-passphrase \
-  luksFormat /dev/nvme0n1p2
-cryptsetup open --type luks2 /dev/nvme0n1p2 container
+  luksFormat $DISK${PART}2
+cryptsetup open --type luks2 $DISK${PART}2 container
 
-mkfs.fat -F32 /dev/nvme0n1p1
+mkfs.fat -F32 $DISK${PART}1
 mkfs.btrfs /dev/mapper/container
 
 mount /dev/mapper/container /mnt
@@ -43,7 +46,7 @@ umount /mnt
 BTRFS_MOUNT_OPTIONS="defaults,noatime,compress-force=zstd,commit=120"
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@     /dev/mapper/container /mnt
 mkdir -p /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
-mount /dev/nvme0n1p1 /mnt/boot
+mount $DISK${PART}1 /mnt/boot
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@home /dev/mapper/container /mnt/home
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@log  /dev/mapper/container /mnt/var/log
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@tmp  /dev/mapper/container /mnt/tmp
