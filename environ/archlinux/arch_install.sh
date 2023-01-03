@@ -34,17 +34,21 @@ mkfs.btrfs /dev/mapper/container
 mount /dev/mapper/container /mnt
 btrfs subvolume create /mnt/@
 btrfs subvolume create /mnt/@home
+btrfs subvolume create /mnt/@log
 btrfs subvolume create /mnt/@snapshots
 btrfs subvolume create /mnt/@swap
+btrfs subvolume create /mnt/@tmp
 umount /mnt
 
 BTRFS_MOUNT_OPTIONS="defaults,noatime,compress-force=zstd,commit=120"
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@     /dev/mapper/container /mnt
-mkdir /mnt/{boot,home,.snapshots,.swap}
+mkdir /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
 mount /dev/sda1 /mnt/boot
 mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@home /dev/mapper/container /mnt/home
-mount -o subvol=@snapshots                   /dev/mapper/container /mnt/.snapshots
+mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@log  /dev/mapper/container /mnt/var/log
+mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@tmp  /dev/mapper/container /mnt/tmp
 mount -o noatime,subvol=@swap                /dev/mapper/container /mnt/.swap
+mount -o subvol=@snapshots                   /dev/mapper/container /mnt/.snapshots
 
 ## swapfile
 touch /mnt/.swap/swapfile
