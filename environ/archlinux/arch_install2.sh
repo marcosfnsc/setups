@@ -65,7 +65,7 @@ gcc -O2 -o btrfs_map_physical btrfs_map_physical.c
 RESUME_OFFSET=$(./btrfs_map_physical /.swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
 RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
-UUID_STORAGE_DEVICE=$(lsblk -no NAME,UUID /dev/$DISK${PART}2 | head -n 1 | awk '{print $2}')
+UUID_STORAGE_DEVICE=$(blkid -s UUID - value /dev/$DISK${PART}2)
 CRYPT_DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards" # :allow-discards to enable TRIM commands
 DISABLE_WORKQUEUE="no-read-workqueue,no-write-workqueue" # for better performance in ssd, not recomended for hdd
 ROOT_DEVICE="root=/dev/mapper/container"
