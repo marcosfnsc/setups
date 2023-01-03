@@ -81,7 +81,7 @@ fi
 
 sed \
   -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g" \
-  -i etc/default/grub
+  -i /etc/default/grub
 grub-mkconfig -o /boot/grub/grub.cfg
 
 systemctl enable NetworkManager
