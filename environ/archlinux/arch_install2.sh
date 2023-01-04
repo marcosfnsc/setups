@@ -71,7 +71,7 @@ ROOT_DEVICE="root=/dev/mapper/container"
 ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
-OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for  enable audio intel driver 
+OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for  enable audio intel driver, add ibt=off for run virtualbox
 LINUX_CMDLINE="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
 sed \
