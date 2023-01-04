@@ -10,6 +10,7 @@ parted -s /dev/$DISK \
   mklabel gpt \
   mkpart primary 1MiB 500MiB \
   mkpart primary 500MiB 100% \
+  set 1 esp on \
   --align optimal \
   align-check min 1
 

@@ -53,9 +53,8 @@ sed -e "s/fsck/resume fsck/g"                -i /etc/mkinitcpio.conf
 sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
-## config grub
-pacman -Sy --needed grub efibootmgr os-prober mtools dosfstools
-grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+## config systemd-boot
+bootctl install
 
 pacman -S --needed curl gcc
 curl \
@@ -74,10 +73,6 @@ RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for  enable audio intel driver 
 LINUX_CMDLINE="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
-
-if ! grep -q "^GRUB_CMDLINE_LINUX=" etc/default/grub ; then
-  echo "GRUB_CMDLINE_LINUX=\"\"" >> etc/default/grub
-fi
 
 sed \
   -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g" \
