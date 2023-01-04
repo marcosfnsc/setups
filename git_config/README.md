@@ -31,13 +31,17 @@ comandos interessantes:
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 
 ### outros comandos
+- `git commit --allow-empty -m 'Empty commit'`: cria um commit vazio, sem alterações de arquivo, util para acionar pipelines CI/CD
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
 - `git commit -a`: mesmo comportamento de digitar `git add .` e depois `git commit`
 - `git commit -am`: mesmo comportamento de digitar `git add .` e depois `git commit -m mensagem_do_commit`
 - `git diff branch1:branch2 -- nome_do_arquivo`: mostra as diferenças em um determinado arquivo
 - `git diff branch1:branch2`: mostra as diferenças entre as duas branches especificadas
+- `git log --grep "string`: procurar string nos textos dos commits
+- `git log -p -G my_func`: procurar string nos textos dos diffs de commit
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
+- `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `git tag nome da tag`: cria um tag leve local
 - `git tag`: lista as tags
