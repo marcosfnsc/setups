@@ -55,6 +55,7 @@ mkinitcpio -p linux
 
 ## config systemd-boot
 bootctl install
+echo -e "default arch\ntimeout 3" > /boot/loader/loader.conf
 
 pacman -S --needed curl gcc
 curl \
@@ -72,12 +73,13 @@ ROOT_FLAGS="rootflags=subvol=@"
 RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
 RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
 OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for  enable audio intel driver, add ibt=off for run virtualbox
-LINUX_CMDLINE="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
+KERNEL_PARAMETERS="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
-sed \
-  -e "s;GRUB_CMDLINE_LINUX=\"[[:print:]]*\";GRUB_CMDLINE_LINUX=\"$LINUX_CMDLINE\";g" \
-  -i /etc/default/grub
-grub-mkconfig -o /boot/grub/grub.cfg
+echo -e "title Archlinux
+linux /vmlinuz-linux
+initrd /intel-ucode.img
+initrd /initramfs-linux.img
+options $KERNEL_PARAMETERS" > /boot/loader/entries/arch.conf
 
 systemctl enable NetworkManager
 systemctl enable fstrim.timer
