@@ -89,6 +89,7 @@
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
 * <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
+* <kbd>g</kbd><kbd>x</kbd> no modo normal: abrir no navegador web a url sob o cursor
 * <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
