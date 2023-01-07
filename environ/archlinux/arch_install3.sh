@@ -5,7 +5,6 @@ APPS_INSTALL=(
   android-tools # adb and fastboot
   ark
   base-devel # for yay
-  btop
   calibre # manage ebooks
   cdrdao # for k3b
   cdrtools # for k3b
