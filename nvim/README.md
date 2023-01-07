@@ -129,16 +129,19 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * registro do ultimo padrão de epsquisa (/): contem o ultimo conteudo pesquisado
 
 ## comandos:
-* `:%bd|e#|bd#`: apaga todos os buffers menos o atual
+* `:%bd | e# | bd#`: fecha todos os buffers menos o atual
 * `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
+* `:nohlsearch` ou `noh`: limpa o destaque de pesquisa
 * `:retab`: transforma tabulações em caracteres de espaço
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
+* `:set hlsearch`: ativa o destaque de pesquisa
 * `:set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
+* `:set nowrap`: faz com que o editor apresente o codigo sem quebrar linhas longas, fazendo com que seja necessario mover a tela para os lados
 * `:set rightleft`: altera a ordem das colulas, deixa o texto invertido, execute novamente para o estado anterior
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
