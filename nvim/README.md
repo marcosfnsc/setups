@@ -139,6 +139,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:nohlsearch` ou `noh`: limpa o destaque de pesquisa
 * `:retab`: transforma tabulações em caracteres de espaço
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
+* `:set colorcolumn=n` ou `:set cc=n`: destaca a coluna `n` onde `n` é o numero da coluna, é possivel destacar mais de uma coluna ao mesmo tempo definindo mais de um valor separado por virgula
 * `:set hlsearch`: ativa o destaque de pesquisa
 * `:set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
 * `:set nowrap`: faz com que o editor apresente o codigo sem quebrar linhas longas, fazendo com que seja necessario mover a tela para os lados
