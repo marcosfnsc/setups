@@ -65,10 +65,18 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         config = function()
+            local function trailing_whitespace()
+                local space = vim.fn.search([[\s\+$]], 'nwc')
+                return space ~= 0 and "TW:"..space or ""
+            end
+
             require('lualine').setup({
                 options = {
                     icons_enabled = false,
                     theme = 'onedark'
+                },
+                sections = {
+                    lualine_z = {'location', trailing_whitespace}
                 }
             })
         end
