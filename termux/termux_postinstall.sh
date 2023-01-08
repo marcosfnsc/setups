@@ -6,6 +6,7 @@ termux-setup-storage
 PACKAGES_ADD=(
   clang
   curl
+  exa
   git
   glow
   keepassxc

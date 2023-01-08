@@ -24,6 +24,9 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+## alias
+alias ls=exa
+
 ## fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
