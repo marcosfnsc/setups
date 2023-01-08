@@ -13,6 +13,7 @@ APPS_INSTALL=(
   dolphin
   dvd+rw-tools # for k3b
   earlyoom
+  exa
   ffmpeg
   firefox
   firewalld
