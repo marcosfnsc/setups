@@ -25,9 +25,9 @@ atalhos:
 comandos dentro do tmux:
 ------------------------
 * `swap-window -t n`: troca a posição da janela atual, sendo `n` a posição desejada
-* `join-pane -t N:N`: move o painel em foco para o painel definido na posição `N:N`
-* `join-pane -t N:N -v`: move o painel em foco para o painel definido na posição `N:N` e os painei divididos na vertical
-* `join-pane -t N:N -h`: move o painel em foco para o painel definido na posição `N:N` e os painei divididos na horizontal
+* `join-pane -t :N`: move o painel em foco para a janela `N`
+* `join-pane -t :N -v`: move o painel em foco para a janela `N` e divide os paineis na vertical
+* `join-pane -t :N -h`: move o painel em foco para a janela `N` e divide os paineis na horizontal
 * `break-pane -t :`: move o painel em foco para uma nova janela
 * `setw synchronise-panes`: envia simultaneamente entrada do teclado de um painel para o resto dos painéis na mesma janela, para desativar o comando basta digita-lo novamente
 
