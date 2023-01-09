@@ -3,15 +3,20 @@ if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
   exec tmux new -A
 fi
 
-## rust environment
-[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
-
 ## flutter environment
 [ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
 
-## Path to your oh-my-zsh installation.
+## fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+## rust environment
+[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
+
+## Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
+source $ZSH/oh-my-zsh.sh
 
 plugins=(
   git
@@ -19,14 +24,8 @@ plugins=(
   docker-compose
 )
 
-source $ZSH/oh-my-zsh.sh
-
 ## alias
 alias ls=exa
-
-## fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 ## use nvim buffer to edit command in shell
 export EDITOR=nvim
