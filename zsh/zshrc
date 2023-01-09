@@ -3,9 +3,6 @@ if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
   exec tmux new -A
 fi
 
-## c charp environment
-export DOTNET_CLI_TELEMETRY_OPTOUT=1 # disable telemetry
-
 ## rust environment
 [ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
@@ -51,13 +48,3 @@ setopt NO_SHARE_HISTORY # disable timestamp in history
 setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
 
 source $HOME/.shell_functions
-
-## java environment
-#export JAVA_HOME=/usr/lib/jvm/default
-
-## pyenv
-#if [ -d "$HOME/.pyenv/" ]; then
-#  export PATH="$HOME/.pyenv/bin:$PATH"
-#  eval "$(pyenv init -)"
-#  eval "$(pyenv virtualenv-init -)"
-#fi
