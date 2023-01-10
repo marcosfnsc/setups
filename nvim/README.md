@@ -165,7 +165,8 @@ recursiva e por fim executar o comando de substituição em todos os arquivos us
 o comando `argdo` vai executar o subcomando em cada arquivo presente no args do vim
 
 #### execução de comandos do modo normal em varias linhas de uma vez
-exemplo: selecione linhas usando modo visual e execute `:norm 0i#` para adicionar # no começo de cada linha
+exemplo: selecione linhas usando modo visual e execute `:norm 0i#` para adicionar # no começo de cada linha,
+dica, pra inserir o <kbd>>ESC</kbd> nesse modo, precisa executar os atalhos <kbd>>ctrol</kbd><kbd>>v</kbd><kbd>>ESC</kbd>
 
 ## macros:
 é um recurso que permite gravar uma sequencia de comandos e salvar para ser usado de
