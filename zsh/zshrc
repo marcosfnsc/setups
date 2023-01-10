@@ -3,16 +3,6 @@ if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
   exec tmux new -A
 fi
 
-## flutter environment
-[ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
-
-## fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
-## rust environment
-[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
-
 ## oh-my-zsh config
 export ZSH="$HOME/.oh-my-zsh"
 ZSH_THEME="agnoster"
@@ -22,6 +12,16 @@ plugins=(
   docker-compose
 )
 source $ZSH/oh-my-zsh.sh
+
+## flutter environment
+[ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
+
+## fzf config
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+
+## rust environment
+[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
 ## alias
 alias ls=exa
