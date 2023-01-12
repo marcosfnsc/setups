@@ -132,6 +132,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * registro do ultimo padrão de epsquisa (/): contem o ultimo conteudo pesquisado
 
 ## comandos:
+* `:!column -t`: alinha o texto verticalmente usando a ferramenta `column`
+* `:!comando_externo`: redireciona o buffer para um programa externo e retorna a saida para o buffer atual
 * `:%bd | e# | bd#`: fecha todos os buffers menos o atual
 * `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
