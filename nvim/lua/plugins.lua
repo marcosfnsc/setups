@@ -9,6 +9,14 @@ return require('packer').startup(function(use)
     use { 'junegunn/fzf', run = './install --all' }
     use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {
+        'iamcco/markdown-preview.nvim',
+        ft = { 'markdown' },
+        run = 'cd app && npm install',
+        setup = function()
+            vim.g.mkdp_filetypes = { 'markdown' }
+        end
+    }
+    use {
         'rcarriga/nvim-notify',
         config = function()
             vim.notify = require('notify')
