@@ -4,18 +4,18 @@
 ### edição:
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
 * <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd>
-* <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteudo da linha atual e entra no modo normal
+* <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteúdo da linha atual e entra no modo normal
 * <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
 * <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
 * <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
 * <kbd>R</kbd> no modo normal: entra no modo replace
 * <kbd>V</kbd> no modo normal: modo visual de linha
-* <kbd>X</kbd> no modo normal: apaga que estiver a direita do cursor
+* <kbd>X</kbd> no modo normal: apaga o caractere que está a esquerda do cursor
 * <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
-* <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteudo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
+* <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteúdo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
 * <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado
 * <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado
-* <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteudo do registro especificado em <code>reg</code>
+* <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteúdo do registro especificado em <code>reg</code>
 * <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert
 * <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e após alguma ação, automaticamente volta para o modo insert
 * <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd>
@@ -46,8 +46,8 @@
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>ctrol</kbd><kbd>d</kbd> no modo normal: mover metade da janela para baixo
 * <kbd>ctrol</kbd><kbd>e</kbd> no modo normal: mover janela uma linha para baixo
-* <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posicao do cursor
-* <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posicao anterior do cursor
+* <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posição do cursor
+* <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posição anterior do cursor
 * <kbd>ctrol</kbd><kbd>u</kbd> no modo normal: mover metade da janela para cima
 * <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert
 * <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert
@@ -64,7 +64,7 @@
 * <kbd>z</kbd><kbd>t</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no topo da janela
 * <kbd>z</kbd><kbd>z</kbd> no modo normal: mover a janela para que a linha sob o cursor fique no centro da janela
 
-### gerenciamento de janela:
+### gerenciamento de janelas e guias:
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>+</kbd> no modo normal: almenta a altura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>-</kbd> no modo normal: diminue a altura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd><</kbd> no modo normal: diminue a largura da janela
@@ -114,23 +114,23 @@
 ### tipos de registros:
 * registro sem nome (`"`): Contém o último conteúdo excluído, alterado ou retirado, mesmo se um registro foi especificado.
 * registros numerados (0-9):
-    * 0: contém o ultimo conteudo arrancado
-    * 1-9: é uma pilha que contém o ultimo conteudo que foi excluido ou alterado
+    * 0: contém o ultimo conteúdo arrancado
+    * 1-9: é uma pilha que contém o ultimo conteúdo que foi excluido ou alterado
 
-      cada vez que alterar ou exluir um conteudo ele sera adicionado ao registro 1, quando outro conteudo
+      cada vez que alterar ou exluir um conteúdo ele sera adicionado ao registro 1, quando outro conteúdo
       é adicionado ao registro 1, o que havia nele é transferido para o proximo registro, que neste caso é
-      o 2, o conteudo vai saltando de um registro para outro até chegar no registro 9, quando outro conteudo
+      o 2, o conteúdo vai saltando de um registro para outro até chegar no registro 9, quando outro conteúdo
       for movido para o registro 9, o que havia antes nele é perdido
 
-* registro de exclusao: Contém qualquer conteúdo excluído ou alterado menor que uma linha
+* registro de exclusão: Contém qualquer conteúdo excluído ou alterado menor que uma linha
 
 Nenhum desses registros mensionados acima é escrito se você especificou um antes com o pressionamento de tecla <kbd>"</kbd>
 
 * registros nomeados (a-z):
-    * o editor so vai sobrescrever se esse tipo de registro for especificado
-    * colocar a letra em maiscula vai anexar o conteudo ao registro, em vez de sobrescrever
-* registro de buraco negro (`&lowbar;`): tudo que for escrito lá sera perdido
-* registro do ultimo padrão de epsquisa (/): contem o ultimo conteudo pesquisado
+    * o editor só vai sobrescrever se esse tipo de registro for especificado
+    * colocar a letra em maiscula vai anexar o conteúdo ao registro, em vez de sobrescrever
+* registro de buraco negro (`_`): tudo que for escrito lá sera perdido
+* registro do ultimo padrão de pesquisa (/): contem o ultimo conteúdo pesquisado
 
 ## comandos:
 * `:!column -t`: alinha o texto verticalmente usando a ferramenta `column`
