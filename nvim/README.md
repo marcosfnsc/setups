@@ -82,23 +82,24 @@
 * <kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>Z</kbd><kbd>Q</kbd> no modo normal: sai sem salvar alterações, atalho para <code>:q!</code>
 * <kbd>Z</kbd><kbd>Z</kbd> no modo normal: salva e sai, atalho para <code>:wq</code>
+* <kbd>\`</kbd><kbd><</kbd> no modo normal: ir para o inicio da ultima seleção
+* <kbd>\`</kbd><kbd>></kbd> no modo normal: ir para o final da ultima seleção
 * <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal
 * <kbd>g</kbd><kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
+* <kbd>g</kbd><kbd>a</kbd> no modo normal: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
 * <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
-* <kbd>g</kbd><kbd>x</kbd> no modo normal: abrir no navegador web a url sob o cursor
 * <kbd>g</kbd><kbd>v</kbd> no modo normal: seleciona novamente a ultima seleção
+* <kbd>g</kbd><kbd>x</kbd> no modo normal: abrir no navegador web a url sob o cursor
 * <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
 * <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento
 * <kbd>z</kbd><kbd>o</kbd> no modo normal: abre uma dobra
-* <kbd>\`</kbd><kbd><</kbd> no modo normal: ir para o inicio da ultima seleção
-* <kbd>\`</kbd><kbd>></kbd> no modo normal: ir para o final da ultima seleção
 
 ### modo comando:
 * <kbd>control</kbd><kbd>b</kbd> no modo comando: move o cursor para o começo da linha
@@ -153,6 +154,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:x`: atalho para `:wq`
+* `as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * `sort u`: ordena as linhas selecionadas e remove duplicatas
 * `sort!`: ordena de forma inversa as linhas selecionadas
 * `sort`: ordena as linhas selecionadas
