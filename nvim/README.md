@@ -95,6 +95,7 @@
 * <kbd>g</kbd><kbd>v</kbd> no modo normal: seleciona novamente a ultima seleção
 * <kbd>g</kbd><kbd>x</kbd> no modo normal: abrir no navegador web a url sob o cursor
 * <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
+* <kbd>v</kbd><kbd>i</kbd><kbd>p</kbd> no modo normal: seleciona um paragráfo, paragráfos são blocos de linhas delimitados por linhas em branco
 * <kbd>z</kbd><kbd>M</kbd> no modo normal: fecha todas as dobras
 * <kbd>z</kbd><kbd>R</kbd> no modo normal: abre todas as dobras
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
