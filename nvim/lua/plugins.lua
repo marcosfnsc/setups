@@ -138,7 +138,8 @@ return require('packer').startup(function(use)
                     'latex',
                     'lua',
                     'python',
-                    'rust'
+                    'rust',
+                    'sql',
                 },
                 sync_install = false,
                 highlight = {
