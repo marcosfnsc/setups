@@ -26,6 +26,7 @@
 * <kbd>g</kbd><kbd>g</kbd><kbd>=</kbd><kbd>G</kbd> no modo normal: corrigir indentação do codigo inteiro
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
+* <kbd>g</kbd><kbd>~</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: alterna entre maiusculas e minusculas as letras das palavras
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
 * <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>u</kbd> no modo normal: desfaz as mudanças
@@ -156,6 +157,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:x`: atalho para `:wq`
 * `as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
+* `sort i`: ordena as linhas selecionadas ignorando case-sensitive
+* `sort n`: ordena as linhas selecionadas seguindo a ordem alfanumérica
 * `sort u`: ordena as linhas selecionadas e remove duplicatas
 * `sort!`: ordena de forma inversa as linhas selecionadas
 * `sort`: ordena as linhas selecionadas
