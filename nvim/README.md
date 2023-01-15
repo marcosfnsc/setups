@@ -142,30 +142,32 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:%bd | e# | bd#`: fecha todos os buffers menos o atual
 * `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
+* `:as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
 * `:nohlsearch` ou `noh`: limpa o destaque de pesquisa
+* `:put =range(x, y)`: criar sequencia de numeros de `x` ate `y`
 * `:retab`: transforma tabulações em caracteres de espaço
 * `:s/pattern/replace/g`: substituir "pattern" por "replace" na linha onde esta o cursor
 * `:set colorcolumn=n` ou `:set cc=n`: destaca a coluna `n` onde `n` é o numero da coluna, é possivel destacar mais de uma coluna ao mesmo tempo definindo mais de um valor separado por virgula
 * `:set hlsearch`: ativa o destaque de pesquisa
 * `:set ignorecase`: todas as pesquisas nao farao distincao entre letras maiusculas e minusculas
 * `:set nowrap`: faz com que o editor apresente o codigo sem quebrar linhas longas, fazendo com que seja necessario mover a tela para os lados
+* `:set nrformats=bin,octal,hex,alpha`: definir o tipo de suporte a incremento e decremento
+* `:set nrformats?`: verificar o tipo de suporte a incremento e decremento
 * `:set rightleft`: altera a ordem das colulas, deixa o texto invertido, execute novamente para o estado anterior
+* `:sort i`: ordena as linhas selecionadas ignorando case-sensitive
+* `:sort n`: ordena as linhas selecionadas seguindo a ordem alfanumérica
+* `:sort u`: ordena as linhas selecionadas e remove duplicatas
+* `:sort!`: ordena de forma inversa as linhas selecionadas
+* `:sort`: ordena as linhas selecionadas
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
+* `:virtualedit=all`: permite o cursor percorrer livremente pela tela, isso é conveniente ao usar ao fazer uma seleção em bloco
 * `:x`: atalho para `:wq`
-* `as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
-* `sort i`: ordena as linhas selecionadas ignorando case-sensitive
-* `sort n`: ordena as linhas selecionadas seguindo a ordem alfanumérica
-* `sort u`: ordena as linhas selecionadas e remove duplicatas
-* `sort!`: ordena de forma inversa as linhas selecionadas
-* `sort`: ordena as linhas selecionadas
-* `virtualedit=all`: permite o cursor percorrer livremente pela tela, isso é conveniente ao usar ao fazer uma seleção em bloco
-* `:put =range(x, y)`: criar sequencia de numeros de `x` ate `y`
 
 ## Truques:
 #### substituição de palavras em todos os arquivos
