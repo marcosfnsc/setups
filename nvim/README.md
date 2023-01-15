@@ -159,6 +159,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:set nrformats=bin,octal,hex,alpha`: definir o tipo de suporte a incremento e decremento
 * `:set nrformats?`: verificar o tipo de suporte a incremento e decremento
 * `:set rightleft`: altera a ordem das colulas, deixa o texto invertido, execute novamente para o estado anterior
+* `:set scrollbind`: faz com que cada janela do vim role simultaneamente
 * `:sort i`: ordena as linhas selecionadas ignorando case-sensitive
 * `:sort n`: ordena as linhas selecionadas seguindo a ordem alfanumérica
 * `:sort u`: ordena as linhas selecionadas e remove duplicatas
