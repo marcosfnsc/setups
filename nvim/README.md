@@ -91,6 +91,7 @@
 * <kbd>g</kbd><kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
+* <kbd>g</kbd><kbd>ctrol</kbd><kbd>g</kbd> no modo normal: mostra informações sobre o documento como quantidade de linhas, palavras e tamanho em bytes, tambem mostra o numero da linha e coluna onde está o cursor
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
 * <kbd>g</kbd><kbd>r</kbd>{caractere} no modo normal: substituir o caractere sob o cursor pelo caractere indicado no atalho
 * <kbd>g</kbd><kbd>v</kbd> no modo normal: seleciona novamente a ultima seleção
