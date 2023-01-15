@@ -197,5 +197,5 @@ novo qantas vezes por necessario
 * para gravar uma macro: `q<reg><comandos>q`
 * para executar uma macro: `@<reg>`
 
-como a macro em gravada nos registros, é possivel colar uma macro usando<kbd>p</kbd>
+como a macro é gravada nos registros, é possivel colar uma macro usando<kbd>p</kbd>
 e depois copiando para o mesmo registro usando algum movimento de corte
