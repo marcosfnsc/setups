@@ -16,6 +16,8 @@
 * <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert
 * <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor no modo insert
 * <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
+* <kbd>g</kbd><kbd>ctrol</kbd><kbd>a</kbd> no modo visual: incrementa uma seleção de numeros de forma sequencial
+* <kbd>g</kbd><kbd>ctrol</kbd><kbd>x</kbd> no modo visual: decrementa uma seleção de numeros de forma sequencial
 * <kbd>g</kbd><kbd>g</kbd><kbd>=</kbd><kbd>G</kbd> no modo normal: corrigir indentação do codigo inteiro
 * <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
@@ -163,6 +165,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `sort!`: ordena de forma inversa as linhas selecionadas
 * `sort`: ordena as linhas selecionadas
 * `virtualedit=all`: permite o cursor percorrer livremente pela tela, isso é conveniente ao usar ao fazer uma seleção em bloco
+* `:put =range(x, y)`: criar sequencia de numeros de `x` ate `y`
 
 ## Truques:
 #### substituição de palavras em todos os arquivos
@@ -174,7 +177,7 @@ o comando `argdo` vai executar o subcomando em cada arquivo presente no args do 
 
 #### execução de comandos do modo normal em varias linhas de uma vez
 exemplo: selecione linhas usando modo visual e execute `:norm 0i#` para adicionar # no começo de cada linha,
-dica, pra inserir o <kbd>>ESC</kbd> nesse modo, precisa executar os atalhos <kbd>>ctrol</kbd><kbd>>v</kbd><kbd>>ESC</kbd>
+dica, pra inserir o <kbd>ESC</kbd> nesse modo, basta executar os atalhos <kbd>ctrol</kbd><kbd>v</kbd><kbd>ESC</kbd>
 
 ## macros:
 é um recurso que permite gravar uma sequencia de comandos e salvar para ser usado de
