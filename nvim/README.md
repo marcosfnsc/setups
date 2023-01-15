@@ -4,36 +4,42 @@
 ### edição:
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
 * <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd>
-* <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
 * <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteúdo da linha atual e entra no modo normal
+* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
+* <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
+* <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
+* <kbd>R</kbd> no modo normal: entra no modo replace
+* <kbd>V</kbd> no modo normal: modo visual de linha
+* <kbd>X</kbd> no modo normal: apaga o caractere que está a esquerda do cursor
+* <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
 * <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteúdo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
 * <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado
 * <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado
-* <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual no modo insert
-* <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e após alguma ação, automaticamente volta para o modo insert
 * <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd>
-* <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteúdo do registro especificado em <code>reg</code>
-* <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual no modo insert
-* <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor no modo insert
-* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
+* <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
+* <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>a</kbd> no modo visual: incrementa uma seleção de numeros de forma sequencial
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>x</kbd> no modo visual: decrementa uma seleção de numeros de forma sequencial
 * <kbd>g</kbd><kbd>g</kbd><kbd>=</kbd><kbd>G</kbd> no modo normal: corrigir indentação do codigo inteiro
-* <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
-* <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
 * <kbd>g</kbd><kbd>~</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: alterna entre maiusculas e minusculas as letras das palavras
-* <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
-* <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
-* <kbd>R</kbd> no modo normal: entra no modo replace
 * <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>u</kbd> no modo normal: desfaz as mudanças
-* <kbd>V</kbd> no modo normal: modo visual de linha
-* <kbd>X</kbd> no modo normal: apaga o caractere que está a esquerda do cursor
 * <kbd>x</kbd> no modo normal: apaga que estiver sub o cursor
 * <kbd>~</kbd> no modo normal: altera o caractere sub o cursor para maiusculo ou minusculo
+
+### atalhos do modo insert:
+* <kbd>ctrol</kbd><kbd>d</kbd> no modo insert: recue a indentação da linha atual
+* <kbd>ctrol</kbd><kbd>h</kbd> no modo insert: excluir o caractere que está a esquerda do cursor
+* <kbd>ctrol</kbd><kbd>o</kbd> no modo insert: alterna para o modo normal e após alguma ação, automaticamente volta para o modo insert
+* <kbd>ctrol</kbd><kbd>R</kbd><code>reg</code> no modo insert: permite adicionar ao buffer o conteúdo do registro especificado em <code>reg</code>
+* <kbd>ctrol</kbd><kbd>t</kbd> no modo insert: aumente a indentação da linha atual
+* <kbd>ctrol</kbd><kbd>u</kbd> no modo insert: exclui tudo que estiver antes do cursor
+* <kbd>ctrol</kbd><kbd>w</kbd> no modo insert: excluir a palavra que está a esquerda do cursor
+* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo
+* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima
 
 ### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha (incluindo o caractere de quebra de linha)
@@ -47,8 +53,6 @@
 * <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posição do cursor
 * <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posição anterior do cursor
 * <kbd>ctrol</kbd><kbd>u</kbd> no modo normal: mover metade da janela para cima
-* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>e</kbd> no modo insert: mover a tela para baixo sem sair do modo insert
-* <kbd>ctrol</kbd><kbd>x</kbd><kbd>ctrol</kbd><kbd>y</kbd> no modo insert: mover a tela para cima sem sair do modo insert
 * <kbd>ctrol</kbd><kbd>y</kbd> no modo normal: mover janela uma linha para cima
 * <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
