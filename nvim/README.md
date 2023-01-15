@@ -167,6 +167,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
 * `:virtualedit=all`: permite o cursor percorrer livremente pela tela, isso é conveniente ao usar ao fazer uma seleção em bloco
+* `:w >> arquito_de_texto.txt`: ao selecionar linhas, permite anexar a seleção em um outro arquivo
+* `:w arquito_de_texto.txt`: ao selecionar linhas, permite salvar a seleção em um outro arquivo
 * `:x`: atalho para `:wq`
 
 ## Truques:
