@@ -178,6 +178,9 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:x`: atalho para `:wq`
 
 ## Truques:
+#### pesquisar em uma seleção visual
+faça a seleção e em seguida vá para o modo normal (<kbd>ESC</kbd>) e depois digite `/\%Vsua_pesquisa`
+
 #### substituição de palavras em todos os arquivos
 digitar no modo comando `:args **` para adicionar todos os arquivos em um direitorio de forma
 recursiva e por fim executar o comando de substituição em todos os arquivos usando o comando
