@@ -9,6 +9,12 @@ return require('packer').startup(function(use)
     use { 'junegunn/fzf', run = './install --all' }
     use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
     use {
+        'j-hui/fidget.nvim',
+        config = function ()
+            require('fidget').setup()
+        end
+    }
+    use {
         'iamcco/markdown-preview.nvim',
         ft = { 'markdown' },
         run = 'cd app && npm install',
