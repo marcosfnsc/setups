@@ -43,7 +43,7 @@
 
 ### movimento:
 * <kbd>$</kbd> no modo normal: ir para a ultima coluna da linha (incluindo o caractere de quebra de linha)
-* <kbd>%</kbd> no modo normal: acha o proximo parêntese, colchete, chave etc
+* <kbd>%</kbd> no modo normal: salta para o proximo parêntese, colchete, chave correpondente
 * <kbd>+</kbd> no modo normal: atalho para <kbd>j^</kbd>
 * <kbd>0</kbd> ou <kbd>|</kbd> no modo normal: ir para a primeira coluna da linha
 * <kbd>^</kbd> no modo normal: ir para o primeiro caractere da linha
