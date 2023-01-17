@@ -4,29 +4,29 @@
 ### edição:
 * <kbd>>></kbd> ou <kbd><<</kbd> no modo normal: altera recuo da linha
 * <kbd>A</kbd> no modo normal: atalho para <kbd>$</kbd><kbd>a</kbd>
-* <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteúdo da linha atual e entra no modo normal
-* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>&lowbar;</kbd>
-* <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
-* <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
-* <kbd>R</kbd> no modo normal: entra no modo replace
-* <kbd>V</kbd> no modo normal: modo visual de linha
-* <kbd>X</kbd> no modo normal: apaga o caractere que está a esquerda do cursor
 * <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
+* <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteúdo da linha atual e entra no modo normal
 * <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteúdo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
 * <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado
 * <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado
 * <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd>
-* <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
-* <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
+* <kbd>D</kbd> no modo normal: apaga que estiver entre o cursor e o ultimo caractereda linha, atalho para <kbd>d</kbd><kbd>g</kbd><kbd>\_</kbd>
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>a</kbd> no modo visual: incrementa uma seleção de numeros de forma sequencial
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>x</kbd> no modo visual: decrementa uma seleção de numeros de forma sequencial
 * <kbd>g</kbd><kbd>g</kbd><kbd>=</kbd><kbd>G</kbd> no modo normal: corrigir indentação do codigo inteiro
+* <kbd>g</kbd><kbd>U</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: mudar letras das palavras para minusculas
+* <kbd>g</kbd><kbd>U</kbd><kbd>U</kbd> no modo normal: mudar todas as palavras da linha para maiusculas
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
 * <kbd>g</kbd><kbd>~</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: alterna entre maiusculas e minusculas as letras das palavras
+* <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
+* <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
+* <kbd>R</kbd> no modo normal: entra no modo replace
 * <kbd>s</kbd> no modo normal: apaga o caractere sobre o cursor e entra no modo insert
 * <kbd>u</kbd> no modo normal: desfaz as mudanças
+* <kbd>V</kbd> no modo normal: modo visual de linha
+* <kbd>X</kbd> no modo normal: apaga o caractere que está a esquerda do cursor
 * <kbd>x</kbd> no modo normal: apaga que estiver sub o cursor
 * <kbd>~</kbd> no modo normal: altera o caractere sub o cursor para maiusculo ou minusculo
 
@@ -57,8 +57,8 @@
 * <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
-* <kbd>g&lowbar;</kbd> no modo normal: ir para o ultimo caractere da linha
-* <kbd>ge</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
+* <kbd>g</kbd><kbd>\_</kbd> no modo normal: ir para o ultimo caractere da linha
+* <kbd>g</kbd><kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
 * <kbd>L</kbd> no modo normal: mover cursor para a parte inferior da janela
 * <kbd>M</kbd> no modo normal: mover cursor para o centro da janela
@@ -77,8 +77,8 @@
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd><</kbd> no modo normal: diminue a largura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>=</kbd> no modo normal: corrige o tamanho de todas as janelas
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>></kbd> no modo normal: aumenta a largura da janela
-* <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>c</kbd> no modo normal: fecha uma janela
+* <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas
 * <kbd>ctrol</kbd><kbd>w</kbd> {<kbd>H</kbd>,<kbd>J</kbd>,<kbd>K</kbd>,<kbd>L</kbd>} no modo normal: move a janela em destaque para um dos cantos da tela
 * <kbd>g</kbd><kbd>T</kbd> no modo normal: alterna para a guia anterior
 * <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
@@ -86,14 +86,16 @@
 ### outros atalhos:
 * <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode usar outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
 * <kbd>#</kbd> no modo normal: pesquisa para tras a palavra que esta sob o cursor
-* <kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
+* <kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>\`</kbd><kbd><</kbd> no modo normal: ir para o inicio da ultima seleção
 * <kbd>\`</kbd><kbd>></kbd> no modo normal: ir para o final da ultima seleção
+* <kbd>\`</kbd><kbd>[</kbd> no modo normal: ir para o começo da ultimo trecho copiado
+* <kbd>\`</kbd><kbd>]</kbd> no modo normal: ir para o final da ultimo trecho copiado
 * <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
 * <kbd>control</kbd><kbd>r</kbd> <kbd>=</kbd> no modo insert: permite escrever expressões matematicas para o vim calcular e o resultado será inserido no lugar do cursor
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal
-* <kbd>g</kbd><kbd>&ast;</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
+* <kbd>g</kbd><kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>g</kbd> no modo normal: mostra informações sobre o documento como quantidade de linhas, palavras e tamanho em bytes, tambem mostra o numero da linha e coluna onde está o cursor
