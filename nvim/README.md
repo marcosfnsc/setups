@@ -50,13 +50,15 @@
 * <kbd>b</kbd> no modo normal: saltar retrocedendo palavras
 * <kbd>ctrol</kbd><kbd>d</kbd> no modo normal: mover metade da janela para baixo
 * <kbd>ctrol</kbd><kbd>e</kbd> no modo normal: mover janela uma linha para baixo
-* <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posição do cursor
-* <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posição anterior do cursor
+* <kbd>ctrol</kbd><kbd>i</kbd> no modo normal: saltar para a proxima posição do jump list
+* <kbd>ctrol</kbd><kbd>o</kbd> ou <kbd>g</kbd><kbd>;</kbd> no modo normal: saltar para a posição do jump list
 * <kbd>ctrol</kbd><kbd>u</kbd> no modo normal: mover metade da janela para cima
 * <kbd>ctrol</kbd><kbd>y</kbd> no modo normal: mover janela uma linha para cima
 * <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
+* <kbd>g</kbd><kbd>,</kbd> no modo normal: pular para a posiçao anterior da lista de alterações
+* <kbd>g</kbd><kbd>;</kbd> no modo normal: pular para a proxima posiçao da lista de alterações
 * <kbd>g</kbd><kbd>\_</kbd> no modo normal: ir para o ultimo caractere da linha
 * <kbd>g</kbd><kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
@@ -152,6 +154,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:%s/pattern//n`: mostra o número de correspondências e o número de linhas em que essas correspondências ocorrem
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
+* `:changes`: alinha o texto verticalmente usando a ferramenta `column`
+* `:clearjumps`: limpar lista de saltos
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
 * `:help digraph-table`: mostra a lista de digrafos
