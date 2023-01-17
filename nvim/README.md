@@ -78,8 +78,8 @@
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>=</kbd> no modo normal: corrige o tamanho de todas as janelas
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>></kbd> no modo normal: aumenta a largura da janela
 * <kbd>ctrol</kbd><kbd>w</kbd> <kbd>r</kbd> no modo normal: troca a posição das janelas
-* <kbd>ctrol</kbd><kbd>w</kbd>+<kbd>c</kbd> no modo normal: fecha uma janela
-* <kbd>ctrol</kbd><kbd>w</kbd>+{<kbd>H</kbd>,<kbd>J</kbd>,<kbd>K</kbd>,<kbd>L</kbd>} no modo normal: move a janela em destaque para um dos cantos da tela
+* <kbd>ctrol</kbd><kbd>w</kbd> <kbd>c</kbd> no modo normal: fecha uma janela
+* <kbd>ctrol</kbd><kbd>w</kbd> {<kbd>H</kbd>,<kbd>J</kbd>,<kbd>K</kbd>,<kbd>L</kbd>} no modo normal: move a janela em destaque para um dos cantos da tela
 * <kbd>g</kbd><kbd>T</kbd> no modo normal: alterna para a guia anterior
 * <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
 
@@ -146,6 +146,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:!comando_externo`: redireciona o buffer para um programa externo e retorna a saida para o buffer atual
 * `:%bd | e# | bd#`: fecha todos os buffers menos o atual
 * `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
+* `:%s/pattern//n`: mostra o número de correspondências e o número de linhas em que essas correspondências ocorrem
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
