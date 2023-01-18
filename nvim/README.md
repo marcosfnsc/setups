@@ -57,10 +57,14 @@
 * <kbd>e</kbd> no modo normal: saltar palavras mantendo o cursor no ultimo caractere
 * <kbd>F</kbd>{caractere} no modo normal: faz a mesma coisa do atalho <kbd>f</kbd> porém de forma reversa, permite usar tambem <kbd>;</kbd> e <kbd>,</kbd>
 * <kbd>f</kbd>{caractere} no modo normal: saltar para a proxima ocorrencia do caractere e deixar o cursor sobre o caractere encontado
+* <kbd>g</kbd><kbd>$</kbd> no modo normal: ir para o final de uma linha quebrada
 * <kbd>g</kbd><kbd>,</kbd> no modo normal: pular para a posiçao anterior da lista de alterações
 * <kbd>g</kbd><kbd>;</kbd> no modo normal: pular para a proxima posiçao da lista de alterações
 * <kbd>g</kbd><kbd>\_</kbd> no modo normal: ir para o ultimo caractere da linha
+* <kbd>g</kbd><kbd>^</kbd> ou <kbd>g</kbd><kbd>0</kbd> no modo normal: ir para o começo de uma linha quebrada
 * <kbd>g</kbd><kbd>e</kbd> no modo normal: saltar retrocedendo palavras mantendo o cursor no ultimo caractere
+* <kbd>g</kbd><kbd>j</kbd> no modo normal: semelhante ao atalho <kbd>j</kbd>, a difereneça é que este consegue se movimentar em linhas quebradas
+* <kbd>g</kbd><kbd>k</kbd> no modo normal: semelhante ao atalho <kbd>k</kbd>, a difereneça é que este consegue se movimentar em linhas quebradas
 * <kbd>H</kbd> no modo normal: mover cursor para o topo da janela
 * <kbd>L</kbd> no modo normal: mover cursor para a parte inferior da janela
 * <kbd>M</kbd> no modo normal: mover cursor para o centro da janela
