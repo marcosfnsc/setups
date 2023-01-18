@@ -160,6 +160,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
+* `:mksession nome_do_arquivo.vim`: salva o estado atual da sessão em um arquivo, este comando possui uma versão abreviada que é `mks nome_do_arquivo.vim`, caso precise salvar a sessão no mesmo arquivo, o comando será `:mksession! nome_do_arquivo.vim`
 * `:nohlsearch` ou `noh`: limpa o destaque de pesquisa
 * `:put =range(x, y)`: criar sequencia de numeros de `x` ate `y`
 * `:retab`: transforma tabulações em caracteres de espaço
@@ -177,6 +178,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:sort u`: ordena as linhas selecionadas e remove duplicatas
 * `:sort!`: ordena de forma inversa as linhas selecionadas
 * `:sort`: ordena as linhas selecionadas
+* `:source nome_do_arquivo.vim`: restaura a sessão a partir de um arquivo
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
@@ -184,6 +186,9 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:w >> arquito_de_texto.txt`: ao selecionar linhas, permite anexar a seleção em um outro arquivo
 * `:w arquito_de_texto.txt`: ao selecionar linhas, permite salvar a seleção em um outro arquivo
 * `:x`: atalho para `:wq`
+
+## comandos da cli:
+* `vim -S nome_do_arquivo.vim`: restaura a sessão a partir de um arquivo
 
 ## Truques:
 #### pesquisar em uma seleção visual
