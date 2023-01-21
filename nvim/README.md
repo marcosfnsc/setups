@@ -92,12 +92,14 @@
 ### outros atalhos:
 * <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode usar outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
 * <kbd>#</kbd> no modo normal: pesquisa para tras a palavra que esta sob o cursor
+* <kbd>@</kbd><kbd>:</kbd> no modo normal: repete o ultimo comando executado
 * <kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor
 * <kbd>\`</kbd><kbd><</kbd> no modo normal: ir para o inicio da ultima seleção
 * <kbd>\`</kbd><kbd>></kbd> no modo normal: ir para o final da ultima seleção
 * <kbd>\`</kbd><kbd>[</kbd> no modo normal: ir para o começo da ultimo trecho copiado
 * <kbd>\`</kbd><kbd>]</kbd> no modo normal: ir para o final da ultimo trecho copiado
 * <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
+* <kbd>control</kbd><kbd>f</kbd> no modo comando: abre uma janela dos comandos executados no modo comando e permite usar os atalhos do modo normal nessa janela, e quando terminar basta apertar enter sobre o comando digitado
 * <kbd>control</kbd><kbd>r</kbd> <kbd>=</kbd> no modo insert: permite escrever expressões matematicas para o vim calcular e o resultado será inserido no lugar do cursor
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal
@@ -113,6 +115,7 @@
 * <kbd>g</kbd><kbd>v</kbd> no modo normal: seleciona novamente a ultima seleção
 * <kbd>g</kbd><kbd>x</kbd> no modo normal: abrir no navegador web a url sob o cursor
 * <kbd>o</kbd> no modo visual: troca a posição do cursor para o final da seleção ou o começo da seleção
+* <kbd>q</kbd><kbd>/</kbd> ou <kbd>q</kbd><kbd>?</kbd> no modo normal: mostra o historico de pesquisa
 * <kbd>v</kbd><kbd>i</kbd><kbd>p</kbd> no modo normal: seleciona um paragráfo, paragráfos são blocos de linhas delimitados por linhas em branco
 * <kbd>z</kbd><kbd>c</kbd> no modo normal: fecha uma dobra
 * <kbd>z</kbd><kbd>f</kbd>{movimento} no modo normal: permite criar uma dobra a partir de um movimento
