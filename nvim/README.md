@@ -225,3 +225,30 @@ novo qantas vezes por necessario
 
 como a macro é gravada nos registros, é possivel colar uma macro usando<kbd>p</kbd>
 e depois copiando para o mesmo registro usando algum movimento de corte
+
+## regex do vim
+#### caracteres especiais do vim
+* `\d`: mesma coisa de `[0-9]`
+* `\D`: mesma coisa de `[^0-9]`
+* `\L`: mesma coisa de `[^a-z]`
+* `\l`: mesma coisa de `[a-z]`
+* `\S`: corresponde a qualquer caractere menos o caractere de espaço
+* `\s`: corresponde a um caractere de espaço
+* `\U`: mesma coisa de `[^A-Z]`
+* `\u`: mesma coisa de `[A-Z]`
+* `\W`: mesma coisa de `[^a-zA-Z0-9_]`
+* `\w`: mesma coisa de `[a-zA-Z0-9_]`
+* `\x`: mesma coisa de `[0-9A-F]`, padrão que corresponde a um numero hexadecimal
+* `\X`: mesma coisa de `[^0-9A-F]`
+* `\X`: mesma coisa de `[^0-9A-F]`
+
+####  quantificadores gulosos e preguiçosos
+na string `I say, "I use Vim". You say, "I don't use Vim". Uh-oh.`, se usarmos `".+"` como padrão de busca, vai retornar
+`"I use Vim". You say, "I don't use Vim"`, esse é o padrão guloso. na mesma string, se usarmos `".{-}"`, como padrão de busca,
+vai retornar `"I use Vim"`
+
+#### delimitadores de palavras
+na string `*Without further ado, I do like donut very much`
+* `<do` vai retornar `do` e `donut`
+* `do>` vai retornar `ado` e `do`
+* `<do>` so vai retornar `do`
