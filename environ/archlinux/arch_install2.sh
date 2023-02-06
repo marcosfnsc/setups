@@ -55,7 +55,7 @@ mkinitcpio -p linux
 
 ## config systemd-boot
 bootctl install
-echo -e "default arch\ntimeout 2" > /boot/loader/loader.conf
+echo -e "default arch\ntimeout 2\neditor no" > /boot/loader/loader.conf
 
 pacman -S --needed curl gcc
 curl \
