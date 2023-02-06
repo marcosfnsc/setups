@@ -6,12 +6,9 @@ APPS_INSTALL=(
   ark
   base-devel # for yay
   calibre # manage ebooks
-  cdrdao # for k3b
-  cdrtools # for k3b
   clamav
   curl
   dolphin
-  dvd+rw-tools # for k3b
   earlyoom
   exa
   ffmpeg
@@ -23,7 +20,6 @@ APPS_INSTALL=(
   git
   glow
   gwenview
-  k3b
   kamoso
   kate
   kcolorchooser # color selector
