@@ -45,3 +45,4 @@ comandos interessantes:
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `git tag nome da tag`: cria um tag leve local
 - `git tag`: lista as tags
+- `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
