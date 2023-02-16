@@ -53,7 +53,6 @@ APPS_INSTALL=(
   plasma-wayland-session # for wayland session
   power-profiles-daemon
   qbittorrent
-  qemu-full # virtual machine manager
   rclone
   reflector
   ripgrep
