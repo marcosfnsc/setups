@@ -25,6 +25,7 @@ APPS_INSTALL=(
   kcolorchooser # color selector
   kdeconnect
   keepassxc
+  kid3-qt
   kitty
   konsole
   krunner
