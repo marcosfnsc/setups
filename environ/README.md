@@ -16,3 +16,4 @@ principais comandos para archlinux:
 * `pacman -Si nome_do_pacote`: mostra informações de um pácote disponivel no repositorio
 * `pacman -Ss nome_do_pacote`: pesquisar pacote
 * `pacman -Sw nome_do_pacote`: baixar pacotes mas sem instalar
+* `pacman -Syyu`: força a atualização do banco de dados e atualiza o sistema caso tenha atualização disponivel
