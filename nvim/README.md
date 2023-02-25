@@ -103,9 +103,9 @@
 * <kbd>control</kbd><kbd>r</kbd> <kbd>=</kbd> no modo insert: permite escrever expressões matematicas para o vim calcular e o resultado será inserido no lugar do cursor
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
 * <kbd>esc</kbd> ou <kbd>ctrol</kbd><kbd>c</kbd> ou <kbd>ctrol</kbd><kbd>[</kbd> em qualquer outro modo: ir para o modo normal
+* <kbd>g</kbd><kbd>8</kbd> no modo normal: mostra a o valor do caractere UTF-8
 * <kbd>g</kbd><kbd>\*</kbd> no modo normal: pesquisa a palavra que esta sob o cursor com combinacao parcial
 * <kbd>g</kbd><kbd>a</kbd> no modo normal: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
-* <kbd>g</kbd><kbd>a</kbd> no modo normal: mostra a o valor do caractere ASCII em diferentes bases numericas
 * <kbd>g</kbd><kbd>control</kbd><kbd>h</kbd> no modo normal: entra no modo select block
 * <kbd>g</kbd><kbd>ctrol</kbd><kbd>g</kbd> no modo normal: mostra informações sobre o documento como quantidade de linhas, palavras e tamanho em bytes, tambem mostra o numero da linha e coluna onde está o cursor
 * <kbd>g</kbd><kbd>f</kbd> no modo normal: abrir o arquivo ou caminho que está sob o cursor
