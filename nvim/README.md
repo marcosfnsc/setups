@@ -188,7 +188,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:sort u`: ordena as linhas selecionadas e remove duplicatas
 * `:sort!`: ordena de forma inversa as linhas selecionadas
 * `:sort`: ordena as linhas selecionadas
-* `:source nome_do_arquivo.vim`: restaura a sessão a partir de um arquivo
+* `:source nome_do_arquivo.vim`: restaura a sessão a partir de um arquivo, tbm pode ser usado pra recarregar o arquivo de configuração do vim
 * `:tabclose` ou `:tac`: fecha uma nova guia
 * `:tabnew` ou `:tabe`: abre uma nova guia
 * `:tabonly` ou `:tao`: fecha todas as guias menos a atual
