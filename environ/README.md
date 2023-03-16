@@ -1,5 +1,4 @@
-principais comandos para archlinux:
-===================================
+#### principais comandos do pacman:
 * `pacman -Fy nome_do_binario`: achar qual o pacote pertence o arquivo
 * `pacman -Q`: listar todos os pacotes e depedencias instalados, `-Qq` faz com que ele não mostre a versão dos pacotes
 * `pacman -Qdt`: listar pacotes orfãos instalados
@@ -17,3 +16,7 @@ principais comandos para archlinux:
 * `pacman -Ss nome_do_pacote`: pesquisar pacote
 * `pacman -Sw nome_do_pacote`: baixar pacotes mas sem instalar
 * `pacman -Syyu`: força a atualização do banco de dados e atualiza o sistema caso tenha atualização disponivel
+
+#### principais comandos do apt-get/apt:
+* `apt show nome_do_pacote`: mostra informações sobre um determinado pacote
+* `apt-cache depends nome_do_pacote`: mostra quais pacotes um determinado pacote depende
