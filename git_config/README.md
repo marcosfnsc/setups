@@ -35,6 +35,7 @@ comandos interessantes:
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
 - `git commit -a`: mesmo comportamento de digitar `git add .` e depois `git commit`
 - `git commit -am`: mesmo comportamento de digitar `git add .` e depois `git commit -m mensagem_do_commit`
+- `git config --list`: mostra as configurações do repositorio onde foi executado esse comando
 - `git diff branch1:branch2 -- nome_do_arquivo`: mostra as diferenças em um determinado arquivo
 - `git diff branch1:branch2`: mostra as diferenças entre as duas branches especificadas
 - `git log --grep "string`: procurar string nos textos dos commits
