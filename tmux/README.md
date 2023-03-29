@@ -11,7 +11,6 @@ atalho padr]ao para `prefix`: <kbd>ctrol</kbd><kbd>b</kbd>
 * `prefix`<kbd>,</kbd>: permite renomear a janela
 * `prefix`<kbd>:</kbd>: entra modo de comando
 * `prefix`<kbd>[</kbd>: entra no modo copia
-* `prefix`<kbd>[</kbd>: entrar no modo copia
 * `prefix`<kbd>]</kbd>: colar a partir do buffer do tmux
 * `prefix`<kbd>c</kbd>: cria uma nova janela
 * `prefix`<kbd>ctrol</kbd><kbd>o</kbd>: trocar posição dos paineis
