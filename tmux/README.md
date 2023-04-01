@@ -10,17 +10,21 @@ atalho padr]ao para `prefix`: <kbd>ctrol</kbd><kbd>b</kbd>
 * `prefix`<kbd>(</kbd> ou `prefix`<kbd>)</kbd>: alterna de uma sessão pra outra
 * `prefix`<kbd>,</kbd>: permite renomear a janela
 * `prefix`<kbd>:</kbd>: entra modo de comando
+* `prefix`<kbd>?</kbd>: mostra a lista de atalhos baseados na configuração atual
 * `prefix`<kbd>[</kbd>: entra no modo copia
 * `prefix`<kbd>]</kbd>: colar a partir do buffer do tmux
 * `prefix`<kbd>c</kbd>: cria uma nova janela
 * `prefix`<kbd>ctrol</kbd><kbd>o</kbd>: trocar posição dos paineis
 * `prefix`<kbd>d</kbd>: sai da sessão atual sem fechar ela (fica rodando em background)
+* `prefix`<kbd>f</kbd>`nome_da_janela`: mostra as janelas em que o nome combina com o termo pesquisado
+* `prefix`<kbd>N</kbd>: alterna para a janela correspondente ao numero N
 * `prefix`<kbd>s</kbd>: listar todas as sessões
 * `prefix`<kbd>space</kbd>: muda o layout dos paineis na janela atual
+* `prefix`<kbd>t</kbd>: transforma o painel em um relogio digital, acionar novamente o atalho restaura o painel para o estado anterior
 * `prefix`<kbd>w</kbd>: listar todas as janelas
 * `prefix`<kbd>x</kbd>: fecha o oaine atual
 * `prefix`<kbd>z</kbd>: aplica zoom em um painel
-* `prefix`<kbd>N</kbd>: alterna para a janela correspondente ao numero N
+* `prefix`<kbd>~</kbd>: mostra os logs do tmux
 
 comandos dentro do tmux:
 ------------------------
