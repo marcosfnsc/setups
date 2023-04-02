@@ -27,7 +27,7 @@ comandos interessantes:
 
 ### url do repositorio
 - `git config --get remote.origin.url`: mostra a url do repo remoto
-- `git remote set-url origin url_do_repo`: alterar url do repo rempto
+- `git remote set-url origin url_do_repo`: alterar url do repo remoto
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 
 ### outros comandos
