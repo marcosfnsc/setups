@@ -20,9 +20,6 @@ RUN groupadd -g "${GID}" user_name \
 USER user_name
 
 WORKDIR /test
-COPY . /test/
-
-RUN ./setup_nvim.sh
 
 ENTRYPOINT ["tail"]
 CMD ["-f","/dev/null"]
