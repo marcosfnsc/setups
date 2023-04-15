@@ -1,0 +1,6 @@
+version: "3.9"
+   
+services:
+  test_environ:
+    build: .
+    container_name: test_environ
