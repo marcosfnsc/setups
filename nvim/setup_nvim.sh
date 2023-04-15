@@ -29,3 +29,5 @@ if [[ -z $TERMUX_VERSION ]] ; then
 else
   nvim --headless -c 'LspInstall pyright' -c 'qa'
 fi
+
+echo "setup nvim sucess"
