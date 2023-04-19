@@ -6,4 +6,4 @@ services:
     container_name: test_environ
     volumes:
       - .:/test
-    entrypoint: ["bash", "-c", "./setup_nvim.sh && sleep 100000"]
+    entrypoint: ["bash", "-c", "./setup_nvim.sh && sleep infinity"]
