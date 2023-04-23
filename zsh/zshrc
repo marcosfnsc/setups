@@ -15,7 +15,7 @@ source $ZSH/oh-my-zsh.sh
 
 # truncate path showd in prompt - https://stackoverflow.com/a/38475524
 prompt_dir() {
-  prompt_segment blue $CURRENT_FG ' %20<...<%~%<< '
+  prompt_segment blue $CURRENT_FG '%20<...<%~%<<'
 }
 
 ## flutter environment
