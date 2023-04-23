@@ -13,6 +13,11 @@ plugins=(
 )
 source $ZSH/oh-my-zsh.sh
 
+# truncate path showd in prompt - https://stackoverflow.com/a/38475524
+prompt_dir() {
+  prompt_segment blue $CURRENT_FG ' %20<...<%~%<< '
+}
+
 ## flutter environment
 [ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
 
@@ -44,5 +49,6 @@ setopt INC_APPEND_HISTORY # append command to history file immediately after exe
 setopt NO_EXTENDED_HISTORY # disable timestamp in history
 setopt NO_SHARE_HISTORY # disable timestamp in history
 setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
+
 
 source $HOME/.shell_functions
