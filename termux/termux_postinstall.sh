@@ -8,18 +8,16 @@ PACKAGES_ADD=(
   curl
   exa
   git
-  glow
+  gnugpg
   keepassxc
-  neomutt
   neovim
   nmap
   nodejs
   openssh
-  perl # required by fzf
   python
+  rclone
   ripgrep
   rsync
-  rust-analyzer
   tmux
   tree
   zsh
@@ -33,8 +31,5 @@ cd git_config && ./setup_git.sh  && cd ..
 cd nvim       && ./setup_nvim.sh && cd ..
 cd tmux       && ./setup_tmux.sh && cd ..
 cd zsh        && ./setup_zsh.sh  && cd ..
+cd fzf        && ./setup_fzf.sh  && cd ..
 cd termux
-
-# install fzf
-git clone --depth 1 https://github.com/junegunn/fzf.git $HOME/.fzf
-$HOME/.fzf/install
