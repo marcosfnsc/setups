@@ -1,36 +1,47 @@
 #!/usr/bin/env bash
 
+set -o errexit
+set -o nounset
+
 # dicas-> loadkeys br-abnt2
 
 DISK="nvme0n1"
 PART="p"
 
-# create partitions
-parted -s /dev/$DISK \
-  mklabel gpt \
-  mkpart primary 1MiB 500MiB \
-  mkpart primary 500MiB 100% \
-  set 1 esp on \
-  --align optimal \
-  align-check min 1
+partition_disk() {
+  parted -s $1 \
+    mklabel gpt \
+    mkpart primary 1MiB 500MiB \
+    mkpart primary 500MiB 100% \
+    set 1 esp on \
+    --align optimal \
+    align-check min 1
+}
 
-## config luks2
-modprobe dm-crypt
-modprobe dm-mod
+encrypt_partition() {
+  ## config luks2
+  modprobe dm-crypt
+  modprobe dm-mod
 
-SECTOR_SIZE=$(cat /sys/block/$DISK/queue/physical_block_size)
-cryptsetup \
-  --type luks2 \
-  --cipher aes-xts-plain64 \
-  --hash sha512 \
-  --key-size 512 \
-  --pbkdf argon2id \
-  --sector-size $SECTOR_SIZE \
-  --align-payload $(expr $SECTOR_SIZE / 512) \
-  --use-random \
-  --verify-passphrase \
-  luksFormat /dev/$DISK${PART}2
-cryptsetup open --type luks2 /dev/$DISK${PART}2 container
+  local DEVICE=$1
+  local PARTITION=$2
+  local SECTOR_SIZE=$(cat /sys/block/$DEVICE/queue/physical_block_size)
+
+  cryptsetup \
+    --type luks2 \
+    --cipher aes-xts-plain64 \
+    --hash sha512 \
+    --key-size 512 \
+    --pbkdf argon2id \
+    --sector-size $SECTOR_SIZE \
+    --align-payload $(expr $SECTOR_SIZE / 512) \
+    --use-random \
+    --verify-passphrase \
+    luksFormat $PARTITION
+
+  cryptsetup open --type luks2 $PARTITION container
+}
+
 
 mkfs.fat -F32 /dev/$DISK${PART}1
 mkfs.btrfs /dev/mapper/container
