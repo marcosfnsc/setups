@@ -6,8 +6,10 @@ comandos interessantes:
 - `git branch -d nome da branch`: deletar branch local
 - `git branch -m novo nome da branch`: mudar o nome da branch atual para outro nome
 - `git checkout -b nome da branch`: cria uma nova branch e alterna para ela
-- `git push origin --delete nome_da_branch`: apaga a branch remota
 - `git fetch -p`: remove referencias de branches que não existem no repo remoto, `-p` é a versão curta de `--prune`
+- `git push origin --delete nome_da_branch`: apaga a branch remota
+- `git switch -c nome da branch`: cria uma nova branch e alterna para ela
+- `git switch nome da branch`: alterna para a branch especificada
 
 
 ### historico do git
@@ -31,6 +33,7 @@ comandos interessantes:
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 
 ### outros comandos
+- `git blame nome_do_arquivo`: mostra informações como autor, numero de commit e outras informações para cada linha do ultimo estado do arquivo especificado
 - `git commit --allow-empty -m 'Empty commit'`: cria um commit vazio, sem alterações de arquivo, util para acionar pipelines CI/CD
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
 - `git commit -a`: mesmo comportamento de digitar `git add .` e depois `git commit`
