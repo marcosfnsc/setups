@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 if [ ! "$EUID" -ne 0 ];then
   echo "Please run this script as non root"
   exit 1
@@ -20,4 +22,4 @@ FLATPAK_FLATHUB=(
   org.telegram.desktop      # telegram
 )
 
-flatpak install -y flathub ${FLATPAK_FLATHUB[@]}
+flatpak install -y flathub ${FLATPAK_FLATHUB[@]} --user
