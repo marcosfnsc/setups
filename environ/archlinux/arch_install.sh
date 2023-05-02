@@ -46,32 +46,43 @@ encrypt_partition() {
 mkfs.fat -F32 /dev/$DISK${PART}1
 mkfs.btrfs /dev/mapper/container
 
-mount /dev/mapper/container /mnt
-btrfs subvolume create /mnt/@
-btrfs subvolume create /mnt/@home
-btrfs subvolume create /mnt/@log
-btrfs subvolume create /mnt/@snapshots
-btrfs subvolume create /mnt/@swap
-btrfs subvolume create /mnt/@tmp
-umount /mnt
+create_btrfs_subvolumes() {
+  local device=$1
+  local mount_point=$2
+  mount $device $mount_point
+  btrfs subvolume create $mount_point/@
+  btrfs subvolume create $mount_point/@home
+  btrfs subvolume create $mount_point/@log
+  btrfs subvolume create $mount_point/@snapshots
+  btrfs subvolume create $mount_point/@swap
+  btrfs subvolume create $mount_point/@tmp
+  umount $mount_point
+}
+create_btrfs_subvolumes /dev/mapper/container /mnt
 
-BTRFS_MOUNT_OPTIONS="defaults,noatime,compress-force=zstd,commit=120"
-mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@     /dev/mapper/container /mnt
-mkdir -p /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
-mount /dev/$DISK${PART}1 /mnt/boot
-mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@home /dev/mapper/container /mnt/home
-mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@log  /dev/mapper/container /mnt/var/log
-mount -o ${BTRFS_MOUNT_OPTIONS},subvol=@tmp  /dev/mapper/container /mnt/tmp
-mount -o noatime,subvol=@swap                /dev/mapper/container /mnt/.swap
-mount -o subvol=@snapshots                   /dev/mapper/container /mnt/.snapshots
 
-## swapfile
-touch /mnt/.swap/swapfile
-chmod 600 /mnt/.swap/swapfile
-chattr +C /mnt/.swap/swapfile
-dd if=/dev/zero of=/mnt/.swap/swapfile bs=1M count=4096 status=progress
-mkswap /mnt/.swap/swapfile
-swapon /mnt/.swap/swapfile
+
+mount_btrfs_subvolumes() {
+  local mount_options="defaults,noatime,compress-force=zstd,commit=120"
+  mount -o ${mount_options},subvol=@ /dev/mapper/container /mnt
+  mkdir -p /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
+
+  mount /dev/$DISK${PART}1 /mnt/boot
+  mount -o ${mount_options},subvol=@home /dev/mapper/container /mnt/home
+  mount -o ${mount_options},subvol=@log  /dev/mapper/container /mnt/var/log
+  mount -o ${mount_options},subvol=@tmp  /dev/mapper/container /mnt/tmp
+  mount -o noatime,subvol=@swap          /dev/mapper/container /mnt/.swap
+  mount -o subvol=@snapshots             /dev/mapper/container /mnt/.snapshots
+}
+
+create_swapfile() {
+  touch /mnt/.swap/swapfile
+  chmod 600 /mnt/.swap/swapfile
+  chattr +C /mnt/.swap/swapfile
+  dd if=/dev/zero of=/mnt/.swap/swapfile bs=1M count=4096 status=progress
+  mkswap /mnt/.swap/swapfile
+  swapon /mnt/.swap/swapfile
+}
 
 mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
