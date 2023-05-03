@@ -1,3 +1,5 @@
+# vi: ft=sh
+
 pyvenv() {
   venvs_path="$HOME/code_space/python_venvs"
   dirname=`{basename $PWD}`
