@@ -28,3 +28,18 @@ pyvenv() {
     esac
   fi
 }
+
+# gambiarra pra executar algumas operações do flatpak apos ser invocado
+flatpak() {
+  case $1 in
+    install)
+      /usr/bin/flatpak install "${@:2}" --user
+      ;;
+    update)
+      /usr/bin/flatpak update
+      /usr/bin/flatpak uninstall --unused
+      ;;
+    *)
+      /usr/bin/flatpak "${@:1}" 
+  esac
+}
