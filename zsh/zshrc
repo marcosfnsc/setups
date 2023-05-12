@@ -28,6 +28,14 @@ export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.g
 ## rust environment
 [ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
+## android environment
+if [ -d "$HOME/code_space/android" ]; then
+  export ANDROID_HOME=$HOME/code_space/android
+  export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
+  export PATH=$ANDROID_HOME/emulator/:$PATH
+  export PATH=$ANDROID_HOME/platform-tools/:$PATH
+fi
+
 ## alias
 alias ls=exa
 
