@@ -18,7 +18,6 @@ APPS_INSTALL=(
   flatpak
   gcc
   git
-  glow
   gwenview
   kamoso
   kate
