@@ -175,6 +175,13 @@ return require('packer').startup(function(use)
         config = function() require('rust-tools').setup() end
     }
     use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
+    use {
         'neovim/nvim-lspconfig',
         config = function()
             require('lspconfig').clangd.setup{}
