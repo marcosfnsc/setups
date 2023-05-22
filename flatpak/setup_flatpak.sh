@@ -12,13 +12,13 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # install flatpak apps
 FLATPAK_FLATHUB=(
-  com.discordapp.Discord    # Discord
-  com.rtosta.zapzap         # cliente não oficial do whatssap
-  com.spotify.Client        # Spotify
-  com.valvesoftware.Steam   # Steam
-  net.lutris.Lutris         # lutris
-  org.audacityteam.Audacity # Audacity
-  org.telegram.desktop      # telegram
+  com.discordapp.Discord     # Discord
+  com.rtosta.zapzap          # cliente não oficial do whatssap
+  com.spotify.Client         # Spotify
+  com.valvesoftware.Steam    # Steam
+  net.lutris.Lutris          # lutris
+  org.telegram.desktop       # telegram
+  org.tenacityaudio.Tenacity # tenacity
 )
 
 flatpak install -y flathub ${FLATPAK_FLATHUB[@]} --user
