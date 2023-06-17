@@ -4,7 +4,7 @@ set -o errexit
 
 #termux-setup-storage # external storage
 
-PACKAGES_ADD=(
+packages_list=(
   clang
   curl
   exa
@@ -24,8 +24,7 @@ PACKAGES_ADD=(
   zsh
 )
 
-pkg install ${APPS_ADD[@]} -y
-exit
+pkg install ${packages_list[@]} -y
 
 cd ..
 cd git_config && ./setup_git.sh  && cd ..
