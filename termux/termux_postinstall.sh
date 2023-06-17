@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# external storage
-termux-setup-storage
+set -o errexit
+
+
+termux-setup-storage # external storage
 
 PACKAGES_ADD=(
   clang
@@ -23,8 +25,8 @@ PACKAGES_ADD=(
   zsh
 )
 
-pkg install x11-repo -y
 pkg install ${APPS_ADD[@]} -y
+exit
 
 cd ..
 cd git_config && ./setup_git.sh  && cd ..
