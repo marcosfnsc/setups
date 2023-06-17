@@ -2,8 +2,7 @@
 
 set -o errexit
 
-
-termux-setup-storage # external storage
+#termux-setup-storage # external storage
 
 PACKAGES_ADD=(
   clang
