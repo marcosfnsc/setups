@@ -9,7 +9,7 @@ packages_list=(
   curl
   exa
   git
-  gnugpg
+  gnupg
   keepassxc
   neovim
   nmap
@@ -24,12 +24,15 @@ packages_list=(
   zsh
 )
 
+pkg install x11-repo # for keepassxc
 pkg install ${packages_list[@]} -y
 
-cd ..
-cd git_config && ./setup_git.sh  && cd ..
-cd nvim       && ./setup_nvim.sh && cd ..
-cd tmux       && ./setup_tmux.sh && cd ..
-cd zsh        && ./setup_zsh.sh  && cd ..
-cd fzf        && ./setup_fzf.sh  && cd ..
-cd termux
+git clone --depth https://github.com/marcosfnsc/setups.git
+path_dir_setups="$(pwd)/setups"
+cd $path_dir_setups/git_config && ./setup_git.sh
+cd $path_dir_setups/nvim       && ./setup_nvim.sh
+cd $path_dir_setups/tmux       && ./setup_tmux.sh
+cd $path_dir_setups/zsh        && ./setup_zsh.sh
+cd $path_dir_setups/fzf        && ./setup_fzf.sh
+
+cd $path_dir_setups/.. && rm -rf setups
