@@ -38,13 +38,7 @@ encrypt_partition() {
     --use-random \
     --verify-passphrase \
     luksFormat $PARTITION
-
-  cryptsetup open --type luks2 $PARTITION container
 }
-
-
-mkfs.fat -F32 /dev/$DISK${PART}1
-mkfs.btrfs /dev/mapper/container
 
 create_btrfs_subvolumes() {
   local device=$1
@@ -58,31 +52,44 @@ create_btrfs_subvolumes() {
   btrfs subvolume create $mount_point/@tmp
   umount $mount_point
 }
-create_btrfs_subvolumes /dev/mapper/container /mnt
 
-
-
-mount_btrfs_subvolumes() {
+mount_partion_and_subvolumes() {
+  local device_boot=$1
+  local device_container=$2
+  local mount_point=$3
   local mount_options="defaults,noatime,compress-force=zstd,commit=120"
-  mount -o ${mount_options},subvol=@ /dev/mapper/container /mnt
-  mkdir -p /mnt/{boot,home,var/log,.snapshots,.swap,tmp}
 
-  mount /dev/$DISK${PART}1 /mnt/boot
-  mount -o ${mount_options},subvol=@home /dev/mapper/container /mnt/home
-  mount -o ${mount_options},subvol=@log  /dev/mapper/container /mnt/var/log
-  mount -o ${mount_options},subvol=@tmp  /dev/mapper/container /mnt/tmp
-  mount -o noatime,subvol=@swap          /dev/mapper/container /mnt/.swap
-  mount -o subvol=@snapshots             /dev/mapper/container /mnt/.snapshots
+  mount -o ${mount_options},subvol=@ $device_container $mount_point
+  mkdir -p $mount_point/{boot,home,var/log,.snapshots,.swap,tmp}
+
+  mount $device_boot /mnt/boot
+  mount -o ${mount_options},subvol=@home $device_container $mount_point/home
+  mount -o ${mount_options},subvol=@log  $device_container $mount_point/var/log
+  mount -o ${mount_options},subvol=@tmp  $device_container $mount_point/tmp
+  mount -o noatime,subvol=@swap          $device_container $mount_point/.swap
+  mount -o subvol=@snapshots             $device_container $mount_point/.snapshots
 }
 
 create_swapfile() {
-  touch /mnt/.swap/swapfile
-  chmod 600 /mnt/.swap/swapfile
-  chattr +C /mnt/.swap/swapfile
-  dd if=/dev/zero of=/mnt/.swap/swapfile bs=1M count=4096 status=progress
-  mkswap /mnt/.swap/swapfile
-  swapon /mnt/.swap/swapfile
+  local swapfile_path=$1
+
+  touch $swapfile_path
+  chmod 600 $swapfile_path
+  chattr +C $swapfile_path
+  dd if=/dev/zero of=$swapfile_path bs=1M count=4096 status=progress
+  mkswap $swapfile_path
+  swapon $swapfile_path
 }
+
+partition_disk /dev/vda
+encrypt_partition vda /dev/vda2
+cryptsetup open --type luks2 /dev/vda2 container
+
+mkfs.fat -F32 /dev/vda1
+mkfs.btrfs /dev/mapper/container
+create_btrfs_subvolumes /dev/mapper/container /mnt
+mount_partion_and_subvolumes /dev/vda1 /dev/mapper/container /mnt
+create_swapfile /mnt/.swap/swapfile
 
 mkdir /mnt/etc
 genfstab -U /mnt > /mnt/etc/fstab
