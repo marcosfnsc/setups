@@ -28,7 +28,7 @@ pkg upgrade -y
 pkg install x11-repo # for keepassxc
 pkg install ${packages_list[@]} -y
 
-git clone --depth https://github.com/marcosfnsc/setups.git
+git clone --depth 1 https://github.com/marcosfnsc/setups.git
 path_dir_setups="$(pwd)/setups"
 cd $path_dir_setups/git_config && ./setup_git.sh
 cd $path_dir_setups/nvim       && ./setup_nvim.sh
