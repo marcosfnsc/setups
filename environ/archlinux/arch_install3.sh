@@ -62,7 +62,7 @@ APPS_INSTALL=(
   spectacle
   sshfs # for the kdeconnect
   sudo
-  texlive-core # for get the latexmk command
+  texlive-basic # for get the latexmk command
   tmux
   tree
   unzip
