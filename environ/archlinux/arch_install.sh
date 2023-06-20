@@ -78,7 +78,7 @@ create_swapfile() {
   swapon $swapfile_path
 }
 
-if [[ -z $ARCHROOT_ENVIRON ]] ; then
+if [[ -v ARCHROOT_ENVIRON ]] ; then
   # if variable doens't exists
 
   echo "select the target config:
