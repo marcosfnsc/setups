@@ -5,9 +5,6 @@ set -o nounset
 
 # dicas-> loadkeys br-abnt2
 
-DISK="nvme0n1"
-PART="p"
-
 partition_disk() {
   parted -s $1 \
     mklabel gpt \
@@ -81,21 +78,82 @@ create_swapfile() {
   swapon $swapfile_path
 }
 
-partition_disk /dev/vda
-encrypt_partition vda /dev/vda2
-cryptsetup open --type luks2 /dev/vda2 container
+if [[ -z $ARCHROOT_ENVIRON ]] ; then
+  # if variable doens't exists
 
-mkfs.fat -F32 /dev/vda1
-mkfs.btrfs /dev/mapper/container
-create_btrfs_subvolumes /dev/mapper/container /mnt
-mount_partion_and_subvolumes /dev/vda1 /dev/mapper/container /mnt
-create_swapfile /mnt/.swap/swapfile
+  echo "select the target config:
+  1 -> bare-metal
+  2 -> bare-metal dual boot
+  3 -> vm
+  4 -> vm with encrypt"
+  read -p "> " target_selected
 
-mkdir /mnt/etc
-genfstab -U /mnt > /mnt/etc/fstab
+  case $target_selected in
+    1) # "bare-metal" target
+      DEVICE=nvme0n1
+      DEVICE_PATH=/dev/nvme0n1
+      DEVICE_PATH_PART1=/dev/nvme0n1p1
 
-reflector --latest 20 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose # mirrors
-yes | pacstrap /mnt base linux linux-firmware networkmanager intel-ucode btrfs-progs
+      ;;
+
+    2) # "bare-metal dual boot" target
+      echo "not implemented"
+      ;;
+
+    3) # "vm" target
+      DEVICE=vda
+      DEVICE_PATH=/dev/vda
+      DEVICE_PATH_PART1=/dev/vda1
+      DEVICE_PATH_PART2=/dev/vda2
+      ;;
+
+    4) # "vm with encrypt" target
+      DEVICE=vda
+      DEVICE_PATH=/dev/vda
+      DEVICE_PATH_PART1=/dev/vda1
+      DEVICE_PATH_PART2=/dev/vda2
+
+      partition_disk $DEVICE_PATH
+      encrypt_partition $DEVICE $DEVICE_PATH_PART2
+      cryptsetup open --type luks2 $DEVICE_PATH_PART2 container
+
+      mkfs.fat -F32 $DEVICE_PATH_PART1
+      mkfs.btrfs /dev/mapper/container
+      create_btrfs_subvolumes /dev/mapper/container /mnt
+      mount_partion_and_subvolumes $DEVICE_PATH_PART1 /dev/mapper/container /mnt
+      ;;
+
+    *)
+      echo "invalid op"
+      exit
+      ;;
+  esac
+
+  create_swapfile /mnt/.swap/swapfile
+
+  mkdir /mnt/etc
+  genfstab -U /mnt > /mnt/etc/fstab
+
+  reflector \
+    --latest 20 \
+    --protocol http \
+    --protocol https \
+    --sort rate \
+    --save /etc/pacman.d/mirrorlist \
+    --verbose
+  yes | pacstrap \
+    /mnt \
+    base \
+    btrfs-progs \
+    intel-ucode \
+    linux \
+    linux-firmware \
+    networkmanager
+
+else
+  # if variable exists
+fi
+
 
 cp arch_install2.sh /mnt
 cd && cp -r setups /mnt
