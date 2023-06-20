@@ -151,7 +151,7 @@ if [[ -z $ARCHROOT_ENVIRON ]] ; then
     networkmanager
 
   cp arch_install.sh /mnt
-  ARCHROOT_ENVIRON=1 arch-chroot /mnt ./arch_install.sh
+  ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 arch-chroot /mnt ./arch_install.sh
 
 else
   # if variable exists
@@ -214,15 +214,15 @@ else
   RESUME_OFFSET=$(./btrfs_map_physical /.swap/swapfile | head -n 2 | tail -1 | awk '{print $NF}')
   RESUME_OFFSET=$(expr $RESUME_OFFSET / $(getconf PAGESIZE))
 
-  UUID_STORAGE_DEVICE=$(blkid -s UUID -o value /dev/$DISK${PART}2)
-  CRYPT_DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards" # :allow-discards to enable TRIM commands
+  UUID_STORAGE_DEVICE=$(blkid -s UUID -o value $STORAGE_DEVICE)
+  DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards" # :allow-discards to enable TRIM commands
   DISABLE_WORKQUEUE="no-read-workqueue,no-write-workqueue" # for better performance in ssd, not recomended for hdd
   ROOT_DEVICE="root=/dev/mapper/container"
   ROOT_FLAGS="rootflags=subvol=@"
   RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
   RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
   OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for enable audio intel driver, add ibt=off for run virtualbox
-  KERNEL_PARAMETERS="$CRYPT_DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
+  KERNEL_PARAMETERS="$DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
 
   echo -e "title Archlinux
   linux /vmlinuz-linux
