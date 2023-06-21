@@ -15,7 +15,7 @@ require('lazy').setup({
     'editorconfig/editorconfig-vim',
     'junegunn/fzf.vim',
     'tpope/vim-surround',
-    --  use { 'junegunn/fzf', run = './install --all' }
+    --  use { 'junegunn/fzf', build = './install --all' }
     {'sindrets/diffview.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
     {
         'folke/tokyonight.nvim',
@@ -34,8 +34,8 @@ require('lazy').setup({
     {
         'iamcco/markdown-preview.nvim',
         ft = { 'markdown' },
-        run = 'cd app && npm install',
-        setup = function()
+        build = 'cd app && npm install',
+        config = function()
             vim.g.mkdp_filetypes = { 'markdown' }
         end
     },
@@ -92,7 +92,7 @@ require('lazy').setup({
             'rafamadriz/friendly-snippets'
         },
         config = function()
-            require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.local/share/nvim/site/pack/packer/start/friendly-snippets' } })
+            require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.local/share/nvim/lazy/friendly-snippets' } })
         end
     },
     {
@@ -148,7 +148,7 @@ require('lazy').setup({
     },
     {
         'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate',
+        build = ':TSUpdate',
         config = function()
             require('nvim-treesitter.configs').setup {
                 ensure_installed = {
