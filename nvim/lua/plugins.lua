@@ -42,9 +42,7 @@ require('lazy').setup({
     {
         'rcarriga/nvim-notify',
         config = function()
-            vim.notify = require('notify').setup({
-                background_colour = '#000000'
-            })
+            vim.notify = require('notify')
         end
     },
     {
@@ -116,8 +114,14 @@ require('lazy').setup({
     },
     {
         'williamboman/mason.nvim',
+        build = ':MasonUpdate',
         config = function()
             require('mason').setup()
+            require('lspconfig').clangd.setup{}
+            require('lspconfig').lua_ls.setup{}
+            require('lspconfig').pyright.setup{}
+            require('lspconfig').texlab.setup{}
+            require('lspconfig').tsserver.setup{}
         end
     },
     {
@@ -201,11 +205,6 @@ require('lazy').setup({
     {
         'neovim/nvim-lspconfig',
         config = function()
-            require('lspconfig').clangd.setup{}
-            require('lspconfig').lua_ls.setup{}
-            require('lspconfig').pyright.setup{}
-            require('lspconfig').texlab.setup{}
-            require('lspconfig').tsserver.setup{}
         end
     },
     {
