@@ -1,39 +1,55 @@
-vim.cmd [[packadd packer.nvim]]
-return require('packer').startup(function(use)
-    use 'wbthomason/packer.nvim'
-
-    use 'christoomey/vim-tmux-navigator'
-    use 'editorconfig/editorconfig-vim'
-    use 'junegunn/fzf.vim'
-    use 'tpope/vim-surround'
-    use { 'junegunn/fzf', run = './install --all' }
-    use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
-    use {
+local lazypath = vim.fn.stdpath('data') .. '/lazy/lazy.nvim'
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    'git',
+    'clone',
+    '--filter=blob:none',
+    'https://github.com/folke/lazy.nvim.git',
+    '--branch=stable', -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
+require('lazy').setup({
+    'christoomey/vim-tmux-navigator',
+    'editorconfig/editorconfig-vim',
+    'junegunn/fzf.vim',
+    'tpope/vim-surround',
+    --  use { 'junegunn/fzf', run = './install --all' }
+    {'sindrets/diffview.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
+    {
+        'folke/tokyonight.nvim',
+        lazy = false,
+        priority = 1000,
+        opts = {},
+        config = function() vim.cmd[[colorscheme tokyonight]] end
+    },
+    {
         'j-hui/fidget.nvim',
         tag = 'legacy',
         config = function ()
             require('fidget').setup()
         end
-    }
-    use {
+    },
+    {
         'iamcco/markdown-preview.nvim',
         ft = { 'markdown' },
         run = 'cd app && npm install',
         setup = function()
             vim.g.mkdp_filetypes = { 'markdown' }
         end
-    }
-    use {
+    },
+    {
         'rcarriga/nvim-notify',
         config = function()
             vim.notify = require('notify').setup({
                 background_colour = '#000000'
             })
         end
-    }
-    use {
+    },
+    {
         'hrsh7th/nvim-cmp',
-        requires = {
+        dependencies = {
             'L3MON4D3/LuaSnip',
             'hrsh7th/cmp-buffer',
             'hrsh7th/cmp-nvim-lsp',
@@ -68,18 +84,18 @@ return require('packer').startup(function(use)
                 }
             }
         end
-    }
-    use {
+    },
+    {
         'L3MON4D3/LuaSnip',
-        tag = '*',
-        requires = {
+        version = '*',
+        dependencies = {
             'rafamadriz/friendly-snippets'
         },
         config = function()
             require('luasnip.loaders.from_vscode').lazy_load({ paths = { '~/.local/share/nvim/site/pack/packer/start/friendly-snippets' } })
         end
-    }
-    use {
+    },
+    {
         'nvim-lualine/lualine.nvim',
         config = function()
             local function trailing_whitespace()
@@ -97,20 +113,20 @@ return require('packer').startup(function(use)
                 }
             })
         end
-    }
-    use {
+    },
+    {
         'williamboman/mason.nvim',
         config = function()
             require('mason').setup()
         end
-    }
-    use {
+    },
+    {
         'williamboman/mason-lspconfig.nvim',
         config = function()
             require('mason-lspconfig').setup()
         end
-    }
-    use {
+    },
+    {
         'nvim-treesitter/nvim-treesitter-context',
         config = function()
             require('treesitter-context').setup{
@@ -118,19 +134,19 @@ return require('packer').startup(function(use)
                 max_lines = 0, -- How many lines the window should span. Values <= 0 mean no limit.
                 trim_scope = 'outer', -- Which context lines to discard if `max_lines` is exceeded. Choices: 'inner', 'outer'
                 patterns = { -- Match patterns for TS nodes. These get wrapped to match at word boundaries.
-                default = {
-                    'class',
-                    'function',
-                    'method',
+                    default = {
+                        'class',
+                        'function',
+                        'method',
+                    },
                 },
-            },
-            zindex = 20, -- The Z-index of the context window
-            mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
-            separator = nil, -- Separator between context and content. Should be a single character string, like '-'.
+                zindex = 20, -- The Z-index of the context window
+                mode = 'cursor',  -- Line used to calculate context. Choices: 'cursor', 'topline'
+                separator = nil, -- Separator between context and content. Should be a single character string, like '-'.
             }
         end
-    }
-    use {
+    },
+    {
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
         config = function()
@@ -157,32 +173,32 @@ return require('packer').startup(function(use)
                 },
             }
         end
-    }
-    use {
+    },
+    {
         'ray-x/lsp_signature.nvim',
         config = function()
             cfg = {}
             require('lsp_signature').setup(cfg)
         end
-    }
-    use {
+    },
+    {
         'windwp/nvim-autopairs',
         config = function()
             require('nvim-autopairs').setup({ map_cr = true })
         end
-    }
-    use {
+    },
+    {
         'simrat39/rust-tools.nvim',
         config = function() require('rust-tools').setup() end
-    }
-    use {
+    },
+    {
         'akinsho/flutter-tools.nvim',
-        requires = {
+        dependencies = {
             'nvim-lua/plenary.nvim',
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
-    }
-    use {
+    },
+    {
         'neovim/nvim-lspconfig',
         config = function()
             require('lspconfig').clangd.setup{}
@@ -191,27 +207,22 @@ return require('packer').startup(function(use)
             require('lspconfig').texlab.setup{}
             require('lspconfig').tsserver.setup{}
         end
-    }
-    use {
-        'folke/tokyonight.nvim',
-        config = function() vim.cmd[[colorscheme tokyonight]] end
-    }
-    use {
+    },
+    {
         'lewis6991/gitsigns.nvim',
         config = function() require('gitsigns').setup() end
-    }
-    use {
+    },
+    {
         'lukas-reineke/indent-blankline.nvim',
         config = function()
             require('indent_blankline').setup{}
         end
-    }
-    use {
+    },
+    {
         'kyazdani42/nvim-tree.lua',
         commit = '8b8d457e07d279976a9baac6bbff5aa036afdc5f', -- adiar atualização da nova api de mapemanetos
         config = function()
             require('nvim-tree').setup({
-
                 update_focused_file = {
                     enable = true,
                 },
@@ -233,10 +244,10 @@ return require('packer').startup(function(use)
                 },
             })
         end
-    }
-    use {
+    },
+    {
         'akinsho/bufferline.nvim',
-        tag = '*',
+        version = '*',
         config = function()
             require('bufferline').setup {
                 options = {
@@ -244,13 +255,9 @@ return require('packer').startup(function(use)
                 }
             }
         end
-    }
-    use {
+    },
+    {
         'folke/trouble.nvim',
         config = function() require('trouble').setup({ icons = false }) end
-    }
-
-    if packer_bootstrap then
-        require('packer').sync()
-    end
-end)
+    },
+})
