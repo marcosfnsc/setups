@@ -2,12 +2,6 @@
 
 set -o errexit
 
-# install packer.nvim
-if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
-  git clone --depth 1 https://github.com/wbthomason/packer.nvim \
-    ~/.local/share/nvim/site/pack/packer/opt/packer.nvim
-fi
-
 mkdir -p $HOME/.config/nvim/lua
 {
   ln -f init.lua         $HOME/.config/nvim/init.lua         2>/dev/null
@@ -19,15 +13,5 @@ mkdir -p $HOME/.config/nvim/lua
   cp -f lua/mappings.lua $HOME/.config/nvim/lua
   cp -f lua/plugins.lua  $HOME/.config/nvim/lua
 }
-
-# install plugins
-nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
-
-# install LSPs
-if [[ -z $TERMUX_VERSION ]] ; then
-  nvim --headless -c 'LspInstall clangd pyright rust_analyzer lua_ls texlab tsserver' -c 'qa'
-else
-  nvim --headless -c 'LspInstall pyright' -c 'qa'
-fi
 
 echo "setup nvim sucess"
