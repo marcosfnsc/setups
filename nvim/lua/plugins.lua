@@ -15,7 +15,7 @@ require('lazy').setup({
     'editorconfig/editorconfig-vim',
     'junegunn/fzf.vim',
     'tpope/vim-surround',
-    --  use { 'junegunn/fzf', build = './install --all' }
+    {'junegunn/fzf', build = './install --all'},
     {'sindrets/diffview.nvim', dependencies = {'nvim-lua/plenary.nvim'}},
     {
         'folke/tokyonight.nvim',
@@ -116,7 +116,7 @@ require('lazy').setup({
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         config = function()
-            require('mason').setup()
+            require('mason').setup{}
             require('lspconfig').clangd.setup{}
             require('lspconfig').lua_ls.setup{}
             require('lspconfig').pyright.setup{}
@@ -127,7 +127,17 @@ require('lazy').setup({
     {
         'williamboman/mason-lspconfig.nvim',
         config = function()
-            require('mason-lspconfig').setup()
+            local parsers
+            if os.getenv('TERMUX_VERSION') == nil then -- check if run in termux
+                parsers = { 'clangd', 'pyright', 'rust_analyzer', 'lua_ls', 'texlab', 'tsserver' }
+            else
+                parsers = { 'pyright' }
+            end
+
+            require('mason-lspconfig').setup({
+                ensure_installed = parsers,
+                automatic_installation = true,
+            })
         end
     },
     {

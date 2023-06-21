@@ -14,11 +14,4 @@ mkdir -p $HOME/.config/nvim/lua
   cp -f lua/plugins.lua  $HOME/.config/nvim/lua
 }
 
-# install LSPs
-if [[ -z $TERMUX_VERSION ]] ; then
-  nvim --headless -c 'LspInstall clangd pyright rust_analyzer lua_ls texlab tsserver' -c 'qa'
-else
-  nvim --headless -c 'LspInstall pyright' -c 'qa'
-fi
-
 echo "setup nvim sucess"
