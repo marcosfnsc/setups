@@ -3,7 +3,7 @@
 set -o errexit
 
 # enable external storage
-[ -d "$HOME/storage/" ] && termux-setup-storage
+[ ! -d "$HOME/storage/" ] && termux-setup-storage
 
 packages_list=(
   clang
