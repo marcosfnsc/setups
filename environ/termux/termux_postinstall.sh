@@ -2,7 +2,8 @@
 
 set -o errexit
 
-#termux-setup-storage # external storage
+# enable external storage
+[ -d "$HOME/storage/" ] && termux-setup-storage
 
 packages_list=(
   clang
@@ -37,3 +38,5 @@ cd $path_dir_setups/zsh        && ./setup_zsh.sh
 cd $path_dir_setups/fzf        && ./setup_fzf.sh
 
 cd $path_dir_setups/.. && rm -rf setups
+
+chsh -s zsh
