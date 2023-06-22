@@ -25,7 +25,7 @@ packages_list=(
   zsh
 )
 
-pkg upgrade -y
+pkg up
 pkg install x11-repo # for keepassxc
 pkg install ${packages_list[@]} -y
 
