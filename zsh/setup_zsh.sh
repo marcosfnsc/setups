@@ -18,3 +18,5 @@ fi
   echo "erro ao criar link fisico, copiando arquivo ..."
   cp -f shell_functions $HOME/.shell_functions
 }
+
+echo "setup zsh sucess"
