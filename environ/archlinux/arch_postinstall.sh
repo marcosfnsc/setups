@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
-  #xorg 
   android-tools # adb and fastboot
   ark
   base-devel # for yay
@@ -43,6 +42,7 @@ APPS_INSTALL=(
   noto-fonts-emoji
   noto-fonts-extra
   npm
+  ntfs-3g # suporte ao sistema de qruivos ntfs
   okular
   openssh
   pacman-contrib
