@@ -9,6 +9,7 @@ packages_list=(
   clang
   curl
   exa
+  file
   git
   gnupg
   keepassxc
