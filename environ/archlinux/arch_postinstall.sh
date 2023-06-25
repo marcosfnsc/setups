@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 APPS_INSTALL=(
-  #xorg 
   android-tools # adb and fastboot
   ark
   base-devel # for yay
@@ -18,7 +17,6 @@ APPS_INSTALL=(
   flatpak
   gcc
   git
-  glow
   gwenview
   kamoso
   kate
@@ -44,6 +42,7 @@ APPS_INSTALL=(
   noto-fonts-emoji
   noto-fonts-extra
   npm
+  ntfs-3g # suporte ao sistema de qruivos ntfs
   okular
   openssh
   pacman-contrib
@@ -63,7 +62,7 @@ APPS_INSTALL=(
   spectacle
   sshfs # for the kdeconnect
   sudo
-  texlive-core # for get the latexmk command
+  texlive-basic # for get the latexmk command
   tmux
   tree
   unzip
