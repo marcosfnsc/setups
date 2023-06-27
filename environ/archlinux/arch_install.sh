@@ -185,21 +185,7 @@ else
   echo "/dev/zram0 none swap defaults,pri=100 0 0" >> /etc/fstab
 
   ## config mkinitcpio
-  HOOKS=$(cat /etc/mkinitcpio.conf | grep ^HOOKS)
-  if [[ $HOOKS == *"keyboard"* ]] ; then
-    sed -e s/keyboard//g -i /etc/mkinitcpio.conf
-  fi
-  if [[ $HOOKS == *"encrypt"* ]] ; then
-    sed -e s/encrypt//g -i /etc/mkinitcpio.conf
-  fi
-  if [[ $HOOKS == *"resume"* ]] ; then
-    sed -e s/resume//g -i /etc/mkinitcpio.conf
-  fi
-  sed -e "s/autodetect/autodetect keyboard/g"  -i /etc/mkinitcpio.conf
-  sed -e "s/keyboard/keyboard keymap/g"        -i /etc/mkinitcpio.conf
-  sed -e "s/filesystems/encrypt filesystems/g" -i /etc/mkinitcpio.conf
-  sed -e "s/fsck/resume fsck/g"                -i /etc/mkinitcpio.conf
-  sed -e "s/  / /g"                            -i /etc/mkinitcpio.conf
+  sed 's/^HOOKS*/HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems resume fsck)/' -i /etc/mkinitcpio.conf
   mkinitcpio -p linux
 
   ## config systemd-boot
