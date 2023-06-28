@@ -185,7 +185,7 @@ else
   echo "/dev/zram0 none swap defaults,pri=100 0 0" >> /etc/fstab
 
   ## config mkinitcpio
-  sed -E 's/^HOOKS*$/HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems resume fsck)/' -i /etc/mkinitcpio.conf
+  sed -E 's/^HOOKS.+$/HOOKS=(base udev autodetect keyboard keymap modconf block encrypt filesystems resume fsck)/' -i /etc/mkinitcpio.conf
   mkinitcpio -p linux
 
   ## config systemd-boot
