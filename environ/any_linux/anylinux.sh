@@ -13,8 +13,6 @@ hostnamectl set-hostname note
 # config swap
 echo "vm.swappiness=10" >> /etc/sysctl.d/99-sysctl.conf
 
-# rust environpment
-sudo -u $_USERNAME curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # run other scripts
 cd $REPO_ROOT/environ/any_linux              &&                    ./disable_webcam.sh
