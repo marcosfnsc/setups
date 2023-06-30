@@ -146,7 +146,6 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
     --sort rate \
     --save /etc/pacman.d/mirrorlist \
     --verbose
-  cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
   yes | pacstrap \
     /mnt \
     base \
@@ -155,6 +154,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
     linux \
     linux-firmware \
     networkmanager
+  cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
 
   cp arch_install.sh /mnt
   ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 arch-chroot /mnt ./arch_install.sh
