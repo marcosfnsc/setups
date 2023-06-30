@@ -146,6 +146,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
     --sort rate \
     --save /etc/pacman.d/mirrorlist \
     --verbose
+  cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
   yes | pacstrap \
     /mnt \
     base \
