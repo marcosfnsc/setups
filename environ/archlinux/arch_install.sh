@@ -109,6 +109,11 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       DEVICE_PATH=/dev/vda
       DEVICE_PATH_PART1=/dev/vda1
       DEVICE_PATH_PART2=/dev/vda2
+
+      mkfs.fat -F32 $DEVICE_PATH_PART1
+      mkfs.btrfs $DEVICE_PATH_PART2
+      create_btrfs_subvolumes $DEVICE_PATH_PART2 /mnt
+      mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_PATH_PART2 /mnt
       ;;
 
     4) # "vm with encrypt" target
@@ -210,9 +215,9 @@ else
   UUID_STORAGE_DEVICE=$(blkid -s UUID -o value $STORAGE_DEVICE)
   DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards" # :allow-discards to enable TRIM commands
   DISABLE_WORKQUEUE="no-read-workqueue,no-write-workqueue" # for better performance in ssd, not recomended for hdd
-  ROOT_DEVICE="root=/dev/mapper/container"
+  ROOT_DEVICE="root=$STORAGE_DEVICE"
   ROOT_FLAGS="rootflags=subvol=@"
-  RESUME_DEVICE="resume=/dev/mapper/container" # for hibernation
+  RESUME_DEVICE="resume=$STORAGE_DEVICE" # for hibernation
   RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
   OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for enable audio intel driver, add ibt=off for run virtualbox
   KERNEL_PARAMETERS="$DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
