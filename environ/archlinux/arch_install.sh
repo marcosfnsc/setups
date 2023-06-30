@@ -78,6 +78,10 @@ create_swapfile() {
   swapon $swapfile_path
 }
 
+enable_pacman_parallet_download() {
+  sed -E 's/^#ParallelDownloads.+$/ParallelDownloads = 10/' -i /etc/pacman.conf
+}
+
 if [[ ! -v ARCHROOT_ENVIRON ]] ; then
   # if variable doens't exists
 
@@ -134,6 +138,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
   mkdir /mnt/etc
   genfstab -U /mnt > /mnt/etc/fstab
 
+  enable_pacman_parallet_download
   reflector \
     --latest 20 \
     --protocol http \
@@ -192,6 +197,7 @@ else
   bootctl install
   echo -e "default arch\ntimeout 2\neditor no" > /boot/loader/loader.conf
 
+  enable_pacman_parallet_download
   pacman -S --needed curl gcc
   curl \
     https://raw.githubusercontent.com/osandov/osandov-linux/master/scripts/btrfs_map_physical.c \
