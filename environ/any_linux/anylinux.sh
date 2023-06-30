@@ -5,7 +5,7 @@ _USERNAME=marcos
 
 # config sudoers
 echo "add user in sudoers"
-nvim /etc/sudoers
+visudo
 
 # config hostmane
 hostnamectl set-hostname note
