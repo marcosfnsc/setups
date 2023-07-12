@@ -19,6 +19,7 @@ FLATPAK_FLATHUB=(
   net.lutris.Lutris          # lutris
   org.telegram.desktop       # telegram
   org.tenacityaudio.Tenacity # tenacity
+  org.zealdocs.Zeal          # zeal docs
 )
 
 flatpak install -y flathub ${FLATPAK_FLATHUB[@]} --user
