@@ -110,6 +110,8 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       DEVICE_PATH_PART1=/dev/vda1
       DEVICE_PATH_PART2=/dev/vda2
 
+      partition_disk $DEVICE_PATH
+
       mkfs.fat -F32 $DEVICE_PATH_PART1
       mkfs.btrfs $DEVICE_PATH_PART2
       create_btrfs_subvolumes $DEVICE_PATH_PART2 /mnt
