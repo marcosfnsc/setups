@@ -25,6 +25,12 @@ require('lazy').setup({
         config = function() vim.cmd[[colorscheme tokyonight]] end
     },
     {
+        'norcalli/nvim-colorizer.lua',
+        config = function ()
+            require('colorizer').setup()
+        end
+    },
+    {
         'j-hui/fidget.nvim',
         tag = 'legacy',
         config = function ()
