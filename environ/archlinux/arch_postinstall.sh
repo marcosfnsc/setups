@@ -12,6 +12,7 @@ APPS_INSTALL=(
   exa
   ffmpeg
   firefox
+  firefox-developer-edition
   firewalld
   flameshot
   flatpak
