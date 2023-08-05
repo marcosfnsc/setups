@@ -26,9 +26,9 @@ packages_list=(
   zsh
 )
 
-pkg up
-pkg install x11-repo # for keepassxc
-pkg install ${packages_list[@]} -y
+yes | pkg up
+yes | pkg install x11-repo # for keepassxc
+yes | pkg install ${packages_list[@]} -y
 
 git clone --depth 1 https://github.com/marcosfnsc/setups.git
 path_dir_setups="$(pwd)/setups"
