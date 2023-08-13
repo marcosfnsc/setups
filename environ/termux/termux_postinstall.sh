@@ -41,3 +41,5 @@ cd $path_dir_setups/fzf        && ./setup_fzf.sh
 cd $path_dir_setups/.. && rm -rf setups
 
 chsh -s zsh
+
+echo "configuração concluida!"
