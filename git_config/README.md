@@ -11,6 +11,10 @@ comandos interessantes:
 - `git switch -c nome da branch`: cria uma nova branch e alterna para ela
 - `git switch nome da branch`: alterna para a branch especificada
 
+### gerenciamento de tags
+- `git show v1.0`: mostra informações de uma determinada tag
+- `git tag nome da tag`: cria um tag leve local
+- `git tag`: lista as tags
 
 ### historico do git
 - `git clone --depth 1 url_do_repo --no-single-branch`: por padrão o clone superficial so baixa uma branch, com esse subcomando permite baixar tambem as outras branches especificando o nivel de profundade para todas elas
@@ -47,6 +51,4 @@ comandos interessantes:
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
 - `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
-- `git tag nome da tag`: cria um tag leve local
-- `git tag`: lista as tags
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
