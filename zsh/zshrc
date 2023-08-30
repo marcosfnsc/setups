@@ -18,15 +18,33 @@ prompt_dir() {
   prompt_segment blue $CURRENT_FG '%20<...<%~%<<'
 }
 
-## flutter environment
-[ -d ~/.flutter/ ] && export PATH=~/.flutter/bin:$PATH
+## use nvim buffer to edit command in shell
+export EDITOR=nvim
+autoload -U edit-command-line
+zle -N edit-command-line
+bindkey '\033' edit-command-line # Use ESC to edit the current command line:
+export KEYTIMEOUT=1
 
-## rust environment
-[ -d ~/.cargo/ ] && export PATH=~/.cargo/bin:$PATH
+## zsh history config
+export HISTFILE=~/.zsh_history
+export SAVEHIST=10000 # maximum number of commands stored in the history file
+export HISTSIZE=$SAVEHIST # number of commands loaded into the memory from the history file
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_ALL_DUPS # do not put duplicated command into history list
+setopt HIST_SAVE_NO_DUPS # do not save duplicated command
+setopt INC_APPEND_HISTORY # append command to history file immediately after execution
+setopt NO_EXTENDED_HISTORY # disable timestamp in history
+setopt NO_SHARE_HISTORY # disable timestamp in history
+setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
+
+[ -d ~/.cargo/ ]   && export PATH=~/.cargo/bin:$PATH   # rust environment
+[ -d ~/.flutter/ ] && export PATH=~/.flutter/bin:$PATH # flutter environment
 
 ## fzf config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+if [ -f ~/.fzf.zsh ]; then
+  source ~/.fzf.zsh
+  export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+fi
 
 ## android environment
 if [ -d ~/code_space/android ]; then
@@ -38,24 +56,5 @@ fi
 
 ## alias
 alias ls=exa
-
-## use nvim buffer to edit command in shell
-export EDITOR=nvim
-autoload -U edit-command-line
-zle -N edit-command-line
-bindkey '\033' edit-command-line # Use ESC to edit the current command line:
-export KEYTIMEOUT=1
-
-## zsh history config
-export HISTFILE="$HOME/.zsh_history"
-export SAVEHIST=10000 # maximum number of commands stored in the history file
-export HISTSIZE=$SAVEHIST # number of commands loaded into the memory from the history file
-setopt HIST_EXPIRE_DUPS_FIRST
-setopt HIST_IGNORE_ALL_DUPS # do not put duplicated command into history list
-setopt HIST_SAVE_NO_DUPS # do not save duplicated command
-setopt INC_APPEND_HISTORY # append command to history file immediately after execution
-setopt NO_EXTENDED_HISTORY # disable timestamp in history
-setopt NO_SHARE_HISTORY # disable timestamp in history
-setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
 
 source $HOME/.shell_functions
