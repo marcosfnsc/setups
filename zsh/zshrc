@@ -43,7 +43,7 @@ setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line bei
 ## fzf config
 if [ -f ~/.fzf.zsh ]; then
   source ~/.fzf.zsh
-  export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
+  command -v rg &> /dev/null && export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 fi
 
 ## android environment
@@ -55,6 +55,6 @@ if [ -d ~/code_space/android ]; then
 fi
 
 ## alias
-alias ls=exa
+command -v exa &> /dev/null && alias ls=exa
 
 source $HOME/.shell_functions
