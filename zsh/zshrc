@@ -4,8 +4,8 @@ if command -v tmux &> /dev/null && [[ -z $TMUX ]]; then
 fi
 
 ## oh-my-zsh config
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="agnoster"
+export ZSH=~/.oh-my-zsh
+ZSH_THEME=agnoster
 plugins=(
   git
   docker
@@ -19,17 +19,17 @@ prompt_dir() {
 }
 
 ## flutter environment
-[ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
+[ -d ~/.flutter/ ] && export PATH=~/.flutter/bin:$PATH
 
 ## rust environment
-[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
+[ -d ~/.cargo/ ] && export PATH=~/.cargo/bin:$PATH
 
 ## fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
 
 ## android environment
-if [ -d "$HOME/code_space/android" ]; then
+if [ -d ~/code_space/android ]; then
   export ANDROID_HOME=$HOME/code_space/android
   export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
   export PATH=$ANDROID_HOME/emulator/:$PATH
