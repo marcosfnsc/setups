@@ -20,5 +20,6 @@
 * `pacman -Syyu`: força a atualização do banco de dados e atualiza o sistema caso tenha atualização disponivel
 
 #### principais comandos do apt-get/apt:
+* `apt clean`: apaga o cache de pacotes baixadoa
 * `apt show nome_do_pacote`: mostra informações sobre um determinado pacote
 * `apt-cache depends nome_do_pacote`: mostra quais pacotes um determinado pacote depende
