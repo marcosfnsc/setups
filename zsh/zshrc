@@ -1,5 +1,5 @@
 ## start with tmux
-if command -v tmux &> /dev/null && [[ -z $TMUX ]] ; then
+if command -v tmux &> /dev/null && [[ -z $TMUX ]]; then
   exec tmux new -A
 fi
 
@@ -21,12 +21,12 @@ prompt_dir() {
 ## flutter environment
 [ -d "$HOME/.flutter/" ] && export PATH="$HOME/.flutter/bin:$PATH"
 
+## rust environment
+[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
+
 ## fzf config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow --glob "!.git/*"'
-
-## rust environment
-[ -d "$HOME/.cargo/" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
 ## android environment
 if [ -d "$HOME/code_space/android" ]; then
@@ -57,6 +57,5 @@ setopt INC_APPEND_HISTORY # append command to history file immediately after exe
 setopt NO_EXTENDED_HISTORY # disable timestamp in history
 setopt NO_SHARE_HISTORY # disable timestamp in history
 setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
-
 
 source $HOME/.shell_functions
