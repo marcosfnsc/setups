@@ -182,6 +182,7 @@ require('lazy').setup({
                     'javascript',
                     'latex',
                     'lua',
+                    'php',
                     'python',
                     'rust',
                     'sql',
