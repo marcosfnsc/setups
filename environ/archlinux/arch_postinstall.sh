@@ -45,6 +45,7 @@ APPS_INSTALL=(
   npm
   ntfs-3g # suporte ao sistema de qruivos ntfs
   okular
+  openbsd-netcat
   openssh
   pacman-contrib
   partitionmanager
@@ -73,6 +74,7 @@ APPS_INSTALL=(
   zathura
   zathura-pdf-mupdf
   zsh
+
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}

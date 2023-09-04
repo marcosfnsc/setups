@@ -25,6 +25,12 @@ require('lazy').setup({
         config = function() vim.cmd[[colorscheme tokyonight]] end
     },
     {
+        'norcalli/nvim-colorizer.lua',
+        config = function ()
+            require('colorizer').setup()
+        end
+    },
+    {
         'j-hui/fidget.nvim',
         tag = 'legacy',
         config = function ()
@@ -118,6 +124,7 @@ require('lazy').setup({
         config = function()
             require('mason').setup{}
             require('lspconfig').clangd.setup{}
+            require('lspconfig').intelephense.setup{}
             require('lspconfig').lua_ls.setup{}
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
@@ -129,7 +136,15 @@ require('lazy').setup({
         config = function()
             local parsers
             if os.getenv('TERMUX_VERSION') == nil then -- check if run in termux
-                parsers = { 'clangd', 'pyright', 'rust_analyzer', 'lua_ls', 'texlab', 'tsserver' }
+                parsers = {
+                    'clangd',
+                    'intelephense',
+                    'lua_ls',
+                    'pyright',
+                    'rust_analyzer',
+                    'texlab',
+                    'tsserver',
+                }
             else
                 parsers = { 'pyright' }
             end
@@ -176,6 +191,7 @@ require('lazy').setup({
                     'javascript',
                     'latex',
                     'lua',
+                    'php',
                     'python',
                     'rust',
                     'sql',

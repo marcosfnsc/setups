@@ -6,6 +6,7 @@
 * `pacman -Qi nome_do_pacote`: mostra informações de um pacote instalado
 * `pacman -Ql nome_do_pacote`: listar arquivos instalados por um pacote
 * `pacman -Qm`: listar todos os pacotes estrangeiros (instalados manualmente ou pacotes removidos dos repositórios)
+* `pacman -Qo nome_do_arquivo`: descobrir a qual pacote pertence o arquivo
 * `pacman -Qs regex`: listar pacotes por regex
 * `pacman -Rs nome_do_pacote`: remover o pacote e depedencias não usadas por outros pacotes
 * `pacman -S nome_do_pacote --overwrite "*"`: o parametro `overwrite` é util quando há arquivos no sistema não rastreados pelo gerenciador de pacotes que estão causando conflito, provavelmente de instalações problematicas
@@ -19,5 +20,6 @@
 * `pacman -Syyu`: força a atualização do banco de dados e atualiza o sistema caso tenha atualização disponivel
 
 #### principais comandos do apt-get/apt:
+* `apt clean`: apaga o cache de pacotes baixadoa
 * `apt show nome_do_pacote`: mostra informações sobre um determinado pacote
 * `apt-cache depends nome_do_pacote`: mostra quais pacotes um determinado pacote depende
