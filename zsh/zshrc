@@ -55,6 +55,6 @@ if [ -d ~/code_space/android ]; then
 fi
 
 ## alias
-command -v exa &> /dev/null && alias ls=exa
+command -v eza &> /dev/null && alias ls=eza
 
 source $HOME/.shell_functions

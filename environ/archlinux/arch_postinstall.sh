@@ -9,7 +9,7 @@ APPS_INSTALL=(
   curl
   dolphin
   earlyoom
-  exa
+  eza
   ffmpeg
   firefox
   firewalld
@@ -73,7 +73,6 @@ APPS_INSTALL=(
   zathura
   zathura-pdf-mupdf
   zsh
-
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}
