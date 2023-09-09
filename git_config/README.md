@@ -37,6 +37,7 @@ comandos interessantes:
 - `git remote show origin`: mostra a url dos repos remotos e outros detalhes
 
 ### outros comandos
+- `export GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:1080 %h %p"' git subcomando_git`: configuração para usar o git via proxy socks5
 - `git blame nome_do_arquivo`: mostra informações como autor, numero de commit e outras informações para cada linha do ultimo estado do arquivo especificado
 - `git commit --allow-empty -m 'Empty commit'`: cria um commit vazio, sem alterações de arquivo, util para acionar pipelines CI/CD
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
