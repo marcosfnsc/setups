@@ -17,7 +17,6 @@ echo "vm.swappiness=10" >> /etc/sysctl.d/99-sysctl.conf
 sudo -u $_USERNAME curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 # run other scripts
-cd $REPO_ROOT/environ/any_linux              &&                    ./disable_webcam.sh
 cd $REPO_ROOT/environ/any_linux/kde_dotfiles && sudo -u $_USERNAME ./setup_dotfiles.sh
 cd $REPO_ROOT/flatpak                        && sudo -u $_USERNAME ./setup_flatpak.sh
 cd $REPO_ROOT/fzf                            && sudo -u $_USERNAME ./setup_fzf.sh
