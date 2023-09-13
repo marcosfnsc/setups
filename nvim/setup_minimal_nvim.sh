@@ -1,5 +1,5 @@
 mkdir -p ~/.config/nvim/lua
-cat << EOF > casa.lua
+cat << EOF > ~/.config/nvim/init.lua
 vim.opt.clipboard = 'unnamed,unnamedplus'
 vim.opt.expandtab = true
 vim.opt.foldmethod = 'manual'
@@ -23,12 +23,11 @@ autocmd FileType rust   setlocal shiftwidth=4 tabstop=4
 vim.g.mapleader = '\\\'
 local opts = { remap = false, silent = true }
 local mappings = {
-    { 'i', 'jj', [[<ESC>]], opts },
-    { 'n', '<leader>s', [[<Cmd>update<CR>]], opts },
+  { 'i', 'jj', [[<ESC>]], opts },
+  { 'n', '<leader>s', [[<Cmd>update<CR>]], opts },
 }
 
 for _, map in pairs(mappings) do
-    vim.keymap.set(unpack(map))
+  vim.keymap.set(unpack(map))
 end
-]])
 EOF
