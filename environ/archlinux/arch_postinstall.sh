@@ -9,7 +9,7 @@ APPS_INSTALL=(
   curl
   dolphin
   earlyoom
-  exa
+  eza
   ffmpeg
   firefox
   firefox-developer-edition
@@ -64,7 +64,6 @@ APPS_INSTALL=(
   spectacle
   sshfs # for the kdeconnect
   sudo
-  texlive-basic # for get the latexmk command
   tmux
   tree
   unzip
@@ -74,7 +73,6 @@ APPS_INSTALL=(
   zathura
   zathura-pdf-mupdf
   zsh
-
 )
 
 pacman -S --needed ${APPS_INSTALL[@]}

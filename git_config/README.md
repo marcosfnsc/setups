@@ -52,3 +52,4 @@ comandos interessantes:
 - `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
+- `GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:1080 %h %p"' git subcomando_git`: configuração para usar o git via proxy socks5
