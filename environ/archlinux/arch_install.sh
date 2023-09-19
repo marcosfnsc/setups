@@ -230,6 +230,9 @@ else
   initrd /initramfs-linux.img
   options $KERNEL_PARAMETERS" > /boot/loader/entries/arch.conf
 
+  pacman -S iwd
+  echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf
+
   systemctl enable NetworkManager
   systemctl enable fstrim.timer
 fi
