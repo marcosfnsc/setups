@@ -231,6 +231,7 @@ else
   options $KERNEL_PARAMETERS" > /boot/loader/entries/arch.conf
 
   pacman -S iwd
+  mkdir -p /etc/NetworkManager/conf.d
   echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf
 
   systemctl enable NetworkManager
