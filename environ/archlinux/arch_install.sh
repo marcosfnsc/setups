@@ -232,7 +232,7 @@ else
 
   pacman -S iwd
   mkdir -p /etc/NetworkManager/conf.d
-  echo -e "[device]\nwifi.backend=iwd" > /etc/NetworkManager/conf.d/wifi_backend.conf
+  echo -e "[device]\nwifi.backend=iwd\nwifi.iwd.autoconnect=no" > /etc/NetworkManager/conf.d/wifi_backend.conf
 
   systemctl enable NetworkManager
   systemctl enable fstrim.timer
