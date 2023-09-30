@@ -13,6 +13,7 @@
 * `pacman -S nome_do_pacote`: instalar pacote
 * `pacman -Sc`: remover do cache arquivos de pacotes que não estão instalados
 * `pacman -Scc`: remover do cache todos os arquivos de pacotes
+* `pacman -Sg nome_do_grupo`: listar pacotes pertencentes a um grupo de pacotes
 * `pacman -Sg nome_do_grupo`: listar pacotes que fazem parte de um determinado grupo
 * `pacman -Si nome_do_pacote`: mostra informações de um pácote disponivel no repositorio
 * `pacman -Ss nome_do_pacote`: pesquisar pacote
