@@ -33,7 +33,7 @@ yes | pkg install ${packages_list[@]} -y
 git clone --depth 1 https://github.com/marcosfnsc/setups.git
 path_dir_setups="$(pwd)/setups"
 cd $path_dir_setups/git_config && ./setup_git.sh
-cd $path_dir_setups/nvim       && ./setup_nvim.sh
+cd $path_dir_setups/nvim       && ./setup_minimal_nvim.sh
 cd $path_dir_setups/tmux       && ./setup_tmux.sh
 cd $path_dir_setups/zsh        && ./setup_zsh.sh
 cd $path_dir_setups/fzf        && ./setup_fzf.sh
