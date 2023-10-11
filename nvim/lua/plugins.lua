@@ -125,6 +125,7 @@ require('lazy').setup({
             require('mason').setup{}
             require('lspconfig').clangd.setup{}
             require('lspconfig').intelephense.setup{}
+            require('lspconfig').jdtls.setup{}
             require('lspconfig').lua_ls.setup{}
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
@@ -139,6 +140,7 @@ require('lazy').setup({
                 parsers = {
                     'clangd',
                     'intelephense',
+                    'jdtls',
                     'lua_ls',
                     'pyright',
                     'rust_analyzer',

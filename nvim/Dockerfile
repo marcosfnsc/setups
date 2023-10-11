@@ -4,6 +4,7 @@ FROM archlinux:latest
 RUN pacman -Sy --needed --noconfirm \
   gcc \
   git \
+  jdk-openjdk \
   neovim \
   nodejs \
   npm \
