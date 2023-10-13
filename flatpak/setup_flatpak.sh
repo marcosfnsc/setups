@@ -17,8 +17,8 @@ FLATPAK_FLATHUB=(
   com.spotify.Client         # Spotify
   com.valvesoftware.Steam    # Steam
   net.lutris.Lutris          # lutris
+  org.audacityteam.Audacity  # audacity
   org.telegram.desktop       # telegram
-  org.tenacityaudio.Tenacity # tenacity
   org.zealdocs.Zeal          # zeal docs
 )
 
