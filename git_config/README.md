@@ -1,6 +1,13 @@
 comandos interessantes:
 -----------------------
 
+### submodulos git
+- `git clone --depth 1 --recursive --shallow-submodules`: clone superficial do repo e clone superficial de todos os submodulos
+- `git clone --recursive url_do_repo`: clonar um repo e clontar tambem todos os submodulos dele
+- `git submodule add url_do_repo nome_do_diretorio`: adicionar um submodulo a um repo, e além disso especificar um nome diferente para o submodulo
+- `git submodule add url_do_repo`: adicionar um submodulo a um repo
+
+
 ### gerenciamento de branches
 - `git branch -a`: listar todas as branches, inclusive remotas
 - `git branch -d nome da branch`: deletar branch local
