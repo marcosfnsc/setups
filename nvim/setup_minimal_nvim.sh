@@ -1,4 +1,4 @@
-mkdir -p ~/.config/nvim/lua
+mkdir -p ~/.config/nvim
 cat << EOF > ~/.config/nvim/init.lua
 vim.opt.clipboard = 'unnamed,unnamedplus'
 vim.opt.expandtab = true
