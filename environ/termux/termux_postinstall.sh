@@ -42,4 +42,7 @@ cd $path_dir_setups/.. && rm -rf setups
 
 chsh -s zsh
 
+echo set password
+passwd
+
 echo "configuração concluida!"
