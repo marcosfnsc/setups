@@ -7,6 +7,7 @@ RUN pacman -Sy --needed --noconfirm \
   git \
   htop \
   jdk-openjdk \
+  neofetch \
   neovim \
   nodejs \
   npm \
