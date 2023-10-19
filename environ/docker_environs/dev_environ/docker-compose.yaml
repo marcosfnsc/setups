@@ -2,9 +2,14 @@ version: "3"
 
 services:
   dev_environ:
+    container_name: dev_environ
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
+      - ./container_volume:/home/marcos/code_space
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./container_home:/home/marcos
+      - home:/home/marcos
+
+volumes:
+  home:
