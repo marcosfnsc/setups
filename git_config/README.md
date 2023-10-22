@@ -13,6 +13,7 @@ comandos interessantes:
 - `git branch -d nome da branch`: deletar branch local
 - `git branch -m novo nome da branch`: mudar o nome da branch atual para outro nome
 - `git checkout -b nome da branch`: cria uma nova branch e alterna para ela
+- `git clone --branch nome_da_branch url_do_repo`: clonar uma branch especifica de um repo
 - `git fetch -p`: remove referencias de branches que não existem no repo remoto, `-p` é a versão curta de `--prune`
 - `git push origin --delete nome_da_branch`: apaga a branch remota
 - `git switch -c nome da branch`: cria uma nova branch e alterna para ela
