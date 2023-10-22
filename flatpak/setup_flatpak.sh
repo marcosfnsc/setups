@@ -13,6 +13,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # install flatpak apps
 FLATPAK_FLATHUB=(
   com.discordapp.Discord     # Discord
+  com.github.tchx84.Flatseal # flatseal
   com.rtosta.zapzap          # cliente não oficial do whatssap
   com.spotify.Client         # Spotify
   com.valvesoftware.Steam    # Steam
