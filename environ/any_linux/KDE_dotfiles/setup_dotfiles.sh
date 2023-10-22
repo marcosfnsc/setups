@@ -7,7 +7,7 @@ check_and_rm() {
 }
 
 # baloo
-echo "exclude folders[\$e]=\$HOME/code_space" >> ~/.config/baloofilerc
+echo "exclude folders[\$e]=\$HOME/code_space,$HOME/.config,$HOME/.local" >> ~/.config/baloofilerc
 
 # dolphin
 check_and_rm $HOME/.config/dolphinrc
