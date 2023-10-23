@@ -42,6 +42,7 @@ create_btrfs_subvolumes() {
   local mount_point=$2
   mount $device $mount_point
   btrfs subvolume create $mount_point/@
+  btrfs subvolume create $mount_point/@docker
   btrfs subvolume create $mount_point/@home
   btrfs subvolume create $mount_point/@log
   btrfs subvolume create $mount_point/@snapshots
@@ -57,14 +58,15 @@ mount_partion_and_subvolumes() {
   local mount_options="defaults,noatime,compress-force=zstd,commit=120"
 
   mount -o ${mount_options},subvol=@ $device_container $mount_point
-  mkdir -p $mount_point/{boot,home,var/log,.snapshots,.swap,tmp}
+  mkdir -p $mount_point/{boot,home,var/lib/docker,var/log,.snapshots,.swap,tmp}
 
   mount $device_boot /mnt/boot
-  mount -o ${mount_options},subvol=@home $device_container $mount_point/home
-  mount -o ${mount_options},subvol=@log  $device_container $mount_point/var/log
-  mount -o ${mount_options},subvol=@tmp  $device_container $mount_point/tmp
-  mount -o noatime,subvol=@swap          $device_container $mount_point/.swap
-  mount -o subvol=@snapshots             $device_container $mount_point/.snapshots
+  mount -o ${mount_options},subvol=@docker $device_container $mount_point/var/lib/docker
+  mount -o ${mount_options},subvol=@home   $device_container $mount_point/home
+  mount -o ${mount_options},subvol=@log    $device_container $mount_point/var/log
+  mount -o ${mount_options},subvol=@tmp    $device_container $mount_point/tmp
+  mount -o noatime,subvol=@swap            $device_container $mount_point/.swap
+  mount -o subvol=@snapshots               $device_container $mount_point/.snapshots
 }
 
 create_swapfile() {
