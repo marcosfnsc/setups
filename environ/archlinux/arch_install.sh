@@ -69,6 +69,10 @@ mount_partion_and_subvolumes() {
   mount -o ${mount_options},subvol=@tmp     $device_container $mount_point/tmp
   mount -o noatime,subvol=@swap             $device_container $mount_point/.swap
   mount -o subvol=@snapshots                $device_container $mount_point/.snapshots
+
+  # disable COW
+  chattr +C $mount_point/var/lib/docker
+  chattr +C $mount_point/var/lib/libvirt
 }
 
 create_swapfile() {
