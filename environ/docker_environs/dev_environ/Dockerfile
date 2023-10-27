@@ -12,6 +12,7 @@ RUN pacman -S --needed --noconfirm \
   git \
   htop \
   jdk-openjdk \
+  jq \
   neofetch \
   neovim \
   nodejs \
