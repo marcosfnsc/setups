@@ -8,6 +8,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./container_volume:/home/marcos/code_space
+      - /usr/bin/docker:/usr/bin/docker
       - /var/run/docker.sock:/var/run/docker.sock
       - home:/home/marcos
 

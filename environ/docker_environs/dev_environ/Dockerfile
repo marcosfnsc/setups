@@ -6,7 +6,6 @@ RUN sed -E 's/^#ParallelDownloads.+$/ParallelDownloads = 10/' -i /etc/pacman.con
 RUN pacman -S --needed --noconfirm \
   clang \
   curl \
-  docker \
   docker-compose \
   eza \
   gcc \
@@ -20,6 +19,7 @@ RUN pacman -S --needed --noconfirm \
   openssh \
   python \
   ripgrep \
+  sudo \
   tmux \
   tree \
   unzip \
@@ -30,6 +30,10 @@ ARG UID=1000
 ARG GID=1000
 RUN groupadd -g "${GID}" marcos \
   && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" marcos
+
+RUN mkdir -p /var/run && touch /var/run/docker.sock
+RUN chown -R marcos:marcos /var/run/docker.sock
+
 USER marcos
 
 WORKDIR /home/marcos
