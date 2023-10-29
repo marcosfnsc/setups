@@ -13,6 +13,7 @@ RUN pacman -S --needed --noconfirm \
   htop \
   jdk-openjdk \
   jq \
+  less \
   neofetch \
   neovim \
   nodejs \
@@ -27,8 +28,8 @@ RUN pacman -S --needed --noconfirm \
   zsh
 
 # create user non root
-ARG UID=1000
-ARG GID=1000
+ARG UID=999
+ARG GID=999
 RUN groupadd -g "${GID}" marcos \
   && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" marcos
 
