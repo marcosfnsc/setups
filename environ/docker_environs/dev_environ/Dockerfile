@@ -4,6 +4,7 @@ RUN pacman -Sy --noconfirm reflector
 RUN reflector --latest 10 --protocol http --protocol https --sort rate --save /etc/pacman.d/mirrorlist --verbose
 RUN sed -E 's/^#ParallelDownloads.+$/ParallelDownloads = 10/' -i /etc/pacman.conf
 RUN pacman -S --needed --noconfirm \
+  base-devel \
   clang \
   curl \
   docker-compose \
@@ -21,34 +22,17 @@ RUN pacman -S --needed --noconfirm \
   openssh \
   python \
   ripgrep \
+  skim \
   sudo \
   tmux \
   tree \
   unzip \
   zsh
 
-# create user non root
-ARG UID=999
-ARG GID=999
-RUN groupadd -g "${GID}" marcos \
-  && useradd --create-home --no-log-init -u "${UID}" -g "${GID}" marcos
-
-RUN mkdir -p /var/run && touch /var/run/docker.sock
-RUN chown -R marcos:marcos /var/run/docker.sock
-
-USER marcos
-
+RUN useradd -m marcos \
+  && chown -R marcos:marcos /home/marcos
 WORKDIR /home/marcos
-RUN git clone --depth 1 https://github.com/marcosfnsc/setups.git
-ENV PATH_DIR_SETUPS="/home/marcos/setups"
-RUN cd $PATH_DIR_SETUPS/git_config && ./setup_git.sh
-RUN cd $PATH_DIR_SETUPS/nvim       && ./setup_nvim.sh
-RUN cd $PATH_DIR_SETUPS/tmux       && ./setup_tmux.sh
-RUN cd $PATH_DIR_SETUPS/zsh        && ./setup_zsh.sh
-RUN cd $PATH_DIR_SETUPS/fzf        && ./setup_fzf.sh
-RUN cd $PATH_DIR_SETUPS/.. && rm -rf setups
 
-RUN echo "exec zsh" > /home/marcos/.bashrc
+COPY docker-entrypoint.sh /
 
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
