@@ -33,6 +33,7 @@ comandos dentro do tmux:
 * `join-pane -t :N -v`: move o painel em foco para a janela `N` e divide os paineis na vertical
 * `join-pane -t :N`: move o painel em foco para a janela `N`
 * `select-layout nome_do_layout` ou `selectl nome_do_layout`: permite escolher um layout para os paineis, os disponiveis são `even-horizontal`, `even-vertical`, `main-horizontal`, `main-vertical` e `tiled`
+* `select-pane -T nome_do_painel`: permite definir um nome/titulo para o painel em foco
 * `setw synchronise-panes`: envia simultaneamente entrada do teclado de um painel para o resto dos painéis na mesma janela, para desativar o comando basta digita-lo novamente
 * `split-window -fbh`: cria um painel no lado esquerdo da tela, indepedente dos outros paineis
 * `split-window -fbv`: cria um painel no lado superior da tela, indepedente dos outros paineis
