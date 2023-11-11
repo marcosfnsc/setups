@@ -130,26 +130,23 @@ require('lazy').setup({
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
             require('lspconfig').tsserver.setup{}
+            require('lspconfig').volar.setup{}
         end
     },
     {
         'williamboman/mason-lspconfig.nvim',
         config = function()
-            local parsers
-            if os.getenv('TERMUX_VERSION') == nil then -- check if run in termux
-                parsers = {
-                    'clangd',
-                    'intelephense',
-                    'jdtls',
-                    'lua_ls',
-                    'pyright',
-                    'rust_analyzer',
-                    'texlab',
-                    'tsserver',
-                }
-            else
-                parsers = { 'pyright' }
-            end
+            local parsers = {
+                'clangd',
+                'intelephense',
+                'jdtls',
+                'lua_ls',
+                'pyright',
+                'rust_analyzer',
+                'texlab',
+                'tsserver',
+                'volar',
+            }
 
             require('mason-lspconfig').setup({
                 ensure_installed = parsers,
@@ -197,6 +194,7 @@ require('lazy').setup({
                     'python',
                     'rust',
                     'sql',
+                    'vue',
                 },
                 sync_install = false,
                 highlight = {
