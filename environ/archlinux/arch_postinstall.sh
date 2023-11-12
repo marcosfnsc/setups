@@ -64,6 +64,7 @@ APPS_INSTALL=(
   spectacle
   sshfs # for the kdeconnect
   sudo
+  thermald # for CPUs intel
   tmux
   tree
   unzip
@@ -81,6 +82,7 @@ systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
 systemctl enable sddm
+systemctl enable thermald # for CPUs intel
 
 systemctl mask lvm2-monitor.service   # I will not use lvm2
 
