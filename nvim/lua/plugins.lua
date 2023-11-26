@@ -194,6 +194,7 @@ require('lazy').setup({
                     'python',
                     'rust',
                     'sql',
+                    'typescript',
                     'vue',
                 },
                 sync_install = false,
