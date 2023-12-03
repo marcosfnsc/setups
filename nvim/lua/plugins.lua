@@ -38,14 +38,12 @@ require('lazy').setup({
         end
     },
     {
-        'toppair/peek.nvim',
-        event = { 'VeryLazy' },
-        build = 'deno task --quiet build:fast',
+        'iamcco/markdown-preview.nvim',
+        ft = { 'markdown' },
+        build = 'cd app && npm install && cd - && git restore .',
         config = function()
-            require('peek').setup({app = 'browser'})
-            vim.api.nvim_create_user_command('PeekOpen', require('peek').open, {})
-            vim.api.nvim_create_user_command('PeekClose', require('peek').close, {})
-        end,
+            vim.g.mkdp_filetypes = { 'markdown' }
+        end
     },
     {
         'rcarriga/nvim-notify',
