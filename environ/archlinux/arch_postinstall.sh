@@ -7,7 +7,6 @@ APPS_INSTALL=(
   calibre # manage ebooks
   clamav
   curl
-  deno
   dolphin
   earlyoom
   eza
