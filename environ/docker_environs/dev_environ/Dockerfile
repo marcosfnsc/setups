@@ -7,7 +7,6 @@ RUN pacman -S --needed --noconfirm \
   base-devel \
   clang \
   curl \
-  deno \
   docker-compose \
   eza \
   gcc \

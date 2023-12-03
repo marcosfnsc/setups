@@ -2,7 +2,6 @@ FROM archlinux:latest
 
 # Install required system packages
 RUN pacman -Sy --needed --noconfirm \
-  deno \
   gcc \
   git \
   jdk-openjdk \
