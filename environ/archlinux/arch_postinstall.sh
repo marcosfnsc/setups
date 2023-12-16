@@ -30,6 +30,7 @@ APPS_INSTALL=(
   krunner
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
+  lsof
   man-db
   man-pages
   neofetch
