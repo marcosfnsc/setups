@@ -164,6 +164,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:%s/pattern//n`: mostra o número de correspondências e o número de linhas em que essas correspondências ocorrem
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
+* `:b N`: permite alternar para o buffer especificado em N, exemplo: `b 2`
+* `:buffers` ou `:ls`: mostra a lista de buffers abertos
 * `:changes`: alinha o texto verticalmente usando a ferramenta `column`
 * `:clearjumps`: limpar lista de saltos
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
