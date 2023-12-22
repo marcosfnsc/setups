@@ -22,5 +22,6 @@
 
 #### principais comandos do apt-get/apt:
 * `apt clean`: apaga o cache de pacotes baixadoa
+* `apt dist-upgrade`: atualiza pacotes, instala novas depedencias e remove dependencias não mais necessarias
 * `apt show nome_do_pacote`: mostra informações sobre um determinado pacote
 * `apt-cache depends nome_do_pacote`: mostra quais pacotes um determinado pacote depende
