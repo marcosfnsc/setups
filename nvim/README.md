@@ -90,6 +90,8 @@
 * <kbd>g</kbd><kbd>t</kbd> no modo normal: alterna para a proxima guia
 
 ### outros atalhos:
+* <kbd>"</kbd><kbd>\*</kbd><kbd>p</kbd> no modo normal: cola a partir da area de transferencia
+* <kbd>"</kbd><kbd>\*</kbd><kbd>y</kbd> no modo normal: copia para a area de transferencia
 * <kbd>"</kbd><kbd>a</kbd> no modo normal: digitar <kbd>"</kbd> representa uma entrada de registro e a letra seria o slot do registro, pode usar outra letra alem de <kbd>a</kbd>, apos isso basta digitar algum comando de corte
 * <kbd>#</kbd> no modo normal: pesquisa para tras a palavra que esta sob o cursor
 * <kbd>@</kbd><kbd>:</kbd> no modo normal: repete o ultimo comando executado
