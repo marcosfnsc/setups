@@ -233,6 +233,10 @@ como a macro é gravada nos registros, é possivel colar uma macro usando<kbd>p<
 e depois copiando para o mesmo registro usando algum movimento de corte
 
 ## regex do vim
+> Aviso, para ativar o modo "magico" (onde alguns caracteres especificos são interpretados como metacaracteres), deve inserir `\v` antes da expressão
+>
+> exemplo: `/(casa)|(cadeira)` => `/\v(casa)|(cadeira)` 
+
 #### caracteres especiais do vim
 * `\d`: mesma coisa de `[0-9]`
 * `\D`: mesma coisa de `[^0-9]`
