@@ -172,6 +172,7 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:clearjumps`: limpar lista de saltos
 * `:g!/string/d` ou `:v/string/d`: apaga todas as linhas que não contenham "string"
 * `:g/string/d`: apaga todas as linhas que contenham "string", cada linha deletada é antes copiada para o registro padrão, é possivel especificar o registtro de buraco negro para otimizar o processo: `:g/string/d _`
+* `:g/string/normal Icasa`: permite usar o comando normal em todas as linhas onde contém o padrão especificado
 * `:help digraph-table`: mostra a lista de digrafos
 * `:jumps`: mostra uma lista com todos os saltos
 * `:mksession nome_do_arquivo.vim`: salva o estado atual da sessão em um arquivo, este comando possui uma versão abreviada que é `mks nome_do_arquivo.vim`, caso precise salvar a sessão no mesmo arquivo, o comando será `:mksession! nome_do_arquivo.vim`
