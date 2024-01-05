@@ -22,7 +22,16 @@ require('lazy').setup({
         lazy = false,
         priority = 1000,
         opts = {},
-        config = function() vim.cmd[[colorscheme tokyonight]] end
+        config = function()
+            require("tokyonight").setup({
+                on_highlights = function(hl, colors)
+                    hl.LineNr = {
+                        fg = colors.white
+                    }
+                end
+            })
+            vim.cmd[[colorscheme tokyonight]]
+        end
     },
     {
         'norcalli/nvim-colorizer.lua',
