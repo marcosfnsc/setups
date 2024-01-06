@@ -96,7 +96,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
   echo "select the target config:
   1 -> bare-metal
   2 -> bare-metal dual boot
-  3 -> vm
+  3 -> vm without encrypt
   4 -> vm with encrypt"
   read -p "> " target_selected
 
@@ -105,14 +105,24 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       DEVICE=nvme0n1
       DEVICE_PATH=/dev/nvme0n1
       DEVICE_PATH_PART1=/dev/nvme0n1p1
+      DEVICE_PATH_PART2=/dev/nvme0n1p2
+      DEVICE_CONTAINER=/dev/mapper/container
 
+      partition_disk $DEVICE_PATH
+      encrypt_partition $DEVICE $DEVICE_PATH_PART2
+      cryptsetup open --type luks2 $DEVICE_PATH_PART2 container
+
+      mkfs.fat -F32 $DEVICE_PATH_PART1
+      mkfs.btrfs $DEVICE_CONTAINER
+      create_btrfs_subvolumes $DEVICE_CONTAINER /mnt
+      mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_CONTAINER /mnt
       ;;
 
     2) # "bare-metal dual boot" target
       echo "not implemented"
       ;;
 
-    3) # "vm" target
+    3) # "vm without encrypt" target
       DEVICE=vda
       DEVICE_PATH=/dev/vda
       DEVICE_PATH_PART1=/dev/vda1
@@ -137,9 +147,9 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       cryptsetup open --type luks2 $DEVICE_PATH_PART2 container
 
       mkfs.fat -F32 $DEVICE_PATH_PART1
-      mkfs.btrfs /dev/mapper/container
-      create_btrfs_subvolumes /dev/mapper/container /mnt
-      mount_partion_and_subvolumes $DEVICE_PATH_PART1 /dev/mapper/container /mnt
+      mkfs.btrfs $DEVICE_CONTAINER
+      create_btrfs_subvolumes $DEVICE_CONTAINER /mnt
+      mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_CONTAINER /mnt
       ;;
 
     *)
@@ -172,7 +182,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
   cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
 
   cp arch_install.sh /mnt
-  ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 arch-chroot /mnt ./arch_install.sh
+  ARCHROOT_ENVIRON=1; STORAGE_DEVICE=$DEVICE_PATH_PART2; ROOT_DEVICE=$DEVICE_CONTAINER; RESUME_DEVICE=$DEVICE_CONTAINER; arch-chroot /mnt ./arch_install.sh
 
 else
   # if variable exists
@@ -225,9 +235,9 @@ else
   UUID_STORAGE_DEVICE=$(blkid -s UUID -o value $STORAGE_DEVICE)
   DEVICE="cryptdevice=UUID=$UUID_STORAGE_DEVICE:container:allow-discards" # :allow-discards to enable TRIM commands
   DISABLE_WORKQUEUE="no-read-workqueue,no-write-workqueue" # for better performance in ssd, not recomended for hdd
-  ROOT_DEVICE="root=$STORAGE_DEVICE"
+  ROOT_DEVICE="root=$ROOT_DEVICE"
   ROOT_FLAGS="rootflags=subvol=@"
-  RESUME_DEVICE="resume=$STORAGE_DEVICE" # for hibernation
+  RESUME_DEVICE="resume=$RESUME_DEVICE" # for hibernation
   RESUME_OFFSET="resume_offset=$RESUME_OFFSET" # when swap is a swapfile
   OTHER_PARAMETERS="zswap.enabled=0" # disable zswap,  add snd_intel_dspcfg.dsp_driver=1 for enable audio intel driver, add ibt=off for run virtualbox
   KERNEL_PARAMETERS="$DEVICE,$DISABLE_WORKQUEUE $ROOT_DEVICE rw $ROOT_FLAGS $RESUME_DEVICE $RESUME_OFFSET $OTHER_PARAMETERS"
