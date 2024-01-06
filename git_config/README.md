@@ -1,6 +1,11 @@
 comandos interessantes:
 -----------------------
 
+### worktrees
+- `git worktree add caminho_do_novo_worktree -b nome_da_nova_branch`: cria uma copia vinculada do repositorio no caminho especificado e essa cria uma nova branch nessa nova copia vinculada
+- `git worktree add caminho_do_novo_worktree`: cria uma copia vinculada do repositorio no caminho especificado
+- `git worktree remove caminho_do_novo_worktree`: deleta a copia vinculada do repositorio
+
 ### submodulos git
 - `git clone --depth 1 --recursive --shallow-submodules`: clone superficial do repo e clone superficial de todos os submodulos
 - `git clone --recursive url_do_repo`: clonar um repo e clontar tambem todos os submodulos dele
