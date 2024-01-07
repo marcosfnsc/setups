@@ -183,7 +183,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
   cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
 
   cp arch_install.sh /mnt
-  ARCHROOT_ENVIRON=1; STORAGE_DEVICE=$DEVICE_PATH_PART2; ROOT_DEVICE=$DEVICE_CONTAINER; RESUME_DEVICE=$DEVICE_CONTAINER; arch-chroot /mnt ./arch_install.sh
+  ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 ROOT_DEVICE=$DEVICE_CONTAINER RESUME_DEVICE=$DEVICE_CONTAINER arch-chroot /mnt ./arch_install.sh
 
 else
   # if variable exists
