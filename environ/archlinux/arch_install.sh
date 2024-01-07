@@ -61,7 +61,7 @@ mount_partion_and_subvolumes() {
   mount -o ${mount_options},subvol=@ $device_container $mount_point
   mkdir -p $mount_point/{boot,var/lib/docker,home,var/lib/libvirt,var/log,.snapshots,.swap,tmp}
 
-  mount $device_boot /mnt/boot
+  mount -o fmask=0077,dmask=0077 $device_boot /mnt/boot
   mount -o ${mount_options},subvol=@docker  $device_container $mount_point/var/lib/docker
   mount -o ${mount_options},subvol=@home    $device_container $mount_point/home
   mount -o ${mount_options},subvol=@libvirt $device_container $mount_point/var/lib/libvirt
