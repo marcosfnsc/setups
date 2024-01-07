@@ -141,6 +141,7 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       DEVICE_PATH=/dev/vda
       DEVICE_PATH_PART1=/dev/vda1
       DEVICE_PATH_PART2=/dev/vda2
+      DEVICE_CONTAINER=/dev/mapper/container
 
       partition_disk $DEVICE_PATH
       encrypt_partition $DEVICE $DEVICE_PATH_PART2
