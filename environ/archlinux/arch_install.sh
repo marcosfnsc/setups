@@ -86,8 +86,30 @@ create_swapfile() {
   swapon $swapfile_path
 }
 
-enable_pacman_parallet_download() {
+other_configs() {
+  create_swapfile /mnt/.swap/swapfile
+
+  mkdir /mnt/etc
+  genfstab -U /mnt > /mnt/etc/fstab
+
+  reflector \
+    --latest 20 \
+    --protocol http \
+    --protocol https \
+    --sort rate \
+    --save /etc/pacman.d/mirrorlist \
+    --verbose
   sed -E 's/^#ParallelDownloads.+$/ParallelDownloads = 10/' -i /etc/pacman.conf
+  yes | pacstrap \
+    /mnt \
+    base \
+    btrfs-progs \
+    intel-ucode \
+    linux \
+    linux-firmware \
+    networkmanager
+  cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
+  cp arch_install.sh /mnt
 }
 
 if [[ ! -v ARCHROOT_ENVIRON ]] ; then
@@ -116,6 +138,8 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       mkfs.btrfs $DEVICE_CONTAINER
       create_btrfs_subvolumes $DEVICE_CONTAINER /mnt
       mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_CONTAINER /mnt
+      other_configs
+      ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 ROOT_DEVICE=$DEVICE_CONTAINER RESUME_DEVICE=$DEVICE_CONTAINER arch-chroot /mnt ./arch_install.sh
       ;;
 
     2) # "bare-metal dual boot" target
@@ -134,6 +158,8 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       mkfs.btrfs $DEVICE_PATH_PART2
       create_btrfs_subvolumes $DEVICE_PATH_PART2 /mnt
       mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_PATH_PART2 /mnt
+      other_configs
+      ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 ROOT_DEVICE=$DEVICE_CONTAINER RESUME_DEVICE=$DEVICE_CONTAINER arch-chroot /mnt ./arch_install.sh
       ;;
 
     4) # "vm with encrypt" target
@@ -151,6 +177,8 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       mkfs.btrfs $DEVICE_CONTAINER
       create_btrfs_subvolumes $DEVICE_CONTAINER /mnt
       mount_partion_and_subvolumes $DEVICE_PATH_PART1 $DEVICE_CONTAINER /mnt
+      other_configs
+      ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 ROOT_DEVICE=$DEVICE_CONTAINER RESUME_DEVICE=$DEVICE_CONTAINER arch-chroot /mnt ./arch_install.sh
       ;;
 
     *)
@@ -158,32 +186,6 @@ if [[ ! -v ARCHROOT_ENVIRON ]] ; then
       exit
       ;;
   esac
-
-  create_swapfile /mnt/.swap/swapfile
-
-  mkdir /mnt/etc
-  genfstab -U /mnt > /mnt/etc/fstab
-
-  enable_pacman_parallet_download
-  reflector \
-    --latest 20 \
-    --protocol http \
-    --protocol https \
-    --sort rate \
-    --save /etc/pacman.d/mirrorlist \
-    --verbose
-  yes | pacstrap \
-    /mnt \
-    base \
-    btrfs-progs \
-    intel-ucode \
-    linux \
-    linux-firmware \
-    networkmanager
-  cat /etc/pacman.d/mirrorlist > /mnt/etc/pacman.d/mirrorlist
-
-  cp arch_install.sh /mnt
-  ARCHROOT_ENVIRON=1 STORAGE_DEVICE=$DEVICE_PATH_PART2 ROOT_DEVICE=$DEVICE_CONTAINER RESUME_DEVICE=$DEVICE_CONTAINER arch-chroot /mnt ./arch_install.sh
 
 else
   # if variable exists
