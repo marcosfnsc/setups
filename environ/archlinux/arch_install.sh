@@ -85,13 +85,16 @@ create_swapfile() {
   mkswap $swapfile_path
   swapon $swapfile_path
 }
+enable_pacman_parallet_download() {
+  sed -E 's/^#ParallelDownloads.+$/ParallelDownloads = 10/' -i /etc/pacman.conf
+}
 
 other_configs() {
   create_swapfile /mnt/.swap/swapfile
 
   mkdir /mnt/etc
   genfstab -U /mnt > /mnt/etc/fstab
-
+  enable_pacman_parallet_download
   reflector \
     --latest 20 \
     --protocol http \
