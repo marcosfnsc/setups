@@ -45,10 +45,10 @@ create_btrfs_subvolumes() {
   btrfs subvolume create $mount_point/@docker
   btrfs subvolume create $mount_point/@home
   btrfs subvolume create $mount_point/@libvirt
-  btrfs subvolume create $mount_point/@log
   btrfs subvolume create $mount_point/@snapshots
   btrfs subvolume create $mount_point/@swap
   btrfs subvolume create $mount_point/@tmp
+  btrfs subvolume create $mount_point/@var_log
   umount $mount_point
 }
 
@@ -65,8 +65,8 @@ mount_partion_and_subvolumes() {
   mount -o ${mount_options},subvol=@docker  $device_container $mount_point/var/lib/docker
   mount -o ${mount_options},subvol=@home    $device_container $mount_point/home
   mount -o ${mount_options},subvol=@libvirt $device_container $mount_point/var/lib/libvirt
-  mount -o ${mount_options},subvol=@log     $device_container $mount_point/var/log
   mount -o ${mount_options},subvol=@tmp     $device_container $mount_point/tmp
+  mount -o ${mount_options},subvol=@var_log $device_container $mount_point/var/log
   mount -o noatime,subvol=@swap             $device_container $mount_point/.swap
   mount -o subvol=@snapshots                $device_container $mount_point/.snapshots
 
