@@ -1,6 +1,12 @@
 comandos interessantes:
 -----------------------
 
+### pacotes git
+- `git bundle create nome_do_arquivo.bundle --all`: permite criar um arquivo compactado do repositorio, o parametro `--all` indica que é para capturar todos os dados como branches e tags 
+- `git bundle create nome_do_arquivo.bundle -5 main`: caso seja um repo grande e deseja criar um pacote de apenas uma certa parte, esse comando cria a partir dos 5 ultimos commits da branch `main`
+- `git clone nome_do_arquivo.bundle`: clonar repo a partir de um pacote git
+- `git pull nome_do_arquivo.bundle`: puxar a partir de um pacote git
+
 ### worktrees
 - `git worktree add caminho_do_novo_worktree -b nome_da_nova_branch`: cria uma copia vinculada do repositorio no caminho especificado e essa cria uma nova branch nessa nova copia vinculada
 - `git worktree add caminho_do_novo_worktree`: cria uma copia vinculada do repositorio no caminho especificado
@@ -58,6 +64,7 @@ comandos interessantes:
 - `git config --list`: mostra as configurações do repositorio onde foi executado esse comando
 - `git diff branch1:branch2 -- nome_do_arquivo`: mostra as diferenças em um determinado arquivo
 - `git diff branch1:branch2`: mostra as diferenças entre as duas branches especificadas
+- `git init --bare`: criar um repo local especial para usar como repo central, um repo local para usar como repo remoto
 - `git log --grep "string`: procurar string nos textos dos commits
 - `git log -p -G my_func`: procurar string nos textos dos diffs de commit
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
