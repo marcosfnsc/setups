@@ -20,6 +20,7 @@
 * <kbd>g</kbd><kbd>u</kbd><kbd>u</kbd> no modo normal: mudar todas as palavras da linha para minusculas
 * <kbd>g</kbd><kbd>~</kbd><kbd>i</kbd><kbd>w</kbd> no modo normal: alterna entre maiusculas e minusculas as letras das palavras
 * <kbd>I</kbd> no modo normal: atalho para <kbd>^</kbd><kbd>i</kbd>
+* <kbd>J</kbd> no modo normal: junta a linha atual com a proxima linha
 * <kbd>o</kbd> no modo normal: insere uma linha abaixo, move o cursos para nova linha e entra no modo insert
 * <kbd>O</kbd> no modo normal: insere uma linha acima, move o cursos para nova linha e entra no modo insert
 * <kbd>R</kbd> no modo normal: entra no modo replace
