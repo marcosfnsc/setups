@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 APPS_INSTALL=(
   android-tools # adb and fastboot
   ark
@@ -27,7 +29,7 @@ APPS_INSTALL=(
   kid3-qt
   kitty
   konsole
-  krunner
+  krunner5
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
   lsof
