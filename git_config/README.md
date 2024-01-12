@@ -38,7 +38,7 @@ comandos interessantes e dicas:
 ### historico do git
 - `git clone --depth 1 url_do_repo --no-single-branch`: por padrão o clone superficial so baixa uma branch, com esse subcomando permite baixar tambem as outras branches especificando o nivel de profundade para todas elas
 - `git clone --depth 1 url_do_repo`: permite realizar um clone superficial onde baixa apenas os commits mais recentes e não todo o historico, o `1` refere ao nivel de profundidade e pode trocado por valores positivos mais altos
-- `git filter-branch --index-filter 'git rm --cached --ignore-unmatch path/to/file' --tag-name-filter cat -- --all`: remove um determinado arquivo do historico do git, faz rebase do historico mas não cria novos commits, aproveita os dados que estavam, mais informações em https://stackoverflow.com/a/8741530
+- `git filter-branch --index-filter 'git rm --cached --ignore-unmatch path/to/file' --tag-name-filter cat -- --all && git push --force --all`: remove um determinado arquivo do historico do git, faz rebase do historico mas não cria novos commits, aproveita os dados que estavam, mais informações em https://stackoverflow.com/a/8741530
 - `git pull --unshallow`: ao clonar um repo no modo superficial, esse comando permite baixar todo o historico como um clone normal
 - `git rebase -i --root`: realizar rebase no modo interativo, `--root` quer dizer para realizar rebase em todos os commits
 
@@ -46,6 +46,7 @@ comandos interessantes e dicas:
 - `git log --diff-filter=A --summary | grep 'create mode'`: mostra todos os arquivos que foram adicionados ao historico do git, esse subcomando `--diff-filter=` possui muitas opções e a saida indica os modos de cada ação sobre os arquivos (ex: create, modified etc), mais informações em [doc git](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---diff-filterACDMRTUXB82308203)
 - `git log --follow nome_do_arquivo`: mostra todos os commits referentes ao um determinado arquivo
 - `git log --oneline --graph`: mostrar o log com uma representação das branches, o `--oneline` serve para resumir os dados mostrados dos commits
+- `git log -p nome_do_arquivo`: mostra os logs em relação a um arquivo especifico
 - `git log branch1:branch2 -- nome_do_arquivo`: mostra as os commits que diferem uma branch da outra em relação a um determinado arquivo
 - `git log branch1:branch2`: mostra as os commits que diferem uma branch da outra
 - `git shortlog -sn`: classifica todos os contribuidores com base na contagem de commits
