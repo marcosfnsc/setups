@@ -1,8 +1,8 @@
-comandos interessantes:
+comandos interessantes e dicas:
 -----------------------
 
 ### pacotes git
-- `git bundle create nome_do_arquivo.bundle --all`: permite criar um arquivo compactado do repositorio, o parametro `--all` indica que é para capturar todos os dados como branches e tags 
+- `git bundle create nome_do_arquivo.bundle --all`: permite criar um arquivo compactado do repositorio, o parametro `--all` indica que é para capturar todos os dados como branches e tags
 - `git bundle create nome_do_arquivo.bundle -5 main`: caso seja um repo grande e deseja criar um pacote de apenas uma certa parte, esse comando cria a partir dos 5 ultimos commits da branch `main`
 - `git clone nome_do_arquivo.bundle`: clonar repo a partir de um pacote git
 - `git pull nome_do_arquivo.bundle`: puxar a partir de um pacote git
@@ -73,3 +73,10 @@ comandos interessantes:
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
 - `GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:1080 %h %p"' git subcomando_git`: configuração para usar o git via proxy socks5
+
+### adicionar arquivo/alteração ao ultimo commit:
+```console
+git add .
+git commit --amend --no-edit
+```
+> remover o parametro `--no-edit` permite editar a mensagem do ultimo commit
