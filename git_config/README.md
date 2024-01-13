@@ -7,6 +7,12 @@ comandos interessantes e dicas:
 - `git clone nome_do_arquivo.bundle`: clonar repo a partir de um pacote git
 - `git pull nome_do_arquivo.bundle`: puxar a partir de um pacote git
 
+### git stash
+- `git stash list`: lista os os "stashes" ativos no momento
+- `git stash pop`: remove o stash mais recente da pilha e aplica as alterações nos arquivos
+- `git stash push`: envia novas alterações de arquivos rastreados para a "area de trabalho" do stash
+- `git stash`: atalho para `git stash push`
+
 ### worktrees
 - `git worktree add caminho_do_novo_worktree -b nome_da_nova_branch`: cria uma copia vinculada do repositorio no caminho especificado e essa cria uma nova branch nessa nova copia vinculada
 - `git worktree add caminho_do_novo_worktree`: cria uma copia vinculada do repositorio no caminho especificado
