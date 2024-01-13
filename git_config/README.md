@@ -8,9 +8,19 @@ comandos interessantes e dicas:
 - `git pull nome_do_arquivo.bundle`: puxar a partir de um pacote git
 
 ### git stash
+- `git stash apply numero_do_stash`: aplica as alterações nos arquivos do stash especificado mas sem remover ele da "area de trabalho" do stash
+- `git stash apply`: aplica as alterações nos arquivos do stash mais recente mas sem remover ele da "area de trabalho" do stash
+- `git stash clear`: remove o stash especifico mas não aplica as alterações no arquivos
+- `git stash drop numero_do_stash`: remove o stash especifico mas não aplica as alterações no arquivos
+- `git stash drop`: remove o stash mais recente mas não aplica as alterações no arquivos
 - `git stash list`: lista os os "stashes" ativos no momento
+- `git stash pop numero_do_stash`: remove o stash especificado e aplica as alterações nos arquivos
 - `git stash pop`: remove o stash mais recente da pilha e aplica as alterações nos arquivos
-- `git stash push`: envia novas alterações de arquivos rastreados para a "area de trabalho" do stash
+- `git stash push nome_do_arquivo`: selecionar um arquivo em especifico para ser enviado para o stash
+- `git stash push`: envia todas as novas alterações de arquivos rastreados para a "area de trabalho" do stash
+- `git stash save "uma descrição simples"`: permite criar uma descrição que será listada no comando `git stash list`
+- `git stash show -p numero_do_stash`: mostra um diff das alterações de cada arquivo guardado em um determinado "stash"
+- `git stash show numero_do_stash`: permite ver quais arquivos estão guardados em um determinado "stash"
 - `git stash`: atalho para `git stash push`
 
 ### worktrees
