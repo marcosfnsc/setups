@@ -21,6 +21,7 @@ packages_list=(
   rclone
   ripgrep
   rsync
+  termux-api
   tmux
   tree
   zsh
