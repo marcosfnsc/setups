@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 APPS_INSTALL=(
   android-tools # adb and fastboot
   ark
@@ -12,6 +14,7 @@ APPS_INSTALL=(
   eza
   ffmpeg
   firefox
+  firefox-developer-edition
   firewalld
   flameshot
   flatpak
@@ -26,9 +29,10 @@ APPS_INSTALL=(
   kid3-qt
   kitty
   konsole
-  krunner
+  krunner5
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
+  lsof
   man-db
   man-pages
   neofetch
@@ -63,6 +67,7 @@ APPS_INSTALL=(
   spectacle
   sshfs # for the kdeconnect
   sudo
+  thermald # for CPUs intel
   tmux
   tree
   unzip
@@ -80,6 +85,7 @@ systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
 systemctl enable sddm
+systemctl enable thermald # for CPUs intel
 
 systemctl mask lvm2-monitor.service   # I will not use lvm2
 
