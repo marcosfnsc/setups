@@ -86,6 +86,10 @@ comandos interessantes e dicas:
 - `git log -p -G my_func`: procurar string nos textos dos diffs de commit
 - `git pull --rebase`: usado para sobrescrever repo local com alterações do repo remoto apos um rebase
 - `git push -u origin nome_da_branch`: dar push em uma branch pela primeira vez, esse parametro `-u` é um atalho para `--set-upstream`
+- `git reset --hard hash_do_commit`: remove o commit referente ao hash, o parametro `--hard` remove os commits e alterações nos arquivos, deixam o repositorio em um estado antes dos tais commits
+- `git reset --hard HEAD~N`: remove commits `N` contando do mais recente e voltando, o parametro `--hard` remove os commits e alterações nos arquivos, deixam o repositorio em um estado antes dos tais commits
+- `git reset --soft hash_do_commit`: remove o commit referente ao hash, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
+- `git reset --soft HEAD~N`: remove commits `N` contando do mais recente e voltando, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
 - `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
