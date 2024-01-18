@@ -74,6 +74,7 @@ comandos interessantes e dicas:
 
 ### outros comandos
 - `git blame nome_do_arquivo`: mostra informações como autor, numero de commit e outras informações para cada linha do ultimo estado do arquivo especificado
+- `git cherry-pick hash_do_commit`: permite copiar um commit de uma outra branch para a branch atual
 - `git commit --allow-empty -m 'Empty commit'`: cria um commit vazio, sem alterações de arquivo, util para acionar pipelines CI/CD
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
 - `git commit -a`: mesmo comportamento de digitar `git add .` e depois `git commit`
