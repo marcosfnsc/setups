@@ -68,6 +68,7 @@ APPS_INSTALL=(
   sshfs # for the kdeconnect
   sudo
   thermald # for CPUs intel
+  time
   tmux
   tree
   unzip
