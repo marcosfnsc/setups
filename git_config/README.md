@@ -102,3 +102,12 @@ git add .
 git commit --amend --no-edit
 ```
 > remover o parametro `--no-edit` permite editar a mensagem do ultimo commit
+
+### mesclar dois repos não relacionados em um unico repo:
+pegar as alterações do repo B e colocar no repo A
+
+##### dentro do repo A executaremos:
+```console
+git remove add -f nome_do_repo_remoto caminho_do_repo_B
+git merge caminho_do_repo_B/branch_do_repo --allow-unrelated-histories
+```
