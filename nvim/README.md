@@ -7,6 +7,7 @@
 * <kbd>a</kbd> no modo normal: entrar no modo insert do lado direito do caractere
 * <kbd>C</kbd>,<kbd>S</kbd> ou <kbd>c</kbd><kbd>c</kbd> no modo normal: exclue o conteúdo da linha atual e entra no modo normal
 * <kbd>c</kbd><kbd>i</kbd><kbd>"</kbd> no modo normal: na linha onde está o cursor, apaga o conteúdo que estiver entre aspas duplas, coloca o curso entre as aspas e entre no modo insert onde está o cursor
+* <kbd>c</kbd><kbd>i</kbd><kbd>t</kbd> no modo normal: na linha onde está o cursor em um documento xml ou html, deleta o valor de uma tag e entra no modo insert
 * <kbd>ctrl</kbd><kbd>a</kbd> no modo normal: incrementa um numero onde o cursor esta localizado
 * <kbd>ctrl</kbd><kbd>x</kbd> no modo normal: decrementa um numero onde o cursor esta localizado
 * <kbd>ctrol</kbd><kbd>r</kbd> no modo normal: refaz as mudanças desfeitas pelo comando <kbd>u</kbd>
