@@ -16,8 +16,8 @@ FLATPAK_FLATHUB=(
   com.github.tchx84.Flatseal # flatseal
   com.rtosta.zapzap          # cliente não oficial do whatssap
   com.spotify.Client         # Spotify
+  com.usebottles.bottles     # bottles
   com.valvesoftware.Steam    # Steam
-  net.lutris.Lutris          # lutris
   org.audacityteam.Audacity  # audacity
   org.telegram.desktop       # telegram
   org.zealdocs.Zeal          # zeal docs
