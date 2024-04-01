@@ -70,6 +70,7 @@ APPS_INSTALL=(
   thermald # for CPUs intel
   time
   tmux
+  traceroute
   tree
   unzip
   usbutils # for get the lsusb command
