@@ -15,3 +15,5 @@
 	prune = true
 [advice]
 	detachedHead = false
+[push]
+	autoSetupRemote = true
