@@ -13,3 +13,5 @@
 	branch = false
 [fetch]
 	prune = true
+[advice]
+	detachedHead = false
