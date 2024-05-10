@@ -8,7 +8,7 @@ set -o errexit
 packages_list=(
   clang
   curl
-  exa
+  eza
   file
   git
   gnupg
