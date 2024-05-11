@@ -18,6 +18,7 @@ packages_list=(
   nodejs
   openssh
   python
+  qrencode
   rclone
   ripgrep
   rsync

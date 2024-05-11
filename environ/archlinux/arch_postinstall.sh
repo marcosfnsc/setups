@@ -59,6 +59,7 @@ APPS_INSTALL=(
   plasma-wayland-session # for wayland session
   power-profiles-daemon
   qbittorrent
+  qrencode
   rclone
   reflector
   ripgrep
