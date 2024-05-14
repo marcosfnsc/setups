@@ -237,6 +237,7 @@ require('lazy').setup({
     },
     {
         'simrat39/rust-tools.nvim',
+        cond = os.getenv("TERMUX_VERSION") == nil,
         config = function() require('rust-tools').setup() end
     },
     {
