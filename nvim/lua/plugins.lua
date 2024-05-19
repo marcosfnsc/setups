@@ -294,6 +294,7 @@ require('lazy').setup({
     {
         'akinsho/bufferline.nvim',
         version = '*',
+        commit = "9ae49d71c84b42b91795f7b7cead223c6346e774",
         config = function()
             require('bufferline').setup {
                 options = {
