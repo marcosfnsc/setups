@@ -9,6 +9,7 @@ APPS_INSTALL=(
   calibre # manage ebooks
   clamav
   curl
+  docker-buildx
   dolphin
   earlyoom
   eza
