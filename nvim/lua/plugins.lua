@@ -28,6 +28,12 @@ require('lazy').setup({
                     hl.LineNr = {
                         fg = colors.white
                     }
+                    hl.LineNrAbove = {
+                        fg = colors.white
+                    }
+                    hl.LineNrBelow = {
+                        fg = colors.white
+                    }
                 end
             })
             vim.cmd[[colorscheme tokyonight]]
