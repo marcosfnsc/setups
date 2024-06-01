@@ -62,6 +62,7 @@ comandos interessantes e dicas:
 ### logs
 - `git log --diff-filter=A --summary | grep 'create mode'`: mostra todos os arquivos que foram adicionados ao historico do git, esse subcomando `--diff-filter=` possui muitas opções e a saida indica os modos de cada ação sobre os arquivos (ex: create, modified etc), mais informações em [doc git](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---diff-filterACDMRTUXB82308203)
 - `git log --follow nome_do_arquivo`: mostra todos os commits referentes ao um determinado arquivo
+- `git log --name-status`: mostra o log dos commits junto com o nome dos arquivos associados ao commit
 - `git log --oneline --graph`: mostrar o log com uma representação das branches, o `--oneline` serve para resumir os dados mostrados dos commits
 - `git log --reverse`: mostra o log dos commits em ordem reversa
 - `git log -p nome_do_arquivo`: mostra os logs em relação a um arquivo especifico
