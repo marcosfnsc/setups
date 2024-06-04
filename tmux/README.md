@@ -44,5 +44,6 @@ comandos dentro do tmux:
 comandos da cli:
 ----------------
 * `tmux attach -t nome_da_sessao`: permite entrar dentro de uma determinada sessão do tmux
+* `tmux kill-session -a -t nome_da_sessao`: encerra todas as sessões menos a definida em `nome_da_sessao`
 * `tmux kill-session -t nome_da_sessao`: encerra uma sessão
 * `tmux new -d -s nome_da_sessao`: permite criar uma nova sessão sem entrar dentro dela, util quando se ja está em uma sessão do tmux e deseja criar outra
