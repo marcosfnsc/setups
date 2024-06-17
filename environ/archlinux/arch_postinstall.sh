@@ -66,6 +66,7 @@ APPS_INSTALL=(
   ripgrep
   rsync
   sddm # lock screen
+  shellcheck
   spectacle
   sshfs # for the kdeconnect
   sudo
