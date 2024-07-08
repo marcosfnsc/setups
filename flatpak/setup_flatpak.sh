@@ -14,6 +14,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 FLATPAK_FLATHUB=(
   com.discordapp.Discord     # Discord
   com.github.tchx84.Flatseal # flatseal
+  com.protonvpn.www          # cliente não oficial do protonvpn
   com.rtosta.zapzap          # cliente não oficial do whatssap
   com.spotify.Client         # Spotify
   com.usebottles.bottles     # bottles
