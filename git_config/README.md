@@ -48,10 +48,16 @@ comandos interessantes e dicas:
 - `git switch nome da branch`: alterna para a branch especificada
 
 ### gerenciamento de tags
+- `git checkout nome_da_tag`: fazer checkout para o commit apontado pela tag
+- `git push --tags`: envia todas as tags para o repo remoto
+- `git push origin nome_da_tag`: envia uma determinada tag para o repo remoto
 - `git show nome_da_tag`: mostra informações de uma determinada tag
 - `git tag -a nome_da_tag`: cria uma annotated tag e abre o editor padrão para escrever a mensagem da tag
+- `git tag -d nome_da_tag`: excluir a tag
 - `git tag nome_da_tag`: cria uma tag leve
 - `git tag`: lista as tags
+> * por padrão, as tags git não são enviadas para o repo remoto via `git push`, precisando explicitamente executar o comando que as tags sejam enviadas
+> * tags leves são tags que apenas apontam para um determinado commit, annotated tags em vez disso possuem muito mais dados além das tags leves como o nome do autor da tag, data de criação e uma mensagem escrita pelo autor na hora da criação da tag
 
 ### historico do git
 - `git clone --depth 1 url_do_repo --no-single-branch`: por padrão o clone superficial so baixa uma branch, com esse subcomando permite baixar tambem as outras branches especificando o nivel de profundade para todas elas
