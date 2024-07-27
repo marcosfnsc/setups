@@ -48,8 +48,9 @@ comandos interessantes e dicas:
 - `git switch nome da branch`: alterna para a branch especificada
 
 ### gerenciamento de tags
-- `git show v1.0`: mostra informações de uma determinada tag
-- `git tag nome da tag`: cria um tag leve local
+- `git show nome_da_tag`: mostra informações de uma determinada tag
+- `git tag -a nome_da_tag`: cria uma annotated tag e abre o editor padrão para escrever a mensagem da tag
+- `git tag nome_da_tag`: cria uma tag leve
 - `git tag`: lista as tags
 
 ### historico do git
