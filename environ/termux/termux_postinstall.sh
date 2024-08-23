@@ -22,6 +22,8 @@ packages_list=(
   rclone
   ripgrep
   rsync
+  rust
+  rust-analyzer
   termux-api
   tmux
   tree
