@@ -137,7 +137,7 @@ require('lazy').setup({
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         config = function()
-            require('mason').setup{}
+            require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
             require('lspconfig').intelephense.setup{}
             require('lspconfig').jdtls.setup{}
@@ -243,7 +243,6 @@ require('lazy').setup({
     },
     {
         'simrat39/rust-tools.nvim',
-        cond = os.getenv("TERMUX_VERSION") == nil,
         config = function() require('rust-tools').setup() end
     },
     {
