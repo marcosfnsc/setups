@@ -242,8 +242,9 @@ require('lazy').setup({
         end
     },
     {
-        'simrat39/rust-tools.nvim',
-        config = function() require('rust-tools').setup() end
+        'mrcjkb/rustaceanvim',
+        version = '^5', -- Recommended
+        lazy = false, -- This plugin is already lazy
     },
     {
         'akinsho/flutter-tools.nvim',
