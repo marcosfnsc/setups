@@ -7,9 +7,9 @@ fi
 export ZSH=~/.oh-my-zsh
 ZSH_THEME=agnoster
 plugins=(
-  git
   docker
   docker-compose
+  git
   kubectl
 )
 source $ZSH/oh-my-zsh.sh
