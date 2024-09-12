@@ -144,7 +144,7 @@ require('lazy').setup({
             require('lspconfig').lua_ls.setup{}
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
-            require('lspconfig').tsserver.setup{}
+            require('lspconfig').ts_ls.setup{}
             require('lspconfig').volar.setup{}
         end
     },
@@ -155,7 +155,7 @@ require('lazy').setup({
                 'intelephense',
                 'jdtls',
                 'pyright',
-                'tsserver',
+                'ts_ls',
                 'volar',
             }
 
