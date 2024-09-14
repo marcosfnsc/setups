@@ -145,7 +145,13 @@ require('lazy').setup({
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
             require('lspconfig').ts_ls.setup{}
-            require('lspconfig').volar.setup{}
+            require('lspconfig').volar.setup({
+                init_options = {
+                    typescript = {
+                        tsdk = os.getenv('HOME') .. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/"
+                    },
+                },
+            })
         end
     },
     {
