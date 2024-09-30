@@ -9,6 +9,7 @@ packages_list=(
   clang
   curl
   eza
+  ffmpeg
   file
   git
   gnupg
@@ -33,6 +34,8 @@ packages_list=(
 yes | pkg up
 yes | pkg install x11-repo # for keepassxc
 yes | pkg install ${packages_list[@]} -y
+
+pip install yt-dlp
 
 git clone --depth 1 https://github.com/marcosfnsc/setups.git
 path_dir_setups="$(pwd)/setups"
