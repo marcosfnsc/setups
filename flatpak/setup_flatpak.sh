@@ -12,16 +12,17 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 
 # install flatpak apps
 FLATPAK_FLATHUB=(
-  com.discordapp.Discord     # Discord
-  com.github.tchx84.Flatseal # flatseal
-  com.protonvpn.www          # cliente não oficial do protonvpn
-  com.rtosta.zapzap          # cliente não oficial do whatssap
-  com.spotify.Client         # Spotify
-  com.usebottles.bottles     # bottles
-  com.valvesoftware.Steam    # Steam
-  org.audacityteam.Audacity  # audacity
-  org.telegram.desktop       # telegram
-  org.zealdocs.Zeal          # zeal docs
+  com.discordapp.Discord      # Discord
+  com.github.tchx84.Flatseal  # flatseal
+  com.protonvpn.www           # cliente não oficial do protonvpn
+  com.rtosta.zapzap           # cliente não oficial do whatssap
+  com.spotify.Client          # Spotify
+  com.usebottles.bottles      # bottles
+  com.valvesoftware.Steam     # Steam
+  org.audacityteam.Audacity   # audacity
+  org.localsend.localsend_app # localsend
+  org.telegram.desktop        # telegram
+  org.zealdocs.Zeal           # zeal docs
 )
 
 flatpak install -y flathub ${FLATPAK_FLATHUB[@]} --user
