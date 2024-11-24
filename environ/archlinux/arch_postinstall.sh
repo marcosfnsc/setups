@@ -6,6 +6,7 @@ APPS_INSTALL=(
   android-tools # adb and fastboot
   ark
   base-devel # for yay
+  bubblewrap
   calibre # manage ebooks
   clamav
   curl
