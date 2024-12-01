@@ -25,6 +25,7 @@ packages_list=(
   rsync
   rust
   rust-analyzer
+  socat
   termux-api
   tmux
   tree
