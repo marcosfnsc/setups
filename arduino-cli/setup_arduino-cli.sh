@@ -9,7 +9,9 @@ curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.
 
 # install core plataform support
 ~/.arduino-cli_bin/arduino-cli config init
-~/.arduino-cli_bin/arduino-cli config set board_manager.additional_urls http://arduino.esp8266.com/stable/package_esp8266com_index.json https://dl.espressif.com/dl/package_esp32_index.json
+~/.arduino-cli_bin/arduino-cli config set board_manager.additional_urls \
+  http://arduino.esp8266.com/stable/package_esp8266com_index.json \
+  https://dl.espressif.com/dl/package_esp32_index.json
 ~/.arduino-cli_bin/arduino-cli core update-index
 ~/.arduino-cli_bin/arduino-cli core install arduino:avr
 ~/.arduino-cli_bin/arduino-cli core install esp32:esp32
