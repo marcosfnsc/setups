@@ -38,8 +38,9 @@ setopt NO_EXTENDED_HISTORY # disable timestamp in history
 setopt NO_SHARE_HISTORY # disable timestamp in history
 setopt HIST_REDUCE_BLANKS # Remove superfluous blanks from each command line being added to the history list.
 
-[ -d ~/.cargo/ ]   && export PATH=~/.cargo/bin:$PATH   # rust environment
-[ -d ~/.flutter/ ] && export PATH=~/.flutter/bin:$PATH # flutter environment
+[ -d ~/.arduino-cli_bin/ ] && export PATH=~/.arduino-cli_bin:$PATH # arduino-cli environment
+[ -d ~/.cargo/ ]           && export PATH=~/.cargo/bin:$PATH       # rust environment
+[ -d ~/.flutter/ ]         && export PATH=~/.flutter/bin:$PATH     # flutter environment
 
 ## fzf config
 if [ -f ~/.fzf.zsh ]; then
