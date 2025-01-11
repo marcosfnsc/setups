@@ -14,6 +14,8 @@ packages_list=(
   git
   gnupg
   keepassxc
+  man
+  manpages
   neovim
   nmap
   nodejs
@@ -29,6 +31,7 @@ packages_list=(
   termux-api
   tmux
   tree
+  xxd
   zsh
 )
 
