@@ -38,14 +38,15 @@ comandos interessantes e dicas:
 
 ### gerenciamento de branches
 - `git branch -a`: listar todas as branches, inclusive remotas
-- `git branch -d nome da branch`: deletar branch local
-- `git branch -m novo nome da branch`: mudar o nome da branch atual para outro nome
-- `git checkout -b nome da branch`: cria uma nova branch e alterna para ela
+- `git branch -d nome_da_branch`: deletar branch local
+- `git branch -m novo_nome_da_branch`: mudar o nome da branch atual para outro nome
+- `git checkout -b nome_da_branch`: cria uma nova branch e alterna para ela
 - `git clone --branch nome_da_branch url_do_repo`: clonar uma branch especifica de um repo
 - `git fetch -p`: remove referencias de branches que não existem no repo remoto, `-p` é a versão curta de `--prune`
+- `git merge --squash nome_da_branch`: puxa as alterações de outra branch para a branch atual, e em seguida em so commitar para todas as alteraçoes da outra branch estarem neste novo commit
 - `git push origin --delete nome_da_branch`: apaga a branch remota
-- `git switch -c nome da branch`: cria uma nova branch e alterna para ela
-- `git switch nome da branch`: alterna para a branch especificada
+- `git switch -c nome_da_branch`: cria uma nova branch e alterna para ela
+- `git switch nome_da_branch`: alterna para a branch especificada
 
 ### gerenciamento de tags
 - `git checkout nome_da_tag`: fazer checkout para o commit apontado pela tag
