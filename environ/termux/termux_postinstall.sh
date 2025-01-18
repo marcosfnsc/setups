@@ -19,6 +19,7 @@ packages_list=(
   neovim
   nmap
   nodejs
+  openjdk-21
   openssh
   python
   qrencode
