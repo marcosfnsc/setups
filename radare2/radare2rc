@@ -1,1 +1,1 @@
-e bin.relocs.apply=true
+e bin.relocs.apply=false
