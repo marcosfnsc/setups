@@ -28,6 +28,7 @@ packages_list=(
   rsync
   rust
   rust-analyzer
+  shellcheck
   socat
   termux-api
   tmux
