@@ -122,3 +122,35 @@ pegar as alterações do repo B e colocar no repo A
 git remove add -f nome_do_repo_remoto caminho_do_repo_B
 git merge caminho_do_repo_B/branch_do_repo --allow-unrelated-histories
 ```
+
+### commits parciais:
+permite fazer commits apenas de algumas partes das alterações no arquivo e não o arquivo todo
+```console
+git add --patch nome_do_arquivo
+```
+> `--patch` pode ser abreviado para `-p`
+
+ao executar esse comando, aparecerá um diff com as seguintes opções:
+```console
+Stage this hunk [y,n,q,a,d,k,K,j,J,g,/,s,e,?]?
+```
+
+o signifiado de cada opção são esses:
+```console
+y - stage this hunk
+n - do not stage this hunk
+q - quit; do not stage this hunk or any of the remaining ones
+a - stage this hunk and all later hunks in the file
+d - do not stage this hunk or any of the later hunks in the file
+g - select a hunk to go to
+/ - search for a hunk matching the given regex
+j - leave this hunk undecided, see next undecided hunk
+J - leave this hunk undecided, see next hunk
+k - leave this hunk undecided, see previous undecided hunk
+K - leave this hunk undecided, see previous hunk
+s - split the current hunk into smaller hunks
+e - manually edit the current hunk
+? - print help
+```
+
+apos isso basta apenas commitar
