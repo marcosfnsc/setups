@@ -38,6 +38,7 @@ APPS_INSTALL=(
   lsof
   man-db
   man-pages
+  ncdu
   neofetch
   neomutt # email client in terminal
   neovim
