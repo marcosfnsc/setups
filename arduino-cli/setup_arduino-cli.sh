@@ -20,6 +20,9 @@ $ARDUINO_PATH/arduino-cli core install arduino:avr
 $ARDUINO_PATH/arduino-cli core install esp32:esp32
 $ARDUINO_PATH/arduino-cli core install esp8266:esp8266
 
+echo "cores installed"
+$ARDUINO_PATH/arduino-cli core list
+
 # install libraries
 ## AsyncTCP for esp32
 ## ESPAsyncTCP for esp8266
