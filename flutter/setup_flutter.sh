@@ -10,5 +10,4 @@ git clone --depth 1 --branch stable https://github.com/flutter/flutter.git ~/.fl
 cd ~/.flutter/bin
 ./flutter precache
 ./flutter config --no-analytics # desativar coleta de dados do google
-./flutter config --android-sdk ~/code_space/android
 ./flutter config --no-enable-linux-desktop

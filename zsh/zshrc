@@ -54,9 +54,8 @@ if [ -f ~/.nix-profile/etc/profile.d/nix.sh ]; then
 fi
 
 ## android environment
-if [ -d ~/code_space/android ]; then
-  export ANDROID_HOME=$HOME/code_space/android
-  export PATH=$ANDROID_HOME/cmdline-tools/tools/bin/:$PATH
+if [ -d ~/Android/Sdk ]; then
+  export ANDROID_HOME=$HOME/Android/Sdk
   export PATH=$ANDROID_HOME/emulator/:$PATH
   export PATH=$ANDROID_HOME/platform-tools/:$PATH
 fi
