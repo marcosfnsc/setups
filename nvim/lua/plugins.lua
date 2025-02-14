@@ -253,11 +253,12 @@ require('lazy').setup({
         lazy = false, -- This plugin is already lazy
     },
     {
-        'akinsho/flutter-tools.nvim',
+        'nvim-flutter/flutter-tools.nvim',
         dependencies = {
             'nvim-lua/plenary.nvim',
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
+        config = true
     },
     {
         'neovim/nvim-lspconfig',
