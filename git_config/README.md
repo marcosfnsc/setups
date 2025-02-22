@@ -103,6 +103,7 @@ comandos interessantes e dicas:
 - `git reset --soft hash_do_commit`: remove o commit referente ao hash, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
 - `git reset --soft HEAD~N`: remove commits `N` contando do mais recente e voltando, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
 - `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
+- `git checkout hash_do_commit nome_do_arquivo`: recuperar o estado de um arquivo a partir de um determinado commit, e faz isso sem alterar para qual commit o ponteiro HEAD está apontando
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
 - `GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:NUMERO_PORTA_SOCKS5 %h %p"' git subcomando_git`: configuração para usar o git via proxy socks5
