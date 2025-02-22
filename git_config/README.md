@@ -120,7 +120,7 @@ pegar as alterações do repo B e colocar no repo A
 
 ##### dentro do repo A executaremos:
 ```console
-git remove add -f nome_do_repo_remoto caminho_do_repo_B
+git remote add -f nome_do_repo_remoto caminho_do_repo_B
 git merge caminho_do_repo_B/branch_do_repo --allow-unrelated-histories
 ```
 
