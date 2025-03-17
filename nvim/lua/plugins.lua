@@ -139,6 +139,7 @@ require('lazy').setup({
         config = function()
             require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
+            require('lspconfig').gopls.setup{}
             require('lspconfig').intelephense.setup{}
             require('lspconfig').jdtls.setup{}
             require('lspconfig').lua_ls.setup{}
@@ -158,6 +159,7 @@ require('lazy').setup({
         'williamboman/mason-lspconfig.nvim',
         config = function()
             local parsers = {
+                'gopls',
                 'intelephense',
                 'jdtls',
                 'pyright',
@@ -214,6 +216,7 @@ require('lazy').setup({
                     'cmake',
                     'cpp',
                     'css',
+                    'go',
                     'html',
                     'java',
                     'javascript',
