@@ -13,6 +13,7 @@ packages_list=(
   file
   git
   gnupg
+  go
   keepassxc
   man
   manpages

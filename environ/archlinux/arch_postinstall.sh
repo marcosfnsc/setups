@@ -23,6 +23,7 @@ APPS_INSTALL=(
   flatpak
   gcc
   git
+  go
   gwenview
   kamoso
   kate
