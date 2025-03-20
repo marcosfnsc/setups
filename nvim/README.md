@@ -102,7 +102,7 @@
 * <kbd>\`</kbd><kbd>></kbd> no modo normal: ir para o final da ultima seleção
 * <kbd>\`</kbd><kbd>[</kbd> no modo normal: ir para o começo da ultimo trecho copiado
 * <kbd>\`</kbd><kbd>]</kbd> no modo normal: ir para o final da ultimo trecho copiado
-* <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>
+* <kbd>c</kbd><kbd>g</kbd><kbd>n</kbd> no modo normal: ao buscar uma palavra no vim usando o comando <code>/palavra</code>, digitar a combinação de comandos vai deletar a palavra, voce digita algo e muda para o modo normal, em seguida "atualiza" as outras ocorrencias da palavra apertando <kbd>.</kbd>, para pular para proxima ocorrencia sem aplicar as alterações so apertar <kbd>n</kbd>
 * <kbd>control</kbd><kbd>f</kbd> no modo comando: abre uma janela dos comandos executados no modo comando e permite usar os atalhos do modo normal nessa janela, e quando terminar basta apertar enter sobre o comando digitado
 * <kbd>control</kbd><kbd>r</kbd> <kbd>=</kbd> no modo insert: permite escrever expressões matematicas para o vim calcular e o resultado será inserido no lugar do cursor
 * <kbd>ctrol</kbd><kbd>v</kbd> no modo normal: entra no modo visual com seleção em modo bloco
