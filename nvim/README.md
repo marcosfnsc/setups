@@ -165,7 +165,6 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:!comando_externo`: redireciona o buffer para um programa externo e retorna a saida para o buffer atual
 * `:%bd | e# | bd#`: fecha todos os buffers menos o atual
 * `:%s/pattern/"&"/g`: comando de substituição onde `&` assume o valor valor de "pattern"
-* `:%s/pattern//n`: mostra o número de correspondências e o número de linhas em que essas correspondências ocorrem
 * `:%s/pattern/replace/g`: substituir "pattern" por "replace" no arquivo inteiro
 * `:as`: inspeciona o caractere sob o cursor, mostra informações como codigo decimal, hexadecimal e octal do caractere
 * `:b N`: permite alternar para o buffer especificado em N, exemplo: `b 2`
