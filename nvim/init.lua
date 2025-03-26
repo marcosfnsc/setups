@@ -21,6 +21,7 @@ end
 -- 4 spaces of indent for some languages, 2 by default
 vim.cmd([[
 autocmd FileType lua    setlocal shiftwidth=4 tabstop=4
+autocmd FileType php    setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType rust   setlocal shiftwidth=4 tabstop=4
 ]])
