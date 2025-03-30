@@ -326,4 +326,11 @@ require('lazy').setup({
         'folke/trouble.nvim',
         config = function() require('trouble').setup({ icons = false }) end
     },
+{
+        -- default port 5555
+        'barrett-ruth/live-server.nvim',
+        build = 'npm add -g live-server',
+        cmd = { 'LiveServerStart', 'LiveServerStop' },
+        config = function() require('live-server').setup({}) end
+    },
 })
