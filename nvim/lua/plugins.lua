@@ -285,30 +285,11 @@ require('lazy').setup({
         end
     },
     {
-        'kyazdani42/nvim-tree.lua',
-        commit = '8b8d457e07d279976a9baac6bbff5aa036afdc5f', -- adiar atualização da nova api de mapemanetos
+        'nvim-tree/nvim-tree.lua',
         config = function()
-            require('nvim-tree').setup({
-                update_focused_file = {
-                    enable = true,
-                },
-                sort_by = 'case_sensitive',
-                view = {
-                    adaptive_size = true,
-                    mappings = {
-                        list = {
-                            { key = 'h', action = 'open_file' },
-                            { key = 'l', action = 'open_file' },
-                        },
-                    },
-                },
-                renderer = {
-                    group_empty = true,
-                },
-                filters = {
-                    dotfiles = true,
-                },
-            })
+            require('nvim-tree').setup()
+            local api = require('nvim-tree.api')
+            vim.keymap.set('n', 'l', api.node.open.edit)
         end
     },
     {
