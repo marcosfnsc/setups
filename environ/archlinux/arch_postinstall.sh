@@ -23,7 +23,6 @@ APPS_INSTALL=(
   flatpak
   gcc
   git
-  go
   gwenview
   kamoso
   kate
@@ -40,11 +39,9 @@ APPS_INSTALL=(
   man-db
   man-pages
   ncdu
-  neofetch
   neomutt # email client in terminal
   neovim
   networkmanager
-  nmap
   nodejs
   noto-fonts
   noto-fonts-cjk
@@ -78,13 +75,11 @@ APPS_INSTALL=(
   sudo
   thermald # for CPUs intel
   time
-  tmux
   traceroute
   tree
   unzip
   usbutils # for get the lsusb command
   vlc
-  yt-dlp
   zathura
   zathura-pdf-mupdf
   zsh

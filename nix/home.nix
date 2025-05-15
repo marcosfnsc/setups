@@ -6,7 +6,11 @@
   home.stateVersion = "24.11";
 
   home.packages = [
+    pkgs.nmap
     pkgs.yt-dlp
+    pkgs.neofetch
+    pkgs.htop
+    pkgs.tmux
   ];
 
   home.file = {
