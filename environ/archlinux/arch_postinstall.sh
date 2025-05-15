@@ -39,7 +39,6 @@ APPS_INSTALL=(
   man-db
   man-pages
   ncdu
-  neomutt # email client in terminal
   neovim
   networkmanager
   nodejs
@@ -64,10 +63,8 @@ APPS_INSTALL=(
   python-pip
   qbittorrent
   qrencode
-  rclone
   reflector
   ripgrep
-  rsync
   sddm # lock screen
   shellcheck
   spectacle
