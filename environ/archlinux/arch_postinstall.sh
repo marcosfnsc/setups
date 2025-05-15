@@ -73,7 +73,6 @@ APPS_INSTALL=(
   thermald # for CPUs intel
   time
   traceroute
-  tree
   unzip
   usbutils # for get the lsusb command
   vlc

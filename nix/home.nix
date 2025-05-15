@@ -7,12 +7,15 @@
 
   home.packages = [
     #pkgs.curl
+    #pkgs.qbittorrent
     #pkgs.rsync
+    #pkgs.zsh
     pkgs.htop
-    pkgs.rclone
     pkgs.neofetch
     pkgs.nmap
+    pkgs.rclone
     pkgs.tmux
+    pkgs.tree
     pkgs.yt-dlp
   ];
 
