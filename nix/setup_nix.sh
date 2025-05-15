@@ -6,8 +6,14 @@ ln -f nix.conf $HOME/.config/nix/nix.conf
 mkdir -p $HOME/.config/home-manager
 ln -f home.nix $HOME/.config/home-manager/home.nix
 
-nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
-nix-channel --update
-nix-shell '<home-manager>' -A install
+if ! command -v nix &> /dev/null; then
+  sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon # single user installation
+fi
+
+if ! command -v home-manager &> /dev/null; then
+  nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+  nix-channel --update
+  nix-shell '<home-manager>' -A install
+fi
 
 home-manager switch
