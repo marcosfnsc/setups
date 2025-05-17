@@ -137,6 +137,7 @@ require('lazy').setup({
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         config = function()
+            vim.lsp.enable('nixd')
             require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
             require('lspconfig').cssls.setup{}

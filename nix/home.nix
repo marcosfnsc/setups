@@ -12,6 +12,7 @@
     #pkgs.zsh
     pkgs.htop
     pkgs.neofetch
+    pkgs.nixd
     pkgs.nmap
     pkgs.rclone
     pkgs.tmux
