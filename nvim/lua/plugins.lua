@@ -138,6 +138,7 @@ require('lazy').setup({
         build = ':MasonUpdate',
         config = function()
             vim.lsp.enable('nixd')
+            vim.lsp.enable('vue_ls')
             require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
             require('lspconfig').cssls.setup{}
@@ -149,13 +150,6 @@ require('lazy').setup({
             require('lspconfig').pyright.setup{}
             require('lspconfig').texlab.setup{}
             require('lspconfig').ts_ls.setup{}
-            require('lspconfig').volar.setup({
-                init_options = {
-                    typescript = {
-                        tsdk = os.getenv('HOME') .. "/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/"
-                    },
-                },
-            })
         end
     },
     {
@@ -169,7 +163,7 @@ require('lazy').setup({
                 'jdtls',
                 'pyright',
                 'ts_ls',
-                'volar',
+                'vue_ls',
             }
 
             if (os.getenv("TERMUX_VERSION") == nil) then -- check if run in termux
