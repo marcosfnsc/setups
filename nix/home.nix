@@ -3,7 +3,7 @@
 {
   home.username = "marcos";
   home.homeDirectory = "/home/marcos";
-  home.stateVersion = "24.11";
+  home.stateVersion = "25.05";
 
   home.packages = [
     #pkgs.curl
