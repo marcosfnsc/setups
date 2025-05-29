@@ -11,6 +11,7 @@
     #pkgs.rsync
     #pkgs.zsh
     pkgs.htop
+    pkgs.jq
     pkgs.neofetch
     pkgs.nixd
     pkgs.nmap
