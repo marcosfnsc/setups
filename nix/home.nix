@@ -12,10 +12,12 @@
     #pkgs.zsh
     pkgs.htop
     pkgs.jq
+    pkgs.ncdu
     pkgs.neofetch
     pkgs.nixd
     pkgs.nmap
     pkgs.rclone
+    pkgs.skim
     pkgs.tmux
     pkgs.tree
     pkgs.yt-dlp
