@@ -113,7 +113,21 @@ comandos interessantes e dicas:
 git add .
 git commit --amend --no-edit
 ```
-> remover o parametro `--no-edit` permite editar a mensagem do ultimo commit
+
+### clonar todas as branches de um repo
+```console
+git clone url_do_repo
+cd pasta_do_repo
+git fetch --all
+```
+```console
+for branch in $(git branch -r | grep -v '\->'); do
+  git branch --track ${branch#origin/} $branch
+done
+```
+```console
+git pull --all
+```
 
 ### mesclar dois repos não relacionados em um unico repo:
 pegar as alterações do repo B e colocar no repo A
