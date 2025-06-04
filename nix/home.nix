@@ -18,6 +18,7 @@
     pkgs.nmap
     pkgs.rclone
     pkgs.skim
+    pkgs.tinyxxd
     pkgs.tmux
     pkgs.tree
     pkgs.yt-dlp
