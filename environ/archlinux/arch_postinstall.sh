@@ -3,7 +3,6 @@
 set -o errexit
 
 APPS_INSTALL=(
-  android-tools # adb and fastboot
   ark
   base-devel # for yay
   bubblewrap

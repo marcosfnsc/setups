@@ -10,6 +10,7 @@
     #pkgs.qbittorrent
     #pkgs.rsync
     #pkgs.zsh
+    pkgs.android-tools
     pkgs.htop
     pkgs.jq
     pkgs.ncdu
