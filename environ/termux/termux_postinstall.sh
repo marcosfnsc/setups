@@ -6,6 +6,7 @@ set -o errexit
 [ ! -d "$HOME/storage/" ] && termux-setup-storage
 
 packages_list=(
+  binutils # to use the strings command
   clang
   curl
   eza
