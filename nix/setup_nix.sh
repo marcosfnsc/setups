@@ -7,7 +7,7 @@ mkdir -p $HOME/.config/home-manager
 ln -f home.nix $HOME/.config/home-manager/home.nix
 
 if ! command -v nix &> /dev/null; then
-  sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --no-daemon # single user installation
+  sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon # multi user install
 fi
 
 if ! command -v home-manager &> /dev/null; then
