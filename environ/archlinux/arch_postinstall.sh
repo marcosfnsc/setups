@@ -9,11 +9,9 @@ APPS_INSTALL=(
   calibre # manage ebooks
   clamav
   curl
-  dive
   docker-buildx
   dolphin
   earlyoom
-  eza
   ffmpeg
   firefox
   firefox-developer-edition
@@ -34,10 +32,8 @@ APPS_INSTALL=(
   krunner5
   libreoffice-fresh # suite office
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
-  lsof
   man-db
   man-pages
-  ncdu
   neovim
   networkmanager
   nodejs
@@ -63,9 +59,7 @@ APPS_INSTALL=(
   qbittorrent
   qrencode
   reflector
-  ripgrep
   sddm # lock screen
-  shellcheck
   spectacle
   sshfs # for the kdeconnect
   sudo
@@ -73,7 +67,6 @@ APPS_INSTALL=(
   time
   traceroute
   unzip
-  usbutils # for get the lsusb command
   vlc
   zathura
   zathura-pdf-mupdf

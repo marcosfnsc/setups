@@ -7,21 +7,29 @@
 
   home.packages = [
     #pkgs.curl
+    #pkgs.git
+    #pkgs.less
     #pkgs.qbittorrent
+    #pkgs.ripgrep
     #pkgs.rsync
     #pkgs.zsh
     pkgs.android-tools
+    pkgs.dive
+    pkgs.eza
     pkgs.htop
     pkgs.jq
+    pkgs.lsof
     pkgs.ncdu
     pkgs.neofetch
     pkgs.nixd
     pkgs.nmap
     pkgs.rclone
+    pkgs.shellcheck
     pkgs.skim
     pkgs.tinyxxd
     pkgs.tmux
     pkgs.tree
+    pkgs.usbutils # for get the lsusb command
     pkgs.yt-dlp
   ];
 
