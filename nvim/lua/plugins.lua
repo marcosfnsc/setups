@@ -137,12 +137,12 @@ require('lazy').setup({
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         config = function()
+            --require('lspconfig').gopls.setup{}
             vim.lsp.enable('nixd')
             vim.lsp.enable('vue_ls')
             require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
             require('lspconfig').cssls.setup{}
-            require('lspconfig').gopls.setup{}
             require('lspconfig').html.setup{}
             require('lspconfig').intelephense.setup{}
             require('lspconfig').jdtls.setup{}
@@ -156,8 +156,8 @@ require('lazy').setup({
         'williamboman/mason-lspconfig.nvim',
         config = function()
             local parsers = {
+                --'gopls',
                 'cssls',
-                'gopls',
                 'html',
                 'intelephense',
                 'jdtls',
