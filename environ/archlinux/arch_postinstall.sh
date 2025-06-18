@@ -67,6 +67,7 @@ APPS_INSTALL=(
   time
   traceroute
   unzip
+  usbutils # for get the lsusb command
   vlc
   zathura
   zathura-pdf-mupdf

@@ -29,7 +29,7 @@
     pkgs.tinyxxd
     pkgs.tmux
     pkgs.tree
-    pkgs.usbutils # for get the lsusb command
+    #pkgs.usbutils # for get the lsusb command
     pkgs.yt-dlp
   ];
 
