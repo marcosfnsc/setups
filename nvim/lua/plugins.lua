@@ -138,13 +138,13 @@ require('lazy').setup({
         build = ':MasonUpdate',
         config = function()
             --require('lspconfig').gopls.setup{}
+            --require('lspconfig').intelephense.setup{}
             vim.lsp.enable('nixd')
             vim.lsp.enable('vue_ls')
             require('mason').setup{ PATH = 'append' }
             require('lspconfig').clangd.setup{}
             require('lspconfig').cssls.setup{}
             require('lspconfig').html.setup{}
-            require('lspconfig').intelephense.setup{}
             require('lspconfig').jdtls.setup{}
             require('lspconfig').lua_ls.setup{}
             require('lspconfig').pyright.setup{}
@@ -157,9 +157,9 @@ require('lazy').setup({
         config = function()
             local parsers = {
                 --'gopls',
+                --'intelephense',
                 'cssls',
                 'html',
-                'intelephense',
                 'jdtls',
                 'pyright',
                 'ts_ls',
