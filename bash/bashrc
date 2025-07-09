@@ -1,0 +1,5 @@
+## zsh history config
+[ -f ~/.shell_history ] && export HISTFILE=~/.shell_history || export HISTFILE=~/.bash_history
+
+## fzf config
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
