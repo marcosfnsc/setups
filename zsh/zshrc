@@ -32,7 +32,7 @@ bindkey '\033' edit-command-line # Use ESC to edit the current command line:
 export KEYTIMEOUT=1
 
 ## zsh history config
-export HISTFILE=~/.zsh_history
+[ -f ~/.shell_history ] && export HISTFILE=~/.shell_history || export HISTFILE=~/.zsh_history
 export SAVEHIST=10000 # maximum number of commands stored in the history file
 export HISTSIZE=$SAVEHIST # number of commands loaded into the memory from the history file
 setopt HIST_EXPIRE_DUPS_FIRST
