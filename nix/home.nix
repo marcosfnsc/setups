@@ -1,6 +1,11 @@
 { config, pkgs, ... }:
 
-{
+let
+  # Importa o canal instável do nixpkgs
+  pkgs = import <nixpkgs-unstable> {
+    config.allowUnfree = true; # se quiser permitir pacotes não livres
+  };
+in {
   home.username = "marcos";
   home.homeDirectory = "/home/marcos";
   home.stateVersion = "25.05";
