@@ -63,4 +63,35 @@ fi
 ## alias
 command -v eza &> /dev/null && alias ls=eza
 
+## notify when long command has finished
+preexec() {
+  CMD_START_DATE=$(date +%s) # Note the date when the command started, in unix time.
+  CMD_NAME=$1
+}
+IGNORE_COMMANDS=(
+  flatpak
+  nvim
+)
+precmd() {
+  local firt_argument=$(echo $CMD_NAME | awk '{print $1;}')
+
+  # Proceed only if we've ran a command in the current shell.
+  if [[ ! ${IGNORE_COMMANDS[@]} =~ $firt_argument ]] && [[ ! -z $CMD_START_DATE ]]; then
+    # Note current date in unix time
+    CMD_END_DATE=$(date +%s)
+    CMD_ELAPSED_TIME=$(($CMD_END_DATE - $CMD_START_DATE)) # Store the difference between the last command start date vs. current date.
+    CMD_NOTIFY_THRESHOLD=45 # Store an arbitrary threshold, in seconds.
+
+    if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
+      message="the command \"$CMD_NAME\" has finished"
+
+      if command -v termux-notification; then
+        termux-notification --content  "$message"
+      else
+        notify-send "$message"
+      fi
+    fi
+  fi
+}
+
 source $HOME/.shell_functions
