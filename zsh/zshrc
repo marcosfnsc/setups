@@ -70,6 +70,7 @@ preexec() {
 }
 IGNORE_COMMANDS=(
   flatpak
+  htop
   nvim
 )
 precmd() {
