@@ -72,6 +72,8 @@ IGNORE_COMMANDS=(
   flatpak
   htop
   nvim
+  pkg
+  yay
 )
 precmd() {
   local firt_argument=$(echo $CMD_NAME | awk '{print $1;}')
