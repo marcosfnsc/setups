@@ -1,9 +1,5 @@
-version: "3.9"
-   
 services:
-  test_environ:
-    build: .
-    container_name: test_environ
+  test_nvim:
+    image: test_nvim:ya442wjqi6wl26pxls8xi7c07narlslq
     volumes:
       - .:/test
-    entrypoint: ["bash", "-c", "./setup_nvim.sh && sleep infinity"]
