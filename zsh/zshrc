@@ -73,6 +73,7 @@ IGNORE_COMMANDS=(
   htop
   nvim
   pkg
+  sk
   yay
 )
 precmd() {
