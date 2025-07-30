@@ -13,6 +13,7 @@
     #pkgs.ripgrep
     #pkgs.rsync
     #pkgs.zsh
+    #pkgs.usbutils # for get the lsusb command
     pkgs.android-tools
     pkgs.dive
     pkgs.eza
@@ -22,14 +23,13 @@
     pkgs.ncdu
     pkgs.neofetch
     pkgs.nixd
-    pkgs.nmap
-    pkgs.rclone
     pkgs.shellcheck
     pkgs.skim
     pkgs.tinyxxd
-    pkgs.tmux
     pkgs.tree
-    #pkgs.usbutils # for get the lsusb command
+    unstablePkgs.nmap
+    unstablePkgs.rclone
+    unstablePkgs.tmux
     unstablePkgs.yt-dlp
   ];
 
