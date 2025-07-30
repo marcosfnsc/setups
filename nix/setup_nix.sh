@@ -5,6 +5,7 @@ ln -f nix.conf $HOME/.config/nix/nix.conf
 
 mkdir -p $HOME/.config/home-manager
 ln -f home.nix $HOME/.config/home-manager/home.nix
+ln -f flake.nix $HOME/.config/home-manager/flake.nix
 
 if ! command -v nix &> /dev/null; then
   sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon # multi user install
@@ -16,4 +17,7 @@ if ! command -v home-manager &> /dev/null; then
   nix-shell '<home-manager>' -A install
 fi
 
-home-manager switch
+#home-manager switch
+nix run ~/.config/home-manager#homeConfigurations.marcos.activationPackage
+
+ln -f $HOME/.config/home-manager/flake.lock flake.lock

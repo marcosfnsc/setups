@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, unstablePkgs, ... }:
 
 {
   home.username = "marcos";
@@ -30,7 +30,7 @@
     pkgs.tmux
     pkgs.tree
     #pkgs.usbutils # for get the lsusb command
-    pkgs.yt-dlp
+    unstablePkgs.yt-dlp
   ];
 
   home.file = {
