@@ -1,5 +1,5 @@
 services:
   test_nvim:
-    image: test_nvim:ya442wjqi6wl26pxls8xi7c07narlslq
+    image: test_nvim:latest
     volumes:
       - .:/test
