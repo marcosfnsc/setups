@@ -4,22 +4,30 @@
 
 pkgs.dockerTools.buildImage {
   name = "test_nvim";
+  tag = "latest";
 
   copyToRoot = pkgs.buildEnv {
     name = "test_nvim";
     paths = [
       pkgs.bash
-        pkgs.curl
-        pkgs.git
-        pkgs.neovim
-        pkgs.nodejs
-        pkgs.ripgrep
+      pkgs.cacert
+      pkgs.coreutils
+      pkgs.curl
+      pkgs.gcc
+      pkgs.git
+      pkgs.gnutar
+      pkgs.gzip
+      pkgs.neovim
+      pkgs.nodejs
+      pkgs.ripgrep
     ];
   };
 
-
   config = {
-    workingDir = "/data";
-    Cmd = [ "${pkgs.bash}/bin/bash" "-c" "./setup_nvim.sh && sleep infinity" ];
+    workingDir = "/test";
+    Env = [
+      "SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt"
+    ];
+    Cmd = [ "${pkgs.bash}/bin/bash" "-c" "bash setup_nvim.sh && sleep infinity" ];
   };
 }
