@@ -2,4 +2,4 @@ services:
   test_nvim:
     image: test_nvim:latest
     volumes:
-      - .:/test
+      - .:/home/user/volume

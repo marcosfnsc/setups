@@ -23,11 +23,22 @@ pkgs.dockerTools.buildImage {
     ];
   };
 
+  runAsRoot = ''
+    #!${pkgs.runtimeShell}
+    ${pkgs.dockerTools.shadowSetup}
+    groupadd -r user
+    useradd --uid=1000 -r -g user user
+    mkdir -p /home/user
+    chown -R user:user /home/user
+  '';
+
   config = {
-    workingDir = "/test";
+    workingDir = "/home/user/volume";
     Env = [
+      "HOME=/home/user"
       "SSL_CERT_FILE=/etc/ssl/certs/ca-bundle.crt"
     ];
     Cmd = [ "${pkgs.bash}/bin/bash" "-c" "bash setup_nvim.sh && sleep infinity" ];
+    User = "1000:1000";
   };
 }
