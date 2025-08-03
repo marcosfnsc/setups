@@ -28,6 +28,11 @@ require('lazy').setup({
         opts = {},
         config = function()
             require("tokyonight").setup({
+                transparent = true,
+                styles = {
+                    sidebars = "transparent",
+                    floats = "transparent",
+                },
                 on_highlights = function(hl, colors)
                     hl.LineNr = {
                         fg = colors.white
