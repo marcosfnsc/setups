@@ -85,6 +85,7 @@ comandos interessantes e dicas:
 
 ### outros comandos
 - `git blame nome_do_arquivo`: mostra informações como autor, numero de commit e outras informações para cada linha do ultimo estado do arquivo especificado
+- `git checkout hash_do_commit nome_do_arquivo`: recuperar o estado de um arquivo a partir de um determinado commit, e faz isso sem alterar para qual commit o ponteiro HEAD está apontando
 - `git cherry-pick hash_do_commit`: permite copiar um commit de uma outra branch para a branch atual
 - `git commit --allow-empty -m 'Empty commit'`: cria um commit vazio, sem alterações de arquivo, util para acionar pipelines CI/CD
 - `git commit --amend`: abre o editor e permite editar a mensagem do ultimo commit
@@ -103,7 +104,7 @@ comandos interessantes e dicas:
 - `git reset --soft hash_do_commit`: remove o commit referente ao hash, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
 - `git reset --soft HEAD~N`: remove commits `N` contando do mais recente e voltando, o parametro `--soft` remove os commits mas mantém alterações na area `stage` do git
 - `git rev-list --all | xargs git grep "string"`: procurar string em todos os arquivos em todos os commits
-- `git checkout hash_do_commit nome_do_arquivo`: recuperar o estado de um arquivo a partir de um determinado commit, e faz isso sem alterar para qual commit o ponteiro HEAD está apontando
+- `git show hash_do_commit --stat`: mostra informações sobre um determinado commit junto com um resumo dos arquivos alterados
 - `git show nome_da_branch:nome_do_arquivo`: permite visualizar arquivos de outras branches sem precisar mudar de branch
 - `GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_custom" git clone git@github.com:user/repo.git`: executar um `git clone` usando uma chave ssh especifica
 - `GIT_SSH_COMMAND='ssh -o ProxyCommand="nc -X 5 -x 127.0.0.1:NUMERO_PORTA_SOCKS5 %h %p"' git subcomando_git`: configuração para usar o git via proxy socks5
