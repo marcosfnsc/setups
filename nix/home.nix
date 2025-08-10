@@ -4,6 +4,7 @@
   home.username = "marcos";
   home.homeDirectory = "/home/marcos";
   home.stateVersion = "25.05";
+  home.enableNixpkgsReleaseCheck = false;
 
   home.packages = [
     #pkgs.curl
