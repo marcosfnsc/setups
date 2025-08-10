@@ -24,11 +24,11 @@
     pkgs.neofetch
     pkgs.nixd
     pkgs.shellcheck
-    pkgs.skim
     pkgs.tinyxxd
     pkgs.tree
     unstablePkgs.nmap
     unstablePkgs.rclone
+    unstablePkgs.skim
     unstablePkgs.tmux
     unstablePkgs.yt-dlp
   ];
