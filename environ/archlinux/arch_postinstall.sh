@@ -69,6 +69,7 @@ APPS_INSTALL=(
   unzip
   usbutils # for get the lsusb command
   vlc
+  vlc-plugin-ffmpeg
   zathura
   zathura-pdf-mupdf
   zsh
