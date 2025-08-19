@@ -75,7 +75,7 @@ comandos interessantes e dicas:
 - `git log --reverse`: mostra o log dos commits em ordem reversa
 - `git log -p nome_do_arquivo`: mostra os logs em relação a um arquivo especifico
 - `git log branch1:branch2 -- nome_do_arquivo`: mostra as os commits que diferem uma branch da outra em relação a um determinado arquivo
-- `git log branch1:branch2`: mostra as os commits que diferem uma branch da outra
+- `git log branch1:branch2`: mostra os commits que diferem uma branch da outra
 - `git shortlog -sn`: classifica todos os contribuidores com base na contagem de commits
 
 ### url do repositorio
