@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -o errexit
+
 # install fzf
 REPO_URL="https://github.com/junegunn/fzf.git"
 REPO_PATH="$HOME/.fzf"
