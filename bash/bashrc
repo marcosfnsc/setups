@@ -3,3 +3,21 @@
 
 ## fzf config
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+## notify when long command has finished
+notification() {
+  local message="the command has finished"
+  if command -v termux-notification; then
+    termux-notification --content  "$message"
+  else
+    notify-send "$message"
+  fi
+}
+beep_if_long_time_past() {
+  LAST_COMMAND_DURATION=$(($(date +%s) - ${LAST_COMMAND_TIME}))
+  [[ ${LAST_COMMAND_DURATION} -gt 5 ]] && notification
+  export LAST_COMMAND_TIME=
+}
+
+export PROMPT_COMMAND=beep_if_long_time_past
+trap '[ -z ${LAST_COMMAND_TIME} ] && export LAST_COMMAND_TIME=$(date +%s)' DEBUG
