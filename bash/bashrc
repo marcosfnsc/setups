@@ -15,7 +15,7 @@ notification() {
 }
 beep_if_long_time_past() {
   LAST_COMMAND_DURATION=$(($(date +%s) - ${LAST_COMMAND_TIME}))
-  [[ ${LAST_COMMAND_DURATION} -gt 5 ]] && notification
+  [[ ${LAST_COMMAND_DURATION} -gt 45 ]] && notification
   export LAST_COMMAND_TIME=
 }
 
