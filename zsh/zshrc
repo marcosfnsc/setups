@@ -87,7 +87,7 @@ precmd() {
     CMD_NOTIFY_THRESHOLD=45 # Store an arbitrary threshold, in seconds.
 
     if [[ $CMD_ELAPSED_TIME -gt $CMD_NOTIFY_THRESHOLD ]]; then
-      message="the command \"$CMD_NAME\" has finished"
+      local message="the command \"$CMD_NAME\" has finished"
 
       if command -v termux-notification; then
         termux-notification --content  "$message"
