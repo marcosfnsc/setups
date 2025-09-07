@@ -71,6 +71,7 @@ preexec() {
 IGNORE_COMMANDS=(
   flatpak
   htop
+  nix-shell
   nvim
   pkg
   sk
