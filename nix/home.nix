@@ -13,8 +13,8 @@
     #pkgs.qbittorrent
     #pkgs.ripgrep
     #pkgs.rsync
-    #pkgs.zsh
     #pkgs.usbutils # for get the lsusb command
+    #pkgs.zsh
     pkgs.android-tools
     pkgs.dive
     pkgs.eza
@@ -27,11 +27,11 @@
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
+    pkgs.yt-dlp
     unstablePkgs.nmap
     unstablePkgs.rclone
     unstablePkgs.skim
     unstablePkgs.tmux
-    unstablePkgs.yt-dlp
   ];
 
   home.file = {
