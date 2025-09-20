@@ -27,11 +27,11 @@
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
-    pkgs.yt-dlp
     unstablePkgs.nmap
     unstablePkgs.rclone
     unstablePkgs.skim
     unstablePkgs.tmux
+    unstablePkgs.yt-dlp
   ];
 
   home.file = {
