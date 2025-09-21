@@ -152,19 +152,19 @@ require('lazy').setup({
         'williamboman/mason.nvim',
         build = ':MasonUpdate',
         config = function()
-            --require('lspconfig').gopls.setup{}
-            --require('lspconfig').intelephense.setup{}
-            vim.lsp.enable('nixd')
-            vim.lsp.enable('vue_ls')
+            --vim.lsp.enable('gopls')
+            --vim.lsp.enable('intelephense')
             require('mason').setup{ PATH = 'append' }
-            require('lspconfig').clangd.setup{}
-            require('lspconfig').cssls.setup{}
-            require('lspconfig').html.setup{}
-            require('lspconfig').jdtls.setup{}
-            require('lspconfig').lua_ls.setup{}
-            require('lspconfig').pyright.setup{}
-            require('lspconfig').texlab.setup{}
-            require('lspconfig').ts_ls.setup{}
+            vim.lsp.enable('clangd')
+            vim.lsp.enable('cssls')
+            vim.lsp.enable('html')
+            vim.lsp.enable('jdtls')
+            vim.lsp.enable('lua_ls')
+            vim.lsp.enable('nixd')
+            vim.lsp.enable('pyright')
+            vim.lsp.enable('texlab')
+            vim.lsp.enable('ts_ls')
+            vim.lsp.enable('vue_ls')
         end
     },
     {
@@ -276,11 +276,6 @@ require('lazy').setup({
             'stevearc/dressing.nvim', -- optional for vim.ui.select
         },
         config = true
-    },
-    {
-        'neovim/nvim-lspconfig',
-        config = function()
-        end
     },
     {
         'lewis6991/gitsigns.nvim',
