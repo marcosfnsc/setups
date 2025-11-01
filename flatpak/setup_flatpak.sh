@@ -20,7 +20,6 @@ FLATPAK_FLATHUB=(
   com.usebottles.bottles      # bottles
   com.valvesoftware.Steam     # Steam
   org.audacityteam.Audacity   # audacity
-  org.localsend.localsend_app # localsend
   org.telegram.desktop        # telegram
   org.zealdocs.Zeal           # zeal docs
 )
