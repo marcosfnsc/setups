@@ -23,7 +23,6 @@
     pkgs.lsof
     pkgs.ncdu
     pkgs.neofetch
-    pkgs.nixd
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree

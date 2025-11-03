@@ -160,7 +160,6 @@ require('lazy').setup({
             vim.lsp.enable('html')
             vim.lsp.enable('jdtls')
             vim.lsp.enable('lua_ls')
-            vim.lsp.enable('nixd')
             vim.lsp.enable('pyright')
             vim.lsp.enable('texlab')
             vim.lsp.enable('ts_ls')
@@ -236,6 +235,7 @@ require('lazy').setup({
                     'javascript',
                     'latex',
                     'lua',
+                    'nix',
                     'php',
                     'python',
                     'rust',
