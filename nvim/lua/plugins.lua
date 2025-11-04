@@ -224,6 +224,7 @@ require('lazy').setup({
         config = function()
             require('nvim-treesitter.configs').setup {
                 ensure_installed = {
+                    --'latex',
                     'bash',
                     'c',
                     'cmake',
@@ -233,7 +234,6 @@ require('lazy').setup({
                     'html',
                     'java',
                     'javascript',
-                    'latex',
                     'lua',
                     'nix',
                     'php',
