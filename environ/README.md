@@ -8,6 +8,7 @@
 * `pacman -Qm`: listar todos os pacotes estrangeiros (instalados manualmente ou pacotes removidos dos repositórios)
 * `pacman -Qo nome_do_arquivo`: descobrir a qual pacote pertence o arquivo
 * `pacman -Qs regex`: listar pacotes por regex
+* `pacman -Qsq 'TERMO'`: listar todos os pacotes que no nome do pacote contenha o `TERMO` desejado
 * `pacman -Rs nome_do_pacote`: remover o pacote e depedencias não usadas por outros pacotes
 * `pacman -S nome_do_pacote --overwrite "*"`: o parametro `overwrite` é util quando há arquivos no sistema não rastreados pelo gerenciador de pacotes que estão causando conflito, provavelmente de instalações problematicas
 * `pacman -S nome_do_pacote`: instalar pacote
