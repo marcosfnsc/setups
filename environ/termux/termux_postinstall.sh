@@ -14,7 +14,6 @@ packages_list=(
   file
   git
   gnupg
-  go
   keepassxc
   man
   manpages
@@ -24,7 +23,6 @@ packages_list=(
   openjdk-21
   openssh
   python
-  qrencode
   rclone
   ripgrep
   rsync
