@@ -17,6 +17,7 @@ packages_list=(
   keepassxc
   man
   manpages
+  ncdu
   neovim
   nmap
   nodejs
