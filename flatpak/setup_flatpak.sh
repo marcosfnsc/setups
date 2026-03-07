@@ -22,6 +22,7 @@ FLATPAK_FLATHUB=(
   org.audacityteam.Audacity   # audacity
   org.telegram.desktop        # telegram
   org.zealdocs.Zeal           # zeal docs
+  rocks.shy.VacuumTube        # youtube with tv interface
 )
 
 flatpak install -y flathub ${FLATPAK_FLATHUB[@]} --user
