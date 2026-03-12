@@ -52,6 +52,7 @@ APPS_INSTALL=(
   pipewire
   pipewire-pulse
   plasma
+  plasma-login-manager # lock screen
   plasma-wayland-session # for wayland session
   power-profiles-daemon
   python
@@ -59,7 +60,6 @@ APPS_INSTALL=(
   qbittorrent
   qrencode
   reflector
-  sddm # lock screen
   spectacle
   sshfs # for the kdeconnect
   sudo
@@ -80,7 +80,7 @@ pacman -S --needed ${APPS_INSTALL[@]}
 systemctl enable earlyoom
 systemctl enable firewalld
 systemctl enable paccache.timer
-systemctl enable sddm
+systemctl enable plasmalogin
 systemctl enable thermald # for CPUs intel
 
 systemctl mask lvm2-monitor.service   # I will not use lvm2
