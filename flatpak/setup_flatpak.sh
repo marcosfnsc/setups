@@ -15,6 +15,7 @@ FLATPAK_FLATHUB=(
   com.discordapp.Discord      # Discord
   com.github.tchx84.Flatseal  # flatseal
   com.google.AndroidStudio    # android studio
+  com.google.Chrome           # google chrome
   com.protonvpn.www           # cliente não oficial do protonvpn
   com.rtosta.zapzap           # cliente não oficial do whatssap
   com.spotify.Client          # Spotify
