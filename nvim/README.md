@@ -205,7 +205,8 @@ Nenhum desses registros mensionados acima é escrito se você especificou um ant
 * `:x`: atalho para `:wq`
 
 ## comandos da cli:
-* `nvim --noplugin -u init.vim`: iniciar o nvim usando um outro arquivo de configuração definido na linha de comando
+* `nvim --noplugin -u init.lua`: iniciar o nvim usando um outro arquivo de configuração definido na linha de comando
+* `nvim --noplugin notas.md`: iniciar o nvim e abrir um arquivo sem carregar as configurações definida no `init.lua`
 * `vim -S nome_do_arquivo.vim`: restaura a sessão a partir de um arquivo
 
 ## Truques:
