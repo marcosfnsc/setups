@@ -9,6 +9,7 @@
 * `pacman -Qo nome_do_arquivo`: descobrir a qual pacote pertence o arquivo
 * `pacman -Qs regex`: listar pacotes por regex
 * `pacman -Qsq 'TERMO'`: listar todos os pacotes que no nome do pacote contenha o `TERMO` desejado
+* `pacman -Rc $(pacman -Qq | grep -i STRING)`: remover todos os pacotes e os pacotes ao qual dependem, aqueles que contam uma determinada string no nome
 * `pacman -Rc nome_do_pacote`: remover o pacote e todos os outros pacotes que dependam dele
 * `pacman -Rs nome_do_pacote`: remover o pacote e depedencias não usadas por outros pacotes
 * `pacman -S nome_do_pacote --overwrite "*"`: o parametro `overwrite` é util quando há arquivos no sistema não rastreados pelo gerenciador de pacotes que estão causando conflito, provavelmente de instalações problematicas
