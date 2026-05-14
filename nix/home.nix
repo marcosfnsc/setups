@@ -30,6 +30,7 @@
     unstablePkgs.rclone
     unstablePkgs.skim
     unstablePkgs.tmux
+    unstablePkgs.vlc
     unstablePkgs.yt-dlp
   ];
 

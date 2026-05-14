@@ -68,8 +68,6 @@ APPS_INSTALL=(
   traceroute
   unzip
   usbutils # for get the lsusb command
-  vlc
-  vlc-plugin-ffmpeg
   zathura
   zathura-pdf-mupdf
   zsh
