@@ -17,3 +17,10 @@ fi
 nix run nixpkgs#home-manager -- switch
 
 ln -f $HOME/.config/home-manager/flake.lock flake.lock
+
+# update kde database
+if command -v kbuildsycoca6 &> /dev/null; then
+  kbuildsycoca6 --noincremental
+else
+  echo "Aviso, comando kbuildsycoca6 não encontrado"
+fi
