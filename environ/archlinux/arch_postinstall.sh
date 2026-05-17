@@ -4,7 +4,6 @@ set -o errexit
 
 APPS_INSTALL=(
   ark
-  base-devel # for yay
   bubblewrap
   calibre # manage ebooks
   clamav
