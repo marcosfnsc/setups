@@ -32,7 +32,6 @@ APPS_INSTALL=(
   libreoffice-fresh-pt-br # pacote de idioma pt-br para o libreoffice
   man-db
   man-pages
-  neovim
   networkmanager
   nodejs
   noto-fonts

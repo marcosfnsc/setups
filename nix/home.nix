@@ -27,6 +27,7 @@
     pkgs.tree
     unstablePkgs.git
     unstablePkgs.kdePackages.okular
+    unstablePkgs.neovim
     unstablePkgs.nmap
     unstablePkgs.rclone
     unstablePkgs.skim
