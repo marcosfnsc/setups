@@ -19,7 +19,6 @@ APPS_INSTALL=(
   flameshot
   flatpak
   gcc
-  git
   gwenview
   kamoso
   kate

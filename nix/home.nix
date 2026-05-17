@@ -8,7 +8,6 @@
 
   home.packages = [
     #pkgs.curl
-    #pkgs.git
     #pkgs.less
     #pkgs.qbittorrent
     #pkgs.ripgrep
@@ -26,12 +25,14 @@
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
+    unstablePkgs.git
     unstablePkgs.kdePackages.okular
     unstablePkgs.nmap
     unstablePkgs.rclone
     unstablePkgs.skim
     unstablePkgs.tmux
     unstablePkgs.vlc
+    unstablePkgs.yay
     unstablePkgs.yt-dlp
   ];
 
