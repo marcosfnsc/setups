@@ -23,6 +23,13 @@
 * `pacman -Sw nome_do_pacote`: baixar pacotes mas sem instalar
 * `pacman -Syyu`: força a atualização do banco de dados e atualiza o sistema caso tenha atualização disponivel
 
+#### atualizar archlinux apos muito tempo sem atualizações:
+```console
+pacman -Sy
+pacman -S archlinux-keyring
+pacman -Syu
+```
+
 #### principais comandos do apt-get/apt:
 * `apt clean`: apaga o cache de pacotes baixadoa
 * `apt dist-upgrade`: atualiza pacotes, instala novas depedencias e remove dependencias não mais necessarias
