@@ -7,24 +7,24 @@
   home.enableNixpkgsReleaseCheck = false;
 
   home.packages = [
-    #pkgs.curl
-    #pkgs.less
     #pkgs.qbittorrent
-    #pkgs.ripgrep
-    #pkgs.rsync
     #pkgs.usbutils # for get the lsusb command
-    #pkgs.zsh
     pkgs.android-tools
+    pkgs.curl
     pkgs.dive
     pkgs.eza
     pkgs.htop
     pkgs.jq
+    pkgs.less
     pkgs.lsof
     pkgs.ncdu
     pkgs.neofetch
+    pkgs.ripgrep
+    pkgs.rsync
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
+    pkgs.zsh
     unstablePkgs.git
     unstablePkgs.kdePackages.okular
     unstablePkgs.neovim
