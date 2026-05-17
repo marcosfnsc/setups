@@ -7,7 +7,6 @@ APPS_INSTALL=(
   bubblewrap
   calibre # manage ebooks
   clamav
-  curl
   docker-buildx
   dolphin
   earlyoom
@@ -17,7 +16,6 @@ APPS_INSTALL=(
   firewalld
   flameshot
   flatpak
-  gcc
   gwenview
   kamoso
   kate
@@ -39,7 +37,6 @@ APPS_INSTALL=(
   noto-fonts-emoji
   noto-fonts-extra
   npm
-  ntfs-3g # suporte ao sistema de qruivos ntfs
   openbsd-netcat
   openssh
   pacman-contrib
@@ -53,7 +50,6 @@ APPS_INSTALL=(
   power-profiles-daemon
   python
   python-pip
-  qbittorrent
   qrencode
   reflector
   spectacle
@@ -64,8 +60,6 @@ APPS_INSTALL=(
   traceroute
   unzip
   usbutils # for get the lsusb command
-  zathura
-  zathura-pdf-mupdf
   zsh
 )
 

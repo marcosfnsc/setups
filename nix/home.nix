@@ -7,7 +7,6 @@
   home.enableNixpkgsReleaseCheck = false;
 
   home.packages = [
-    #pkgs.qbittorrent
     #pkgs.usbutils # for get the lsusb command
     pkgs.android-tools
     pkgs.curl
@@ -19,6 +18,7 @@
     pkgs.lsof
     pkgs.ncdu
     pkgs.neofetch
+    pkgs.qbittorrent
     pkgs.ripgrep
     pkgs.rsync
     pkgs.shellcheck
