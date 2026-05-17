@@ -43,7 +43,6 @@ APPS_INSTALL=(
   noto-fonts-extra
   npm
   ntfs-3g # suporte ao sistema de qruivos ntfs
-  okular
   openbsd-netcat
   openssh
   pacman-contrib

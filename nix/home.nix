@@ -26,6 +26,7 @@
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
+    unstablePkgs.kdePackages.okular
     unstablePkgs.nmap
     unstablePkgs.rclone
     unstablePkgs.skim
