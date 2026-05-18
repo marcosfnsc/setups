@@ -26,6 +26,7 @@
     pkgs.tree
     pkgs.zsh
     unstablePkgs.git
+    unstablePkgs.kdePackages.kate
     unstablePkgs.kdePackages.okular
     unstablePkgs.neovim
     unstablePkgs.nmap

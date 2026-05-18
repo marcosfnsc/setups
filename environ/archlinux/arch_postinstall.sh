@@ -18,7 +18,6 @@ APPS_INSTALL=(
   flatpak
   gwenview
   kamoso
-  kate
   kcolorchooser # color selector
   kdeconnect
   keepassxc
