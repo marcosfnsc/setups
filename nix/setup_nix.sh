@@ -12,6 +12,8 @@ ln -f flake.lock $HOME/.config/home-manager/flake.lock
 
 if ! command -v nix &> /dev/null; then
   sh <(curl --proto '=https' --tlsv1.2 -L https://nixos.org/nix/install) --daemon # multi user install
+else
+  nix upgrade-nix
 fi
 
 nix run nixpkgs#home-manager -- switch
