@@ -32,6 +32,7 @@
     unstablePkgs.neovim
     unstablePkgs.nmap
     unstablePkgs.rclone
+    unstablePkgs.ripgrep-all
     unstablePkgs.skim
     unstablePkgs.tmux
     unstablePkgs.vlc
