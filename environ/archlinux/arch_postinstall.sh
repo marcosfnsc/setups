@@ -20,7 +20,6 @@ APPS_INSTALL=(
   kamoso
   kcolorchooser # color selector
   kdeconnect
-  keepassxc
   kid3-qt
   kitty
   konsole

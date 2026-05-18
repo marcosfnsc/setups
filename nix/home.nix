@@ -28,6 +28,7 @@
     unstablePkgs.git
     unstablePkgs.kdePackages.kate
     unstablePkgs.kdePackages.okular
+    unstablePkgs.keepassxc
     unstablePkgs.neovim
     unstablePkgs.nmap
     unstablePkgs.rclone
