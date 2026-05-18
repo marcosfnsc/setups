@@ -39,7 +39,6 @@ APPS_INSTALL=(
   openssh
   pacman-contrib
   partitionmanager
-  pbzip2 # parallel implementation of the bzip2
   pipewire
   pipewire-pulse
   plasma
