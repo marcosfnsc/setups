@@ -29,12 +29,10 @@ APPS_INSTALL=(
   man-db
   man-pages
   networkmanager
-  nodejs
   noto-fonts
   noto-fonts-cjk
   noto-fonts-emoji
   noto-fonts-extra
-  npm
   openbsd-netcat
   openssh
   pacman-contrib

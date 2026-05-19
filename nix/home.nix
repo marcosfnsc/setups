@@ -18,6 +18,7 @@
     pkgs.lsof
     pkgs.ncdu
     pkgs.neofetch
+    pkgs.nodejs
     pkgs.qbittorrent
     pkgs.ripgrep
     pkgs.rsync
