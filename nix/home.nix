@@ -1,9 +1,9 @@
-{ pkgs, unstablePkgs, ... }:
+{ pkgs, unstablePkgs, pkgs_neofetch, ... }:
 
 {
   home.username = "marcos";
   home.homeDirectory = "/home/marcos";
-  home.stateVersion = "25.11";
+  home.stateVersion = "26.05";
   home.enableNixpkgsReleaseCheck = false;
 
   home.packages = [
@@ -17,7 +17,6 @@
     pkgs.less
     pkgs.lsof
     pkgs.ncdu
-    pkgs.neofetch
     pkgs.nodejs
     pkgs.qbittorrent
     pkgs.ripgrep
@@ -26,6 +25,7 @@
     pkgs.tinyxxd
     pkgs.tree
     pkgs.zsh
+    pkgs_neofetch.neofetch
     unstablePkgs.git
     unstablePkgs.kdePackages.kate
     unstablePkgs.kdePackages.okular
