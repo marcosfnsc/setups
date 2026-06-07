@@ -14,6 +14,7 @@
     pkgs.eza
     pkgs.htop
     pkgs.jq
+    pkgs.kid3-qt
     pkgs.less
     pkgs.lsof
     pkgs.ncdu
