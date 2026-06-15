@@ -5,7 +5,8 @@
 * `pacman -Qe`: listar pacotes instalados de forma explicita
 * `pacman -Qi nome_do_pacote`: mostra informações de um pacote instalado
 * `pacman -Ql nome_do_pacote`: listar arquivos instalados por um pacote
-* `pacman -Qm`: listar todos os pacotes estrangeiros (instalados manualmente ou pacotes removidos dos repositórios)
+* `pacman -Qm`: listar todos os pacotes estrangeiros, que foram instalados fora dos repositorios oficiais, ou seja, pacotes AUR e pacotes compilados manualmente
+* `pacman -Qme`: listar todos os pacotes estrangeiros instalados explicitamente, mas não suas depedencias
 * `pacman -Qo nome_do_arquivo`: descobrir a qual pacote pertence o arquivo
 * `pacman -Qs regex`: listar pacotes por regex
 * `pacman -Qsq 'TERMO'`: listar todos os pacotes que no nome do pacote contenha o `TERMO` desejado
