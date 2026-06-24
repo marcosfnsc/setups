@@ -13,6 +13,7 @@ symbol_link_or_copy() {
 
 mkdir -p $HOME/.config/nvim/lua
 symbol_link_or_copy init.lua         $HOME/.config/nvim/init.lua
+symbol_link_or_copy lazy-lock.json   $HOME/.config/nvim/lazy-lock.json
 symbol_link_or_copy lua/mappings.lua $HOME/.config/nvim/lua/mappings.lua
 symbol_link_or_copy lua/plugins.lua  $HOME/.config/nvim/lua/plugins.lua
 
