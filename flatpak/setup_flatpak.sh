@@ -17,7 +17,6 @@ FLATPAK_FLATHUB=(
   com.google.AndroidStudio    # android studio
   com.google.Chrome           # google chrome
   com.protonvpn.www           # cliente não oficial do protonvpn
-  com.rtosta.zapzap           # cliente não oficial do whatssap
   com.spotify.Client          # Spotify
   com.usebottles.bottles      # bottles
   com.valvesoftware.Steam     # Steam
