@@ -21,6 +21,7 @@ FLATPAK_FLATHUB=(
   com.usebottles.bottles      # bottles
   com.valvesoftware.Steam     # Steam
   org.audacityteam.Audacity   # audacity
+  org.localsend.localsend_app
   org.telegram.desktop        # telegram
   org.zealdocs.Zeal           # zeal docs
   rocks.shy.VacuumTube        # youtube with tv interface
