@@ -8,7 +8,6 @@
 
   home.packages = [
     #pkgs.usbutils # for get the lsusb command
-    pkgs.android-tools
     pkgs.curl
     pkgs.dive
     pkgs.eza
