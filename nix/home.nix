@@ -24,6 +24,7 @@
     pkgs.shellcheck
     pkgs.tinyxxd
     pkgs.tree
+    pkgs.yay
     pkgs.zsh
     pkgs_neofetch.neofetch
     unstablePkgs.git
@@ -37,7 +38,6 @@
     unstablePkgs.skim
     unstablePkgs.tmux
     unstablePkgs.vlc
-    unstablePkgs.yay
     unstablePkgs.yt-dlp
   ];
 
